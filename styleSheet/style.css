@@ -1,0 +1,41 @@
+:root{
+	--body-color:rgb(285,185,0);
+	--label-color:rgb(255,255,255);
+	--user-color:rgb(255,0,0);
+	--full-length:100%;
+}
+
+body{
+	background-color:var(--body-color) !important;
+	margin-bottom:50px;
+}
+label{
+	color:var(--label-color);
+}
+.row{
+	width:var(--full-length);
+}
+.first-row{
+	margin-top:40px;
+}
+input,textarea{
+	width:var(--full-length);
+}
+span.user{
+	color:var(--user-color);
+}
+table.dataTable td{
+	background-color:var(--body-color);
+}
+table.dataTable thead th, table.dataTable thead td{
+	border-bottom: none;
+}
+input[type="search"]{
+	width:175px !important;
+}
+thead{
+	display:none;
+}
+#dvQuesAnsTable_filter{
+	margin-top:-30px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>BrainRain</title>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+	<link href="StyleSheet/style.css" rel="stylesheet" type="text/css">
+	<script src='src/JSFunction.js' type='text/javascript'></script>
+</head>
+<body>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-1'>
+				<label>Domain</label>
+			</div>
+			<div class='col-md-1'>
+				<select class='domain'>
+					<option value='sql'>SQL</option>
+					<option value='csharp'>C#</option>
+					<option value='mvc'>MVC</option>
+					<option value='js'>Javascript</option>
+					<option value='jq'>Jquery</option>
+					<option value='misc'>Misc</option>
+				</select>
+			</div>
+			<div class='col-md-7'></div>
+			<div class='col-md-1'>Hello</div>
+			<div class='col-md-1'><span class='user'>kmukund439@gmail.com</span></div>
+		</div>
+		<div class='row'>
+			<div class='col-md-12'>
+				<label>What is your Question ?</label>
+			</div>
+			<div class='col-md-12'>
+				<input type='text' class='question' placeholder='Question ???'/>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-md-12'>
+				<label>Your answer please !</label>
+			</div>
+			<div class='col-md-12'>
+				<textarea type='text' class='answer' placeholder='Answer !!!' rows='10'></textarea>
+			</div>
+		</div> 
+		<div class='row'>
+		<div class="col-md-4"></div>
+			<div class='col-md-1'>
+				<button type='submit' class='btn btn-primary' title='Save Changes' onclick='CreateQuesAns();'>Save</button>
+			</div>
+			<div class='col-md-1'>
+				<button type='clear' class='btn btn-default' title='Cancel Changes' onclick='Redirect("index");'>Cancel</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

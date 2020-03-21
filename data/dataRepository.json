@@ -1,0 +1,460 @@
+{
+	"quesAns" : [
+		{
+			"ID":1,
+			"quesID":1,
+			"user":"mukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Why do we use database ?",
+			"ans":"Because, it manages data efficiently and allows users to perform multiple tasks with ease. It can stores, organizes and manages a large amount of information within a single software application."
+		},
+		{
+			"ID":2,
+			"quesID":2,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"We can also store data in file or excel. Then , Why do we need database ?",
+			"ans":"Database follows acid property, <br /> It provides indexing and querying feature thus making retrieval process faster,  <br />It takes full advantage of normalization, <br /> We need to use reporting or intelligence tools to work out business problems, <br /> Databases are concurrent so multiple users can use them at the same time without corrupting the data and                             also the database from remote location,<br />Exception handling is feasible."
+		},
+		{
+			"ID":3,
+			"quesID":3,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What is SQL ?",
+			"ans":"SQL is a domain-specific language used in querying and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS)."
+		},
+		{
+			"ID":4,
+			"quesID":4,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"",
+			"ans":""
+		},
+		{
+			"ID":5,
+			"quesID":5,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What is difference between SQL Server 2008 and SQL Server 2012",
+			"ans":"ORDER BY Clause modified with FETCH & OFFSET <br/> Function like FORMAT, CONCAT, TRY_CONVERT introduced <br/> Column store index is used for storage<br/> It Use 48 bit precision(instead of 27 bit) for Spatial Calculation"
+		},
+		{
+			"ID":6,
+			"quesID":6,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What is column store index ? What is it's benefit ?",
+			"ans":"The column store index in SQL Server 2012 stores columns instead of rows."
+		},
+		{
+			"ID":7,
+			"quesID":7,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How can you create the structure of a table  similar to another table TRANSPOSE ?",
+			"ans":"SELECT * INTO NEW_TABLE FROM TRANSPOSE WHERE 1 = 2"
+		},
+		{
+			"ID":8,
+			"quesID":8,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Can you achieve the same without using WHERE clause ?",
+			"ans":"SELECT TOP 0 * INTO NEW_TABLE FROM TRANSPOSE"
+		},
+		{
+			"ID":9,
+			"quesID":9,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How to print 0 without using select 0 or aritmetic manuplation ?",
+			"ans":"SELECT $; <br/> SELECT ISDATE('BRAINRAIN'); <br/> SELECT ISNUMERIC('BRAINRAIN'); <br/>SELECT CHARINDEX('P', 'BRAINRAIN');<br/> SELECT CHAR(48);"
+		},
+		{
+			"ID":10,
+			"quesID":10,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What is difference between union and union all ?",
+			"ans":"UNION : SELECT 3 UNION  SELECT 3 UNION SELECT 2   : Output : 2 3<br /> UNION ALL : SELECT 3 UNION ALL SELECT 3 UNION ALL SELECT 2  : Outpt : 3 3 2<br /> Union and Union all both combines the result set <br />In addition to this,  union filters duplicate element and does sorting in ascending order."
+		},
+		{
+			"ID":11,
+			"quesID":11,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How to find the number of tables existing in a particular database ?",
+			"ans":"SELECT COUNT(0) FROM INFORMATION_SCHEMA.TABLES"
+		},
+		{
+			"ID":12,
+			"quesID":12,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What is difference between convert and format ?",
+			"ans":"Convert is a sql server native function. Format depends on .NET CLR"
+		},
+		{
+			"ID":13,
+			"quesID":13,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How to find the number of records in a table EMPLOYEE(ID, NAME, SEX, DOB , JD, SALARY, MID) without using count ?",
+			"ans":"SELECT ROWS FROM SYSINDEXES WHERE ID = OBJECT_ID('EMPLOYEE') AND <br /> STATUS = 0 <br /> SELECT SUM(1) NAME FROM EMPLOYEE"
+		},
+		{
+			"ID":14,
+			"quesID":14,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How will you find the name of columns in the table transpose ?",
+			"ans":"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'TRANSPOSE'"
+		},
+		{
+			"ID":15,
+			"quesID":15,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What is INFORMATION_SCHEMA.TABLES, SYSINDEXES, INFORMATION_SCHEMA.COLUMNS used above ?",
+			"ans":"All are system views."
+		},
+		{
+			"ID":16,
+			"quesID":16,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"In the table EMPLOYEE, how will you find the name of all the employees starting with 'R' without using LIKE clause ?",
+			"ans":"SELECT NAME FROM EMPLOYEE WHERE CHARINDEX('R',NAME) = 1 <br /> SELECT NAME FROM EMPLOYEE WHERE SUBSTRING('NAME', 1 , 1) = 'R'"
+		},
+		{
+			"ID":17,
+			"quesID":17,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Can you write script for the same without using where clause ?",
+			"ans":"SELECT CASE WHEN LEFT(NAME,1) = 'S' THEN NAME END FROM EMPLOYEE EXCEPT  SELECT NULL"
+		},
+		{
+			"ID":18,
+			"quesID":18,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Can you compare null with null ?",
+			"ans":"Yes, the output depends upon ANSI_NULLS. When it is set on , the query yields false else true."
+		},
+		{
+			"ID":19,
+			"quesID":19,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Can you compare null with null ?",
+			"ans":"Yes, the output depends upon ANSI_NULLS. When it is set on , the query yields false else true."
+		},
+		{
+			"ID":20,
+			"quesID":20,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"SELECT CASE WHEN 1 = 1 THEN 'INDIA' <br /> WHEN 2 = 2 THEN 'COUNTRY' <br /> ELSE 'STATE'  END <br /> What is output for the above query ?",
+			"ans":"INDIA"
+		},
+		{
+			"ID":21,
+			"quesID":21,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"SELECT ASCII(123) as [123]. What do you except from the query ?",
+			"ans":"The query will return  49, the ascii value of 1.The ASCII() function returns the ASCII code value of the leftmost character of a character expression."
+		},
+		{
+			"ID":22,
+			"quesID":22,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"1. SELECT 'INDIA' &nbsp; &nbsp; 2. SELECT ''INDIA''.  Both query yield same result. What can be the reason ?",
+			"ans":"In this case, QUOTED_IDENTIFIER is set to OFF"
+		},
+		{
+			"ID":23,
+			"quesID":23,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How can you print a string n number of times without using loops",
+			"ans":"SELECT REPLICATE('INDIA_', 25)"
+		},
+		{
+			"ID":24,
+			"quesID":24,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How can you select a random record ?",
+			"ans":"SELECT TOP 1 * FROM TRANSPOSE ORDER BY NEWID()"
+		},
+		{
+			"ID":25,
+			"quesID":25,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How will you print numbers from 1 to 125 without using loop ?",
+			"ans":"It can be achieved using recursive CTE <br /> DECLARE @SEED INT = 1; <br /> WITH PRINTINGCTE AS (<br /> SELECT @SEED AS NEXTVALUE<br /> UNION ALL<br /> SELECT NEXTVALUE +  1 FROM PRINTINGCTE<br /> WHERE NEXTVALUE < 125)<br /> SELECT * FROM PRINTINGCTE OPTION(MAXRECURSION 125)"
+		},
+		{
+			"ID":26,
+			"quesID":26,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How will you find the sum of numbers separated by a special character ?",
+			"ans":"Use REPLACE FUNCTION to replace special character with ADD operator + and then EXEC "
+		},
+		{
+			"ID":27,
+			"quesID":27,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What is difference between ROWS and RANGE clause ?",
+			"ans":"Rows clause treats every row as distinct, But, Range clause treats duplicate row as same"
+		},
+		{
+			"ID":28,
+			"quesID":28,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What is difference between ROW_NUMBER(), RANK(), DENSE_RANK()",
+			"ans":"ROW_NUMBER() function returns the sequential ranking for each record partition wise.<br /> RANK() returns returns distict ranking for each distint record and same for duplicate record with voids<br />  DENSE_RANK() returns the consecutive ranking of records and assigns same rank for duplicate values"
+		},
+		{
+			"ID":29,
+			"quesID":29,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How can you find the last generated identity column value ?",
+			"ans":"It can be retrieved using SCOPE_IDENTITY(),  @@IDENTITY,  IDENT_CURRENT('TABLE_NAME')"
+		},
+		{
+			"ID":30,
+			"quesID":30,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Then, What is difference among them ?",
+			"ans":"SCOPE_IDENTITY returns the last identity value generated for any table in the current session and the current scope.<br /> @@IDENTITY returns the last identity value generated for any table in the current session, across all scopes.<br /> IDENT_CURRENT returns the last identity value generated for a specific table in any session and any scope for a specific table."
+		},
+		{
+			"ID":31,
+			"quesID":31,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How will you find nth highest salary ?",
+			"ans":"It can be achieved using correlated query <br /> SELECT * FROM EMPLOYEE E1 <br /> WHERE N = (SELECT COUNT(*) FROM EMPLOYEE E2 <br /> WHERE E1.SALARY <= E2.SALARY)"
+		},
+		{
+			"ID":32,
+			"quesID":32,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Can you find the same using any other way.",
+			"ans":"WITH RES AS (<br /> SELECT DISTINCT TOP N SALARY AS SALARY FROM EMPLOYEE ORDER BY SALARY DESC ) <br />  SELECT MIN(SALARY) FROM RES"
+		},
+		{
+			"ID":33,
+			"quesID":33,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How to change gender of employee from male to female and vice versa ? ",
+			"ans":" update employee</br> set gender = case gender</br> When 'Male' Then 'FeMale'</br> When 'FeMale' Then 'Male'</br> END</br>"
+		},
+		{
+			"ID":34,
+			"quesID":34,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How to update the records in on table based on the records in another table ?",
+			"ans":"Update OrdersDuplicate</br> set OrderBy = O.OrderBy</br> From  OrdersDuplicate OD join Orders O</br> on OD.ID = O.ID"
+		},
+		{
+			"ID":35,
+			"quesID":35,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Can you do the same without using join ?",
+			"ans":"Merge OrdersDuplicate OD using Orders O on OD.ID = O.ID When Matched Then Update set OrderBy = O.OrderBy;"
+		},
+		{
+			"ID":36,
+			"quesID":36,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"A table TRANSPOSE lists country and its top four cities. e.g.  : <div class='row'><div class='col-md-1><span>Cities</span></div></div<div class='row'><div class='col-md-2'>India<br/>Mumbai</div><div class='col-md-4'>India<br/>Delhi</div></div><div class='row'><div class='col-md-12'>Then, output should be like ...</div></div<div class='row'><div class='col-md-1'>Country</div><div class='col-md-1'>City1</div><div class='col-md-1'>City2</div></div><div class='row'><div class='col-md-1'>India</div><div class='col-md-1'>Mumbai</div><div class='col-md-1'>Delhi</div></div><div class='row'><div class='col-md-1'>How to achieve this ?</div></div>",
+			"ans":"WITH RES AS ( <br/> SELECT COUNTRY , CITY , 'CITY' + ( <br/> CAST(ROW_NUMBER() OVER (PARTITION BY COUNTRY ORDER BY COUNTRY) AS VARCHAR(25)) AS CITY_SI FROM TRANSPOSE )( <br/>   SELECT * FROM ( SELECT * FROM RES ( <br/> PIVOT( MAX(CITY) FOR CITY_SI IN (CITY1 , CITY2 , CITY3 , CITY4))  AS PIVOTINGCC) AS PINUY"
+		},
+		{
+			"ID":37,
+			"quesID":37,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"There are two tables.1) State 2) Cities. Cities table has foreign key referencing state table. How will you find first and latest city of each state to be marked as smart city and the number of smart city in each state ?",
+			"ans":"It can be retrieved using SCOPE_IDENTITY(),  @@IDENTITY,  IDENT_CURRENT('TABLE_NAME')"
+		},
+		{
+			"ID":38,
+			"quesID":38,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How can you find the last generated identity column value ?",
+			"ans":"SELECT SC.Code AS Code,SS.Name AS State, SC.Name AS SmartCity,  ROW_NUMBER() OVER (PARTITION BY SS.Name order by SC.Code) AS ROW_NUMBER INTO #RESULTSETASC  FROM SmartCities SC JOIN SmartState SS ON SC.StateCode = SS.Code <br/> SELECT SC.Code AS Code,SS.Name AS State, SC.Name AS SmartCity,  ROW_NUMBER() OVER (PARTITION BY SS.Name order by SC.Code DESC) AS ROW_NUMBER INTO #RESULTSETDESC FROM SmartCities SC JOIN SmartState SS ON SC.StateCode = SS.Code  <br/><br/> -- Selecting first city marked as smart city of each state <br/> Select * into #RSA from #RESULTSETASC where ROW_NUMBER = 1  <br/> -- Selecting last city marked as smart city of each state <br/> Select * into #RSD from #RESULTSETDESC where ROW_NUMBER = 1 <br/> -- Selecting count of smart city in each state <br/> select State as State, Count(1) as Count into #ESSCCount from #RESULTSETASC group by State <br/><br/> Select RSA.State, RSA.SmartCity as fisrtcity, RSD.SmartCity as lastcity, ESSC.Count from #RSA RSA <br/> join #RSD RSD on RSA.State = RSD.State <br/> join #ESSCCount ESSC on RSA.State = ESSC.State"
+		},
+		{
+			"ID":39,
+			"quesID":39,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What are stored Procedures ?",
+			"ans":"A stored procedure in SQL Server is a group of one or more Transact-SQL statements which are executed as a single batch of code. This significantly reduces network traffic between the server and client because only the call to execute the procedure is sent across the network and implements the code encapsulation concept."
+		},
+		{
+			"ID":40,
+			"quesID":40,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What is difference between stored procedure and function ? ",
+			"ans":"Function must return a value but Procedure can return zero or n values. <br /> Functions can have only input parameters for it whereas Procedures can have input/output parameters .<br /> Functions can be called from Procedure whereas Procedures cannot be called from Function. <br /> Procedure allows SELECT as well as DML(INSERT/UPDATE/DELETE) statement in it whereas  Function allows only SELECT statement in it. <br />  Function can be embedded in a SELECT statement or WHERE/HAVING clause but, Procedures can not be embedded in a SELECT statement <br /> Exceptions can be handled by try-catch block in a Procedure whereas try-catch block cannot be used in a Function.<br /> We can go for Transaction Management in Procedure whereas we can't go in Function."
+		},
+		{
+			"ID":41,
+			"quesID":41,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Why stored procedures can not be called from functions ?",
+			"ans":"It is  because a function is not allowed to modify database state, and stored procedures are allowed to modify database state. A function can have only select statement which doesn't affect the database state.  A stored procedure can have DDL, DML, DCL, TCL statements."
+		},
+		{
+			"ID":42,
+			"quesID":42,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"If a stored procedure is executing slowly, how it can be optimized ?",
+			"ans":"Instead of SELECT *, use column list with select statement, <br /> To find the records in a table, use ROWS column of sysindexes, <br /> Use EXISTS keyword to do an existence check instead of count() aggregate,<br /> Use UNION operator to replace OR operation, <br /> UNION, UNION ALL, INTERSECT, EXCEPT are useful operations for the simple  tasks that can replace JOIN operations.<br /> Avoid calling functions repeatedly within your Stored Procedures, triggers, functions, and batches.  Assign the result of function to some variable and use it everywhere, <br /> Using correct data type as required<br /> Do not use sp_xxxxx to name a stored procedure as system stored procedure starts with sp_. During search, it will first look for system stored procedures, <br /> Use  SET NOCOUNT ON  to avoid extra network roundtrip, <br /> Avoid LIKE clause. Above there is query for the same <br />"
+		},
+		{
+			"ID":43,
+			"quesID":43,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"what is difference between delete and truncate command ?",
+			"ans":"DELETE is a DML Command. <br /> DELETE statement is executed using a row lock, each row in the table is locked for deletion.<br /> We can specify filters in where clause<br /> It deletes specified data if where condition exists.<br /> Delete activates a trigger because the operation are logged individually.<br /> Slower than truncate because, it keeps logs.<br /> Rollback is possible. <br/><br/> TRUNCATE is a DDL command.<br /> TRUNCATE TABLE always locks the table and page but not each row. <br /> Cannot use Where Condition. <br /> It Removes all the data. <br /> TRUNCATE TABLE cannot activate a trigger because the operation does not log individual row deletions. <br /> Faster in performance wise, because it doesn't keep any logs. <br /> Rollback is not possible."
+		},
+		{
+			"ID":44,
+			"quesID":44,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How will you fetch the data from a table in xml format ?",
+			"ans":"SELECT * FROM TRANSPOSE FOR XML PATH('')"
+		},
+		{
+			"ID":45,
+			"quesID":45,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How will you insert values in more than one table using single insert statement ?",
+			"ans":"We can do so using trigger"
+		},
+		{
+			"ID":46,
+			"quesID":46,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What is trigger ?",
+			"ans":"A trigger is a special kind of stored procedure that automatically executes when an event occurs in the database server. Triggers are designed to execute in response to the DML statement like DELETE, INSERT, or UPDATE or DDL statement  like CREATE, ALTER, or DROP or a database operation like SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN."
+		},
+		{
+			"ID":47,
+			"quesID":47,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Can you create a simple trigger which inserts data in a table on updating table EMPLOYEE?",
+			"ans":"CREATE TRIGGER TRG12345 ON MASTER.DBO.EMPLOYEE <br /> FOR UPDATE AS <br /> INSERT INTO NEW_TABLE VALUES('INDIA','PATNA',1)"
+		},
+		{
+			"ID":48,
+			"quesID":48,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"What will hapeen if a trigger inserts data on the same table ?",
+			"ans":"trigger inserts data once on being fired."
+		},
+		{
+			"ID":49,
+			"quesID":49,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Can we use trigger inside trigger ?",
+			"ans":"Yes, the trigger can be nested. Triggers can be nested to a maximum of 32 levels."
+		},
+		{
+			"ID":50,
+			"quesID":50,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"Can you write sql query to retrieve your organization reporting hierarchy for a particular employee ?",
+			"ans":"WITH RES AS (<br/> SELECT ID, NAME, MID FROM EMPLOYEE WHERE ID = 1111<br /> UNION ALL<br /> SELECT EMPLOYEE.ID, EMPLOYEE.NAME, EMPLOYEE.MID FROM EMPLOYEE<br /> JOIN RES<br /> ON EMPLOYEE.ID = RES.MID )<br /> SELECT EI1.NAME AS EMPLOYEENAME, ISNULL(EI2.NAME,'NO BOSS') AS MANAGERNAME FROM RES EI1<br /> LEFT JOIN RES EI2<br /> ON EI1.MID = EI2.ID"
+		},
+		{
+			"ID":51,
+			"quesID":51,
+			"user":"kmukund439@gmail.com",
+			"domain":"C#",
+			"ques":"What is C# ?",
+			"ans":"C# is a multi-paradigm programming language encompassing  <br/> strong typing, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines. <br/> It was developed by Microsoft within its .NET initiative and later approved as a standard by Ecma (ECMA-334) and ISO (ISO/IEC 23270:2006). <br/> C# is one of the programming languages designed for the Common Language Infrastructure."
+		},
+		{
+			"ID":52,
+			"quesID":52,
+			"user":"kmukund439@gmail.com",
+			"domain":"C#",
+			"ques":"What are constant and readonly ?",
+			"ans":"Constants are the variable whose value don't change throughout program. It is compile time constant. It is run time constant. </br> Operations with constants run under checked context by default. It is created in ild directly. </br> Dynamically generated value can't be assigned to constant.</br> Readonly variables are the variable whose value don't change except in consructor.</br> Operations with readonly variables run under unchecked context by default. </br> It is compiled to IL code. Dynamically generated value can be assigned to the variable</br></h4>"
+		},
+		{
+			"ID":53,
+			"quesID":53,
+			"user":"kmukund439@gmail.com",
+			"domain":"js",
+			"ques":"On an html page, there is a div(div section=SQL) with many h3 tags.  How will you change the background color of h3 tag at second last odd position ?",
+			"ans":"const h3Elements = $('[section=SQL] h3:nth-child(odd)');</br> const len = h3Elements.length;</br> const secondlastElement  = h3Elements.eq(len-2);</br> $(secondlastElement).css('background-color', 'red');</br> Alternatively : $('[section='SQL'] h3:nth-child(odd)').eq(-2).css('background-color', 'red');"
+		},
+		{
+			"ID":54,
+			"quesID":54,
+			"user":"kmukund439@gmail.com",
+			"domain":"js",
+			"ques":"How will you create an array with 10 elements each differing by 3 starting from 100 ?",
+			"ans":"var res = [...Array(10).keys()].map(el=> (el * 3) + 100);"
+		},
+		{
+			"ID":55,
+			"quesID":55,
+			"user":"kmukund439@gmail.com",
+			"domain":"js",
+			"ques":"What are the different ways to append some dynamic data to a string ?",
+			"ans":"let str = Welcome to the universe of programming in <br/> let domain = javascript <br/> 1. str+' '+domain <br/> 2. `${str} ${domain}`  3. str.concat(' ').concat(domain) / str.concat(' ',domain)<br/> 4. [str,' ',domain].join('')"
+		},
+		{
+			"ID":56,
+			"quesID":56,
+			"user":"kmukund439@gmail.com",
+			"domain":"sql",
+			"ques":"How to find a particular word in a database using procedure?",
+			"ans":"CREATE PROCEDURE dbo.sp_findStringInTable(@stringToFind VARCHAR(40), @database<br/>SYSNAME, @schema SYSNAME, @table SYSNAME)<br/> AS BEGIN SET @stringToFind = '%' + @stringToFind + '%'<br/> DECLARE @sqlCommand VARCHAR(150) = ' SELECT * FROM '+ @database +'.'+<br/>@schema +'.'+ @table +' WHERE '<br/> SELECT @sqlCommand = @sqlCommand + ' '+ COLUMN_NAME +' LIKE '''+<br/>@stringToFind+''' OR ' FROM INFORMATION_SCHEMA.COLUMNS<br/> WHERE TABLE_NAME = @table AND TABLE_SCHEMA = @schema<br/> SET @sqlCommand = SUBSTRING(@sqlCommand,1,LEN(@sqlCommand)-3)<br/>EXEC(@sqlCommand) END "
+		},
+		{
+			"ID":57,
+			"quesID":57,
+			"user":"kmukund439@gmail.com",
+			"domain":"js",
+			"ques": "How will you sort JSON data people having property age agewise in ascending order ?",
+			"ans":"people.sort((a,b) => a.Age - b.Age)"
+		}
+	]
+}
