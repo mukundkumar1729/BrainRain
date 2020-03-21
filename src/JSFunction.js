@@ -43,7 +43,7 @@ function HideShow(e){
         $('#dvQuesAnsTable').dataTable({
           "order":[],
           "lengthChange": true,
-          "pageLength": 25,
+          "pageLength": 100,
           dom: 'Bfrtip',
           buttons: [
             'copy', 'csv', 'excel', 'pdf','print'
