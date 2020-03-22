@@ -1,4 +1,3 @@
-	$(document).ready(function(){
         var fileUploadPath= './data/dataRepository.json';
         $.ajax({
                 url: fileUploadPath,
@@ -15,13 +14,10 @@ function HideShow(e){
   debugger;
     $('tr[data-domain]').hide();
     let domainType = e.value;
-
-    if(domainType == "all"){
-      $('tr[data-domain]').show();
-    }
-    else{
-      $(`tr[data-domain="${domainType}"]`).show();
-    }
+  let domainTypeValue = `data-domain-${e.value}`;
+  const table = $('#dvQuesAnsTable').DataTable(); 
+  table.search(domainTypeValue).draw();
+    $('input[type="search"]').val('');
 }
 
     function ProcessQuesAns(data){
@@ -30,7 +26,8 @@ function HideShow(e){
         for(var item of data){
             options.includes(item.domain) ? '' : options.push(item.domain);
             if(item.ques.trim() != '' ){
-                html += `<tr data-domain='${item.domain.toLowerCase()}'><td>`;
+                html += '<tr><td>';
+                html += `<span style='display:none'>data-domain-${item.domain.toLowerCase()}</span>`;
                 html += CreateElementForQuesAns(item.ques,item.domain,'ques');
                 html += CreateElementForQuesAns(item.ans,item.domain,'ans');
                 html += '</td></tr>';
@@ -43,12 +40,12 @@ function HideShow(e){
         $('#dvQuesAnsTable').dataTable({
           "order":[],
           "lengthChange": true,
-          "pageLength": 100,
+          "pageLength": 25,
           dom: 'Bfrtip',
           buttons: [
             'copy', 'csv', 'excel', 'pdf','print'
         ]
-        });
+        });    
     }
 
     function CreateElementForQuesAns(item, domain, style){
