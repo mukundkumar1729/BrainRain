@@ -1,3 +1,4 @@
+ $(document).ready(function(){
         var fileUploadPath= './data/dataRepository.json';
         $.ajax({
                 url: fileUploadPath,
@@ -12,8 +13,6 @@
 
 function HideShow(e){
   debugger;
-    $('tr[data-domain]').hide();
-    let domainType = e.value;
   let domainTypeValue = `data-domain-${e.value}`;
   const table = $('#dvQuesAnsTable').DataTable(); 
   table.search(domainTypeValue).draw();
