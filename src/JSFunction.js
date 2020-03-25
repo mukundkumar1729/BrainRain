@@ -1,5 +1,4 @@
 let quesAnsData = [];
-let quesAnsDataTable = '';
 $(document).ready(function(){
   GetDataOnPageLoad();
          });
@@ -41,6 +40,9 @@ function HideShow(e){
 
     function ProcessQuesAns(data){
       debugger;
+      if(quesAnsData.length > 0){
+        $('#dvQuesAnsTable').DataTable().clear().destroy();
+      }
         var html = '';
         let options = [];
         for(var item of data){
@@ -59,10 +61,9 @@ function HideShow(e){
         dvQuesAns.innerHTML= html;
         
           debugger;
-          if(quesAnsData.length == 0){
-          
-          quesAnsDataTable = $('#dvQuesAnsTable').DataTable({
+        $('#dvQuesAnsTable').DataTable({
           "order":[],
+          "destroy":true,
           "lengthChange": true,
           "pageLength": 25,
           dom: 'Bfrtip',
@@ -70,7 +71,6 @@ function HideShow(e){
             'copy', 'csv', 'excel', 'pdf','print'
         ]
         });
-      }    
     }
 
     function CreateElementForQuesAns(item, domain, style){
@@ -103,7 +103,7 @@ function HideShow(e){
   
   function CreateQuesAns(){
     debugger;
-    var quesObj = quesAnsData[quesAnsData.length-1] ;
+    var quesObj = quesAnsData[quesAnsData.length-1];
     const id=quesObj.ID + 1;
     const quesID =quesObj.quesID + 1;
     let control = $('.domain selected:option');
@@ -119,8 +119,6 @@ function HideShow(e){
 			"ans":answer
     };
     quesAnsData.push(quesAns);
-     let tbl =$('#dvQuesAnsTable').DataTable();    
-     tbl.push(quesAns);
     if(confirm('Do you want to go to ques ans lists ?')){
       GetDataOnPageLoad();
     }
