@@ -1,25 +1,46 @@
- $(document).ready(function(){
-        var fileUploadPath= './data/dataRepository.json';
-        $.ajax({
-                url: fileUploadPath,
-                contentType:'json',
-                success: function(data,status){
-                ProcessQuesAns(data.quesAns);   
+let quesAnsData = [];
+let quesAnsDataTable = '';
+$(document).ready(function(){
+  GetDataOnPageLoad();
+         });
+
+         function GetDataOnPageLoad(){
+           debugger;
+          var fileUploadPath= './data/dataRepository.json';
+          debugger;
+          if(quesAnsData.length == 0){
+            $.ajax({
+              url: fileUploadPath,
+              contentType:'json',
+              success: function(data,status){
+                debugger;
+                  ActionOnPageLoad(data.quesAns);
+                  quesAnsData = data.quesAns; 
                 },
                 error: function(err, status){
                 }
             });
-        });
+          }else{
+            ActionOnPageLoad(quesAnsData);
+          }
+         }
 
+         function ActionOnPageLoad(data){
+          ShowSingleDiv();
+          ProcessQuesAns(data);
+          AlignSearchBox();
+         }
 function HideShow(e){
+
+  let domainTypeValue =  `data-domain-${e.value == "all" ? "" : e.value}`;
   debugger;
-  let domainTypeValue = `data-domain-${e.value}`;
   const table = $('#dvQuesAnsTable').DataTable(); 
   table.search(domainTypeValue).draw();
     $('input[type="search"]').val('');
 }
 
     function ProcessQuesAns(data){
+      debugger;
         var html = '';
         let options = [];
         for(var item of data){
@@ -36,7 +57,11 @@ function HideShow(e){
         var dvQuesAns = document.getElementById('dvQuesAns');
         dvQuesAns.innerHTML = '';
         dvQuesAns.innerHTML= html;
-        $('#dvQuesAnsTable').dataTable({
+        
+          debugger;
+          if(quesAnsData.length == 0){
+          }
+          quesAnsDataTable = $('#dvQuesAnsTable').DataTable({
           "order":[],
           "lengthChange": true,
           "pageLength": 25,
@@ -50,21 +75,58 @@ function HideShow(e){
     function CreateElementForQuesAns(item, domain, style){
         style = style == 'ques' ? "background-color:white;margin-top:10px" :"background-color:green";
         let row = `<div class='row'>
-                    <div class='col-md-12' style='${style}'>${item}</div></div>`;
+                    <div class='col-md-12 col-12' style='${style}'>${item}</div></div>`;
         return row;
     }
 
     function CreateOptionForQuesAns(options){
+      debugger;
       var ddl = document.getElementsByClassName('domain')[0];
-      if(ddl.options.length == 0)
-      {
+      ddl.options.length = 0;
         ddl.options[ddl.options.length] = new Option("All", "all");
       for(option of options) {
         ddl.options[ddl.options.length] = new Option(option.toUpperCase(), option.toLowerCase());
     }
   }
-  }
 	
 	function Redirect(page){
 		window.location.href = page+ '.html';
+  }
+
+  function AlignSearchBox(){
+		const width = screen.width;
+		if(width <= 640){
+      $("#dvQuesAnsTable_filter").css({"margin-top": "0", "float": "left"});
+		}
+  }
+  
+  function CreateQuesAns(){
+    debugger;
+    var quesObj = quesAnsData[quesAnsData.length-1] ;
+    const id=quesObj.ID + 1;
+    const quesID =quesObj.quesID + 1;
+    let control = $('.domain selected:option');
+    const domain = $('.domain selected:option').val() == null ? "misc" : $('.domain selected:option').val();
+    const question = $('#question').val();
+    const answer =$('#answer').val();
+    var quesAns = {
+      "ID":id,
+			"quesID":quesID,
+			"user":"kmukund439@gmail.com",
+			"domain":domain,
+			"ques":question,
+			"ans":answer
+    };
+    quesAnsData.push(quesAns);
+     let tbl =$('#dvQuesAnsTable').DataTable();    
+     tbl.push(quesAns);
+    if(confirm('Do you want to go to ques ans lists ?')){
+      GetDataOnPageLoad();
+    }
+  }
+
+  function ShowSingleDiv(div){
+    $('.spa-div').hide();
+    div = div == null ? 'listing' : div;
+    $('#'+ div).show();
   }

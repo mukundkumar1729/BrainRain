@@ -18,20 +18,21 @@
 </head>
 <body>
 	<div class="container">
+		<div id ="listing" class="spa-div">
     <div class='row first-row'>
-			<div class='col-md-1'>
+			<div class='col-md-1 col-3'>
 				<label>Domain</label>
 			</div>
-			<div class='col-md-1'>
+			<div class='col-md-1  col-3'>
 				<select class='domain' onchange='HideShow(this);' style='width:100px'>
 				</select>
 			</div>
-			<div class='col-md-5'></div>
-			<div class='col-md-2'>
-				<a href="">Add Question</a>
+			<div class='col-md-5  col-0'></div>
+			<div class='col-md-2  col-5'>
+				<button type="button" class="btn btn-primary" onclick="ShowSingleDiv('updateBrainRain')">Add Question</button>	
 			</div>
-			<div class='col-md-1 text-right'>Hello</div>
-			<div class='col-md-1'><span class='user'>kmukund439@gmail.com</span></div>
+			<div class='col-md-1 col-2 text-right'>Hello</div>
+			<div class='col-md-1 col-5'><span class='user'>kmukund439@gmail.com</span></div>
 		</div>
 		 <div class="row">
 			<div class="col-md-12">
@@ -46,7 +47,53 @@
 					</tbody>
 				</table>
 			</div>
-    </div>
+	</div>
+</div>
+<div id="updateBrainRain" class="spa-div">
+	<div class='row' style="margin-top:10px">
+		<div class='col-md-1'>
+			<label>Domain</label>
+		</div>
+		<div class='col-md-1'>
+			<select class='domain'>
+				<option value='sql'>SQL</option>
+				<option value='c#'>C#</option>
+				<option value='mvc'>MVC</option>
+				<option value='js'>Javascript</option>
+				<option value='jq'>Jquery</option>
+				<option value='misc'>Misc</option>
+			</select>
+		</div>
+		<div class='col-md-7'></div>
+		<div class='col-md-1'>Hello</div>
+		<div class='col-md-1'><span class='user'>kmukund439@gmail.com</span></div>
+	</div>
+	<div class='row'>
+		<div class='col-md-12'>
+			<label>What is your Question ?</label>
+		</div>
+		<div class='col-md-12'>
+			<input type='text' id='question' placeholder='Question ???'/>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='col-md-12'>
+			<label>Your answer please !</label>
+		</div>
+		<div class='col-md-12'>
+			<textarea type='text' id='answer' placeholder='Answer !!!' rows='10'></textarea>
+		</div>
+	</div> 
+	<div class='row'>
+	<div class="col-md-4"></div>
+		<div class='col-md-1'>
+			<button type='button' class='btn btn-primary' title='Save Changes' onclick='CreateQuesAns();'>Save</button>
+		</div>
+		<div class='col-md-1'>
+			<button type='button' class='btn btn-primary' title='Save Changes' onclick='ShowSingleDiv("listing")'>Cancel</button>
+		</div>
+	</div>
+</div>
 	</div>
 </body>
 </html>

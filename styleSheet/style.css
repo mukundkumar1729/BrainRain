@@ -31,7 +31,7 @@ table.dataTable thead th, table.dataTable thead td{
 	border-bottom: none;
 }
 input[type="search"]{
-	width:175px !important;
+	width:175px;
 }
 thead{
 	display:none;
