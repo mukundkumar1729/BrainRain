@@ -4,15 +4,12 @@ $(document).ready(function(){
          });
 
          function GetDataOnPageLoad(){
-           debugger;
           var fileUploadPath= './data/dataRepository.json';
-          debugger;
           if(quesAnsData.length == 0){
             $.ajax({
               url: fileUploadPath,
               contentType:'json',
               success: function(data,status){
-                debugger;
                   ActionOnPageLoad(data.quesAns);
                   quesAnsData = data.quesAns; 
                 },
@@ -32,14 +29,12 @@ $(document).ready(function(){
 function HideShow(e){
 
   let domainTypeValue =  `data-domain-${e.value == "all" ? "" : e.value}`;
-  debugger;
   const table = $('#dvQuesAnsTable').DataTable(); 
   table.search(domainTypeValue).draw();
     $('input[type="search"]').val('');
 }
 
     function ProcessQuesAns(data){
-      debugger;
       if(quesAnsData.length > 0){
         $('#dvQuesAnsTable').DataTable().clear().destroy();
       }
@@ -60,10 +55,8 @@ function HideShow(e){
         dvQuesAns.innerHTML = '';
         dvQuesAns.innerHTML= html;
         
-          debugger;
         $('#dvQuesAnsTable').DataTable({
           "order":[],
-          "destroy":true,
           "lengthChange": true,
           "pageLength": 25,
           dom: 'Bfrtip',
@@ -81,7 +74,6 @@ function HideShow(e){
     }
 
     function CreateOptionForQuesAns(options){
-      debugger;
       var ddl = document.getElementsByClassName('domain')[0];
       ddl.options.length = 0;
         ddl.options[ddl.options.length] = new Option("All", "all");
@@ -102,12 +94,11 @@ function HideShow(e){
   }
   
   function CreateQuesAns(){
-    debugger;
     var quesObj = quesAnsData[quesAnsData.length-1];
     const id=quesObj.ID + 1;
     const quesID =quesObj.quesID + 1;
-    let control = $('.domain selected:option');
-    const domain = $('.domain selected:option').val() == null ? "misc" : $('.domain selected:option').val();
+    let ddl = $('#updateBrainRain .domain')[0];
+    const domain = ddl.value == null ? "misc" : ddl.value;
     const question = $('#question').val();
     const answer =$('#answer').val();
     var quesAns = {
