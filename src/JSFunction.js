@@ -60,7 +60,7 @@ function HideShow(e){
         
           debugger;
           if(quesAnsData.length == 0){
-          }
+          
           quesAnsDataTable = $('#dvQuesAnsTable').DataTable({
           "order":[],
           "lengthChange": true,
@@ -69,7 +69,8 @@ function HideShow(e){
           buttons: [
             'copy', 'csv', 'excel', 'pdf','print'
         ]
-        });    
+        });
+      }    
     }
 
     function CreateElementForQuesAns(item, domain, style){
