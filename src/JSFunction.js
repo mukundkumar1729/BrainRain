@@ -120,17 +120,22 @@ function CreateQuesAns() {
     const domain = ddl.value == null ? constant.misc : ddl.value;
     const question = $(control.question).val();
     const answer = $(control.answer).val();
-    var quesAns = {
-        "ID": id,
-        "quesID": quesID,
-        "user": "kmukund439@gmail.com",
-        "domain": domain,
-        "ques": question,
-        "ans": answer
-    };
-    quesAnsData.push(quesAns);
-    if (confirm(constant.confirmListing)) {
-        GetDataOnPageLoad();
+    if(question.trim() == '' && answer.trim() == ''){
+        alert("Question and answer can't be empty");
+        $(control.question).focus();
+    }else{
+        var quesAns = {
+            "ID": id,
+            "quesID": quesID,
+            "user": "kmukund439@gmail.com",
+            "domain": domain,
+            "ques": question,
+            "ans": answer
+        };
+        quesAnsData.push(quesAns);
+        if (confirm(constant.confirmListing)) {
+            GetDataOnPageLoad();
+        }
     }
 }
 
@@ -149,20 +154,22 @@ function PreUpdateQuesAns(id) {
 function UpdateQuesAns(el) {
     debugger;
     const id = $(el).attr("itemID");
-    const ques = $(control.question).val();
-    const ans = $(control.answer).val();
-    if (quesAnsData[id].ques == ques && quesAnsData[id].ans == ans) {
-        alert(constant.alertNoChange);
-        return false;
-    } else {
-        quesAnsData[id - 1].ques = ques;
-        quesAnsData[id - 1].ans = ans;
+    const question = $(control.question).val();
+    const answer = $(control.answer).val();
+    if(question.trim() == '' && answer.trim() == ''){
+        alert("Question and answer can't be empty");
+        $(control.question).focus();
+    } else if (quesAnsData[id].ques == ques && quesAnsData[id].ans == ans) {
+            alert(constant.alertNoChange);
+            return false;
+        } else {
+            quesAnsData[id - 1].ques = ques;
+            quesAnsData[id - 1].ans = ans;
+            if (confirm(constant.confirmListing)) {
+                GetDataOnPageLoad();
+            }
+        }
     }
-
-    if (confirm(constant.confirmListing)) {
-        GetDataOnPageLoad();
-    }
-}
 
 function DeleteQuesAns(id) {
     if (confirm(constant.confirmDelete)) {
