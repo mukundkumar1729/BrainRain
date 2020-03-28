@@ -3,6 +3,7 @@
 	--label-color:rgb(255,255,255);
 	--user-color:rgb(255,0,0);
 	--full-length:100%;
+	--style-none:none;
 }
 
 body{
@@ -28,13 +29,13 @@ table.dataTable td{
 	background-color:var(--body-color);
 }
 table.dataTable thead th, table.dataTable thead td{
-	border-bottom: none;
+	border-bottom: var(--style-none);
 }
 input[type="search"]{
 	width:175px;
 }
 thead{
-	display:none;
+	display:var(--style-none);
 }
 #dvQuesAnsTable_filter{
 	margin-top:-30px;

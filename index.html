@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>BrainRain</title>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
-  <script type="text/javascript" src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
-  <link href="StyleSheet/style.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="src/JSFunction.js"></script>
-</head>
-<body>
-	<div class="container">
-		<div id ="listing" class="spa-div">
-    <div class='row first-row'>
-			<div class='col-md-1 col-3'>
-				<label>Domain</label>
-			</div>
-			<div class='col-md-1  col-3'>
-				<select class='domain' onchange='HideShow(this);' style='width:100px'>
-				</select>
-			</div>
-			<div class='col-md-5  col-0'></div>
-			<div class='col-md-2  col-5'>
-				<button type="button" class="btn btn-primary" onclick="ShowSingleDiv('updateBrainRain')">Add Question</button>	
-			</div>
-			<div class='col-md-1 col-2 text-right'>Hello</div>
-			<div class='col-md-1 col-5'><span class='user'>kmukund439@gmail.com</span></div>
-		</div>
-		 <div class="row">
-			<div class="col-md-12">
-				<table id="dvQuesAnsTable">
-					<thead>
-						<tr>
-							<th></th>
-						</tr>
-					</thead>
-					<tbody id="dvQuesAns">
 
-					</tbody>
-				</table>
-			</div>
-	</div>
-</div>
-<div id="updateBrainRain" class="spa-div">
-	<div class='row' style="margin-top:10px">
-		<div class='col-md-1'>
-			<label>Domain</label>
-		</div>
-		<div class='col-md-1'>
-			<select class='domain'>
-				<option value='sql'>SQL</option>
-				<option value='c#'>C#</option>
-				<option value='mvc'>MVC</option>
-				<option value='js'>Javascript</option>
-				<option value='jq'>Jquery</option>
-				<option value='misc'>Misc</option>
-			</select>
-		</div>
-		<div class='col-md-7'></div>
-		<div class='col-md-1'>Hello</div>
-		<div class='col-md-1'><span class='user'>kmukund439@gmail.com</span></div>
-	</div>
-	<div class='row'>
-		<div class='col-md-12'>
-			<label>What is your Question ?</label>
-		</div>
-		<div class='col-md-12'>
-			<input type='text' id='question' placeholder='Question ???'/>
-		</div>
-	</div>
-	<div class='row'>
-		<div class='col-md-12'>
-			<label>Your answer please !</label>
-		</div>
-		<div class='col-md-12'>
-			<textarea type='text' id='answer' placeholder='Answer !!!' rows='10'></textarea>
-		</div>
-	</div> 
-	<div class='row'>
-	<div class="col-md-4"></div>
-		<div class='col-md-1'>
-			<button type='button' class='btn btn-primary' title='Save Changes' onclick='CreateQuesAns();'>Save</button>
-		</div>
-		<div class='col-md-1'>
-			<button type='button' class='btn btn-primary' title='Save Changes' onclick='ShowSingleDiv("listing")'>Cancel</button>
-		</div>
-	</div>
-</div>
-	</div>
+<head>
+    <title>BrainRain</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
+    <link href="StyleSheet/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="src/JSFunction.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="listing" class="spa-div">
+            <div class='row first-row'>
+                <div class='col-md-1 col-3'>
+                    <label>Domain</label>
+                </div>
+                <div class='col-md-1  col-3'>
+                    <select class='domain' onchange='HideShow(this);' style='width:100px'>
+                    </select>
+                </div>
+                <div class='col-md-5  col-0'></div>
+                <div class='col-md-2  col-5'>
+                    <button type="button" class="btn btn-primary" onclick="PreCreateQuesAns()">Add Question</button>
+                </div>
+                <div class='col-md-1 col-2 text-right'>Hello</div>
+                <div class='col-md-1 col-5'><span class='user'>kmukund439@gmail.com</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="dvQuesAnsTable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="dvQuesAns">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="updateBrainRain" class="spa-div">
+            <div class='row' style="margin-top:10px">
+                <div class='col-md-1'>
+                    <label>Domain</label>
+                </div>
+                <div class='col-md-1'>
+                    <select class='domain'>
+                        <option value='sql'>SQL</option>
+                        <option value='c#'>C#</option>
+                        <option value='mvc'>MVC</option>
+                        <option value='js'>Javascript</option>
+                        <option value='jq'>Jquery</option>
+                        <option value='misc'>Misc</option>
+                    </select>
+                </div>
+                <div class='col-md-7'></div>
+                <div class='col-md-1'>Hello</div>
+                <div class='col-md-1'><span class='user'>kmukund439@gmail.com</span></div>
+            </div>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <label>What is your Question ?</label>
+                </div>
+                <div class='col-md-12'>
+                    <input type='text' id='question' placeholder='Question ???' />
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <label>Your answer please !</label>
+                </div>
+                <div class='col-md-12'>
+                    <textarea type='text' id='answer' placeholder='Answer !!!' rows='10'></textarea>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col-md-4"></div>
+                <div class='col-md-1'>
+                    <button type='button' id="saveButton" class='btn btn-primary' value='save' title='Save Changes' onclick='SaveQuesAns(this);'>Save</button>
+                </div>
+                <div class='col-md-1'>
+                    <button type='button' class='btn btn-primary' title='Save Changes' onclick='ShowSingleDiv("#listing")'>Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
