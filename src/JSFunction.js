@@ -92,7 +92,7 @@ function CreateOptionForQuesAns(options) {
 function SaveQuesAns(el) {
     debugger;
     const mode = $(el).val();
-    if (mode == constant.update) {
+    if (mode == constant.update.toLowerCase()) {
         UpdateQuesAns(el);
     } else {
         CreateQuesAns();
@@ -159,12 +159,12 @@ function UpdateQuesAns(el) {
     if(question.trim() == '' && answer.trim() == ''){
         alert("Question and answer can't be empty");
         $(control.question).focus();
-    } else if (quesAnsData[id].ques == ques && quesAnsData[id].ans == ans) {
+    } else if (quesAnsData[id].ques == question && quesAnsData[id].ans == answer) {
             alert(constant.alertNoChange);
             return false;
         } else {
-            quesAnsData[id - 1].ques = ques;
-            quesAnsData[id - 1].ans = ans;
+            quesAnsData[id - 1].ques = question;
+            quesAnsData[id - 1].ans = answer;
             if (confirm(constant.confirmListing)) {
                 GetDataOnPageLoad();
             }
