@@ -31,15 +31,15 @@ function ActionOnPageLoad(data) {
 
 function HideShow(e) {
 
-    let domainTypeValue = `data-domain-${e.value == "all" ? "" : e.value}`;
-    const table = $('#dvQuesAnsTable').DataTable();
+    let domainTypeValue = `${constant.dataDomain}-${e.value == "all" ? "" : e.value}`;
+    const table = $(control.dvQuesAnsTable).DataTable();
     table.search(domainTypeValue).draw();
     $('input[type="search"]').val('');
 }
 
 function ProcessQuesAns(data) {
     if (quesAnsData.length > 0) {
-        $('#dvQuesAnsTable').DataTable().clear().destroy();
+        $(control.dvQuesAnsTable).DataTable().clear().destroy();
     }
     var html = '';
     let options = [];
@@ -54,11 +54,11 @@ function ProcessQuesAns(data) {
         }
     }
     CreateOptionForQuesAns(options);
-    var dvQuesAns = document.getElementById('dvQuesAns');
-    dvQuesAns.innerHTML = '';
-    dvQuesAns.innerHTML = html;
+    var dvQuesAns = $(control.dvQuesAns);
+    dvQuesAns.html('');
+    dvQuesAns.html(html);
 
-    $('#dvQuesAnsTable').DataTable({
+    $(control.dvQuesAnsTable).DataTable({
         "order": [],
         "lengthChange": true,
         "pageLength": 25,
@@ -83,7 +83,7 @@ function CreateElementForQuesAns(item, qnsType) {
 function CreateOptionForQuesAns(options) {
     var ddl = document.getElementsByClassName('domain')[0];
     ddl.options.length = 0;
-    ddl.options[ddl.options.length] = new Option("All", "all");
+    ddl.options[ddl.options.length] = new Option(constant.all, constant.all.toLowerCase());
     for (option of options) {
         ddl.options[ddl.options.length] = new Option(option.toUpperCase(), option.toLowerCase());
     }
@@ -106,6 +106,8 @@ function PreCreateQuesAns() {
     $(el).val(constant.add.toLowerCase());
     $(el).text(constant.add);
     $(`${control.updateBrainRain} .domain`)[0].disabled = false;
+    $(control.question).val('');
+    $(control.answer).text('');
 }
 
 
@@ -114,10 +116,10 @@ function CreateQuesAns() {
     var quesObj = quesAnsData[quesAnsData.length - 1];
     const id = quesObj.ID + 1;
     const quesID = quesObj.quesID + 1;
-    let ddl = $('#updateBrainRain .domain')[0];
-    const domain = ddl.value == null ? "misc" : ddl.value;
-    const question = $('#question').val();
-    const answer = $('#answer').val();
+    let ddl = $(`${control.updateBrainRain} .domain`)[0];
+    const domain = ddl.value == null ? constant.misc : ddl.value;
+    const question = $(control.question).val();
+    const answer = $(control.answer).val();
     var quesAns = {
         "ID": id,
         "quesID": quesID,
@@ -127,7 +129,7 @@ function CreateQuesAns() {
         "ans": answer
     };
     quesAnsData.push(quesAns);
-    if (confirm('Do you want to go to ques ans lists ?')) {
+    if (confirm(constant.confirmListing)) {
         GetDataOnPageLoad();
     }
 }
@@ -173,7 +175,7 @@ function DeleteQuesAns(id) {
 
 function ShowSingleDiv(div) {
     debugger;
-    $('.spa-div').hide();
+    $(control.spaDiv).hide();
     div = div == null ? control.listing : div;
     $(div).show();
 }
@@ -181,10 +183,14 @@ function ShowSingleDiv(div) {
 function AlignSearchBox() {
     const width = screen.width;
     if (width <= 640) {
-        $("#dvQuesAnsTable_filter").css({
+        $(control,dvQuesAnsTable_filter).css({
             "margin-top": "0",
             "float": "left"
         });
+        if(width < 300){
+            $(`${control.dvQuesAnsTable_filter} ${control.label}`).addClass("text-left");
+      
+        }
     }
 }
 
