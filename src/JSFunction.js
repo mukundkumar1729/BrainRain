@@ -90,7 +90,6 @@ function CreateOptionForQuesAns(options) {
 }
 
 function SaveQuesAns(el) {
-    debugger;
     const mode = $(el).val();
     if (mode == constant.update.toLowerCase()) {
         UpdateQuesAns(el);
@@ -100,7 +99,6 @@ function SaveQuesAns(el) {
 }
 
 function PreCreateQuesAns() {
-    debugger;
     ShowSingleDiv(control.updateBrainRain);
     let el = $(constant.saveButton);
     $(el).val(constant.add.toLowerCase());
@@ -121,7 +119,7 @@ function CreateQuesAns() {
     const question = $(control.question).val();
     const answer = $(control.answer).val();
     if(question.trim() == '' && answer.trim() == ''){
-        alert("Question and answer can't be empty");
+        alert(constant.qnaEmpty);
         $(control.question).focus();
     }else{
         var quesAns = {
@@ -140,7 +138,7 @@ function CreateQuesAns() {
 }
 
 function PreUpdateQuesAns(id) {
-    debugger;
+    
     ShowSingleDiv(control.updateBrainRain);
     let el = $(control.saveButton);
     $(el).val(constant.update.toLocaleLowerCase());
@@ -152,12 +150,11 @@ function PreUpdateQuesAns(id) {
 }
 
 function UpdateQuesAns(el) {
-    debugger;
     const id = $(el).attr("itemID");
     const question = $(control.question).val();
     const answer = $(control.answer).val();
     if(question.trim() == '' && answer.trim() == ''){
-        alert("Question and answer can't be empty");
+        alert(constant.qnaEmpty);
         $(control.question).focus();
     } else if (quesAnsData[id].ques == question && quesAnsData[id].ans == answer) {
             alert(constant.alertNoChange);
@@ -181,7 +178,6 @@ function DeleteQuesAns(id) {
 
 
 function ShowSingleDiv(div) {
-    debugger;
     $(control.spaDiv).hide();
     div = div == null ? control.listing : div;
     $(div).show();
@@ -190,7 +186,7 @@ function ShowSingleDiv(div) {
 function AlignSearchBox() {
     const width = screen.width;
     if (width <= 640) {
-        $(control,dvQuesAnsTable_filter).css({
+        $(control.dvQuesAnsTable_filter).css({
             "margin-top": "0",
             "float": "left"
         });
@@ -213,7 +209,8 @@ const constant = {
     dataDomain: "data-domain",
     confirmDelete: "Are you sure to delete ?",
     confirmListing: "Do you want to go to ques ans lists ?",
-    alertNoChange: "you didn't made any change to update"
+    alertNoChange: "you didn't made any change to update",
+    qnaEmpty: "Question and answer can't be empty"
 }
 
 const control = {
