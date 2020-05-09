@@ -141,8 +141,8 @@
 			"quesID":18,
 			"user":"kmukund439@gmail.com",
 			"domain":"sql",
-			"ques":"Can you compare null with null ?",
-			"ans":"Yes, the output depends upon ANSI_NULLS. When it is set on , the query yields false else true."
+			"ques":"How to achieve Pattern Matching in SQL?",
+			"ans":"1. Using the % wildcard to perform a simple search. <br/> 2. Omitting the patterns using the NOT keyword <br/> 3. Matching a pattern anywhere using the % wildcard twice <br/> 4. Using the _ wildcard to match pattern at a specific position <br/> 5. Matching patterns for specific length"
 		},
 		{
 			"ID":19,
