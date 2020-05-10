@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>BrainRain</title>
     <meta charset="utf-8">
@@ -15,6 +14,20 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
     <link href="StyleSheet/style.css" rel="stylesheet" type="text/css">
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyBN3vM2XOK7uXSgI-KmPqbKp6ZFE4Ws_uI",
+                authDomain: "brainrain-a43d3.firebaseapp.com",
+                databaseURL: "https://brainrain-a43d3.firebaseio.com",
+                projectId: "brainrain-a43d3",
+                storageBucket: "brainrain-a43d3.appspot.com",
+                messagingSenderId: "428403134568",
+                appId: "1:428403134568:web:1df9072c4e624e4243ebdd",
+                measurementId: "G-1S797R81GE"
+              };
+              firebase.initializeApp(firebaseConfig);
+              </script>
     <script type="text/javascript" src="src/JSFunction.js"></script>
 </head>
 
@@ -35,6 +48,11 @@
                 </div>
                 <div class='col-md-1 col-2 text-right'>Hello</div>
                 <div class='col-md-1 col-5'><span class='user'>kmukund439@gmail.com</span></div>
+            </div>
+            <div class="row" id="PrePageLoad">
+                <div class="col-md-12">
+
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-12 col-12">

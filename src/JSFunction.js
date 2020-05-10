@@ -1,12 +1,17 @@
 let quesAnsData = [];
+const dbRef = firebase.database().ref();
+const quesAnsRef = dbRef.child('quesAns');
 $(document).ready(function() {
-    GetDataOnPageLoad();
+    debugger;
+    document.getElementById("PrePageLoad").classList.add("loader");
+    
+    GetDataOnPageLoad_FirebaseDB();
     $(window).resize(function() {
         AlignSearchBox();
     });
 });
 
-function GetDataOnPageLoad() {
+function GetDataOnPageLoad_JSONFile() {
     var fileUploadPath = './data/dataRepository.json';
     if (quesAnsData.length == 0) {
         $.ajax({
@@ -21,6 +26,23 @@ function GetDataOnPageLoad() {
     } else {
         ActionOnPageLoad(quesAnsData);
     }
+}
+
+ function GetDataOnPageLoad_FirebaseDB() {
+    debugger;
+    if (quesAnsData.length == 0) {
+        quesAnsRef.on("child_added", data => {
+            debugger;
+            quesAnsData = data.val(); 
+            ActionOnPageLoad(quesAnsData);
+            debugger;
+            document.getElementById("PrePageLoad").classList.remove("loader");
+        });
+    }else{
+        ActionOnPageLoad(quesAnsData);
+        debugger;
+        document.getElementById("PrePageLoad").classList.remove("loader");
+}
 }
 
 function ActionOnPageLoad(data) {
@@ -43,6 +65,7 @@ function ProcessQuesAns(data) {
     }
     var html = '';
     let options = [];
+    debugger;
     for (var item of data) {
         options.includes(item.domain) ? '' : options.push(item.domain);
         if (item.ques.trim() != '') {
@@ -98,6 +121,7 @@ function SaveQuesAns(el) {
     }
 }
 
+// Clears all the field of QuesAns to create a new QuesAns, updates value of save button to insert data 
 function PreCreateQuesAns() {
     ShowSingleDiv(control.updateBrainRain);
     let el = $(constant.saveButton);
@@ -109,8 +133,8 @@ function PreCreateQuesAns() {
 }
 
 
-
 function CreateQuesAns() {
+    debugger;
     var quesObj = quesAnsData[quesAnsData.length - 1];
     const id = quesObj.ID + 1;
     const quesID = quesObj.quesID + 1;
@@ -118,6 +142,7 @@ function CreateQuesAns() {
     const domain = ddl.value == null ? constant.misc : ddl.value;
     const question = $(control.question).val();
     const answer = $(control.answer).val();
+    debugger;
     if(question.trim() == '' && answer.trim() == ''){
         alert(constant.qnaEmpty);
         $(control.question).focus();
@@ -131,12 +156,27 @@ function CreateQuesAns() {
             "ans": answer
         };
         quesAnsData.push(quesAns);
+        CreateQuesAns_FirebaseDB(quesAns)
         if (confirm(constant.confirmListing)) {
-            GetDataOnPageLoad();
+            GetDataOnPageLoad_FirebaseDB();
         }
     }
 }
 
+// creates question in firebase db
+function CreateQuesAns_FirebaseDB(quesAns) {
+    //const quesAnsChildRef = quesAnsRef.child('quesAnsDoc');
+    // quesAnsChildRef.push(quesAns, function(){
+    //     console.log("data has been inserted successfully");
+    // });
+    let id = quesAns.ID - 1;
+    const quesAnsChildRef = quesAnsRef.child('quesAnsDoc/' + id);
+    quesAnsChildRef.set(quesAns, function(){
+        console.log("data has been inserted successfully");
+    });
+}
+
+// Pre fills all the field of Ques Ans to make changes and update QuesAns, updates value of save button to update data 
 function PreUpdateQuesAns(id) {
     
     ShowSingleDiv(control.updateBrainRain);
@@ -150,23 +190,35 @@ function PreUpdateQuesAns(id) {
 }
 
 function UpdateQuesAns(el) {
+    debugger;
     const id = $(el).attr("itemID");
     const question = $(control.question).val();
     const answer = $(control.answer).val();
     if(question.trim() == '' && answer.trim() == ''){
         alert(constant.qnaEmpty);
         $(control.question).focus();
-    } else if (quesAnsData[id].ques == question && quesAnsData[id].ans == answer) {
+    } else if (quesAnsData[id-1].ques == question && quesAnsData[id-1].ans == answer) {
             alert(constant.alertNoChange);
             return false;
         } else {
             quesAnsData[id - 1].ques = question;
             quesAnsData[id - 1].ans = answer;
+            UpdateQuesAns_FirebaseDB(id, question, answer);
             if (confirm(constant.confirmListing)) {
-                GetDataOnPageLoad();
+                GetDataOnPageLoad_FirebaseDB();
             }
         }
     }
+
+    function UpdateQuesAns_FirebaseDB(id, question, answer) {
+        debugger;
+        const quesAnsChildRef = quesAnsRef.child('quesAnsDoc/' + (id-1));
+        quesAnsChildRef.update({
+            "ques":question,
+            "ans":answer
+        });
+    }
+    
 
 function DeleteQuesAns(id) {
     if (confirm(constant.confirmDelete)) {
@@ -176,13 +228,14 @@ function DeleteQuesAns(id) {
     }
 }
 
-
+// Hides all the div and show only one div (one section / one page)
 function ShowSingleDiv(div) {
     $(control.spaDiv).hide();
     div = div == null ? control.listing : div;
     $(div).show();
 }
 
+// adjusts jquery datatable searchbox position on small screen
 function AlignSearchBox() {
     const width = screen.width;
     if (width <= 640) {
