@@ -25,6 +25,10 @@ input,textarea{
 span.user{
 	color:var(--user-color);
 }
+table.dataTable tbody td{
+	padding-left:5px;
+	padding-right:0px;
+}
 table.dataTable td{
 	background-color:var(--body-color);
 }

@@ -1,8 +1,49 @@
+const constant = {
+    update: "Update",
+    create: "Create",
+    add: "Add",
+    all: "All",
+    misc: "Misc",
+    ques: "ques",
+    ans: "ans",
+    empty: "",
+    dataDomain: "data-domain",
+    confirmDelete: "Are you sure to delete ?",
+    confirmListing: "Do you want to go to ques ans lists ?",
+    alertNoChange: "you didn't made any change to update",
+    qnaEmpty: "Question and answer can't be empty"
+}
+
+const control = {
+    spaDiv: ".spa-div",
+    listing: "#listing",
+    dvQuesAnsTable: "#dvQuesAnsTable",
+    dvQuesAns: "#dvQuesAns",
+    dvQuesAnsTable_filter: "#dvQuesAnsTable_filter",
+    updateBrainRain: "#updateBrainRain",
+    saveButton: "#saveButton",
+    label: "label",
+    question: "#question",
+    answer: "#answer"
+}
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBN3vM2XOK7uXSgI-KmPqbKp6ZFE4Ws_uI",
+    authDomain: "brainrain-a43d3.firebaseapp.com",
+    databaseURL: "https://brainrain-a43d3.firebaseio.com",
+    projectId: "brainrain-a43d3",
+    storageBucket: "brainrain-a43d3.appspot.com",
+    messagingSenderId: "428403134568",
+    appId: "1:428403134568:web:1df9072c4e624e4243ebdd",
+    measurementId: "G-1S797R81GE"
+  };
+  firebase.initializeApp(firebaseConfig);
+
 let quesAnsData = [];
+let quesAnsUploadedData = [];
 const dbRef = firebase.database().ref();
 const quesAnsRef = dbRef.child('quesAns');
 $(document).ready(function() {
-    debugger;
     document.getElementById("PrePageLoad").classList.add("loader");
     
     GetDataOnPageLoad_FirebaseDB();
@@ -29,18 +70,14 @@ function GetDataOnPageLoad_JSONFile() {
 }
 
  function GetDataOnPageLoad_FirebaseDB() {
-    debugger;
     if (quesAnsData.length == 0) {
         quesAnsRef.on("child_added", data => {
-            debugger;
             quesAnsData = data.val(); 
             ActionOnPageLoad(quesAnsData);
-            debugger;
             document.getElementById("PrePageLoad").classList.remove("loader");
         });
     }else{
         ActionOnPageLoad(quesAnsData);
-        debugger;
         document.getElementById("PrePageLoad").classList.remove("loader");
 }
 }
@@ -65,9 +102,9 @@ function ProcessQuesAns(data) {
     }
     var html = '';
     let options = [];
-    debugger;
     for (var item of data) {
         options.includes(item.domain) ? '' : options.push(item.domain);
+        debugger;
         if (item.ques.trim() != '') {
             html += '<tr><td>';
             html += `<span style='display:none'>data-domain-${item.domain.toLowerCase()}</span>`;
@@ -134,7 +171,6 @@ function PreCreateQuesAns() {
 
 
 function CreateQuesAns() {
-    debugger;
     var quesObj = quesAnsData[quesAnsData.length - 1];
     const id = quesObj.ID + 1;
     const quesID = quesObj.quesID + 1;
@@ -169,6 +205,7 @@ function CreateQuesAns_FirebaseDB(quesAns) {
     // quesAnsChildRef.push(quesAns, function(){
     //     console.log("data has been inserted successfully");
     // });
+    // alternate way to achieve the same action
     let id = quesAns.ID - 1;
     const quesAnsChildRef = quesAnsRef.child('quesAnsDoc/' + id);
     quesAnsChildRef.set(quesAns, function(){
@@ -190,10 +227,10 @@ function PreUpdateQuesAns(id) {
 }
 
 function UpdateQuesAns(el) {
-    debugger;
     const id = $(el).attr("itemID");
     const question = $(control.question).val();
     const answer = $(control.answer).val();
+    debugger;
     if(question.trim() == '' && answer.trim() == ''){
         alert(constant.qnaEmpty);
         $(control.question).focus();
@@ -211,7 +248,6 @@ function UpdateQuesAns(el) {
     }
 
     function UpdateQuesAns_FirebaseDB(id, question, answer) {
-        debugger;
         const quesAnsChildRef = quesAnsRef.child('quesAnsDoc/' + (id-1));
         quesAnsChildRef.update({
             "ques":question,
@@ -250,31 +286,79 @@ function AlignSearchBox() {
     }
 }
 
-const constant = {
-    update: "Update",
-    create: "Create",
-    add: "Add",
-    all: "All",
-    misc: "Misc",
-    ques: "ques",
-    ans: "ans",
-    empty: "",
-    dataDomain: "data-domain",
-    confirmDelete: "Are you sure to delete ?",
-    confirmListing: "Do you want to go to ques ans lists ?",
-    alertNoChange: "you didn't made any change to update",
-    qnaEmpty: "Question and answer can't be empty"
-}
+function Upload() {
+            //Reference the FileUpload element.
+            var fileUpload = document.getElementById("fileUpload");
+			
 
-const control = {
-    spaDiv: ".spa-div",
-    listing: "#listing",
-    dvQuesAnsTable: "#dvQuesAnsTable",
-    dvQuesAns: "#dvQuesAns",
-    dvQuesAnsTable_filter: "#dvQuesAnsTable_filter",
-    updateBrainRain: "#updateBrainRain",
-    saveButton: "#saveButton",
-    label: "label",
-    question: "#question",
-    answer: "#answer"
+            //Validate whether File is valid Excel file.
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.xls|.xlsx)$/;
+            if (regex.test(fileUpload.value.toLowerCase())) {
+                if (typeof (FileReader) != "undefined") {
+                    var reader = new FileReader();
+
+                    //For Browsers other than IE.
+                    if (reader.readAsBinaryString) {
+                        reader.onload = function (e) {
+                            ProcessExcel(e.target.result);
+                        };
+                        reader.readAsBinaryString(fileUpload.files[0]);
+                    } else {
+                        //For IE Browser.
+                        reader.onload = function (e) {
+                            var data = "";
+                            var bytes = new Uint8Array(e.target.result);
+                            for (var i = 0; i < bytes.byteLength; i++) {
+                                data += String.fromCharCode(bytes[i]);
+                            }
+                            ProcessExcel(data);
+                        };
+                        reader.readAsArrayBuffer(fileUpload.files[0]);
+                    }
+                } else {
+                    alert("This browser does not support HTML5.");
+                }
+            } else {
+                alert("Please upload a valid Excel file.");
+            }
+        }
+		
+function ProcessExcel(data) {
+		debugger;
+            //Read the Excel File data.
+            var workbook = XLSX.read(data, {
+                type: 'binary'
+            });
+
+            //Read all rows from First Sheet into an JSON array.
+            var excelRows = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[workbook.SheetNames[0]]);
+			quesAnsUploadedData = excelRows;
+            ImportQnsAnsFromExcel(quesAnsUploadedData);
+            GetDataOnPageLoad_JSONFile(quesAnsData);
+        }
+
+// importing data only for json file
+function ImportQnsAnsFromExcel(quesAnsUploadedData)
+{
+	debugger;
+	var id = quesAnsData[quesAnsData.length-1].ID;
+	var quesID = quesAnsData[quesAnsData.length-1].quesID;
+    
+	quesAnsUploadedData.forEach(function(item, index){
+        if(item.ques && item.ans && item.domain)
+        {
+		var quesAns = {
+				"ID": id + 1 + index,
+				"quesID": quesID + 1 + index,
+				"user": "kmukund439@gmail.com",
+				"domain": item.domain,
+				"ques": item.ques,
+				"ans": item.ans
+            }; 
+            debugger;
+            quesAnsData.push(quesAns);
+            CreateQuesAns_FirebaseDB(quesAns);
+        }
+			
+});
 }
