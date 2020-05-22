@@ -19,6 +19,7 @@
     <script type="text/javascript" src="src/JSFunction.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>  
 </head>
 
 <body>
@@ -37,7 +38,7 @@
                     <button type="button" class="btn btn-primary" onclick="PreCreateQuesAns()">Add Question</button>
                 </div>
                 <div class='col-md-1 col-2 text-right'>Hello</div>
-                <div class='col-md-1 col-5'><span class='user'>kmukund439@gmail.com</span></div>
+                <div class='col-md-1 col-5'><span class='user'></span></div>
             </div>
             <div class="row" id="PrePageLoad">
                 <div class="col-md-12">
@@ -85,8 +86,9 @@
                     
 				</div>
                 <div class='col-md-1'>Hello</div>
-                <div class='col-md-1'><span class='user'>kmukund439@gmail.com</span></div>
+                <div class='col-md-1'><span class='user'></span></div>
             </div>
+            <div id="dvAddEditQnsAnsBySave">
             <div class='row'>
                 <div class='col-md-12'>
                     <label>What is your Question ?</label>
@@ -112,6 +114,30 @@
                     <button type='button' class='btn btn-primary' title='Save Changes' onclick='ShowSingleDiv("#listing")'>Cancel</button>
                 </div>
             </div>
+        </div>
+        <div id="dvAddQnsAnsByUpload" style="display:none">
+            <div id="dvAddQnsAnsByUploadLoader"></div>
+            <table id="QuesAnsAddTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="dvQuesAnsAdd">
+
+                </tbody>
+            </table>
+
+            <div class='row'>
+                <div class="col-md-4"></div>
+                <div class='col-md-2 col-4'>
+                    <button type='button' id="importButton" class='btn btn-primary' value='import' title='Save Changes' onclick='ImportQnsAnsFromExcel(this);'>Import All</button>
+                </div>
+                <div class='col-md-1 col-4'>
+                    <button type='button' class='btn btn-primary' title='Save Changes' onclick='ShowSingleDiv("#listing")'>Cancel</button>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </body>

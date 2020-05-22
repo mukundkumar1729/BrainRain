@@ -24,7 +24,12 @@ const control = {
     saveButton: "#saveButton",
     label: "label",
     question: "#question",
-    answer: "#answer"
+    answer: "#answer",
+    dvAddEditQnsAnsBySave:"#dvAddEditQnsAnsBySave",
+    dvAddQnsAnsByUpload:"#dvAddQnsAnsByUpload",
+    AddQnsAnsTable:"#QuesAnsAddTable",
+    dvAddQuesAns:"#dvQuesAnsAdd",
+    dvAddQnsAnsByUploadLoader:"#dvAddQnsAnsByUploadLoader"
 }
 
 const firebaseConfig = {
@@ -41,16 +46,23 @@ const firebaseConfig = {
 
 let quesAnsData = [];
 let quesAnsUploadedData = [];
+
 const dbRef = firebase.database().ref();
 const quesAnsRef = dbRef.child('quesAns');
 $(document).ready(function() {
     document.getElementById("PrePageLoad").classList.add("loader");
-    
+    sendEmail();
     GetDataOnPageLoad_FirebaseDB();
     $(window).resize(function() {
         AlignSearchBox();
     });
 });
+
+function SetUserEmail(){
+    let userEmailID = $('.spa-div .user');
+    $(userEmailID).html();
+    $(userEmailID).val('kmukund439@gmail.com');
+}
 
 function GetDataOnPageLoad_JSONFile() {
     var fileUploadPath = './data/dataRepository.json';
@@ -100,19 +112,11 @@ function ProcessQuesAns(data) {
     if (quesAnsData.length > 0) {
         $(control.dvQuesAnsTable).DataTable().clear().destroy();
     }
-    var html = '';
-    let options = [];
-    for (var item of data) {
-        options.includes(item.domain) ? '' : options.push(item.domain);
-        debugger;
-        if (item.ques.trim() != '') {
-            html += '<tr><td>';
-            html += `<span style='display:none'>data-domain-${item.domain.toLowerCase()}</span>`;
-            html += CreateElementForQuesAns(item, 'ques');
-            html += CreateElementForQuesAns(item, 'ans');
-            html += '</td></tr>';
-        }
-    }
+    
+    const quesAnsTbodyData = GetQuesAnsTBodyHTML(data);
+    var html = quesAnsTbodyData.html;
+    let options = quesAnsTbodyData.options;
+
     CreateOptionForQuesAns(options);
     var dvQuesAns = $(control.dvQuesAns);
     dvQuesAns.html('');
@@ -129,9 +133,27 @@ function ProcessQuesAns(data) {
     });
 }
 
+function GetQuesAnsTBodyHTML(data){
+    let html = '';
+    let options = [];
+    for (var item of data) {
+        options.includes(item.domain) ? '' : options.push(item.domain);
+        debugger;
+        if (item.ques.trim() != '') {
+            html += '<tr><td>';
+            html += `<span style='display:none'>data-domain-${item.domain.toLowerCase()}</span>`;
+            html += CreateElementForQuesAns(item, 'ques');
+            html += CreateElementForQuesAns(item, 'ans');
+            html += '</td></tr>';
+        }
+    }
+    const quesAnsTbodyData = {html: html, options: options};
+    return quesAnsTbodyData;
+}
+
 function CreateElementForQuesAns(item, qnsType) {
     style = qnsType == constant.ques ? "background-color:white;margin-top:10px" : "background-color:green";
-    const editButton = `<button type='button' class='btn btn-primary' onclick='PreUpdateQuesAns("${item.ID}")' style='float:right;margin-right:-15px'>Edit</button>`;
+    const editButton = `<button type='button' class='btn btn-primary editButton' onclick='PreUpdateQuesAns("${item.ID}")' style='float:right;margin-right:-15px'>Edit</button>`;
     let row = `<div class='row'>
                         <div class='col-md-12 col-12' style='${style}'>
                         ${qnsType == constant.ques ? item.ques : item.ans}
@@ -161,6 +183,7 @@ function SaveQuesAns(el) {
 // Clears all the field of QuesAns to create a new QuesAns, updates value of save button to insert data 
 function PreCreateQuesAns() {
     ShowSingleDiv(control.updateBrainRain);
+    $(control.dvAddQnsAnsByUpload).hide();
     let el = $(constant.saveButton);
     $(el).val(constant.add.toLowerCase());
     $(el).text(constant.add);
@@ -215,8 +238,8 @@ function CreateQuesAns_FirebaseDB(quesAns) {
 
 // Pre fills all the field of Ques Ans to make changes and update QuesAns, updates value of save button to update data 
 function PreUpdateQuesAns(id) {
-    
     ShowSingleDiv(control.updateBrainRain);
+    $(control.dvAddQuesAns).hide();
     let el = $(control.saveButton);
     $(el).val(constant.update.toLocaleLowerCase());
     $(el).text(constant.update);
@@ -287,6 +310,11 @@ function AlignSearchBox() {
 }
 
 function Upload() {
+debugger;
+        $(control.dvAddEditQnsAnsBySave).hide();
+        $(control.dvAddQnsAnsByUpload).show();
+        $(control.dvAddQnsAnsByUploadLoader).addClass("loader");	 
+
             //Reference the FileUpload element.
             var fileUpload = document.getElementById("fileUpload");
 			
@@ -311,17 +339,35 @@ function Upload() {
                             for (var i = 0; i < bytes.byteLength; i++) {
                                 data += String.fromCharCode(bytes[i]);
                             }
+                            BindUploadedData(data);
                             ProcessExcel(data);
                         };
                         reader.readAsArrayBuffer(fileUpload.files[0]);
                     }
                 } else {
                     alert("This browser does not support HTML5.");
+                    $(control.dvAddEditQnsAnsBySave).show();
+        $(control.dvAddQnsAnsByUpload).hide();
                 }
             } else {
                 alert("Please upload a valid Excel file.");
+                $(control.dvAddEditQnsAnsBySave).show();
+                $(control.dvAddQnsAnsByUpload).hide();
             }
         }
+
+function BindUploadedData(data){
+    debugger;
+       // $(control.dvAddQnsAnsByUpload).DataTable().clear().destroy();
+        var html = GetQuesAnsTBodyHTML(data).html;
+       
+        var dvAddQuesAns = $(control.dvAddQuesAns);
+        dvAddQuesAns.html('');
+        dvAddQuesAns.html(html);
+    
+        $(control.AddQnsAnsTable).DataTable();
+        $(control.dvAddQnsAnsByUploadLoader).removeClass("loader");	 
+    }
 		
 function ProcessExcel(data) {
 		debugger;
@@ -331,34 +377,58 @@ function ProcessExcel(data) {
             });
 
             //Read all rows from First Sheet into an JSON array.
-            var excelRows = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[workbook.SheetNames[0]]);
-			quesAnsUploadedData = excelRows;
-            ImportQnsAnsFromExcel(quesAnsUploadedData);
-            GetDataOnPageLoad_JSONFile(quesAnsData);
+            quesAnsUploadedData = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[workbook.SheetNames[0]]);
+            BindUploadedData(quesAnsUploadedData)
         }
 
 // importing data only for json file
-function ImportQnsAnsFromExcel(quesAnsUploadedData)
+function ImportQnsAnsFromExcel(sender)
 {
 	debugger;
 	var id = quesAnsData[quesAnsData.length-1].ID;
 	var quesID = quesAnsData[quesAnsData.length-1].quesID;
     
 	quesAnsUploadedData.forEach(function(item, index){
-        if(item.ques && item.ans && item.domain)
-        {
-		var quesAns = {
-				"ID": id + 1 + index,
-				"quesID": quesID + 1 + index,
-				"user": "kmukund439@gmail.com",
-				"domain": item.domain,
-				"ques": item.ques,
-				"ans": item.ans
-            }; 
-            debugger;
-            quesAnsData.push(quesAns);
-            CreateQuesAns_FirebaseDB(quesAns);
-        }
-			
+        if(item.ques && item.ans && item.domain){
+            document.getElementById("PrePageLoad").classList.add("loader");
+	    	var quesAns = {
+	    			"ID": id + 1 + index,
+		    		"quesID": quesID + 1 + index,
+			    	"user": "kmukund439@gmail.com",
+				    "domain": item.domain,
+				    "ques": item.ques,
+				    "ans": item.ans
+                }; 
+                debugger;
+                quesAnsData.push(quesAns);
+                CreateQuesAns_FirebaseDB(quesAns);
+                $(control.dvAddQnsAnsByUpload).DataTable().clear().destroy();
+            }
+        else{
+            alert("There is something wrong in the import file");  
+            $(AddEditQnsAnsBySave).show();
+        $(control.dvAddQnsAnsByUpload).hide();
+     };
+     document.getElementById("PrePageLoad").classList.remove("loader");	 
 });
+GetDataOnPageLoad_JSONFile(quesAnsData);
+}
+
+function sendEmail() {
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username : "gordiansoftware",
+        Password : "g0rdian1729",
+        To : 'kmukund439@gmail.com',
+        From : "gordiansoftware@gmail.com",
+        Subject : "Welcome",
+        Body : "Hi, Mukund. Welocome to gordian software portal",
+    })
+    .then(function(message){
+        console.log(message);
+    });
+}
+
+function SampleFileDownload(){
+
 }
