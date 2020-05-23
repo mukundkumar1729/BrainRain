@@ -82,3 +82,7 @@ display: none;
 	padding-left: 0;
 	padding-right: 0;
 }
+
+#addMoreButton{
+	float: right;
+}

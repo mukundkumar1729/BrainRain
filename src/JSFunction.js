@@ -30,7 +30,8 @@ const control = {
     dvAddQnsAnsByUpload:"#dvAddQnsAnsByUpload",
     AddQnsAnsTable:"#QuesAnsAddTable",
     dvAddQuesAns:"#dvQuesAnsAdd",
-    dvAddQnsAnsByUploadLoader:"#dvAddQnsAnsByUploadLoader"
+    dvAddQnsAnsByUploadLoader:"#dvAddQnsAnsByUploadLoader",
+    addMoreButton:"#addMoreButton"
 }
 
 const firebaseConfig = {
@@ -195,6 +196,7 @@ function SaveQuesAns(el) {
 function PreCreateQuesAns() {
     ShowSingleDiv(control.updateBrainRain);
     $(control.dvAddQnsAnsByUpload).hide();
+    $(control.addMoreButton).show();
     let el = $(constant.saveButton);
     $(el).val(constant.add.toLowerCase());
     $(el).text(constant.add);
@@ -250,6 +252,7 @@ function CreateQuesAns_FirebaseDB(quesAns) {
 function PreUpdateQuesAns(id) {
     ShowSingleDiv(control.updateBrainRain);
     $(control.dvAddQuesAns).hide();
+    $(control.addMoreButton).hide();
     let el = $(control.saveButton);
     $(el).val(constant.update.toLocaleLowerCase());
     $(el).text(constant.update);
@@ -452,4 +455,8 @@ function checkNetConnection(){
     } catch (e) {
      return false;
     }
+   }
+
+   function AddMoreQuesAns(){
+       alert("This module is in the development phase");
    }

@@ -80,7 +80,7 @@
 					<input type="file" id="fileUpload" />
                 </div>
                 <div class='col-md-3 col-12' id="qnaFileUpload">
-                    <button type="button" class="btn btn-default" onclick="SampleFileDownload();">Sample File</button>
+                    <button type="button" class="btn btn-secondary" onclick="SampleFileDownload();">Sample File</button>
                         
                     <button id="upload" type="button" class="btn btn-primary" onclick="Upload();" title="Import Question And Answser">Upload</button>
                     
@@ -90,8 +90,12 @@
             </div>
             <div id="dvAddEditQnsAnsBySave">
             <div class='row'>
-                <div class='col-md-12'>
+                <div class='col-md-11'>
                     <label>What is your Question ?</label>
+                </div>
+                <div class='col-md-1 col-4'>
+                    <button type='button' id="addMoreButton" class='btn btn-primary' value='save' title='Add More Ques Ans' onclick='AddMoreQuesAns(this);'>
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                 </div>
                 <div class='col-md-12'>
                     <input type='text' id='question' placeholder='Question ???' />
@@ -111,7 +115,7 @@
                     <button type='button' id="saveButton" class='btn btn-primary' value='save' title='Save Changes' onclick='SaveQuesAns(this);'>Save</button>
                 </div>
                 <div class='col-md-1 col-4'>
-                    <button type='button' class='btn btn-primary' title='Save Changes' onclick='ShowSingleDiv("#listing")'>Cancel</button>
+                    <button type='button' class='btn btn-secondary' title='Save Changes' onclick='ShowSingleDiv("#listing")'>Cancel</button>
                 </div>
             </div>
         </div>
