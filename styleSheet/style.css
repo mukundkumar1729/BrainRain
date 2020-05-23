@@ -71,14 +71,9 @@ display: none;
 
 .container{
 	padding-right:0;
-	width:100%
 }
 
 .row{
 	margin-left: 0;
 	margin-right: 0;
-}
-
-.col{
-	padding-left: 0;
 }
