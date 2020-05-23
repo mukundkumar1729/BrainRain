@@ -164,7 +164,7 @@ function GetQuesAnsTBodyHTML(data){
 
 function CreateElementForQuesAns(item, qnsType) {
     style = qnsType == constant.ques ? "background-color:white;margin-top:10px" : "background-color:green";
-    const editButton = `<button type='button' class='btn btn-primary editButton' onclick='PreUpdateQuesAns("${item.ID}")' style='float:right;margin-right:-15px'>Edit</button>`;
+    const editButton = `<button type='button' class='btn btn-primary editButton' onclick='PreUpdateQuesAns("${item.ID}")' style='float:right;'>Edit</button>`;
     let row = `<div class='row'>
                         <div class='col-md-12 col-12' style='${style}'>
                         ${qnsType == constant.ques ? item.ques : item.ans}
