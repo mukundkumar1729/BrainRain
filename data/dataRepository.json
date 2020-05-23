@@ -455,6 +455,14 @@
 			"domain":"js",
 			"ques": "How will you sort JSON data people having property age agewise in ascending order ?",
 			"ans":"people.sort((a,b) => a.Age - b.Age)"
+		},
+		{
+			"ID":58,
+			"quesID":58,
+			"user":"kmukund439@gmail.com",
+			"domain":"js",
+			"ques": "How to update a field name if it is not null or empty or name ?",
+			"ans":"update table1 set name = Coalesce(@name, nullif(@name, ''),nullif(@name,'name')@name) where id =@id"
 		}
 	]
 }

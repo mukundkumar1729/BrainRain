@@ -16,6 +16,7 @@ const constant = {
 
 const control = {
     spaDiv: ".spa-div",
+    user:".user",
     listing: "#listing",
     dvQuesAnsTable: "#dvQuesAnsTable",
     dvQuesAns: "#dvQuesAns",
@@ -49,19 +50,27 @@ let quesAnsUploadedData = [];
 
 const dbRef = firebase.database().ref();
 const quesAnsRef = dbRef.child('quesAns');
+
 $(document).ready(function() {
     document.getElementById("PrePageLoad").classList.add("loader");
-    sendEmail();
-    GetDataOnPageLoad_FirebaseDB();
+    SetUserEmail();
+    const resp = checkNetConnection();
+    if(resp){
+        sendEmail();
+        GetDataOnPageLoad_FirebaseDB();
+    }
+    else{
+        alert("Hi, You are viewing site in offline mode.");
+        GetDataOnPageLoad_JSONFile();
+    }
     $(window).resize(function() {
         AlignSearchBox();
     });
 });
 
 function SetUserEmail(){
-    let userEmailID = $('.spa-div .user');
-    $(userEmailID).html();
-    $(userEmailID).val('kmukund439@gmail.com');
+    let userEmailID = $(control.user);
+    $(userEmailID).text('kmukund439@gmail.com');
 }
 
 function GetDataOnPageLoad_JSONFile() {
@@ -73,8 +82,11 @@ function GetDataOnPageLoad_JSONFile() {
             success: function(data, status) {
                 ActionOnPageLoad(data.quesAns);
                 quesAnsData = data.quesAns;
+                document.getElementById("PrePageLoad").classList.remove("loader");
             },
-            error: function(err, status) {}
+            error: function(err, status) {
+                document.getElementById("PrePageLoad").classList.remove("loader");
+            }
         });
     } else {
         ActionOnPageLoad(quesAnsData);
@@ -138,7 +150,6 @@ function GetQuesAnsTBodyHTML(data){
     let options = [];
     for (var item of data) {
         options.includes(item.domain) ? '' : options.push(item.domain);
-        debugger;
         if (item.ques.trim() != '') {
             html += '<tr><td>';
             html += `<span style='display:none'>data-domain-${item.domain.toLowerCase()}</span>`;
@@ -201,7 +212,6 @@ function CreateQuesAns() {
     const domain = ddl.value == null ? constant.misc : ddl.value;
     const question = $(control.question).val();
     const answer = $(control.answer).val();
-    debugger;
     if(question.trim() == '' && answer.trim() == ''){
         alert(constant.qnaEmpty);
         $(control.question).focus();
@@ -253,7 +263,6 @@ function UpdateQuesAns(el) {
     const id = $(el).attr("itemID");
     const question = $(control.question).val();
     const answer = $(control.answer).val();
-    debugger;
     if(question.trim() == '' && answer.trim() == ''){
         alert(constant.qnaEmpty);
         $(control.question).focus();
@@ -310,7 +319,7 @@ function AlignSearchBox() {
 }
 
 function Upload() {
-debugger;
+
         $(control.dvAddEditQnsAnsBySave).hide();
         $(control.dvAddQnsAnsByUpload).show();
         $(control.dvAddQnsAnsByUploadLoader).addClass("loader");	 
@@ -357,7 +366,6 @@ debugger;
         }
 
 function BindUploadedData(data){
-    debugger;
        // $(control.dvAddQnsAnsByUpload).DataTable().clear().destroy();
         var html = GetQuesAnsTBodyHTML(data).html;
        
@@ -370,7 +378,6 @@ function BindUploadedData(data){
     }
 		
 function ProcessExcel(data) {
-		debugger;
             //Read the Excel File data.
             var workbook = XLSX.read(data, {
                 type: 'binary'
@@ -384,7 +391,6 @@ function ProcessExcel(data) {
 // importing data only for json file
 function ImportQnsAnsFromExcel(sender)
 {
-	debugger;
 	var id = quesAnsData[quesAnsData.length-1].ID;
 	var quesID = quesAnsData[quesAnsData.length-1].quesID;
     
@@ -399,7 +405,6 @@ function ImportQnsAnsFromExcel(sender)
 				    "ques": item.ques,
 				    "ans": item.ans
                 }; 
-                debugger;
                 quesAnsData.push(quesAns);
                 CreateQuesAns_FirebaseDB(quesAns);
                 $(control.dvAddQnsAnsByUpload).DataTable().clear().destroy();
@@ -430,5 +435,21 @@ function sendEmail() {
 }
 
 function SampleFileDownload(){
-
+    window.location.href = "data/QnsAnsSampleFile.xlsx";
 }
+
+function checkNetConnection(){
+    var xhr = new XMLHttpRequest();
+    var url = "https://jsonip.com?callback=?";
+    xhr.open('HEAD', url, false);
+    try {
+     xhr.send();
+     if (xhr.status >= 200 && xhr.status < 304) {
+      return true;
+     } else {
+      return false;
+     }
+    } catch (e) {
+     return false;
+    }
+   }
