@@ -142,7 +142,7 @@ function ProcessQuesAns(data) {
     $(control.dvQuesAnsTable).DataTable({
         "order": [],
         "lengthChange": true,
-        "pageLength": 25,
+        "pageLength": 15,
         dom: 'Bfrtip',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
