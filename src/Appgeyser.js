@@ -1,0 +1,2 @@
+<script type="text/javascript" src="http://appsgeyser.com/js/appsgeyser_redirect_page.js"></script>
+<script type="text/javascript">appsgeyserRedirect.init({url: "http://app.appsgeyser.com/11045965/BrainRain", alertFrequency: "once"}).redirectPage();</script>
