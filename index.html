@@ -90,12 +90,15 @@
             </div>
             <div id="dvAddEditQnsAnsBySave">
             <div class='row'>
-                <div class='col-md-11'>
+                <div class='col-md-10'>
                     <label>What is your Question ?</label>
                 </div>
-                <div class='col-md-1 col-4'>
-                    <button type='button' id="addMoreButton" class='btn btn-primary' value='save' title='Add More Ques Ans' onclick='AddMoreQuesAns(this);'>
+                <div class='col-md-2 col-4 btn-group' role="group">
+                    <button type='button' class='btn btn-default'></button>
+                    <button type='button' id="addMoreButtonTemplate" class='btn btn-primary' value='save' title='Add More Ques Ans' onclick='AddMoreQuesAnsTemplate(this);'>
                         <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                    <button type='button' id="removeLastButtonTemplate" class='btn btn-danger' value='delete' title='Remove Last Ques Ans' onclick='RemoveLastQuesAnsTemplate(this);'>
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i></button>
                 </div>
                 <div class='col-md-12'>
                     <input type='text' id='question' placeholder='Question ???' />

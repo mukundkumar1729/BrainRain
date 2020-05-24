@@ -11,7 +11,10 @@ const constant = {
     confirmDelete: "Are you sure to delete ?",
     confirmListing: "Do you want to go to ques ans lists ?",
     alertNoChange: "you didn't made any change to update",
-    qnaEmpty: "Question and answer can't be empty"
+    qnaEmpty: "Question and answer can't be empty",
+    lastChild:"nth-last-child(1)",
+    secondLastChild:"nth-last-child(2)",
+    nextQuestion:"Next Question"
 }
 
 const control = {
@@ -24,14 +27,15 @@ const control = {
     updateBrainRain: "#updateBrainRain",
     saveButton: "#saveButton",
     label: "label",
-    question: "#question",
-    answer: "#answer",
+    question: "input#question",
+    answer: "textarea#answer",
     dvAddEditQnsAnsBySave:"#dvAddEditQnsAnsBySave",
     dvAddQnsAnsByUpload:"#dvAddQnsAnsByUpload",
     AddQnsAnsTable:"#QuesAnsAddTable",
     dvAddQuesAns:"#dvQuesAnsAdd",
     dvAddQnsAnsByUploadLoader:"#dvAddQnsAnsByUploadLoader",
-    addMoreButton:"#addMoreButton"
+    addMoreButton:"#addMoreButtonTemplate",
+    removeLastButton:"#removeLastButtonTemplate"
 }
 
 const firebaseConfig = {
@@ -197,6 +201,7 @@ function PreCreateQuesAns() {
     ShowSingleDiv(control.updateBrainRain);
     $(control.dvAddQnsAnsByUpload).hide();
     $(control.addMoreButton).show();
+    $(control.removeLastButton).hide();
     let el = $(constant.saveButton);
     $(el).val(constant.add.toLowerCase());
     $(el).text(constant.add);
@@ -207,13 +212,22 @@ function PreCreateQuesAns() {
 
 
 function CreateQuesAns() {
-    var quesObj = quesAnsData[quesAnsData.length - 1];
-    const id = quesObj.ID + 1;
-    const quesID = quesObj.quesID + 1;
     let ddl = $(`${control.updateBrainRain} .domain`)[0];
     const domain = ddl.value == null ? constant.misc : ddl.value;
-    const question = $(control.question).val();
-    const answer = $(control.answer).val();
+    // const question = $(control.question).val();
+    // const answer = $(control.answer).val();
+debugger;
+    const qnsElement = $(`${control.dvAddEditQnsAnsBySave} .row ${control.question}`);
+    const ansElement = $(`${control.dvAddEditQnsAnsBySave} .row ${control.answer}`);
+    const qnsElementLength = qnsElement.length;
+
+    for(var i = 0; i < qnsElementLength; i++){
+        const question = $(qnsElement[i]).val();
+        const answer = $(ansElement[i]).val();
+
+    const quesObj = quesAnsData[quesAnsData.length - 1];
+    const id = quesObj.ID + 1;
+    const quesID = quesObj.quesID + 1;
     if(question.trim() == '' && answer.trim() == ''){
         alert(constant.qnaEmpty);
         $(control.question).focus();
@@ -227,10 +241,11 @@ function CreateQuesAns() {
             "ans": answer
         };
         quesAnsData.push(quesAns);
-        CreateQuesAns_FirebaseDB(quesAns)
-        if (confirm(constant.confirmListing)) {
-            GetDataOnPageLoad_FirebaseDB();
-        }
+        CreateQuesAns_FirebaseDB(quesAns);
+    }
+    }
+    if (confirm(constant.confirmListing)) {
+        GetDataOnPageLoad_FirebaseDB();
     }
 }
 
@@ -253,6 +268,7 @@ function PreUpdateQuesAns(id) {
     ShowSingleDiv(control.updateBrainRain);
     $(control.dvAddQuesAns).hide();
     $(control.addMoreButton).hide();
+    $(control.removeLastButton).hide();
     let el = $(control.saveButton);
     $(el).val(constant.update.toLocaleLowerCase());
     $(el).text(constant.update);
@@ -457,6 +473,41 @@ function checkNetConnection(){
     }
    }
 
-   function AddMoreQuesAns(){
+   function AddMoreQuesAnsTemplate(){
        alert("This module is in the development phase");
+       debugger;
+       $(control.removeLastButton).show();
+        let dvAddEditQnsAnsBySave = $(`${control.dvAddEditQnsAnsBySave} .row`);
+        let quesRow = $(dvAddEditQnsAnsBySave[0]).clone();
+        let ansRow = $(dvAddEditQnsAnsBySave[1]).clone();
+        let saveButtonRow = dvAddEditQnsAnsBySave[dvAddEditQnsAnsBySave.length-1];
+
+        $(saveButtonRow).before(`<b>${constant.nextQuestion}</b>`);
+        $(saveButtonRow).before(quesRow);
+        $(saveButtonRow).before(ansRow);
+        $(saveButtonRow).before('<p></p>');
+
+        let lastQnsEl = $(`${control.dvAddEditQnsAnsBySave} ${control.question}:${constant.lastChild}`);
+        let lastAnsEl = $(`${control.dvAddEditQnsAnsBySave} ${control.answer}:${constant.lastChild}`);
+        $(lastQnsEl).val('');
+        $(lastAnsEl).val('');
+
    }
+
+   function RemoveLastQuesAnsTemplate(){
+    debugger;
+
+    let lastQnsAns = $(`${control.dvAddEditQnsAnsBySave} .row`);
+    rowsLength = lastQnsAns.length;
+    for(var i = 0; i< rowsLength; i++)
+    {
+     if(i == rowsLength-3 || i == rowsLength-2){
+            $(lastQnsAns[i]).remove();
+        }
+    }
+    if(rowsLength==5){
+        $(control.removeLastButton).hide();
+    }
+    var lastNextQuestionTitle = $(`b:contains(${constant.nextQuestion})`)
+    $(lastNextQuestionTitle).last().remove();
+}
