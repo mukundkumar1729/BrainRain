@@ -90,3 +90,8 @@ hr.rounded {
 	border-radius: 5px;
 	color:green;
   }
+
+  #adsSection {
+	margin-top:125px;
+	position: fixed;
+  }
