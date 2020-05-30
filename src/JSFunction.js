@@ -145,7 +145,38 @@ function ProcessQuesAns(data) {
         "pageLength": 15,
         dom: 'Bfrtip',
         buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
+            'copy', 'csv', 'excel',,'print',
+            {
+                extend:'pdf',
+                footer:true,
+                fieldSeparator: '\n\n',
+                exportOptions: {
+                    format: {
+                        body: function ( data) {
+                            debugger;
+                            data = data.replace( /( |<([^>]+)>)/ig, ' ' ).replace('data-domain-','').replace('Edit','').replace(/(\r\n|\n|\r)/gm,"");
+                            data = data.replace('?','?\n');
+                               return  data;
+                        }
+                    },
+
+                    customize: function (doc) {
+                        doc['footer']=(function(page, pages) {
+                            return {
+                                columns: [
+                                    {
+                                        alignment: 'right',
+                                        text: ['page ', { text: page.toString() },  ' of ', { text: pages.toString() }]
+                                    }
+                                ]
+                            }
+                        });
+                    }
+
+
+                    
+                }
+            }
         ]
     });
 }
@@ -154,7 +185,13 @@ function GetQuesAnsTBodyHTML(data){
     let html = '';
     let options = [];
     for (var item of data) {
-        options.includes(item.domain) ? '' : options.push(item.domain);
+        let isOptionIncluded = false;
+        for(var opt of options){
+            isOptionIncluded = opt.toLowerCase() == item.domain.toLowerCase() ? true : false;
+            if(isOptionIncluded){break;}
+        }
+        if(!isOptionIncluded){options.push(item.domain);}
+
         if (item.ques.trim() != '') {
             html += '<tr><td>';
             html += `<span style='display:none'>data-domain-${item.domain.toLowerCase()}</span>`;
@@ -163,6 +200,7 @@ function GetQuesAnsTBodyHTML(data){
             html += '</td></tr>';
         }
     }
+    debugger;
     const quesAnsTbodyData = {html: html, options: options};
     return quesAnsTbodyData;
 }
