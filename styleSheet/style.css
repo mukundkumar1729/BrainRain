@@ -93,9 +93,19 @@ hr.rounded {
 
   #adsSection {
 	margin-top:125px;
-	position: fixed;
+	position: relative;
   }
 
   .space{
 	  width:60px;
+  }
+
+  #adsSection img{
+	height:75px;
+	width:125px
+  }
+
+  .contactUs img{
+	  height:40px;
+	  width: 50px;
   }
