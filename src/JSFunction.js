@@ -71,6 +71,7 @@ $(document).ready(function() {
     $(window).resize(function() {
         AlignSearchBox();
     });
+    CueLinksAds();
 });
 
 function SetUserEmail(){
@@ -142,7 +143,7 @@ function ProcessQuesAns(data) {
     $(control.dvQuesAnsTable).DataTable({
         "order": [],
         "lengthChange": true,
-        "pageLength": 15,
+        "pageLength": 25,
         dom: 'Bfrtip',
         buttons: [
             'copy', 'csv', 'excel',,'print',
@@ -153,7 +154,6 @@ function ProcessQuesAns(data) {
                 exportOptions: {
                     format: {
                         body: function ( data) {
-                            debugger;
                             data = data.replace( /( |<([^>]+)>)/ig, ' ' ).replace('data-domain-','').replace('Edit','').replace(/(\r\n|\n|\r)/gm,"");
                             data = data.replace('?','?\n');
                                return  data;
@@ -200,7 +200,6 @@ function GetQuesAnsTBodyHTML(data){
             html += '</td></tr>';
         }
     }
-    debugger;
     const quesAnsTbodyData = {html: html, options: options};
     return quesAnsTbodyData;
 }
@@ -254,7 +253,6 @@ function CreateQuesAns() {
     const domain = ddl.value == null ? constant.misc : ddl.value;
     // const question = $(control.question).val();
     // const answer = $(control.answer).val();
-debugger;
     const qnsElement = $(`${control.dvAddEditQnsAnsBySave} .row ${control.question}`);
     const ansElement = $(`${control.dvAddEditQnsAnsBySave} .row ${control.answer}`);
     const qnsElementLength = qnsElement.length;
@@ -512,8 +510,6 @@ function checkNetConnection(){
    }
 
    function AddMoreQuesAnsTemplate(){
-       alert("This module is in the development phase");
-       debugger;
        $(control.removeLastButton).show();
         let dvAddEditQnsAnsBySave = $(`${control.dvAddEditQnsAnsBySave} .row`);
         let quesRow = $(dvAddEditQnsAnsBySave[0]).clone();
@@ -533,7 +529,6 @@ function checkNetConnection(){
    }
 
    function RemoveLastQuesAnsTemplate(){
-    debugger;
 
     let lastQnsAns = $(`${control.dvAddEditQnsAnsBySave} .row`);
     rowsLength = lastQnsAns.length;
@@ -548,4 +543,14 @@ function checkNetConnection(){
     }
     var lastNextQuestionTitle = $(`b:contains(${constant.nextQuestion})`)
     $(lastNextQuestionTitle).last().remove();
+}
+
+function CueLinksAds(){
+    debugger;
+    var cId =  "84555";
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://cdn0.cuelinks.com/js/" : "http://cdn0.cuelinks.com/js/")  + "cuelinksv2.js";
+    document.getElementsByTagName("body")[0].appendChild(s);
 }

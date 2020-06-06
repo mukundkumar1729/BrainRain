@@ -109,3 +109,11 @@ hr.rounded {
 	  height:40px;
 	  width: 50px;
   }
+
+  .amazonSearch iframe{
+	  width: var(--full-length) !important;
+  }
+
+  .container{
+	  width:100% !important;
+  }
