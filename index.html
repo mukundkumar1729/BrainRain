@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BrainRain</title>
+    <title>BrainRain | SQL | MVC | Javascript | JQuery | Interview Questions</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="BrainRain, SQL, .NET, MVC, Javascript, JQuery, Bootstrap, Interview Questions, mukundkumar1729">
+    <meta name="keywords" content="BrainRain, SQL, .NET, MVC, Javascript, JQuery, Bootstrap, Interview Questions, Add more functionality, import from excel, BrainRain News, mukundkumar1729">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -18,11 +18,11 @@
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
     <script type="text/javascript" src="https://use.fontawesome.com/ad063041d8.js"></script>
     <link href="StyleSheet/style.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script type="text/javascript" src="src/JSFunction.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>  
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>   -->
     <!-- google adsense ads script -->
     <script data-ad-client="ca-pub-7923513691103876" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
@@ -30,9 +30,16 @@
 <body>
     <div class="container">
         <div class="row">
+                <div class="col-md-12 brainRainNews">
+                    <marquee onmouseover ="this.stop()" onmouseout ="this.start()"> 
+                       <span>
+                              BrainRain Latest News on science - technology & Software  Coming Soon ... &nbsp;&nbsp; 
+                       </span> 
+                    </marquee>
+                </div>
+        </div>
+        <div class="row">
             <div class="col-md-9 col-12">
-
-            
         <div id="listing" class="spa-div">
             <div class='row first-row'>
                 <div class='col-md-1 col-3'>
@@ -118,7 +125,7 @@
                     <label>Your answer please !</label>
                 </div>
                 <div class='col-md-12'>
-                    <textarea type='text' id='answer' placeholder='Answer !!!' rows='10'></textarea>
+                    <textarea id='answer' placeholder='Answer !!!' rows='10'></textarea>
                 </div>
             </div>
             <div class='row'>
@@ -156,19 +163,20 @@
         </div>
         </div>
         <div class="row Contacts">
-            <hr class="rounded"></hr>
+            <hr class="rounded"/>
             <div class="col-md-6 col-6">
                 <h3>Get App</h3>
                 <a href="https://app.appsgeyser.com/11045965/BrainRain">Download Here</a><br/>
+                <!-- Appgeyser Scanner -->
                 <iframe src="https://appsgeyser.com/social_widget/social_widget.php?width=100&height=100&apkName=BrainRain_11045965&simpleVersion=yes" 
-        width="180" height="220" vspace="0" hspace="0" frameborder="no" scrolling="no" seamless=""  allowtransparency="true" title="Scan QR Code to download and browse in our app"></iframe>
+        width="180" height="150"   title="Scan QR Code to download and browse in our app"></iframe>
             </div>
             <div class="col-md-6 col-6 contactUs">
                 <h3>Contact Us:</h3>
-                <a href="https://kmukund439@gmail.com/" target="_blank" title="kmukund439@gmail.com"><img src="image/gmail.png"/></a><span class="space"></span>
-                <a href="https://www.linkedin.com/in/mukundkumar1729/?originalSubdomain=in" target="_blank"><img src="image/LinkedIn.png"/></a><span class="space"></span>
-                <a href="https://twitter.com/mukundkumar1729" target="_blank"><img src="image/twitter.png"/> </a><span class="space"></span>
-                <a href="https://www.facebook.com/mukundkumar1729" target="_blank"><img src="image/fb-art.png"/></a>
+                <a href="https://kmukund439@gmail.com/" target="_blank" title="kmukund439@gmail.com"><img src="image/gmail.png" alt="gmail"/></a><span class="space"></span>
+                <a href="https://www.linkedin.com/in/mukundkumar1729/?originalSubdomain=in" target="_blank"><img src="image/LinkedIn.png" alt="linkedIn"/></a><span class="space"></span>
+                <a href="https://twitter.com/mukundkumar1729" target="_blank"><img src="image/twitter.png" alt="twitter"/> </a><span class="space"></span>
+                <a href="https://www.facebook.com/mukundkumar1729" target="_blank"><img src="image/fb-art.png" alt="facebook"/></a>
             </div>
     </div>
 </div>
@@ -179,40 +187,40 @@
         <div  class="carousel-inner">
             <div class="carousel-item active">
                 <span>Health and Beauty Products</span><br/>
-                <iframe width='300' height='250' frameborder='0' scrolling='no' src='https://widget.cuelinks.com/widgets/50038?cid=84555'></iframe>
+                <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50038?cid=84555'></iframe>
             </div>
             <div class="carousel-item">
                 <span>Trending Books</span><br/>
-                <iframe width='300' height='250' frameborder='0' scrolling='no' src='https://widget.cuelinks.com/widgets/50037?cid=84555'></iframe>
+                <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50037?cid=84555'></iframe>
             </div>
             <div class="carousel-item">
                 <span>Electronics Items</span><br/>
-                <iframe width='300' height='250' frameborder='0' scrolling='no' src='https://widget.cuelinks.com/widgets/50035?cid=84555'></iframe>
+                <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50035?cid=84555'></iframe>
             </div>
             <div class="carousel-item">
                 <span>Fashion Items</span><br/>
-                <iframe width='300' height='250' frameborder='0' scrolling='no' src='https://widget.cuelinks.com/widgets/50056?cid=84555'></iframe>
+                <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50056?cid=84555'></iframe>
             </div>
             <div class="carousel-item">
                 <span>Health & Beauty</span><br/>
-                <iframe width='300' height='250' frameborder='0' scrolling='no' src='https://widget.cuelinks.com/widgets/50057?cid=84555'></iframe>
+                <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50057?cid=84555'></iframe>
             </div>
             <div class="carousel-item">
                 <span>Flowers & Gifts</span><br/>
-                <iframe width='300' height='250' frameborder='0' scrolling='no' src='https://widget.cuelinks.com/widgets/50058?cid=84555'></iframe>
+                <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50058?cid=84555'></iframe>
             </div>
             <div class="carousel-item">
                 <span>Home & Kitchen</span><br/>
-                <iframe width='300' height='250' frameborder='0' scrolling='no' src='https://widget.cuelinks.com/widgets/50060?cid=84555'></iframe>
+                <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50060?cid=84555'></iframe>
             </div>
             <div class="carousel-item">
                 <span></span><br/>
-                <iframe width='300' height='250' frameborder='0' scrolling='no' src='https://widget.cuelinks.com/widgets/50062?cid=84555'></iframe>
+                <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50062?cid=84555'></iframe>
             </div>
         </div>
     </div>
     <p style="margin-top:20px;">
-        <a href="https://linksredirect.com/?cid=84555&source=linkkit&url=https%3A%2F%2Fstore.jiva.com%2F" alt="jiva Ayurved">
+        <a href="https://linksredirect.com/?cid=84555&source=linkkit&url=https%3A%2F%2Fstore.jiva.com%2F">
         <img src="image/jiva-ayurveda-logo.jpg" alt="jiva Ayurved"/></a>
     </p>
     <p>
@@ -229,15 +237,15 @@
     </p>
     <p>
         <a target="_blank" href="https://linksredirect.com/?cid=20477&source=linkkit&url=https%3A%2F%2Fpaytmmall.com">
-            <img src="image/paymall.png" alt="Paytm Mall"/></a></a>
+            <img src="image/paymall.png" alt="Paytm Mall"/></a>
     </p>
     <p>
         <a target="_blank" href="https://linksredirect.com/?pub_id=21531&url=https://www.adda247.com/">
             <img src="image/adda247.jpg" alt="Add247"/></a>
     </p>
     <p>
-        <script type="text/javascript" language="javascript">var aax_size='300x250';var aax_pubname = 'mukundkumar17-21';var aax_src='302';</script>
-        <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script>
+        <script type="text/javascript">var aax_size='300x250';var aax_pubname = 'mukundkumar17-21';var aax_src='302';</script>
+        <script type="text/javascript" src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
     </p>
     <p>
         <a href="https://linksredirect.com/?pub_id=21531&url=https://themomsco.com/baby-products.html">
@@ -255,7 +263,7 @@
         </a>
     </p>
     <p>
-        <iframe width='300' height='600' frameborder='0' scrolling='no' src='https://widget.cuelinks.com/widgets/50034?cid=84555'></iframe>
+        <iframe width='300' height='600' src='https://widget.cuelinks.com/widgets/50034?cid=84555'></iframe>
     </p>
 </div>
 </div>

@@ -14,7 +14,9 @@ const constant = {
     qnaEmpty: "Question and answer can't be empty",
     lastChild:"nth-last-child(1)",
     secondLastChild:"nth-last-child(2)",
-    nextQuestion:"Next Question"
+    nextQuestion:"Next Question",
+    kmukund439Rgmail:"kmukund439@gmail.com",
+    newsAPI:"http://newsapi.org/v2/top-headlines?q=software&from=2020-05-07&sortBy=publishedAt&apiKey=7fca3f9fb5d54ade81bbc6aa14b11e8b"
 }
 
 const control = {
@@ -35,9 +37,10 @@ const control = {
     dvAddQuesAns:"#dvQuesAnsAdd",
     dvAddQnsAnsByUploadLoader:"#dvAddQnsAnsByUploadLoader",
     addMoreButton:"#addMoreButtonTemplate",
-    removeLastButton:"#removeLastButtonTemplate"
+    removeLastButton:"#removeLastButtonTemplate",
+    brainRainNews:".brainRainNews",
+    marqueeContent:".brainRainNews marquee span"
 }
-
 const firebaseConfig = {
     apiKey: "AIzaSyBN3vM2XOK7uXSgI-KmPqbKp6ZFE4Ws_uI",
     authDomain: "brainrain-a43d3.firebaseapp.com",
@@ -49,19 +52,19 @@ const firebaseConfig = {
     measurementId: "G-1S797R81GE"
   };
   firebase.initializeApp(firebaseConfig);
+  const dbRef = firebase.database().ref();
+  const quesAnsRef = dbRef.child('quesAns');
 
 let quesAnsData = [];
 let quesAnsUploadedData = [];
 
-const dbRef = firebase.database().ref();
-const quesAnsRef = dbRef.child('quesAns');
-
 $(document).ready(function() {
     document.getElementById("PrePageLoad").classList.add("loader");
     SetUserEmail();
+    GetNews();
     const resp = checkNetConnection();
     if(resp){
-        sendEmail();
+        //sendEmail();
         GetDataOnPageLoad_FirebaseDB();
     }
     else{
@@ -546,11 +549,24 @@ function checkNetConnection(){
 }
 
 function CueLinksAds(){
-    debugger;
     var cId =  "84555";
     var s = document.createElement("script");
     s.type = "text/javascript";
     s.async = true;
     s.src = (document.location.protocol == "https:" ? "https://cdn0.cuelinks.com/js/" : "http://cdn0.cuelinks.com/js/")  + "cuelinksv2.js";
     document.getElementsByTagName("body")[0].appendChild(s);
+}
+
+function GetNews(){
+    debugger;
+    fetch(constant.newsAPI)
+		.then((res) => res.json())
+		.then((data) => {
+            debugger;
+            html = '';
+            for(let title of data){
+                html += `<span>${title}</span>`;
+            }
+            $(control.marqueeContent).html(html);
+        });
 }
