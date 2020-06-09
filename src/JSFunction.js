@@ -16,7 +16,7 @@ const constant = {
     secondLastChild:"nth-last-child(2)",
     nextQuestion:"Next Question",
     kmukund439Rgmail:"kmukund439@gmail.com",
-    newsAPI:"http://newsapi.org/v2/top-headlines?q=software&from=2020-05-07&sortBy=publishedAt&apiKey=7fca3f9fb5d54ade81bbc6aa14b11e8b"
+    newsAPI:"https://gnews.io/api/v3/search?q=software&token=a200bb11d1b6155caffd725d56755f7a"
 }
 
 const control = {
@@ -559,14 +559,29 @@ function CueLinksAds(){
 
 function GetNews(){
     debugger;
-    fetch(constant.newsAPI)
-		.then((res) => res.json())
-		.then((data) => {
-            debugger;
-            html = '';
-            for(let title of data){
-                html += `<span>${title}</span>`;
+    let newsArticles = JSON.parse(sessionStorage.getItem('newsArticles'));
+    if(!newsArticles){
+        $.ajax({
+            url: constant.newsAPI,
+            type:'GET',
+            success: function(data, status) {
+                debugger;
+                 SetNewsMarquee(data);
+                 sessionStorage.setItem('newsArticles', JSON.stringify(data));
+            },
+            error: function(err, status) {
+                debugger;
             }
-            $(control.marqueeContent).html(html);
         });
+    }else{
+        SetNewsMarquee(newsArticles);
+    }
+}
+
+function SetNewsMarquee(data){
+    html = '';
+    for(let article of data.articles){
+        html += `<span title='${article.description}'>${article.title}</span>`;
+    }
+    $(control.marqueeContent).html(html);
 }
