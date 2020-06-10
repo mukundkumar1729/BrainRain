@@ -57,8 +57,11 @@ const firebaseConfig = {
 
 let quesAnsData = [];
 let quesAnsUploadedData = [];
+let globalCounter = 0;
+let localCounter = 0
 
 $(document).ready(function() {
+    var timer = setInterval(MyTimer, 1000);
     document.getElementById("PrePageLoad").classList.add("loader");
     SetUserEmail();
     GetNews();
@@ -76,6 +79,26 @@ $(document).ready(function() {
     });
     CueLinksAds();
 });
+
+function MyTimer() {
+    if(globalCounter == 0){
+        globalCounter = parseInt(sessionStorage.getItem('globalCounter'));
+        if(isNaN(globalCounter)){
+            globalCounter = 0;
+        }
+    }
+    var d = (new Date()).toLocaleTimeString();
+    const timerID = document.getElementById("timer");
+    globalCounter = globalCounter + 1;
+    localCounter = localCounter + 1;
+    if(timerID != null){
+        timerID.innerHTML = `${d} (${globalCounter}s)`;
+    }
+    sessionStorage.setItem('globalCounter',globalCounter );
+    if(localCounter == 5){
+        setAdsSection();
+    }
+}
 
 function SetUserEmail(){
     let userEmailID = $(control.user);
@@ -548,29 +571,17 @@ function checkNetConnection(){
     $(lastNextQuestionTitle).last().remove();
 }
 
-function CueLinksAds(){
-    var cId =  "84555";
-    var s = document.createElement("script");
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = (document.location.protocol == "https:" ? "https://cdn0.cuelinks.com/js/" : "http://cdn0.cuelinks.com/js/")  + "cuelinksv2.js";
-    document.getElementsByTagName("body")[0].appendChild(s);
-}
-
 function GetNews(){
-    debugger;
     let newsArticles = JSON.parse(sessionStorage.getItem('newsArticles'));
     if(!newsArticles){
         $.ajax({
             url: constant.newsAPI,
             type:'GET',
             success: function(data, status) {
-                debugger;
                  SetNewsMarquee(data);
                  sessionStorage.setItem('newsArticles', JSON.stringify(data));
             },
             error: function(err, status) {
-                debugger;
             }
         });
     }else{
@@ -584,4 +595,15 @@ function SetNewsMarquee(data){
         html += `<span title='${article.description}'>${article.title}</span>`;
     }
     $(control.marqueeContent).html(html);
+}
+
+function setAdsSection(){
+    debugger;
+    $.getScript( "src/adsJSCode.js" )
+  .done(function( script, textStatus ) {
+    console.log( textStatus );
+  })
+  .fail(function( jqxhr, settings, exception ) {
+    $( "div.log" ).text( "Triggered ajaxError handler." );
+});
 }

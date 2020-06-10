@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>BrainRain | SQL | MVC | Javascript | JQuery | Interview Questions</title>
     <meta charset="utf-8">
@@ -44,18 +44,28 @@
             <div class="col-md-9 col-12">
         <div id="listing" class="spa-div">
             <div class='row first-row'>
-                <div class='col-md-1 col-3'>
+                <div class='col-md-1 col-2'>
+                    <label>GoTo</label>
+                </div>
+                <div class='col-md-2  col-3'>
+                    <select class='page' style='width:100px'>   <!-- onchange='HideShow(this);' -->
+                        <option>Interview Questions</option>
+                        <option>C# Programming</option>
+                        <option>News Section</option>
+                    </select>
+                </div>
+                <div class='col-md-1 col-2'>
                     <label>Domain</label>
                 </div>
-                <div class='col-md-1  col-3'>
+                <div class='col-md-1  col-2'>
                     <select class='domain' onchange='HideShow(this);' style='width:100px'>
                     </select>
                 </div>
-                <div class='col-md-5  col-12'></div>
+                <div class='col-md-3  col-1'><p id="timer" class="text-right"></p></div>
                 <div class='col-md-2  col-12'>
                     <button type="button" class="btn btn-primary" onclick="PreCreateQuesAns()">Add Question</button>
                 </div>
-                <div class='col-md-1 col-2 text-right'>Hello</div>
+                <div class='col-md-1 col-2'>Hello</div>
                 <div class='col-md-1 col-5'><span class='user'></span></div>
             </div>
             <div class="row" id="PrePageLoad">
@@ -164,6 +174,11 @@
             </div>
         </div>
         </div>
+
+        <div id="programmingSection" class="spa-div">
+<!-- Programming section -->
+        </div>
+
         <div class="row Contacts">
             <hr class="rounded"/>
             <div class="col-md-6 col-6">
@@ -183,97 +198,20 @@
     </div>
 </div>
 
-
-<div class="col-md-3 col-0" id="adsSection">
+<div class="col-md-3 col-12" id="adsSection">
     <div id="carousel123" class ="carousel slide" data-ride="carousel">
         <div  class="carousel-inner">
-            <div class="carousel-item active">
-                <span>Health and Beauty Products</span><br/>
-                <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50038?cid=84555'></iframe>
-            </div>
-            <div class="carousel-item">
-                <span>Trending Books</span><br/>
-                <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50037?cid=84555'></iframe>
-            </div>
-            <div class="carousel-item">
-                <span>Electronics Items</span><br/>
-                <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50035?cid=84555'></iframe>
-            </div>
-            <div class="carousel-item">
-                <span>Fashion Items</span><br/>
-                <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50056?cid=84555'></iframe>
-            </div>
-            <div class="carousel-item">
-                <span>Health & Beauty</span><br/>
-                <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50057?cid=84555'></iframe>
-            </div>
-            <div class="carousel-item">
-                <span>Flowers & Gifts</span><br/>
-                <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50058?cid=84555'></iframe>
-            </div>
-            <div class="carousel-item">
-                <span>Home & Kitchen</span><br/>
-                <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50060?cid=84555'></iframe>
-            </div>
-            <div class="carousel-item">
-                <span></span><br/>
-                <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50062?cid=84555'></iframe>
-            </div>
+            
         </div>
     </div>
-    <p style="margin-top:20px;">
-        <a href="https://linksredirect.com/?cid=84555&source=linkkit&url=https%3A%2F%2Fstore.jiva.com%2F">
-        <img src="image/jiva-ayurveda-logo.jpg" alt="jiva Ayurved"/></a>
-    </p>
-    <p>
-        <a href="https://linksredirect.com/?cid=84555&source=linkkit&url=https%3A%2F%2Fwww.medicaldepartures.com%2F">
-        <img src="image/MedicalDeparture.png" alt="MedicalDeparture"/> Find a Medical Doctor</a>
-    </p>
-    <p>
-        <a target="_blank" href="https://linksredirect.com/?pub_id=21531&url=https://www.lenskart.com/eyeq-contest%3Futm_source=">
-        <img src="image/Lenskart.jpg" alt="Lenskart"/></a>
-    </p>
-    <p>
-        <a target="_blank" href="https://linksredirect.com/?pub_id=21531&url=https://testbook.com/referrals">
-        <img src="image/testbook.png" alt="TextBook"/></a>
-    </p>
-    <p>
-        <a target="_blank" href="https://linksredirect.com/?cid=20477&source=linkkit&url=https%3A%2F%2Fpaytmmall.com">
-            <img src="image/paymall.png" alt="Paytm Mall"/></a>
-    </p>
-    <p>
-        <a target="_blank" href="https://linksredirect.com/?pub_id=21531&url=https://www.adda247.com/">
-            <img src="image/adda247.jpg" alt="Add247"/></a>
-    </p>
-    <p>
-        <script type="text/javascript">var aax_size='300x250';var aax_pubname = 'mukundkumar17-21';var aax_src='302';</script>
-        <script type="text/javascript" src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
-    </p>
-    <p>
-        <a href="https://linksredirect.com/?pub_id=21531&url=https://themomsco.com/baby-products.html">
-            <img src="image/theMomsCo.png" alt="the moms co."/>
-        </a>
-    </p>
-    <p>
-        <a href="https://linksredirect.com/?pub_id=21531&url=https://www.edureka.co/">
-            <span>Edureka</span>
-        </a>
-    </p>
-    <p>
-        <a href="https://linksredirect.com/?pub_id=21531&url=https://www.shopclues.com/branded-products.html">
-            <img src="image/shopclues.png" alt="Shop Clues"/>
-        </a>
-    </p>
-    <p>
-        <iframe width='300' height='600' src='https://widget.cuelinks.com/widgets/50034?cid=84555'></iframe>
-    </p>
+    <div id="staticAds">
+
+    </div>
 </div>
 </div>
 
 <div class="row">
     <div class="col-md-12 amazonSearch">
-        <script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="mukundkumar17-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category =""; amzn_assoc_default_search_key ="micromax";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; </script>
-        <script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"></script>
     </div>
 </div>
     </div>
