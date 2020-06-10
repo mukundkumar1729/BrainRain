@@ -42,31 +42,39 @@
         </div>
         <div class="row">
             <div class="col-md-9 col-12">
-        <div id="listing" class="spa-div">
-            <div class='row first-row'>
+                <div class='row'>
                 <div class='col-md-1 col-2'>
                     <label>GoTo</label>
                 </div>
-                <div class='col-md-2  col-3'>
-                    <select class='page' style='width:100px'>   <!-- onchange='HideShow(this);' -->
-                        <option>Interview Questions</option>
-                        <option>C# Programming</option>
-                        <option>News Section</option>
+                <div class='col-md-3  col-5'>
+                    <select class='page form-control' onchange='ShowSinglePage(this);'>
+                        <option value='listing'>Interview Questions</option>
+                        <option value='programmingSection'>C# Programming</option>
+                        <option value='newsSection'>News Section</option>
                     </select>
                 </div>
+                <div class='col-md-3  col-5'><p id="timer" class="text-right"></p></div>
+                <div class='col-md-2 col-2 text-right'>
+                    <label>Hello</label>
+                </div>
+                <div class='col-md-3 col-5 text-right'>
+                    <span class='user'></span>
+                </div>
+                </div>
+
+        <div id="listing" class="spa-div">
+            <div class='row first-row'>
                 <div class='col-md-1 col-2'>
                     <label>Domain</label>
                 </div>
-                <div class='col-md-1  col-2'>
-                    <select class='domain' onchange='HideShow(this);' style='width:100px'>
+                <div class='col-md-3  col-4'>
+                    <select class='domain form-control' onchange='HideShow(this);'>
                     </select>
                 </div>
-                <div class='col-md-3  col-1'><p id="timer" class="text-right"></p></div>
-                <div class='col-md-2  col-12'>
+                <div class='col-md-6  col-6'></div>
+                <div class='col-md-2  col-12 text-right'>
                     <button type="button" class="btn btn-primary" onclick="PreCreateQuesAns()">Add Question</button>
                 </div>
-                <div class='col-md-1 col-2'>Hello</div>
-                <div class='col-md-1 col-5'><span class='user'></span></div>
             </div>
             <div class="row" id="PrePageLoad">
                 <div class="col-md-12">
@@ -93,7 +101,7 @@
                 <div class='col-md-1'>
                     <label>Domain</label>
                 </div>
-                <div class='col-md-1'>
+                <div class='col-md-3'>
                     <select class='domain'>
                         <option value='sql'>SQL</option>
                         <option value='c#'>C#</option>
@@ -103,18 +111,13 @@
                         <option value='misc'>Misc</option>
                     </select>
                 </div>
-				<div class='col-md-1'></div>
                 <div class='col-md-3 col-12' id="qnaImport">
 					<input type="file" id="fileUpload" />
                 </div>
-                <div class='col-md-3 col-12' id="qnaFileUpload">
+                <div class='col-md-2 col-12' id="qnaFileUpload">
                     <button type="button" class="btn btn-secondary" onclick="SampleFileDownload();">Sample File</button>
-                        
                     <button id="upload" type="button" class="btn btn-primary" onclick="Upload();" title="Import Question And Answser">Upload</button>
-                    
 				</div>
-                <div class='col-md-1'>Hello</div>
-                <div class='col-md-1'><span class='user'></span></div>
             </div>
             <div id="dvAddEditQnsAnsBySave">
             <div class='row'>
@@ -175,10 +178,35 @@
         </div>
         </div>
 
+        <!-- Programming section Starts-->
         <div id="programmingSection" class="spa-div">
-<!-- Programming section -->
+Programming section
         </div>
+        <!-- Programming section Ends-->
 
+        <!-- News section Starts-->
+        <div id="newsSection" class="spa-div">
+            <h2>News section</h2>
+            <div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 id="newsTitle"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 id="newsDescription"></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img id="newsImage" src="" alt=""></img>
+                </div>
+            </div>
+            <hr id="newsSectionHL"/>
+        </div>
+                    <!-- News section Ends-->
+                    </div>
         <div class="row Contacts">
             <hr class="rounded"/>
             <div class="col-md-6 col-6">

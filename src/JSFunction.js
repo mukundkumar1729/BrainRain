@@ -39,7 +39,13 @@ const control = {
     addMoreButton:"#addMoreButtonTemplate",
     removeLastButton:"#removeLastButtonTemplate",
     brainRainNews:".brainRainNews",
-    marqueeContent:".brainRainNews marquee span"
+    marqueeContent:".brainRainNews marquee span",
+    newsSection:"#newsSection",
+    newsTitle:"#newsSection #newsTitle",
+    newsDescription:"#newsSection #newsDescription",
+    newsImage:"#newsSection #newsImage",
+    newsSectionHL:"#newsSection #newsSectionHL"
+
 }
 const firebaseConfig = {
     apiKey: "AIzaSyBN3vM2XOK7uXSgI-KmPqbKp6ZFE4Ws_uI",
@@ -592,18 +598,68 @@ function GetNews(){
 function SetNewsMarquee(data){
     html = '';
     for(let article of data.articles){
-        html += `<span title='${article.description}'>${article.title}</span>`;
+        html += `<a href='javascript:void(0)' title='click to get details' onclick='SetNewsDetails("${article.title}")'>
+                 <span>${article.title}</span>
+                </a>`;
     }
     $(control.marqueeContent).html(html);
 }
 
-function setAdsSection(){
+function SetAllNewsDetails(){
     debugger;
+    ShowSingleDiv(control.newsSection);
+    let ind = 0;
+    let newsArticles = JSON.parse(sessionStorage.getItem('newsArticles')).articles;
+    let newsTitle = $(control.newsTitle).clone();
+    let newsDescription = $(control.newsDescription).clone();
+    let newsImage = $(control.newsImage).clone();
+
+    for(let article of newsArticles){
+        if(ind == 0){
+            $(control.newsTitle).html(article.title);
+            $(control.newsDescription).html(article.description).after(`<a href='${article.url}'>${article.url}</a>`);
+            $(control.newsImage).attr('src',article.image);
+        }else{
+            $(control.newsSection + ':last-child').before(newsTitle.html(article.title));
+            $(control.newsSection + ':last-child').before(newsDescription.html(article.description)); // after(`<a href='${article.url}'>${article.url}</a>`)
+            $(control.newsSection + ':last-child').before(newsImage.attr('src', article.image));
+            $(control.newsSection + ':last-child').before('<p></p>');
+        }
+        ind++;
+    }
+}
+
+function SetNewsDetails(title){
+    debugger;
+    ShowSingleDiv(control.newsSection);
+    let newsArticles = JSON.parse(sessionStorage.getItem('newsArticles')).articles;
+    for(let article of newsArticles){
+        if(article.title.toLowerCase() == title.toLowerCase()){
+            $(control.newsTitle).html(article.title);
+            $(control.newsDescription).html(article.description).after(`<a href='${article.url}'>${article.url}</a>`);;
+            $(control.newsImage).attr('src', article.image);
+            break;
+        }
+    }
+}
+
+function setAdsSection(){
     $.getScript( "src/adsJSCode.js" )
   .done(function( script, textStatus ) {
-    console.log( textStatus );
   })
   .fail(function( jqxhr, settings, exception ) {
-    $( "div.log" ).text( "Triggered ajaxError handler." );
 });
+}
+
+function ShowSinglePage(sender){
+    debugger;
+    let div = '#' + sender.value;
+    ShowSingleDiv(div);
+    switch(sender.value) {
+        case 'newsSection':
+        SetAllNewsDetails();
+          break;
+        default:
+          // code block
+      }   
 }

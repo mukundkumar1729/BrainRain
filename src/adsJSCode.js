@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    debugger;
     CueLinksAds();
     $('#adsSection #carousel123 .carousel-inner').html(CueLinksWidgets());
     $('#adsSection #staticAds').html(StaticAdsSection());
