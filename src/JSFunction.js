@@ -620,10 +620,36 @@ function SetAllNewsDetails(){
             $(control.newsDescription).html(article.description).after(`<a href='${article.url}'>${article.url}</a>`);
             $(control.newsImage).attr('src',article.image);
         }else{
-            $(control.newsSection + ':last-child').before(newsTitle.html(article.title));
-            $(control.newsSection + ':last-child').before(newsDescription.html(article.description)); // after(`<a href='${article.url}'>${article.url}</a>`)
-            $(control.newsSection + ':last-child').before(newsImage.attr('src', article.image));
-            $(control.newsSection + ':last-child').before('<p></p>');
+        //     $(control.newsSectionHL).before(newsTitle);
+        //     $(control.newsSectionHL).before(newsDescription); // after(`<a href='${article.url}'>${article.url}</a>`)
+        //     $(control.newsSectionHL).before(newsImage);
+        //     $(control.newsSectionHL).before('<p></p>');
+
+        //     let lastNewsTitleEl = $(`${control.newsSection} ${control.newsTitle}:${constant.lastChild}`);
+        //     let lastNewsDescriptionEl = $(`${control.newsSection} ${control.newsDescription}:${constant.lastChild}`);
+        //     let lastNewsImageEl = $(`${control.newsSection} ${control.newsImage}:${constant.lastChild}`);
+
+        //    $(lastNewsTitleEl).val(article.title);
+        //    $(lastNewsDescriptionEl).val(article.description);
+        //    $(lastNewsImageEl).attr('src',article.image);
+        let html = `<div class="allNewsDetails">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <h3 id="newsTitle">${article.title}</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                        <h4 id="newsDescription">${article.description}</h4>
+                        <a href="${article.url}"></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                        <img id="newsImage" src="${article.image}" alt=""></img>
+                        </div>
+                    </div></div>`;
+                    $(control.newsSectionHL).before(html);
         }
         ind++;
     }
@@ -632,6 +658,7 @@ function SetAllNewsDetails(){
 function SetNewsDetails(title){
     debugger;
     ShowSingleDiv(control.newsSection);
+    $('.allNewsDetails').remove();
     let newsArticles = JSON.parse(sessionStorage.getItem('newsArticles')).articles;
     for(let article of newsArticles){
         if(article.title.toLowerCase() == title.toLowerCase()){
@@ -645,10 +672,8 @@ function SetNewsDetails(title){
 
 function setAdsSection(){
     $.getScript( "src/adsJSCode.js" )
-  .done(function( script, textStatus ) {
-  })
-  .fail(function( jqxhr, settings, exception ) {
-});
+  .done(function( script, textStatus ) {})
+  .fail(function( jqxhr, settings, exception ) {});
 }
 
 function ShowSinglePage(sender){
