@@ -7,6 +7,7 @@ const constant = {
     ques: "ques",
     ans: "ans",
     empty: "",
+    domain:"domain",
     dataDomain: "data-domain",
     confirmDelete: "Are you sure to delete ?",
     confirmListing: "Do you want to go to ques ans lists ?",
@@ -16,7 +17,11 @@ const constant = {
     secondLastChild:"nth-last-child(2)",
     nextQuestion:"Next Question",
     kmukund439Rgmail:"kmukund439@gmail.com",
-    newsAPI:"https://gnews.io/api/v3/search?q=software&token=a200bb11d1b6155caffd725d56755f7a"
+    newsArticles:"newsArticles",
+    newsAPI:"https://gnews.io/api/v3/search?q=software&token=a200bb11d1b6155caffd725d56755f7a",
+    listing:"listing",
+    programmingSection:"programmingSection",
+    newsSection:"newsSection"
 }
 
 const control = {
@@ -44,7 +49,8 @@ const control = {
     newsTitle:"#newsSection #newsTitle",
     newsDescription:"#newsSection #newsDescription",
     newsImage:"#newsSection #newsImage",
-    newsSectionHL:"#newsSection #newsSectionHL"
+    newsSectionHL:"#newsSection #newsSectionHL",
+    gotoDdl:"select.page"
 
 }
 const firebaseConfig = {
@@ -71,6 +77,7 @@ $(document).ready(function() {
     document.getElementById("PrePageLoad").classList.add("loader");
     SetUserEmail();
     GetNews();
+    BindGoToPageDdl();
     const resp = checkNetConnection();
     if(resp){
         //sendEmail();
@@ -167,7 +174,7 @@ function ProcessQuesAns(data) {
     var html = quesAnsTbodyData.html;
     let options = quesAnsTbodyData.options;
 
-    CreateOptionForQuesAns(options);
+    CreateOptionForQuesAns(options,constant.domain);
     var dvQuesAns = $(control.dvQuesAns);
     dvQuesAns.html('');
     dvQuesAns.html(html);
@@ -248,6 +255,7 @@ function CreateElementForQuesAns(item, qnsType) {
 }
 
 function CreateOptionForQuesAns(options) {
+    debugger;
     var ddl = document.getElementsByClassName('domain')[0];
     ddl.options.length = 0;
     ddl.options[ddl.options.length] = new Option(constant.all, constant.all.toLowerCase());
@@ -283,8 +291,6 @@ function PreCreateQuesAns() {
 function CreateQuesAns() {
     let ddl = $(`${control.updateBrainRain} .domain`)[0];
     const domain = ddl.value == null ? constant.misc : ddl.value;
-    // const question = $(control.question).val();
-    // const answer = $(control.answer).val();
     const qnsElement = $(`${control.dvAddEditQnsAnsBySave} .row ${control.question}`);
     const ansElement = $(`${control.dvAddEditQnsAnsBySave} .row ${control.answer}`);
     const qnsElementLength = qnsElement.length;
@@ -398,12 +404,11 @@ function AlignSearchBox() {
             "margin-top": "0",
             "float": "left"
         });
-        if(width < 300){
-            $(`${control.dvQuesAnsTable_filter} ${control.label}`).addClass("text-left");
-      
+    }
+    if(width < 300){
+        $(`${control.dvQuesAnsTable_filter} ${control.label}`).addClass("text-left");
         }
     }
-}
 
 function Upload() {
 
@@ -578,14 +583,14 @@ function checkNetConnection(){
 }
 
 function GetNews(){
-    let newsArticles = JSON.parse(sessionStorage.getItem('newsArticles'));
+    let newsArticles = JSON.parse(sessionStorage.getItem(constant.newsArticles));
     if(!newsArticles){
         $.ajax({
             url: constant.newsAPI,
             type:'GET',
             success: function(data, status) {
                  SetNewsMarquee(data);
-                 sessionStorage.setItem('newsArticles', JSON.stringify(data));
+                 sessionStorage.setItem(constant.newsArticles, JSON.stringify(data));
             },
             error: function(err, status) {
             }
@@ -609,7 +614,7 @@ function SetAllNewsDetails(){
     debugger;
     ShowSingleDiv(control.newsSection);
     let ind = 0;
-    let newsArticles = JSON.parse(sessionStorage.getItem('newsArticles')).articles;
+    let newsArticles = JSON.parse(sessionStorage.getItem(constant.newsArticles)).articles;
     let newsTitle = $(control.newsTitle).clone();
     let newsDescription = $(control.newsDescription).clone();
     let newsImage = $(control.newsImage).clone();
@@ -659,7 +664,7 @@ function SetNewsDetails(title){
     debugger;
     ShowSingleDiv(control.newsSection);
     $('.allNewsDetails').remove();
-    let newsArticles = JSON.parse(sessionStorage.getItem('newsArticles')).articles;
+    let newsArticles = JSON.parse(sessionStorage.getItem(constant.newsArticles)).articles;
     for(let article of newsArticles){
         if(article.title.toLowerCase() == title.toLowerCase()){
             $(control.newsTitle).html(article.title);
@@ -681,10 +686,24 @@ function ShowSinglePage(sender){
     let div = '#' + sender.value;
     ShowSingleDiv(div);
     switch(sender.value) {
-        case 'newsSection':
-        SetAllNewsDetails();
+        case constant.newsSection:
+            SetAllNewsDetails();
+            $(control.gotoDdl).val(constant.newsSection);
           break;
         default:
           // code block
       }   
+}
+
+function BindGoToPageDdl(){
+    debugger;
+    let ddl = $(control.gotoDdl)[0];
+    ddl.options.length = 0;
+    let options = [{value: constant.listing, text: "Interview Questions"},
+                   {value: constant.programmingSection, text: "Programming Section"},
+                   {value: constant.newsSection, text: "News Section"}];
+    for (option of options) {
+        ddl.options[ddl.options.length] = new Option(option.text, option.value);
+    }
+
 }
