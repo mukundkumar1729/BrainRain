@@ -409,6 +409,8 @@ function AlignElsOnSmallDevice() {
     if(width < 300){
         $(`${control.dvQuesAnsTable_filter} ${control.label}`).addClass("text-left");
         }
+        if(width < 640){}
+        $('.contactUs span#line-break').html('');
     }
 
 function Upload() {
