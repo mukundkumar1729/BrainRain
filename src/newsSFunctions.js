@@ -74,7 +74,7 @@ function SetAllNewsDetails(){
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                        <img id="newsImage" src="${article.image}" alt=""/>
+                        <img id="newsImage" src="${article.image}" alt="${article.url}" width="100%" height="100%" />
                         </div>
                     </div></div>`;
                     $(control.newsSectionHL).before(html);
