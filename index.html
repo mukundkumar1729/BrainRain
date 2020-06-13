@@ -1,243 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>BrainRain | SQL | MVC | Javascript | JQuery | Interview Questions</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="BrainRain, SQL, .NET, MVC, Javascript, JQuery, Bootstrap, Interview Questions, Add more functionality, import from excel, BrainRain News, mukundkumar1729">
-    <meta name="description" content="SQL Javascript  Interview Questions">
-    <meta name="author" content="Mukund Kumar">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
-    <script type="text/javascript" src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
-    <script type="text/javascript" src="https://use.fontawesome.com/ad063041d8.js"></script>
-    <link href="StyleSheet/style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script type="text/javascript" src="src/JSFunction.js"></script>
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script> -->
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>   -->
-    <!-- google adsense ads script -->
-    <!-- <script data-ad-client="ca-pub-7923513691103876" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-</head>
-
-<body>
-    <div class="container">
-        <div class="row">
-                <div class="col-md-12 brainRainNews">
-                    <marquee onmouseover ="this.stop()" onmouseout ="this.start()"> 
-                       <span>
-                              BrainRain Latest News on science - technology & Software  Coming Soon ... &nbsp;&nbsp; 
-                       </span> 
-                    </marquee>
-                </div>
-        </div>
-        <div class="row">
+   <head>
+      <title>BrainRain | Interview Questions | SQL | C# | JQuery |</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="BrainRain, SQL, .NET, MVC, Javascript, JQuery, Bootstrap, Interview Questions, Add more functionality, import from excel,  C# Programming, Software News, Programming News, mukundkumar1729, mukundkumar1729-brainrain">
+      <meta name="description" content="SQL Javascript  Interview Question C# Programming">
+      <meta name="author" content="Mukund Kumar">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+      <script type="text/javascript" src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+      <script type="text/javascript" src="https://use.fontawesome.com/ad063041d8.js"></script>
+      <link href="StyleSheet/style.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <script type="text/javascript" src="src/JSFunction.js"></script>
+      <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script> -->
+      <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>   -->
+      <!-- google adsense ads script -->
+      <!-- <script data-ad-client="ca-pub-7923513691103876" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 brainRainNews">
+               <marquee onmouseover ="this.stop()" onmouseout ="this.start()"> 
+                  <span>
+                  BrainRain Latest News on science - technology & Software  Coming Soon ... &nbsp;&nbsp; 
+                  </span> 
+               </marquee>
+            </div>
+         </div>
+         <div class="row">
             <div class="col-md-9 col-12">
-                <div class='row'>
-                <div class='col-md-1 col-2'>
-                    <label>GoTo</label>
-                </div>
-                <div class='col-md-3  col-5'>
-                    <select class='page form-control' onchange='ShowSinglePage(this);'>
-                    </select>
-                </div>
-                <div class='col-md-3  col-5'><p id="timer" class="text-right"></p></div>
-                <div class='col-md-2 col-2 text-right'>
-                    <label>Hello</label>
-                </div>
-                <div class='col-md-3 col-5 text-md-right text-left'>
-                    <span class='user'></span>
-                </div>
-                </div>
-
-        <div id="listing" class="spa-div">
-            <div class='row first-row'>
-                <div class='col-md-1 col-2'>
-                    <label>Domain</label>
-                </div>
-                <div class='col-md-3  col-5'>
-                    <select class='domain form-control' onchange='HideShow(this);'>
-                    </select>
-                </div>
-                <div class='col-md-8 col-5 text-right'>
-                    <button type="button" class="btn btn-primary" onclick="PreCreateQuesAns()">Add Question</button>
-                </div>
-            </div>
-            <div class="row" id="PrePageLoad">
-                <div class="col-md-12">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-12">
-                    <table id="dvQuesAnsTable">
+               <div class='row'>
+                  <div class='col-md-1 col-2'>
+                     <label>GoTo</label>
+                  </div>
+                  <div class='col-md-3  col-5'>
+                     <select class='page form-control' onchange='ShowSinglePage(this);'>
+                     </select>
+                  </div>
+                  <div class='col-md-3  col-5'>
+                     <p id="timer" class="text-right"></p>
+                  </div>
+                  <div class='col-md-2 col-2 text-right'>
+                     <label>Hello</label>
+                  </div>
+                  <div class='col-md-3 col-5 text-md-right text-left'>
+                     <span class='user'></span>
+                  </div>
+               </div>
+               <div id="listing" class="spa-div">
+                  <h2 style="display:none">Interview Questions</h2>
+                  <div class='row first-row'>
+                     <div class='col-md-1 col-2'>
+                        <label>Domain</label>
+                     </div>
+                     <div class='col-md-3  col-5'>
+                        <select class='domain form-control' onchange='HideShow(this);'>
+                        </select>
+                     </div>
+                     <div class='col-md-8 col-5 text-right'>
+                        <button type="button" class="btn btn-primary" onclick="PreCreateQuesAns()">Add Question</button>
+                     </div>
+                  </div>
+                  <div class="row" id="PrePageLoad">
+                     <div class="col-md-12">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-12 col-12">
+                        <table id="dvQuesAnsTable">
+                           <thead>
+                              <tr>
+                                 <th></th>
+                              </tr>
+                           </thead>
+                           <tbody id="dvQuesAns">
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div id="updateBrainRain" class="spa-div">
+                  <div class='row' style="margin-top:10px">
+                     <div class='col-md-1 col-2'>
+                        <label>Domain</label>
+                     </div>
+                     <div class='col-md-3 col-5'>
+                        <select class='domain form-control'>
+                           <option value='sql'>SQL</option>
+                           <option value='c#'>C#</option>
+                           <option value='mvc'>MVC</option>
+                           <option value='js'>Javascript</option>
+                           <option value='jq'>Jquery</option>
+                           <option value='misc'>Misc</option>
+                        </select>
+                     </div>
+                     <div class='col-md-3 col-6' id="qnaImport">
+                        <input type="file" id="fileUpload" />
+                     </div>
+                     <div class='col-md-3 col-6' id="qnaFileUpload">
+                        <button type="button" class="btn btn-secondary" onclick="SampleFileDownload();">Sample File</button>
+                        <button id="upload" type="button" class="btn btn-primary" onclick="Upload();" title="Import Question And Answser">Upload</button>
+                     </div>
+                  </div>
+                  <div id="dvAddEditQnsAnsBySave">
+                     <div class='row'>
+                        <div class='col-md-10 col-8'>
+                           <label>What is your Question ?</label>
+                        </div>
+                        <div class='col-md-2 col-4 btn-group' role="group">
+                           <button type='button' class='btn btn-default'></button>
+                           <button type='button' id="addMoreButtonTemplate" class='btn btn-primary' value='save' title='Add More Ques Ans' onclick='AddMoreQuesAnsTemplate(this);'>
+                           <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                           <button type='button' id="removeLastButtonTemplate" class='btn btn-danger' value='delete' title='Remove Last Ques Ans' onclick='RemoveLastQuesAnsTemplate(this);'>
+                           <i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+                        </div>
+                        <div class='col-md-12'>
+                           <input type='text' id='question' placeholder='Question ???' />
+                        </div>
+                     </div>
+                     <div class='row'>
+                        <div class='col-md-12'>
+                           <label>Your answer please !</label>
+                        </div>
+                        <div class='col-md-12'>
+                           <textarea id='answer' placeholder='Answer !!!' rows='10'></textarea>
+                        </div>
+                     </div>
+                     <div class='row'>
+                        <div class="col-md-4"></div>
+                        <div class='col-md-1 col-4'>
+                           <button type='button' id="saveButton" class='btn btn-primary' value='save' title='Save Changes' onclick='SaveQuesAns(this);'>Save</button>
+                        </div>
+                        <div class='col-md-1 col-4'>
+                           <button type='button' class='btn btn-secondary' title='Save Changes' onclick='ShowSingleDiv("#listing")'>Cancel</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="dvAddQnsAnsByUpload" style="display:none">
+                     <div id="dvAddQnsAnsByUploadLoader"></div>
+                     <table id="QuesAnsAddTable">
                         <thead>
-                            <tr>
-                                <th></th>
-                            </tr>
+                           <tr>
+                              <th></th>
+                           </tr>
                         </thead>
-                        <tbody id="dvQuesAns">
-
+                        <tbody id="dvQuesAnsAdd">
                         </tbody>
-                    </table>
-                </div>
+                     </table>
+                     <div class='row'>
+                        <div class="col-md-4"></div>
+                        <div class='col-md-2 col-4'>
+                           <button type='button' id="importButton" class='btn btn-primary' value='import' title='Save Changes' onclick='ImportQnsAnsFromExcel(this);'>Import All</button>
+                        </div>
+                        <div class='col-md-1 col-4'>
+                           <button type='button' class='btn btn-primary' title='Save Changes' onclick='ShowSingleDiv("#listing")'>Cancel</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Programming section Starts-->
+               <div id="programmingSection" class="spa-div">
+                  <h2>Programming section</h2>
+                  <div id="CSharpProgramming">
+                      <div style="display:none">
+                        <details>
+                            <summary></summary>
+                            <p></p>
+                            </details>
+                      </div>
+                  </div>
+               </div>
+               <!-- Programming section Ends-->
+               <!-- News section Starts-->
+               <div id="newsSection" class="spa-div">
+                  <h2>News section</h2>
+                  <div>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h3 id="newsTitle"></h3>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h4 id="newsDescription"></h4>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <img id="newsImage" src="#" alt="news"/>
+                        </div>
+                     </div>
+                     <hr id="newsSectionHL"/>
+                  </div>
+                  <!-- News section Ends-->
+               </div>
+               <div class="row Contacts">
+                  <hr class="rounded"/>
+                  <div class="col-md-6 col-6">
+                     <h3>Get App</h3>
+                     <a href="https://app.appsgeyser.com/11045965/BrainRain">Download Here</a><br/>
+                     <!-- Appgeyser Scanner -->
+                     <iframe src="https://appsgeyser.com/social_widget/social_widget.php?width=100&height=100&apkName=BrainRain_11045965&simpleVersion=yes" 
+                        width="180" height="150"   title="Scan QR Code to download and browse in our app"></iframe>
+                  </div>
+                  <div class="col-md-6 col-6 contactUs">
+                     <h3>Contact Us:</h3>
+                     <a href="https://kmukund439@gmail.com/" target="_blank" title="kmukund439@gmail.com"><img src="image/gmail.png" alt="gmail"/></a><span class="space"></span>
+                     <a href="https://www.linkedin.com/in/mukundkumar1729/?originalSubdomain=in" target="_blank"><img src="image/LinkedIn.png" alt="linkedIn"/></a><span class="space"></span>
+                     <a href="https://twitter.com/mukundkumar1729" target="_blank"><img src="image/twitter.png" alt="twitter"/> </a><span class="space"></span>
+                     <a href="https://www.facebook.com/mukundkumar1729" target="_blank"><img src="image/fb-art.png" alt="facebook"/></a><br/><br/>
+                     <a href="https://www.hackerearth.com/@kmukund439" target="_blank"><img src="image/hackerEarth.png" alt="HackerEarth"/></a>
+                     <a href="https://www.instagram.com/_mukundkumar1729/" target="_blank"><img src="image/instagram.jpg" alt="Instagram"/></a>
+                     <a href="https://in.pinterest.com/kmukund439/boards/" target="_blank"><img src="image/pinterestLogo.jpg" alt="pinterest"/></a>
+                  </div>
+               </div>
             </div>
-        </div>
-        <div id="updateBrainRain" class="spa-div">
-            <div class='row' style="margin-top:10px">
-                <div class='col-md-1'>
-                    <label>Domain</label>
-                </div>
-                <div class='col-md-3'>
-                    <select class='domain'>
-                        <option value='sql'>SQL</option>
-                        <option value='c#'>C#</option>
-                        <option value='mvc'>MVC</option>
-                        <option value='js'>Javascript</option>
-                        <option value='jq'>Jquery</option>
-                        <option value='misc'>Misc</option>
-                    </select>
-                </div>
-                <div class='col-md-3 col-12' id="qnaImport">
-					<input type="file" id="fileUpload" />
-                </div>
-                <div class='col-md-2 col-12' id="qnaFileUpload">
-                    <button type="button" class="btn btn-secondary" onclick="SampleFileDownload();">Sample File</button>
-                    <button id="upload" type="button" class="btn btn-primary" onclick="Upload();" title="Import Question And Answser">Upload</button>
-				</div>
+            <div class="col-md-3 col-12" id="adsSection">
+               <div id="carousel123" class ="carousel slide" data-ride="carousel">
+                  <div  class="carousel-inner">
+                  </div>
+               </div>
+               <div id="staticAds">
+               </div>
             </div>
-            <div id="dvAddEditQnsAnsBySave">
-            <div class='row'>
-                <div class='col-md-10 col-8'>
-                    <label>What is your Question ?</label>
-                </div>
-                <div class='col-md-2 col-4 btn-group' role="group">
-                    <button type='button' class='btn btn-default'></button>
-                    <button type='button' id="addMoreButtonTemplate" class='btn btn-primary' value='save' title='Add More Ques Ans' onclick='AddMoreQuesAnsTemplate(this);'>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-                    <button type='button' id="removeLastButtonTemplate" class='btn btn-danger' value='delete' title='Remove Last Ques Ans' onclick='RemoveLastQuesAnsTemplate(this);'>
-                        <i class="fa fa-minus-circle" aria-hidden="true"></i></button>
-                </div>
-                <div class='col-md-12'>
-                    <input type='text' id='question' placeholder='Question ???' />
-                </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12 amazonSearch">
             </div>
-            <div class='row'>
-                <div class='col-md-12'>
-                    <label>Your answer please !</label>
-                </div>
-                <div class='col-md-12'>
-                    <textarea id='answer' placeholder='Answer !!!' rows='10'></textarea>
-                </div>
-            </div>
-            <div class='row'>
-                <div class="col-md-4"></div>
-                <div class='col-md-1 col-4'>
-                    <button type='button' id="saveButton" class='btn btn-primary' value='save' title='Save Changes' onclick='SaveQuesAns(this);'>Save</button>
-                </div>
-                <div class='col-md-1 col-4'>
-                    <button type='button' class='btn btn-secondary' title='Save Changes' onclick='ShowSingleDiv("#listing")'>Cancel</button>
-                </div>
-            </div>
-        </div>
-        <div id="dvAddQnsAnsByUpload" style="display:none">
-            <div id="dvAddQnsAnsByUploadLoader"></div>
-            <table id="QuesAnsAddTable">
-                <thead>
-                    <tr>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="dvQuesAnsAdd">
-
-                </tbody>
-            </table>
-
-            <div class='row'>
-                <div class="col-md-4"></div>
-                <div class='col-md-2 col-4'>
-                    <button type='button' id="importButton" class='btn btn-primary' value='import' title='Save Changes' onclick='ImportQnsAnsFromExcel(this);'>Import All</button>
-                </div>
-                <div class='col-md-1 col-4'>
-                    <button type='button' class='btn btn-primary' title='Save Changes' onclick='ShowSingleDiv("#listing")'>Cancel</button>
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <!-- Programming section Starts-->
-        <div id="programmingSection" class="spa-div">
-Programming section
-        </div>
-        <!-- Programming section Ends-->
-
-        <!-- News section Starts-->
-        <div id="newsSection" class="spa-div">
-            <h2>News section</h2>
-            <div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 id="newsTitle"></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h4 id="newsDescription"></h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <img id="newsImage" src="" alt=""></img>
-                </div>
-            </div>
-            <hr id="newsSectionHL"/>
-        </div>
-                    <!-- News section Ends-->
-                    </div>
-        <div class="row Contacts">
-            <hr class="rounded"/>
-            <div class="col-md-6 col-6">
-                <h3>Get App</h3>
-                <a href="https://app.appsgeyser.com/11045965/BrainRain">Download Here</a><br/>
-                <!-- Appgeyser Scanner -->
-                <iframe src="https://appsgeyser.com/social_widget/social_widget.php?width=100&height=100&apkName=BrainRain_11045965&simpleVersion=yes" 
-        width="180" height="150"   title="Scan QR Code to download and browse in our app"></iframe>
-            </div>
-            <div class="col-md-6 col-6 contactUs">
-                <h3>Contact Us:</h3>
-                <a href="https://kmukund439@gmail.com/" target="_blank" title="kmukund439@gmail.com"><img src="image/gmail.png" alt="gmail"/></a><span class="space"></span>
-                <a href="https://www.linkedin.com/in/mukundkumar1729/?originalSubdomain=in" target="_blank"><img src="image/LinkedIn.png" alt="linkedIn"/></a><span class="space"></span>
-                <a href="https://twitter.com/mukundkumar1729" target="_blank"><img src="image/twitter.png" alt="twitter"/> </a><span class="space"></span>
-                <a href="https://www.facebook.com/mukundkumar1729" target="_blank"><img src="image/fb-art.png" alt="facebook"/></a>
-            </div>
-    </div>
-</div>
-
-<div class="col-md-3 col-12" id="adsSection">
-    <div id="carousel123" class ="carousel slide" data-ride="carousel">
-        <div  class="carousel-inner">
-            
-        </div>
-    </div>
-    <div id="staticAds">
-
-    </div>
-</div>
-</div>
-
-<div class="row">
-    <div class="col-md-12 amazonSearch">
-    </div>
-</div>
-    </div>
-</body>
+         </div>
+      </div>
+   </body>
 </html>

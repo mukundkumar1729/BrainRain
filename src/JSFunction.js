@@ -18,6 +18,7 @@ const constant = {
     nextQuestion:"Next Question",
     kmukund439Rgmail:"kmukund439@gmail.com",
     newsArticles:"newsArticles",
+    pNewsArticles:"pNewsArticles",
     newsAPI:"https://gnews.io/api/v3/search?q=software&token=a200bb11d1b6155caffd725d56755f7a",
     listing:"listing",
     programmingSection:"programmingSection",
@@ -50,7 +51,9 @@ const control = {
     newsDescription:"#newsSection #newsDescription",
     newsImage:"#newsSection #newsImage",
     newsSectionHL:"#newsSection #newsSectionHL",
-    gotoDdl:"select.page"
+    gotoDdl:"select.page",
+    CSharpProgramming:"#programmingSection #CSharpProgramming",
+    summaryEl:"details summary"
 
 }
 const firebaseConfig = {
@@ -76,11 +79,10 @@ $(document).ready(function() {
     var timer = setInterval(MyTimer, 1000);
     document.getElementById("PrePageLoad").classList.add("loader");
     SetUserEmail();
-    GetNews();
+    loadNewsSectionScript();
     BindGoToPageDdl();
     const resp = checkNetConnection();
     if(resp){
-        //sendEmail();
         GetDataOnPageLoad_FirebaseDB();
     }
     else{
@@ -88,9 +90,8 @@ $(document).ready(function() {
         GetDataOnPageLoad_JSONFile();
     }
     $(window).resize(function() {
-        AlignSearchBox();
+        AlignElsOnSmallDevice();
     });
-    CueLinksAds();
 });
 
 function MyTimer() {
@@ -154,7 +155,7 @@ function GetDataOnPageLoad_JSONFile() {
 function ActionOnPageLoad(data) {
     ShowSingleDiv();
     ProcessQuesAns(data);
-    AlignSearchBox();
+    AlignElsOnSmallDevice();
 }
 
 function HideShow(e) {
@@ -255,7 +256,6 @@ function CreateElementForQuesAns(item, qnsType) {
 }
 
 function CreateOptionForQuesAns(options) {
-    debugger;
     var ddl = document.getElementsByClassName('domain')[0];
     ddl.options.length = 0;
     ddl.options[ddl.options.length] = new Option(constant.all, constant.all.toLowerCase());
@@ -397,13 +397,14 @@ function ShowSingleDiv(div) {
 }
 
 // adjusts jquery datatable searchbox position on small screen
-function AlignSearchBox() {
+function AlignElsOnSmallDevice() {
     const width = screen.width;
     if (width <= 640) {
         $(control.dvQuesAnsTable_filter).css({
             "margin-top": "0",
             "float": "left"
         });
+        $('#adsSection').css('margin-top','10px');
     }
     if(width < 300){
         $(`${control.dvQuesAnsTable_filter} ${control.label}`).addClass("text-left");
@@ -511,21 +512,6 @@ function ImportQnsAnsFromExcel(sender)
 GetDataOnPageLoad_JSONFile(quesAnsData);
 }
 
-function sendEmail() {
-    Email.send({
-        Host: "smtp.gmail.com",
-        Username : "gordiansoftware",
-        Password : "g0rdian1729",
-        To : 'kmukund439@gmail.com',
-        From : "gordiansoftware@gmail.com",
-        Subject : "Welcome",
-        Body : "Hi, Mukund. Welocome to gordian software portal",
-    })
-    .then(function(message){
-        console.log(message);
-    });
-}
-
 function SampleFileDownload(){
     window.location.href = "data/QnsAnsSampleFile.xlsx";
 }
@@ -581,108 +567,21 @@ function checkNetConnection(){
     var lastNextQuestionTitle = $(`b:contains(${constant.nextQuestion})`)
     $(lastNextQuestionTitle).last().remove();
 }
-
-function GetNews(){
-    let newsArticles = JSON.parse(sessionStorage.getItem(constant.newsArticles));
-    if(!newsArticles){
-        $.ajax({
-            url: constant.newsAPI,
-            type:'GET',
-            success: function(data, status) {
-                 SetNewsMarquee(data);
-                 sessionStorage.setItem(constant.newsArticles, JSON.stringify(data));
-            },
-            error: function(err, status) {
-            }
-        });
-    }else{
-        SetNewsMarquee(newsArticles);
-    }
+// News Section Starts Here
+function loadNewsSectionScript(){
+    $.getScript("src/newsSFunctions.js");
 }
+// News Section Ends Here
 
-function SetNewsMarquee(data){
-    html = '';
-    for(let article of data.articles){
-        html += `<a href='javascript:void(0)' title='click to get details' onclick='SetNewsDetails("${article.title}")'>
-                 <span>${article.title}</span>
-                </a>`;
-    }
-    $(control.marqueeContent).html(html);
-}
-
-function SetAllNewsDetails(){
-    debugger;
-    ShowSingleDiv(control.newsSection);
-    let ind = 0;
-    let newsArticles = JSON.parse(sessionStorage.getItem(constant.newsArticles)).articles;
-    let newsTitle = $(control.newsTitle).clone();
-    let newsDescription = $(control.newsDescription).clone();
-    let newsImage = $(control.newsImage).clone();
-
-    for(let article of newsArticles){
-        if(ind == 0){
-            $(control.newsTitle).html(article.title);
-            $(control.newsDescription).html(article.description).after(`<a href='${article.url}'>${article.url}</a>`);
-            $(control.newsImage).attr('src',article.image);
-        }else{
-        //     $(control.newsSectionHL).before(newsTitle);
-        //     $(control.newsSectionHL).before(newsDescription); // after(`<a href='${article.url}'>${article.url}</a>`)
-        //     $(control.newsSectionHL).before(newsImage);
-        //     $(control.newsSectionHL).before('<p></p>');
-
-        //     let lastNewsTitleEl = $(`${control.newsSection} ${control.newsTitle}:${constant.lastChild}`);
-        //     let lastNewsDescriptionEl = $(`${control.newsSection} ${control.newsDescription}:${constant.lastChild}`);
-        //     let lastNewsImageEl = $(`${control.newsSection} ${control.newsImage}:${constant.lastChild}`);
-
-        //    $(lastNewsTitleEl).val(article.title);
-        //    $(lastNewsDescriptionEl).val(article.description);
-        //    $(lastNewsImageEl).attr('src',article.image);
-        let html = `<div class="allNewsDetails">
-                    <div class="row">
-                        <div class="col-md-12">
-                        <h3 id="newsTitle">${article.title}</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                        <h4 id="newsDescription">${article.description}</h4>
-                        <a href="${article.url}"></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                        <img id="newsImage" src="${article.image}" alt=""></img>
-                        </div>
-                    </div></div>`;
-                    $(control.newsSectionHL).before(html);
-        }
-        ind++;
-    }
-}
-
-function SetNewsDetails(title){
-    debugger;
-    ShowSingleDiv(control.newsSection);
-    $('.allNewsDetails').remove();
-    let newsArticles = JSON.parse(sessionStorage.getItem(constant.newsArticles)).articles;
-    for(let article of newsArticles){
-        if(article.title.toLowerCase() == title.toLowerCase()){
-            $(control.newsTitle).html(article.title);
-            $(control.newsDescription).html(article.description).after(`<a href='${article.url}'>${article.url}</a>`);;
-            $(control.newsImage).attr('src', article.image);
-            break;
-        }
-    }
-}
-
+// Ads Section Starts Here
 function setAdsSection(){
     $.getScript( "src/adsJSCode.js" )
   .done(function( script, textStatus ) {})
   .fail(function( jqxhr, settings, exception ) {});
 }
+// Ads Section Ends Here
 
 function ShowSinglePage(sender){
-    debugger;
     let div = '#' + sender.value;
     ShowSingleDiv(div);
     switch(sender.value) {
@@ -690,13 +589,14 @@ function ShowSinglePage(sender){
             SetAllNewsDetails();
             $(control.gotoDdl).val(constant.newsSection);
           break;
+        case constant.programmingSection:
+           $.getScript("src/programmingSFunctions.js");
         default:
           // code block
       }   
 }
 
 function BindGoToPageDdl(){
-    debugger;
     let ddl = $(control.gotoDdl)[0];
     ddl.options.length = 0;
     let options = [{value: constant.listing, text: "Interview Questions"},
@@ -705,5 +605,4 @@ function BindGoToPageDdl(){
     for (option of options) {
         ddl.options[ddl.options.length] = new Option(option.text, option.value);
     }
-
 }

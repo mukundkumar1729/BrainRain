@@ -7,35 +7,35 @@ $(document).ready(function(){
 
 function CueLinksWidgets(){
 const ads = `<div class='carousel-item active'>
-<span>Health and Beauty Products</span><br/>
+<span class='redColor'>Health and Beauty Products</span><br/>
 <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50038?cid=84555'></iframe>
 </div>
 <div class='carousel-item'>
-<span>Trending Books</span><br/>
+<span class='greenColor'>Trending Books</span><br/>
 <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50037?cid=84555'></iframe>
 </div>
 <div class='carousel-item'>
-<span>Electronics Items</span><br/>
+<span class='whiteColor'>Electronics Items</span><br/>
 <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50035?cid=84555'></iframe>
 </div>
 <div class='carousel-item'>
-<span>Fashion Items</span><br/>
+<span class='redColor'>Fashion Items</span><br/>
 <iframe width='300' height='250' src='https://widget.cuelinks.com/widgets/50056?cid=84555'></iframe>
 </div>
 <div class='carousel-item'>
-<span>Health & Beauty</span><br/>
+<span class='greenColor'>Health & Beauty</span><br/>
 <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50057?cid=84555'></iframe>
 </div>
 <div class='carousel-item'>
-<span>Flowers & Gifts</span><br/>
+<span class='whiteColor'>Flowers & Gifts</span><br/>
 <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50058?cid=84555'></iframe>
 </div>
 <div class='carousel-item'>
-<span>Home & Kitchen</span><br/>
+<span class='redColor'>Home & Kitchen</span><br/>
 <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50060?cid=84555'></iframe>
 </div>
 <div class='carousel-item'>
-<span></span><br/>
+<span class='greenColor'></span><br/>
 <iframe width='300' height='250'  src='https://widget.cuelinks.com/widgets/50062?cid=84555'></iframe>
 </div>`;
 return ads;
