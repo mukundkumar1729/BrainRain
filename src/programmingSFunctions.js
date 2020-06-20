@@ -7,9 +7,10 @@ function GetPrograms_JSONFile() {
 }
 
 function GetPrograms(data){
-    debugger;
     let el = $(control.CSharpProgramming);
+    let isHtml = $(el).html();
     let html = "";
+    if(isHtml.trim() == ""){
     for(let program of data){
         html= `<details>
                 <summary onclick='ImplementAccordion();'>${program.ques}</summary>
@@ -18,16 +19,24 @@ function GetPrograms(data){
         $(el).append(html);
     }
 }
+}
 
 function ImplementAccordion(){
-    debugger;
-    $('details').removeAttr('open')
-    const el = $(this).parent();
-    const isOpen = $(el)[0].hasAttribute('open');
-    if(isOpen == 'open'){
-        $(this).parent().removeAttr('open');
-    }else{
-        $(this).parent().attr('open','open');
+    $('details').removeAttr('open');
+}
+
+function SearchQuestions(){
+    ImplementAccordion();
+    const searchText = $(control.searchForQuestions).val().trim().toLowerCase();
+    const summary = $(control.summaryEl);
+    for(let el of summary){
+        let txt = $(el).text().trim().toLowerCase();
+        if(txt.includes(searchText)){
+            $(el).parent().show();
+        }
+        else{
+            $(el).parent().hide();
+        }
     }
 }
 

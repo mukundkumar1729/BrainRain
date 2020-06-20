@@ -53,7 +53,8 @@ const control = {
     newsSectionHL:"#newsSection #newsSectionHL",
     gotoDdl:"select.page",
     CSharpProgramming:"#programmingSection #CSharpProgramming",
-    summaryEl:"details summary"
+    summaryEl:"details summary",
+    searchForQuestions:"input#searchForQuestions"
 
 }
 const firebaseConfig = {
