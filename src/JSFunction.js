@@ -104,12 +104,12 @@ function MyTimer() {
     }
     var d = (new Date()).toLocaleTimeString();
     const timerID = document.getElementById("timer");
+    debugger;
     globalCounter = globalCounter + 1;
     localCounter = localCounter + 1;
-    const elapsedTime = (globalCounter/60).toFixed(2);
     if(timerID != null){
         timerID.innerHTML = `${d} (${globalCounter}s)`;
-        timerID.title = `active from last ${elapsedTime} minutes`;
+        timerID.title = `active from last ${(globalCounter/60).toFixed(0)} minutes`;
     }
     sessionStorage.setItem('globalCounter',globalCounter );
     if(localCounter == 5){
