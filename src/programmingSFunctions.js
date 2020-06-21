@@ -48,6 +48,7 @@ var programs =[
         domain:"prg",
         ques:"How to print pascal triangle in C# ?",
         ans:`
+        <br/>
         using System;<br/>
         using System.Collections.Generic;<br/>
         using System.Linq;<br/>
@@ -145,23 +146,23 @@ var programs =[
         ques:"Write a code to print X ?",
         ans:`
         <br/>
-        int r = 5;
-        int col = 2 * r - 1;
+        int r = 5;  <br/>
+        int col = 2 * r - 1; <br/>
         int row = 2 * r;
-        for(int i = 0; i < row; i++)
-        {
-            for(int j = 0; j < col; j++)
-            {
-                if(j == i || j == col-i-1)
-                    {
-                        Console.Write((i < r) ? i : row - i -2);
-                    }
-                    else
-                    {
-                        Console.Write("		");
-                    }
-            }
-            Console.WriteLine();
+        for(int i = 0; i < row; i++) <br/>
+        { <br/>
+            for(int j = 0; j < col; j++) <br/>
+            { <br/>
+                if(j == i || j == col-i-1) <br/>
+                    { <br/>
+                        Console.Write((i < r) ? i : row - i -2); <br/>
+                    } <br/>
+                    else <br/>
+                    { <br/>
+                        Console.Write("		"); <br/>
+                    } <br/>
+            } <br/>
+            Console.WriteLine(); <br/>
         } <br/>
         `,
         CreatedDate:"2020/06/12/0"
