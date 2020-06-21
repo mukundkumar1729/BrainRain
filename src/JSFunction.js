@@ -106,8 +106,10 @@ function MyTimer() {
     const timerID = document.getElementById("timer");
     globalCounter = globalCounter + 1;
     localCounter = localCounter + 1;
+    const elapsedTime = (globalCounter/60).toFixed(2);
     if(timerID != null){
         timerID.innerHTML = `${d} (${globalCounter}s)`;
+        timerID.title = `active from last ${elapsedTime} minutes`;
     }
     sessionStorage.setItem('globalCounter',globalCounter );
     if(localCounter == 5){
