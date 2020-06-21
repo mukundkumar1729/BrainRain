@@ -104,7 +104,6 @@ function MyTimer() {
     }
     var d = (new Date()).toLocaleTimeString();
     const timerID = document.getElementById("timer");
-    debugger;
     globalCounter = globalCounter + 1;
     localCounter = localCounter + 1;
     if(timerID != null){
