@@ -195,15 +195,17 @@ function ProcessQuesAns(data) {
                 fieldSeparator: '\n\n',
                 exportOptions: {
                     format: {
-                        body: function ( data) {
+                        body: function (data) {
+                            debugger;
                             data = data.replace( /( |<([^>]+)>)/ig, ' ' ).replace('data-domain-','').replace('Edit','').replace(/(\r\n|\n|\r)/gm,"");
                             data = data.replace('?','?\n');
                                return  data;
                         }
                     },
-
                     customize: function (doc) {
+                        debugger;
                         doc['footer']=(function(page, pages) {
+                            debugger;
                             return {
                                 columns: [
                                     {
@@ -213,10 +215,7 @@ function ProcessQuesAns(data) {
                                 ]
                             }
                         });
-                    }
-
-
-                    
+                    } 
                 }
             }
         ]
