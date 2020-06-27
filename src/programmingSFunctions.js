@@ -134,7 +134,7 @@ var programs =[
         domain:"prg",
         ques:"You need to find all the possible palindromes that can be obtained from a string and it's substring which have length gretaer than 3?",
         ans:`
-            <br/>
+        <br/><br/>
         void Main()    <br/>  
         {    <br/>
             string str = Console.ReadLine();    <br/>
