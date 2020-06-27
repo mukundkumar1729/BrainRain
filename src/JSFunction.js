@@ -114,6 +114,9 @@ function MyTimer() {
     if(localCounter == 5){
         setAdsSection();
     }
+    if(localCounter == 7){
+        SetContactsScript();
+    }
 }
 
 function SetUserEmail(){
@@ -608,4 +611,9 @@ function BindGoToPageDdl(){
     for (option of options) {
         ddl.options[ddl.options.length] = new Option(option.text, option.value);
     }
+}
+
+function SetContactsScript(){
+    debugger;
+    $.getScript("src/contactUs.js");
 }
