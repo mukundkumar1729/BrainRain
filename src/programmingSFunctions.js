@@ -132,58 +132,9 @@ var programs =[
         quesID:1,
         user:"mukund439@gmail.com",
         domain:"prg",
-        ques:"You need to find all the possible palindromes that can be obtained from a string and it's substring which have length gretaer than 3?",
+        ques:"Question",
         ans:`
-            <br/>
-        void Main()    <br/>  
-        {    <br/>
-            string str = Console.ReadLine();    <br/>
-            int palMinLen  = 3; // minimum length of  palindrome    <br/>
-            List<string> allPalindromes = AllPalindromes(str, palMinLen);    <br/>
-            foreach(string s in allPalindromes)    <br/>
-            {    <br/>
-                Console.WriteLine(s);    <br/>
-            }    <br/>
-        }    <br/><br/>
-
-        private List<string> AllPalindromes(string str, int palMinLen)    <br/>
-        {    <br/>
-            List<string> substrings = new List<string>();    <br/>
-            int strLen = str.Length;    <br/>
-            for(int len =palMinLen; len < strLen; len++) // len for Substring length which will be checked for palindrome    <br/>
-            {    <br/>
-                for(int i = 0; i < strLen -1; i++)    <br/>
-                {    <br/>
-                string pal = "";    <br/>
-                if(i+len <= strLen)    <br/>
-                {    <br/>
-                    pal = str.Substring(i, len);    <br/>
-                    bool isPalindrome = PalindromesChecker(pal);    <br/>
-                    if(isPalindrome)    <br/>
-                    {    <br/>
-                        substrings.Add(pal);	    <br/>
-                    }    <br/>
-                }    <br/>
-                }    <br/>
-            }    <br/>
-            return substrings;    <br/>
-        }    <br/>    <br/>
-        
-        private bool PalindromesChecker(string str)    <br/>
-        {    <br/>
-            bool isPalindrome = true;    <br/>
-            int len = str.Length;    <br/>
-            int halfLen = (len+1)/2;    <br/>
-            for(int i = 0 ; i < halfLen ; i++)    <br/>
-            {    <br/>
-                if(str[i] != str[len-i-1])    <br/>
-                {    <br/>
-                    isPalindrome = false;    <br/>
-                    break;    <br/>
-                }    <br/>
-            }    <br/>
-            return isPalindrome;    <br/>
-        }    <br/>
+            Answer ??? <br/> Answer ??? <br/> Answer ??? <br/>
         `,
         CreatedDate:"2020/06/12/0"
 	},
