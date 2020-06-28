@@ -16,13 +16,14 @@ const constant = {
     lastChild:"nth-last-child(1)",
     secondLastChild:"nth-last-child(2)",
     nextQuestion:"Next Question",
-    kmukund439Rgmail:"kmukund439@gmail.com",
     newsArticles:"newsArticles",
     pNewsArticles:"pNewsArticles",
     newsAPI:"https://gnews.io/api/v3/search?q=software&token=a200bb11d1b6155caffd725d56755f7a",
     listing:"listing",
     programmingSection:"programmingSection",
-    newsSection:"newsSection"
+    newsSection:"newsSection",
+    PrePageLoad:"PrePageLoad",
+    loader:"loader"
 }
 
 const control = {
@@ -68,17 +69,21 @@ const firebaseConfig = {
     measurementId: "G-1S797R81GE"
   };
   firebase.initializeApp(firebaseConfig);
-  const dbRef = firebase.database().ref();
+const dbRef = firebase.database().ref();
   const quesAnsRef = dbRef.child('quesAns');
 
 let quesAnsData = [];
 let quesAnsUploadedData = [];
-let globalCounter = 0;
-let localCounter = 0
+
+let variables = {
+    userEmailID:"kmukund439@gmail.com",
+    globalCounter:0,
+    localCounter:0
+}
 
 $(document).ready(function() {
     var timer = setInterval(MyTimer, 1000);
-    document.getElementById("PrePageLoad").classList.add("loader");
+    document.getElementById(constant.PrePageLoad).classList.add(constant.loader);
     SetUserEmail();
     loadNewsSectionScript();
     BindGoToPageDdl();
@@ -96,32 +101,31 @@ $(document).ready(function() {
 });
 
 function MyTimer() {
-    if(globalCounter == 0){
-        globalCounter = parseInt(sessionStorage.getItem('globalCounter'));
-        if(isNaN(globalCounter)){
-            globalCounter = 0;
+    if(variables.globalCounter == 0){
+        variables.globalCounter = parseInt(sessionStorage.getItem('globalCounter'));
+        if(isNaN(variables.globalCounter)){
+            variables.globalCounter = 0;
         }
     }
     var d = (new Date()).toLocaleTimeString();
     const timerID = document.getElementById("timer");
-    globalCounter = globalCounter + 1;
-    localCounter = localCounter + 1;
+    variables.globalCounter = variables.globalCounter + 1;
+    variables.localCounter = variables.localCounter + 1;
     if(timerID != null){
-        timerID.innerHTML = `${d} (${globalCounter}s)`;
-        timerID.title = `active from last ${(globalCounter/60).toFixed(0)} minutes`;
+        timerID.innerHTML = `${d} (${variables.globalCounter}s)`;
+        timerID.title = `active from last ${(variables.globalCounter/60).toFixed(0)} minutes`;
     }
-    sessionStorage.setItem('globalCounter',globalCounter );
-    if(localCounter == 5){
+    sessionStorage.setItem('globalCounter',variables.globalCounter);
+    if(variables.localCounter == 5){
         setAdsSection();
     }
-    if(localCounter == 7){
+    if(variables.localCounter == 7){
         SetContactsScript();
     }
 }
 
 function SetUserEmail(){
-    let userEmailID = $(control.user);
-    $(userEmailID).text('kmukund439@gmail.com');
+    $(control.user).text(variables.userEmailID);
 }
 
 function GetDataOnPageLoad_JSONFile() {
@@ -133,10 +137,10 @@ function GetDataOnPageLoad_JSONFile() {
             success: function(data, status) {
                 ActionOnPageLoad(data.quesAns);
                 quesAnsData = data.quesAns;
-                document.getElementById("PrePageLoad").classList.remove("loader");
+                document.getElementById(constant.PrePageLoad).classList.remove(constant.loader);
             },
             error: function(err, status) {
-                document.getElementById("PrePageLoad").classList.remove("loader");
+                document.getElementById(constant.PrePageLoad).classList.remove(constant.loader);
             }
         });
     } else {
@@ -149,11 +153,11 @@ function GetDataOnPageLoad_JSONFile() {
         quesAnsRef.on("child_added", data => {
             quesAnsData = data.val(); 
             ActionOnPageLoad(quesAnsData);
-            document.getElementById("PrePageLoad").classList.remove("loader");
+            document.getElementById(constant.PrePageLoad).classList.remove(constant.loader);
         });
     }else{
         ActionOnPageLoad(quesAnsData);
-        document.getElementById("PrePageLoad").classList.remove("loader");
+        document.getElementById(constant.PrePageLoad).classList.remove(constant.loader);
 }
 }
 
@@ -313,7 +317,7 @@ function CreateQuesAns() {
         var quesAns = {
             "ID": id,
             "quesID": quesID,
-            "user": "kmukund439@gmail.com",
+            "user": variables.userEmailID,
             "domain": domain,
             "ques": question,
             "ans": answer
@@ -495,11 +499,11 @@ function ImportQnsAnsFromExcel(sender)
     
 	quesAnsUploadedData.forEach(function(item, index){
         if(item.ques && item.ans && item.domain){
-            document.getElementById("PrePageLoad").classList.add("loader");
+            document.getElementById(constant.PrePageLoad).classList.add(constant.loader);
 	    	var quesAns = {
 	    			"ID": id + 1 + index,
 		    		"quesID": quesID + 1 + index,
-			    	"user": "kmukund439@gmail.com",
+			    	"user": variables.userEmailID,
 				    "domain": item.domain,
 				    "ques": item.ques,
 				    "ans": item.ans
@@ -513,7 +517,7 @@ function ImportQnsAnsFromExcel(sender)
             $(AddEditQnsAnsBySave).show();
         $(control.dvAddQnsAnsByUpload).hide();
      };
-     document.getElementById("PrePageLoad").classList.remove("loader");	 
+     document.getElementById(constant.PrePageLoad).classList.remove(constant.loader);	 
 });
 GetDataOnPageLoad_JSONFile(quesAnsData);
 }
@@ -558,7 +562,6 @@ function checkNetConnection(){
    }
 
    function RemoveLastQuesAnsTemplate(){
-
     let lastQnsAns = $(`${control.dvAddEditQnsAnsBySave} .row`);
     rowsLength = lastQnsAns.length;
     for(var i = 0; i< rowsLength; i++)
@@ -614,6 +617,5 @@ function BindGoToPageDdl(){
 }
 
 function SetContactsScript(){
-    debugger;
     $.getScript("src/contactUs.js");
 }

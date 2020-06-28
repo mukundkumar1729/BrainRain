@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function(){    
     GetPrograms_JSONFile();
 });
 
@@ -44,7 +44,7 @@ var programs =[
     {
         ID:1,
         quesID:1,
-        user:"mukund439@gmail.com",
+        user:variables.userEmailID,
         domain:"prg",
         ques:"How to print pascal triangle in C# ?",
         ans:`
@@ -108,7 +108,7 @@ var programs =[
 	{
         ID:2,
         quesID:2,
-        user:"mukund439@gmail.com",
+        user:variables.userEmailID,
         domain:"prg",
         ques:"How to swap two numbers without using third variable in C# ??",
         ans:`
@@ -119,7 +119,7 @@ var programs =[
 	{
         ID:3,
         quesID:3,
-        user:"mukund439@gmail.com",
+        user:variables.userEmailID,
         domain:"prg",
         ques:"Finding count of a character in a word in C# ?",
         ans:`
@@ -130,9 +130,9 @@ var programs =[
 	{
         ID:4,
         quesID:4,
-        user:"mukund439@gmail.com",
+        user:variables.userEmailID,
         domain:"prg",
-        ques:"You need to find all the possible palindromes that can be obtained from a string and it's substring which have length gretaer than 3?",
+        ques:"You need to find all the possible palindromes that can be obtained from a string which have length greater than 3?",
         ans:`
         <br/><br/>
         void Main()    <br/>  
@@ -190,7 +190,7 @@ var programs =[
 	{
         ID:5,
         quesID:5,
-        user:"mukund439@gmail.com",
+        user:variables.userEmailID,
         domain:"prg",
         ques:"Write a code to print X ?",
         ans:`
