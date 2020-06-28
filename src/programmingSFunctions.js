@@ -152,7 +152,7 @@ var programs =[
             int strLen = str.Length;    <br/>
             for(int len =palMinLen; len < strLen; len++) // len for Substring length which will be checked for palindrome    <br/>
             {    <br/>
-                for(int i = 0; i < strLen -1; i++)    <br/>
+                for(int i = 0; i < strLen; i++)    <br/>
                 {    <br/>
                 string pal = "";    <br/>
                 if(i+len <= strLen)    <br/>

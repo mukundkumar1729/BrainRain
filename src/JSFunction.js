@@ -23,7 +23,8 @@ const constant = {
     programmingSection:"programmingSection",
     newsSection:"newsSection",
     PrePageLoad:"PrePageLoad",
-    loader:"loader"
+    loader:"loader",
+    contactUsSection:"contactUsSection"
 }
 
 const control = {
@@ -55,8 +56,7 @@ const control = {
     gotoDdl:"select.page",
     CSharpProgramming:"#programmingSection #CSharpProgramming",
     summaryEl:"details summary",
-    searchForQuestions:"input#searchForQuestions"
-
+    searchForQuestions:"input#searchForQuestions",
 }
 const firebaseConfig = {
     apiKey: "AIzaSyBN3vM2XOK7uXSgI-KmPqbKp6ZFE4Ws_uI",
@@ -591,6 +591,9 @@ function setAdsSection(){
 // Ads Section Ends Here
 
 function ShowSinglePage(sender){
+    if(sender.value == constant.contactUsSection){
+        location.href = `#${constant.contactUsSection}`;
+    }else{
     let div = '#' + sender.value;
     ShowSingleDiv(div);
     switch(sender.value) {
@@ -603,6 +606,7 @@ function ShowSinglePage(sender){
         default:
           // code block
       }   
+    }
 }
 
 function BindGoToPageDdl(){
@@ -610,7 +614,8 @@ function BindGoToPageDdl(){
     ddl.options.length = 0;
     let options = [{value: constant.listing, text: "Interview Questions"},
                    {value: constant.programmingSection, text: "Programming Section"},
-                   {value: constant.newsSection, text: "News Section"}];
+                   {value: constant.newsSection, text: "News Section"},
+                   {value: constant.contactUsSection, text:"Contact Us"}];
     for (option of options) {
         ddl.options[ddl.options.length] = new Option(option.text, option.value);
     }
