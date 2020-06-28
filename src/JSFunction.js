@@ -591,8 +591,9 @@ function setAdsSection(){
 // Ads Section Ends Here
 
 function ShowSinglePage(sender){
+    debugger;
     if(sender.value == constant.contactUsSection){
-        location.href = `#${constant.contactUsSection}`;
+        document.getElementById(constant.contactUsSection).scrollIntoView(true)
     }else{
     let div = '#' + sender.value;
     ShowSingleDiv(div);
