@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 function AppsQRCode(){
 const qrCode = `
-<a href="https://app.appsgeyser.com/11045965/BrainRain" target="_blank">Download Here</a><br/>
+<a href="https://app.appsgeyser.com/11045965/BrainRain" target="_blank" class="btn btn-info" style="border-radius:25px;">Download Here</a><br/>
 <iframe src="https://appsgeyser.com/social_widget/social_widget.php?width=100&height=100&apkName=BrainRain_11045965&simpleVersion=yes" 
                         width="180" height="150"   title="Scan QR Code to download and browse in our app"></iframe>
                 `;
