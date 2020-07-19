@@ -26,13 +26,13 @@ const constant = {
     loader:"loader",
     contactUsSection:"contactUsSection",
     urls:{
-        brainrain:"https://mukundkumar1729-brainrain.netlify.app/",
+        brainrain:"https://brainrain.netlify.app/",
         brainrain_Aapp:"http://app.appsgeyser.com/11045965/BrainRain",
-        tictactoe:"https://mukundkumar1729-tictactoe.netlify.app/",
+        tictactoe:"https://brainrain-tictactoe.netlify.app/",
         tictactoe_Aapp:"http://app.appsgeyser.com/11438924/TicTacToe",
-        _2048:"https://mukundkumar1729-2048.netlify.app/",
-        _2048_Aapp:"http://app.appsgeyser.com/11446356/2048%20BrainRain%20Game",
-        pairup:"http://pairup.brainrain.in/",
+        _2048:"https://brainrain-2048.netlify.app/",
+        _2048_Aapp:"http://app.appsgeyser.com/11611166/2048%20BrainRain%20Game",
+        pairup:"https://brainrain-pairup.netlify.app/",
         pairup_Aapp:"http://app.appsgeyser.com/11608416/PairUp%20BrainRain%20Game"
     }
 }
