@@ -24,7 +24,17 @@ const constant = {
     newsSection:"newsSection",
     PrePageLoad:"PrePageLoad",
     loader:"loader",
-    contactUsSection:"contactUsSection"
+    contactUsSection:"contactUsSection",
+    urls:{
+        brainrain:"https://mukundkumar1729-brainrain.netlify.app/",
+        brainrain_Aapp:"http://app.appsgeyser.com/11045965/BrainRain",
+        tictactoe:"https://mukundkumar1729-tictactoe.netlify.app/",
+        tictactoe_Aapp:"http://app.appsgeyser.com/11438924/TicTacToe",
+        _2048:"https://mukundkumar1729-2048.netlify.app/",
+        _2048_Aapp:"http://app.appsgeyser.com/11446356/2048%20BrainRain%20Game",
+        pairup:"http://pairup.brainrain.in/",
+        pairup_Aapp:"http://app.appsgeyser.com/11608416/PairUp%20BrainRain%20Game"
+    }
 }
 
 const control = {
@@ -624,4 +634,10 @@ function BindGoToPageDdl(){
 
 function SetContactsScript(){
     $.getScript("src/contactUs.js");
+}
+
+function Redirect(url){
+    debugger;
+    url = Function(`return(constant.urls.${url})`)(); 
+    window.location.href = url;
 }
