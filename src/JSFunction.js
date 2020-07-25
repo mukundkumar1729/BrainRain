@@ -27,7 +27,8 @@ const constant = {
     contactUsSection:"contactUsSection",
     urls:{
         brainrain:"https://brainrain.netlify.app/",
-        brainrain_Aapp:"http://app.appsgeyser.com/11045965/BrainRain",
+        brainrain_AGapp:"http://app.appsgeyser.com/11045965/BrainRain",
+        brainrain_Aapp:"https://play.google.com/store/apps/details?id=com.wBrainRain_11045965",
         tictactoe:"https://brainrain-tictactoe.netlify.app/",
         tictactoe_Aapp:"http://app.appsgeyser.com/11438924/TicTacToe",
         _2048:"https://brainrain-2048.netlify.app/",
