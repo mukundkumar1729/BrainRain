@@ -6,10 +6,13 @@ $(document).ready(function(){
 
 function AppsQRCode(){
 const qrCode = `
-<a href="${constant.urls.brainrain_Aapp}" target="_blank" class="btn btn-info" style="border-radius:25px;">Download Here</a><br/>
-<iframe src="https://appsgeyser.com/social_widget/social_widget.php?width=100&height=100&apkName=BrainRain_11045965&simpleVersion=yes" 
-                        width="180" height="150"   title="Scan QR Code to download and browse in our app"></iframe>
-                `;
+<a href="${constant.urls.brainrain_Aapp}" title="${constant.title.brainrain}" target="_blank" class="btn btn-info" style="border-radius:25px;">Get BrainRain App Here</a><br/>
+<a href="${constant.urls._2048_Aapp}" title="${constant.title._2048}" target="_blank" class="btn btn-info" style="border-radius:25px;margin-top:5px;">Get 2048</a><br/>
+<a href="${constant.urls.pairup_Aapp}" title="${constant.title.pairup}" target="_blank" class="btn btn-info" style="border-radius:25px;margin-top:5px;">Get PairUp</a><br/>
+<a href="${constant.urls.tictactoe_Aapp}" title="${constant.title.tictactoe}" target="_blank" class="btn btn-info" style="border-radius:25px;margin-top:5px;">Get tic-tac-toe</a><br/>
+<a href="${constant.urls.all_Aapp}" title="${constant.title.all}" target="_blank" class="btn btn-info" style="border-radius:25px;margin-top:5px;">Get all App</a><br/>
+`; 
+
 let qrCodeEl = $('.contacts .qrCode');
 $(qrCodeEl).append(qrCode);
 }
