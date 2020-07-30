@@ -226,16 +226,13 @@ function ProcessQuesAns(data) {
                 exportOptions: {
                     format: {
                         body: function (data) {
-                            debugger;
                             data = data.replace( /( |<([^>]+)>)/ig, ' ' ).replace('data-domain-','').replace('Edit','').replace(/(\r\n|\n|\r)/gm,"");
                             data = data.replace('?','?\n');
                                return  data;
                         }
                     },
                     customize: function (doc) {
-                        debugger;
                         doc['footer']=(function(page, pages) {
-                            debugger;
                             return {
                                 columns: [
                                     {
@@ -614,7 +611,6 @@ function setAdsSection(){
 // Ads Section Ends Here
 
 function ShowSinglePage(sender){
-    debugger;
     if(sender.value == constant.contactUsSection){
         document.getElementById(constant.contactUsSection).scrollIntoView(true)
     }else{
@@ -650,7 +646,6 @@ function SetContactsScript(){
 }
 
 function Redirect(url){
-    debugger;
     url = Function(`return(constant.urls.${url})`)(); 
     window.location.href = url;
 }

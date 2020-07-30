@@ -1,11 +1,11 @@
 
 $(document).ready(function(){
-    AppsQRCode();
+    AppsLink();
     ContactUsSocialMediaLinks();
 });
 
-function AppsQRCode(){
-const qrCode = `
+function AppsLink(){
+const appsLink = `
 <a href="${constant.urls.brainrain_Aapp}" title="${constant.title.brainrain}" target="_blank" class="btn btn-info" style="border-radius:25px;">Get BrainRain App Here</a><br/>
 <a href="${constant.urls._2048_Aapp}" title="${constant.title._2048}" target="_blank" class="btn btn-info" style="border-radius:25px;margin-top:5px;">Get 2048</a><br/>
 <a href="${constant.urls.pairup_Aapp}" title="${constant.title.pairup}" target="_blank" class="btn btn-info" style="border-radius:25px;margin-top:5px;">Get PairUp</a><br/>
@@ -14,7 +14,7 @@ const qrCode = `
 `; 
 
 let qrCodeEl = $('.contacts .qrCode');
-$(qrCodeEl).append(qrCode);
+$(qrCodeEl).append(appsLink);
 }
 
 function ContactUsSocialMediaLinks(){
