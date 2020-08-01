@@ -139,10 +139,8 @@ function MyTimer() {
         timerID.title = `active from last ${(variables.globalCounter/60).toFixed(0)} minutes`;
     }
     sessionStorage.setItem('globalCounter',variables.globalCounter);
-    if(variables.localCounter == 9){
-        setAdsSection();
-    }
     if(variables.localCounter == 7){
+        setAdsSection();
         SetContactsScript();
     }
 }
