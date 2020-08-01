@@ -80,6 +80,7 @@ const control = {
     CSharpProgramming:"#programmingSection #CSharpProgramming",
     summaryEl:"details summary",
     searchForQuestions:"input#searchForQuestions",
+    PrePageLoadText:"#PrePageLoadText"
 }
 const firebaseConfig = {
     apiKey: "AIzaSyBN3vM2XOK7uXSgI-KmPqbKp6ZFE4Ws_uI",
@@ -107,6 +108,7 @@ let variables = {
 $(document).ready(function() {
     var timer = setInterval(MyTimer, 1000);
     document.getElementById(constant.PrePageLoad).classList.add(constant.loader);
+    $(control.PrePageLoadText).fadeOut();
     SetUserEmail();
     loadNewsSectionScript();
     BindGoToPageDdl();
@@ -124,6 +126,7 @@ $(document).ready(function() {
 });
 
 function MyTimer() {
+debugger;
     if(variables.globalCounter == 0){
         variables.globalCounter = parseInt(sessionStorage.getItem('globalCounter'));
         if(isNaN(variables.globalCounter)){
@@ -647,5 +650,9 @@ function SetContactsScript(){
 
 function Redirect(url){
     url = Function(`return(constant.urls.${url})`)(); 
+    window.location.href = url;
+
+}
+function Transfer(url){
     window.location.href = url;
 }
