@@ -152,7 +152,7 @@ function StaticAdsSection() {
         html += `
         <div class="row">
             <div class="col-md-6 col-6">
-                <a href="${prop.url}" target="_blank"><img src="image/${prop.image}"/></a>
+                <a target="_blank" href="${prop.url}"><img src="image/${prop.image}"/></a>
             </div>
             <div class="col-md-6 col-6">
                 <span>${prop.text}</span>
