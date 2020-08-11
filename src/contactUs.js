@@ -6,8 +6,8 @@ $(document).ready(function(){
 
 function AppsLink(){
 const appsLink = `
-<a onclick="Transfer('${constant.urls.brainrain_Aapp}')" title="${constant.title.brainrain}" class="btn btn-info" style="border-radius:25px;">Get BrainRain App Here</a><br/>
-<a onclick="Transfer('${constant.urls.all_Aapp}')" title="${constant.title.all}" class="btn btn-info" style="border-radius:25px;margin-top:5px;">Get all App</a><br/>
+<a onclick="Transfer('${variables.urls.brainrain_Aapp}')" title="${variables.title.brainrain}" class="btn btn-info" style="border-radius:25px;">Get BrainRain App Here</a><br/>
+<a onclick="Transfer('${variables.urls.all_Aapp}')" title="${variables.title.all}" class="btn btn-info" style="border-radius:25px;margin-top:5px;">Get all App</a><br/>
 `; 
 
 let qrCodeEl = $('.contacts .qrCode');

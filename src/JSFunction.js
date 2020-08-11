@@ -24,30 +24,7 @@ const constant = {
     newsSection:"newsSection",
     PrePageLoad:"PrePageLoad",
     loader:"loader",
-    contactUsSection:"contactUsSection",
-    urls:{
-        all_Aapp:"https://play.google.com/store/apps/developer?id=Mukund+Kumar",
-        brainrain:"https://brainrain.netlify.app/",
-        brainrain_AGapp:"http://app.appsgeyser.com/11045965/BrainRain",
-        brainrain_Aapp:"https://play.google.com/store/apps/details?id=com.wBrainRain_11045965",
-        tictactoe:"https://brainrain-tictactoe.netlify.app/",
-        tictactoe_AGapp:"http://app.appsgeyser.com/11438924/TicTacToe",
-        tictactoe_Aapp:"https://play.google.com/store/apps/details?id=com.wTicTacToe_11438924",
-        _2048:"https://brainrain-2048.netlify.app/",
-        _2048_AGapp:"http://app.appsgeyser.com/11611166/2048%20BrainRain%20Game",
-        _2048_Aapp:"https://play.google.com/store/apps/details?id=com.ww2048BrainRainGame_11611166",
-        pairup:"https://brainrain-pairup.netlify.app/",
-        pairup_AGapp:"http://app.appsgeyser.com/11608416/PairUp%20BrainRain%20Game",
-        pairup_Aapp:"https://play.google.com/store/apps/details?id=com.wPairUpBrainRainGame_11608416"
-    },
-    title:{
-        all:"Get all apps fom the same developer",
-        brainrain:"The app lets user to prepare for programming techincal interview related to .net, C#, Javascript, SQL, MVC and also provides programs in C#. Also, let him edit existing question - answer, add one or multiple question - answer at a time or by importing from excel file. Also, the app shows the latest information related to software programming.",
-        tictactoe:"Tic-tac-toe, also known as crosses or Xs and Os is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.",
-        _2048:"2048 is a pair up game with 2 and its exponential multiple where adjacent numbers in the same row or column merge into one i.e. add if the they are same. With each slide or arrow triggered, 2 or 4 is generated at a random cell / block.",
-        pairup:"Pairup is a board game played on 3X3 grid by a single player. The target for this game is to form a number from the preloaded/initial numbers 1 to 9"
-    }
-
+    contactUsSection:"contactUsSection"
 }
 
 const control = {
@@ -102,8 +79,20 @@ let quesAnsUploadedData = [];
 let variables = {
     userEmailID:"kmukund439@gmail.com",
     globalCounter:0,
-    localCounter:0
+    localCounter:0,
+    urls:{},
+    titles:{}
 }
+
+(function(){
+    debugger;
+    fetch("../data/commonUrls.json")
+    .then(Response => Response.json())
+    .then(data => {
+        variables.urls = data.urls;
+        variables.titles = data.titles;
+    })
+})();
 
 $(document).ready(function() {
     var timer = setInterval(MyTimer, 1000);
@@ -649,7 +638,7 @@ function SetContactsScript(){
 }
 
 function Redirect(url){
-    url = Function(`return(constant.urls.${url})`)(); 
+    url = Function(`return(variables.urls.${url})`)(); 
     window.location.href = url;
 
 }
