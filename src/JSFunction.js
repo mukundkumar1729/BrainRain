@@ -69,9 +69,9 @@ const firebaseConfig = {
     appId: "1:428403134568:web:1df9072c4e624e4243ebdd",
     measurementId: "G-1S797R81GE"
   };
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 const dbRef = firebase.database().ref();
-  const quesAnsRef = dbRef.child('quesAns');
+const quesAnsRef = dbRef.child('quesAns');
 
 let quesAnsData = [];
 let quesAnsUploadedData = [];
@@ -83,16 +83,6 @@ let variables = {
     urls:{},
     titles:{}
 }
-
-(function(){
-    debugger;
-    fetch("../data/commonUrls.json")
-    .then(Response => Response.json())
-    .then(data => {
-        variables.urls = data.urls;
-        variables.titles = data.titles;
-    })
-})();
 
 $(document).ready(function() {
     var timer = setInterval(MyTimer, 1000);
@@ -112,10 +102,31 @@ $(document).ready(function() {
     $(window).resize(function() {
         AlignElsOnSmallDevice();
     });
+        debugger;
+    $.ajax({
+        url:"../data/commonUrls.json",
+        type:"GET",
+        dataType:"json",
+        async:true,
+        processData:true,
+        ifModified:false,
+        beforeSend: function(xhr){},
+        success: function(data, status, xhr){
+            debugger;
+            variables.urls = data.urls;
+            variables.title = data.title;
+        },
+        error: function(xhr, status, error){
+            console.log(error);
+        },
+        complete: function(xhr, status){
+            console.log('action completetd');
+        }
+    });
+
 });
 
 function MyTimer() {
-debugger;
     if(variables.globalCounter == 0){
         variables.globalCounter = parseInt(sessionStorage.getItem('globalCounter'));
         if(isNaN(variables.globalCounter)){
