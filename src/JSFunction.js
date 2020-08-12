@@ -112,16 +112,13 @@ $(document).ready(function() {
         ifModified:false,
         beforeSend: function(xhr){},
         success: function(data, status, xhr){
-            debugger;
             variables.urls = data.urls;
             variables.title = data.title;
         },
         error: function(xhr, status, error){
             console.log(error);
         },
-        complete: function(xhr, status){
-            console.log('action completetd');
-        }
+        complete: function(xhr, status){}
     });
 
 });
