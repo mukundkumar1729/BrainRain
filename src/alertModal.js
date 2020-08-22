@@ -18,7 +18,7 @@ setTimeout(() => {
           keys.forEach(key => {
               if (key.includes("_Aapp")) {
                   appLinkHtml += `<div class="row"><div class="col-12">
-                              <button type="button" onclick="Transfer('${data.urls[key]}')" class="form-control btn btn-info">
+                              <button type="button" onclick="RedirectToApp('${data.urls[key]}')" class="form-control btn btn-info">
                               Install ${key.replace('_Aapp','')}</button>
                           </div></div>`;
               }
@@ -34,7 +34,7 @@ setTimeout(() => {
       </div>
       <div class="modal-body">
           <p>Download App for better browsing </p>
-          <button onclick="Transfer('${data.urls[constant.page + '_Aapp']}')" class="form-control btn btn-info">Download App</button>
+          <button onclick="RedirectToApp('${data.urls[constant.page + '_Aapp']}')" class="form-control btn btn-info">Download App</button>
           ${appLinkHtml}
       </div>
       <div class="modal-footer">
@@ -49,3 +49,11 @@ setTimeout(() => {
       })
       .catch(error => console.log(error));
 }, 15000);
+
+const RedirectToApp = (url) => {
+  if(url){
+    window.location.href = url;
+  }else{
+    window.location.href = "https://brainrain-news.netlify.app/";
+  }
+}
