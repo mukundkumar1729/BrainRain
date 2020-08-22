@@ -24,7 +24,8 @@ const constant = {
     newsSection:"newsSection",
     PrePageLoad:"PrePageLoad",
     loader:"loader",
-    contactUsSection:"contactUsSection"
+    contactUsSection:"contactUsSection",
+    page:"brainrain"
 }
 
 const control = {
