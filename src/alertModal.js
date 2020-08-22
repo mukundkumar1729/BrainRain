@@ -12,7 +12,6 @@ setTimeout(() => {
       })
       .then(response => response.json())
       .then(data => {
-          debugger;
           let appLinkHtml = "";
           let keys = Object.keys(data.urls);
           keys.forEach(key => {
@@ -51,7 +50,6 @@ setTimeout(() => {
 }, 15000);
 
 const RedirectToApp = (url) => {
-  debugger;
   if(url.includes('undefined')){
     window.location.href = "https://brainrain-news.netlify.app/";
   }else{
