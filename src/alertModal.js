@@ -34,7 +34,7 @@ setTimeout(() => {
       </div>
       <div class="modal-body">
           <p>Download App for better browsing </p>
-          <button onclick="Transfer('${data.urls[constant.page]}_Aapp')" class="form-control btn btn-info">Download App</button>
+          <button onclick="Transfer('${data.urls[constant.page + '_Aapp']}')" class="form-control btn btn-info">Download App</button>
           ${appLinkHtml}
       </div>
       <div class="modal-footer">
