@@ -52,9 +52,9 @@ setTimeout(() => {
 
 const RedirectToApp = (url) => {
   debugger;
-  if(url || url.includes('undefined')){
-    window.location.href = url;
-  }else{
+  if(url.includes('undefined')){
     window.location.href = "https://brainrain-news.netlify.app/";
+  }else{
+    window.location.href = url;
   }
 }
