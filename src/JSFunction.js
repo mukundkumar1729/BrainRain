@@ -102,7 +102,6 @@ $(document).ready(function() {
     $(window).resize(function() {
         AlignElsOnSmallDevice();
     });
-        debugger;
     $.ajax({
         url:"../data/commonUrls.json",
         type:"GET",
@@ -646,6 +645,7 @@ function SetContactsScript(){
 }
 
 function Redirect(url){
+    debugger;
     url = Function(`return(variables.urls.${url})`)(); 
     window.location.href = url;
 
