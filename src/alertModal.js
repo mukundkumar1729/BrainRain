@@ -34,7 +34,7 @@ setTimeout(() => {
       </div>
       <div class="modal-body">
           <p>Download App for better browsing </p>
-          <button onclick="GetAppUrl()" class="form-control btn btn-info">Download App</button>
+          <button onclick="Transfer('${constant.page}')" class="form-control btn btn-info">Download App</button>
           ${appLinkHtml}
       </div>
       <div class="modal-footer">
@@ -49,14 +49,3 @@ setTimeout(() => {
       })
       .catch(error => console.log(error));
 }, 15000);
-
-const GetAppUrl = () => {
-  debugger;
-  let page = constant.page; 
-  if(!page){
-    page = "brainrain";
-  }
-  let query = `data.urls.${page}_Aapp`;
-  const url = Function(`return(${query})`)();
-  window.location.href = url;
-  }
