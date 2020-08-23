@@ -18,7 +18,7 @@ setTimeout(() => {
               if (key.includes("_Aapp")) {
                   appLinkHtml += `<div class="row"><div class="col-12">
                               <button type="button" onclick="RedirectToApp('${data.urls[key]}')" class="form-control btn btn-info">
-                              Install ${key.replace('_Aapp','')}</button>
+                              ${key.replace('_Aapp','').replace("_","")}</button>
                           </div></div>`;
               }
           });
@@ -29,10 +29,10 @@ setTimeout(() => {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="text-primary">BrainRain Apps</h5>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <button type="button" class="close btn btn-danger" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-          <p>Download App for better browsing </p>
+          <p>Download and Install / Update App for better browsing </p>
           <button onclick="RedirectToApp('${data.urls[constant.page + '_Aapp']}')" class="form-control btn btn-info">Download App</button>
           ${appLinkHtml}
       </div>
