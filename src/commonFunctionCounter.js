@@ -4,6 +4,14 @@ if(isNaN(_timerCounter)){
 }
 let _functionCounter = 0;
 
+const RedirectTo = (url) => {
+    if(url.includes('undefined')){
+      window.location.href = "https://brainrain-news.netlify.app/";
+    }else{
+      window.location.href = url;
+    }
+  }
+
 (function SetAdsContactsHTML(){
     if(document.getElementById("contactUsSection")){
         document.getElementById("contactUsSection").innerHTML = `<hr class="rounded"/>

@@ -1,5 +1,3 @@
-const colour =["redColor", "greenColor", "whiteColor"];
-
 const widgets = [
     {
         url:"https://widget.cuelinks.com/widgets/50038?cid=97511",
@@ -102,67 +100,67 @@ const cueLinksAds = [
      },
     {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fthemomsco.com%2F",
-        image:"theMomsCo.png",
+        image:"https://brainrain.netlify.app/theMomsCo.png",
         text:"Buy natural products Online" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.shopclues.com%2F",
-        image:"shopclues.png",
+        image:"https://brainrain.netlify.app/shopclues.png",
         text:"" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.voot.com%2F",
-        image:"vootKids.png",
+        image:"https://brainrain.netlify.app/vootKids.png",
         text:"vootkids provides entertaining & learning experience for the kids" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.unacademyapp",
-        image:"unacademy.png",
+        image:"https://brainrain.netlify.app/unacademy.png",
         text:"Unacademy is a learning platform" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fstore.adda247.com%2Fhome",
-        image:"adda247.jpg",
+        image:"https://brainrain.netlify.app/adda247.jpg",
         text:"Adda247 is examination specific" 
      },
      {
         url:"",
-        image:"edureka.png",
+        image:"https://brainrain.netlify.app/edureka.png",
         text:"edureka!" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.testbook.tbapp",
-        image:"testbook.png",
+        image:"https://brainrain.netlify.app/testbook.png",
         text:"Testbook is for Online Exam Preparation, provides Free Mock Tests" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fgoprep.co%2F",
-        image:"goprep.png",
+        image:"https://brainrain.netlify.app/goprep.png",
         text:"Goprep is e-learning platform for Classes 8th to 12th" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dco.gradeup.k12",
-        image:"goprep.png",
+        image:"https://brainrain.netlify.app/goprep.png",
         text:"Install Goprep App" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.skillzcafe.com%2F",
-        image:"skillzCafe.png",
+        image:"https://brainrain.netlify.app/skillzCafe.png",
         text:"Skillzcafe is an online learning market place" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Ftestseries.edugorilla.com%2F",
-        image:"eduGorilla.png",
+        image:"https://brainrain.netlify.app/eduGorilla.png",
         text:"EduGorilla is an educational community, encapsulates every exam held in the country" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.vidyakul.com%2F",
-        image:"vidyakul.png",
+        image:"https://brainrain.netlify.app/vidyakul.png",
         text:"Vidyakul is an interactive e-learning platform" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.vidyakul.com%2F",
-        image:"DataCamp.png",
+        image:"https://brainrain.netlify.app/DataCamp.png",
         text:"DataCamp lets us to understand the language of data" 
      }
 ];
@@ -172,7 +170,7 @@ function CueLinksWidgets() {
     for(let i in widgets){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
-                    <span class='${colour[i%3]}'> ${widgets[i].text}</span><br/>
+                    <span style=color:'${(i%3==1)?"red":(i%3==2)?"green":"white"}'> ${widgets[i].text}</span><br/>
                     <iframe width='300' height='250' src='${widgets[i].url}'></iframe>
                  </div>
         `;
@@ -187,7 +185,7 @@ function AmazonAds() {
         if(amazonAds[i].url != ''){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
-                    <span class='${colour[i%3]}'> ${amazonAds[i].text}</span><br/>
+                    <span style=color:'${(i%3==1)?"red":(i%3==2)?"green":"white"}'> ${amazonAds[i].text}</span><br/>
                     <div class="row">
                         <div class="col-md-6 col-6">${amazonAds[i].url}</div>
                         <div class="col-md-6 col-6"><span class='${colour[i%3]}'> ${amazonAds[i].info}</span><br/></div>
@@ -213,7 +211,7 @@ function CueLinksAds() {
         html += `
         <div class="row">
             <div class="col-md-6 col-6">
-                <a onclick="Transfer('${prop.url}')"><img src="image/${prop.image}"/></a>
+                <a onclick="RedirectTo('${prop.url}')"><img src="image/${prop.image}"/></a>
             </div>
             <div class="col-md-6 col-6">
                 <span style="color:${isApplycolour?"white":"black"}">${prop.text}</span>

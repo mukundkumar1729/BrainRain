@@ -33,7 +33,7 @@ const AlertModal = (() => {
       </div>
       <div class="modal-body">
           <p>Download and Install / Update App for better browsing </p>
-          <button style="margin-top:5px;" onclick="RedirectToApp('${data.urls[constant.page + '_Aapp']}')" class="form-control btn btn-info">Download App</button>
+          <button style="margin-top:5px;" onclick="RedirectTo('${data.urls[constant.page + '_Aapp']}')" class="form-control btn btn-info">Download App</button>
           ${appLinkHtml}
       </div>
       <div class="modal-footer">
@@ -48,14 +48,6 @@ const AlertModal = (() => {
       })
       .catch(error => console.log(error));
 });
-
-const RedirectToApp = (url) => {
-  if(url.includes('undefined')){
-    window.location.href = "https://brainrain-news.netlify.app/";
-  }else{
-    window.location.href = url;
-  }
-}
 
 (function(){
   setTimeout(AlertModal(), 25000);
