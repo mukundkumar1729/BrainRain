@@ -37,11 +37,11 @@ const widgets = [
 
 
 const amazonAds= [
-    // {
-    //     url:`<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="mukundkumar17-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category =""; amzn_assoc_default_search_key ="micromax";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; <\/script>\n<script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"><\/script>`,
-    //     text:`Search Amazon`,
-    //     info:``
-    // },
+    {
+        url:`<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="mukundkumar17-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category =""; amzn_assoc_default_search_key ="micromax";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; <\/script>\n<script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"><\/script>`,
+        text:`Search Amazon`,
+        info:``
+    },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B075NKHHBV&asins=B075NKHHBV&linkId=e6ab4e7d80ba588204f3dd567884b69f&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Micromax Canvas Infinity 18:9`,
@@ -69,8 +69,8 @@ const amazonAds= [
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B075V7T4F4&asins=B075V7T4F4&linkId=40564c02227faef708f24ea72514bee9&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`DI GRAZIA Tactical Outdoor Sports Organizer Waist Bag Pack with Cell Phone Holster, Camping Hiking Running Pouch (Black)`,
-        info:`2 zippered compartments with 1 interior and 1 mesh pockets that can fit in your Cell phone, Camera, Earphone, Cable, Charger, MP3, MP4, IPod, Keys, and ID cards, cards and other accessories. 1 outer pocket for cell phones, 1 Pen/Tactical Torch Latch, Key ring hook, Durable Zippers, Ultra Lightweight for Speed and Comfort during All Activities`
+        text:`Waist Bag`,
+info:`2 zippered compartments with 1 interior and 1 mesh pockets and  1 outer pocket for cell phones, 1 Pen/Tactical Torch Latch, `
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B073JWDLXZ&asins=B073JWDLXZ&linkId=939631059610ef30044868914b652752&show_border=true&link_opens_in_new_window=true"></iframe>`,

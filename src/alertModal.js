@@ -33,7 +33,7 @@ const AlertModal = (() => {
       </div>
       <div class="modal-body">
           <p>Download and Install / Update App for better browsing </p>
-          <button onclick="RedirectToApp('${data.urls[constant.page + '_Aapp']}')" class="form-control btn btn-info">Download App</button>
+          <button style="margin-top:5px;" onclick="RedirectToApp('${data.urls[constant.page + '_Aapp']}')" class="form-control btn btn-info">Download App</button>
           ${appLinkHtml}
       </div>
       <div class="modal-footer">
