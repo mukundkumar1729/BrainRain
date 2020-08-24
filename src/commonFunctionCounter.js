@@ -7,12 +7,12 @@ let _functionCounter = 0;
 (function SetAdsContactsHTML(){
     if(document.getElementById("contactUsSection")){
         document.getElementById("contactUsSection").innerHTML = `<hr class="rounded"/>
-        <div class="col-md-6 col-6 qrCode">
-           <h3>Get App</h3>
-        </div>
-        <div class="col-md-6 col-6 contactUs">
-           <h3>Contact Us:</h3>
-        </div>`;
+                  <div class="col-md-6 col-6 qrCode">
+                     <h3>Get App</h3>
+                  </div>
+                  <div class="col-md-6 col-6 contactUs">
+                     <h3>Contact Us:</h3>
+                  </div>`;
     }
 
     if(document.getElementById("adsSection")){
@@ -51,13 +51,13 @@ setInterval(function(){
 
 switch(_functionCounter){
     case 5 :
-        $.getScript("src/contactUs.js");
+        $.getScript("https://brainrain.netlify.app/src/contactUs.js");
         break;
     case 7 :
-        $.getScript("src/adsJSCode.js");
+        $.getScript("https://brainrain.netlify.app/src/adsJSCode.js");
         break;
     case 30 :
-        $.getScript("src/alertModal.js");
+        $.getScript("https://brainrain.netlify.app/src/alertModal.js");
         break;
     default :
         break;
