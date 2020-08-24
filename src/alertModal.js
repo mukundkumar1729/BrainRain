@@ -1,4 +1,4 @@
-setTimeout(() => {
+const AlertModal = (() => {
   let aAppUrl = "";
   let alertDiv = document.createElement("div");
   alertDiv.id = "alertModal";
@@ -47,7 +47,7 @@ setTimeout(() => {
           $("#appAlertModal").modal("show");
       })
       .catch(error => console.log(error));
-}, 15000);
+});
 
 const RedirectToApp = (url) => {
   if(url.includes('undefined')){
@@ -56,3 +56,7 @@ const RedirectToApp = (url) => {
     window.location.href = url;
   }
 }
+
+(function(){
+  setTimeout(AlertModal(), 25000);
+})();

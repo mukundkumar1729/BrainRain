@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     AppsLink();
     ContactUsSocialMediaLinks();
@@ -26,6 +25,7 @@ function ContactUsSocialMediaLinks(){
     <a onclick="Transfer('https://in.pinterest.com/kmukund439/boards/')"><img src="image/pinterestLogo.jpg" alt="pinterest"/></a>
     <br/><br/>
     `;
+    
     let linksEL = $('.contacts .contactUs');
     $(linksEL).append(links);
 }

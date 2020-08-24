@@ -79,14 +79,11 @@ let quesAnsUploadedData = [];
 
 let variables = {
     userEmailID:"kmukund439@gmail.com",
-    globalCounter:0,
-    localCounter:0,
     urls:{},
     titles:{}
 }
 
 $(document).ready(function() {
-    var timer = setInterval(MyTimer, 1000);
     document.getElementById(constant.PrePageLoad).classList.add(constant.loader);
     $(control.PrePageLoadText).fadeOut();
     SetUserEmail();
@@ -120,32 +117,7 @@ $(document).ready(function() {
         },
         complete: function(xhr, status){}
     });
-
 });
-
-function MyTimer() {
-    if(variables.globalCounter == 0){
-        variables.globalCounter = parseInt(sessionStorage.getItem('globalCounter'));
-        if(isNaN(variables.globalCounter)){
-            variables.globalCounter = 0;
-        }
-    }
-    var d = (new Date()).toLocaleTimeString();
-    const timerID = document.getElementById("timer");
-    variables.globalCounter = variables.globalCounter + 1;
-    variables.localCounter = variables.localCounter + 1;
-    if(timerID != null){
-        timerID.innerHTML = `${d} (${variables.globalCounter}s)`;
-        timerID.title = `active from last ${(variables.globalCounter/60).toFixed(0)} minutes`;
-    }
-    sessionStorage.setItem('globalCounter',variables.globalCounter);
-    if(variables.localCounter == 5){
-        setAdsSection();
-    }
-    if(variables.localCounter == 7){
-        SetContactsScript();
-    }
-}
 
 function SetUserEmail(){
     $(control.user).text(variables.userEmailID);
@@ -602,14 +574,6 @@ function loadNewsSectionScript(){
 }
 // News Section Ends Here
 
-// Ads Section Starts Here
-function setAdsSection(){
-    $.getScript( "src/adsJSCode.js" )
-  .done(function( script, textStatus ) {})
-  .fail(function( jqxhr, settings, exception ) {});
-}
-// Ads Section Ends Here
-
 function ShowSinglePage(sender){
     if(sender.value == constant.contactUsSection){
         document.getElementById(constant.contactUsSection).scrollIntoView(true)
@@ -639,10 +603,6 @@ function BindGoToPageDdl(){
     for (option of options) {
         ddl.options[ddl.options.length] = new Option(option.text, option.value);
     }
-}
-
-function SetContactsScript(){
-    $.getScript("src/contactUs.js");
 }
 
 function Redirect(url){
