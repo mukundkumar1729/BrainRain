@@ -226,13 +226,10 @@ function CueLinksAds() {
 }
 
 $(document).ready(function() {
-    
     CueLinksAdsScript
     $("#adsSection #cueLinksCarousel .carousel-inner").html(CueLinksWidgets());
- var ele = document.getElementById("cueLinksAds");
- ele.innerHTML = CueLinksAds();
-
-
-  $("#adsSection #amazonCarousel .carousel-inner").html(AmazonAds());
+    $("#adsSection #amazonCarousel .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
+    $("#adsSection #amazonCarousel .carousel-inner").html(AmazonAds());
+    $("#cueLinksAds").html(CueLinksAds());
     
 });
