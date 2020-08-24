@@ -188,7 +188,7 @@ function AmazonAds() {
                     <span style=color:'${(i%3==1)?"red":(i%3==2)?"green":"white"}'> ${amazonAds[i].text}</span><br/>
                     <div class="row">
                         <div class="col-md-6 col-6">${amazonAds[i].url}</div>
-                        <div class="col-md-6 col-6"><span class='${colour[i%3]}'> ${amazonAds[i].info}</span><br/></div>
+                        <div class="col-md-6 col-6"><span style=color:'${(i%3==1)?"red":(i%3==2)?"green":"white"}'> ${amazonAds[i].info}</span><br/></div>
                     </div>
                  </div>
         `;
