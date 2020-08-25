@@ -37,7 +37,7 @@ const widgets = [
 const amazonAds= [
     {
         url:`<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="mukundkumar17-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category =""; amzn_assoc_default_search_key ="micromax";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; <\/script>\n<script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"><\/script>`,
-        text:`Search Amazon`,
+        text:``,
         info:``
     },
     {
@@ -68,7 +68,7 @@ const amazonAds= [
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B075V7T4F4&asins=B075V7T4F4&linkId=40564c02227faef708f24ea72514bee9&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Waist Bag`,
-info:`2 zippered compartments with 1 interior and 1 mesh pockets and  1 outer pocket for cell phones, 1 Pen/Tactical Torch Latch, `
+        info:`2 zippered compartments with 1 interior and 1 mesh pockets and  1 outer pocket for cell phones, 1 Pen/Tactical Torch Latch, `
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B073JWDLXZ&asins=B073JWDLXZ&linkId=939631059610ef30044868914b652752&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -100,67 +100,67 @@ const cueLinksAds = [
      },
     {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fthemomsco.com%2F",
-        image:"https://brainrain.netlify.app/theMomsCo.png",
+        image:`theMomsCo.png`,
         text:"Buy natural products Online" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.shopclues.com%2F",
-        image:"https://brainrain.netlify.app/shopclues.png",
+        image:`shopclues.png`,
         text:"" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.voot.com%2F",
-        image:"https://brainrain.netlify.app/vootKids.png",
+        image:`vootKids.png`,
         text:"vootkids provides entertaining & learning experience for the kids" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.unacademyapp",
-        image:"https://brainrain.netlify.app/unacademy.png",
+        image:`unacademy.png`,
         text:"Unacademy is a learning platform" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fstore.adda247.com%2Fhome",
-        image:"https://brainrain.netlify.app/adda247.jpg",
+        image:`adda247.jpg`,
         text:"Adda247 is examination specific" 
      },
      {
         url:"",
-        image:"https://brainrain.netlify.app/edureka.png",
+        image:`edureka.png`,
         text:"edureka!" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.testbook.tbapp",
-        image:"https://brainrain.netlify.app/testbook.png",
+        image:`testbook.png`,
         text:"Testbook is for Online Exam Preparation, provides Free Mock Tests" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fgoprep.co%2F",
-        image:"https://brainrain.netlify.app/goprep.png",
+        image:`goprep.png`,
         text:"Goprep is e-learning platform for Classes 8th to 12th" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dco.gradeup.k12",
-        image:"https://brainrain.netlify.app/goprep.png",
+        image:`goprep.png`,
         text:"Install Goprep App" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.skillzcafe.com%2F",
-        image:"https://brainrain.netlify.app/skillzCafe.png",
+        image:`skillzCafe.png`,
         text:"Skillzcafe is an online learning market place" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Ftestseries.edugorilla.com%2F",
-        image:"https://brainrain.netlify.app/eduGorilla.png",
+        image:`eduGorilla.png`,
         text:"EduGorilla is an educational community, encapsulates every exam held in the country" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.vidyakul.com%2F",
-        image:"https://brainrain.netlify.app/vidyakul.png",
+        image:`vidyakul.png`,
         text:"Vidyakul is an interactive e-learning platform" 
      },
      {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.vidyakul.com%2F",
-        image:"https://brainrain.netlify.app/DataCamp.png",
+        image:`DataCamp.png`,
         text:"DataCamp lets us to understand the language of data" 
      }
 ];
@@ -170,7 +170,7 @@ function CueLinksWidgets() {
     for(let i in widgets){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
-                    <span style=color:'${(i%3==1)?"red":(i%3==2)?"green":"white"}'> ${widgets[i].text}</span><br/>
+                    <span style='color:'${(i%3==1)?"red":(i%3==2)?"green":"white"}'> ${widgets[i].text}</span><br/>
                     <iframe width='300' height='250' src='${widgets[i].url}'></iframe>
                  </div>
         `;
@@ -185,10 +185,10 @@ function AmazonAds() {
         if(amazonAds[i].url != ''){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
-                    <span style=color:'${(i%3==1)?"red":(i%3==2)?"green":"white"}'> ${amazonAds[i].text}</span><br/>
+                    <span style=${(i%3==1)?"color:red":(i%3==2)?"color:green":"color:white"}> ${amazonAds[i].text}</span><br/>
                     <div class="row">
                         <div class="col-md-6 col-6">${amazonAds[i].url}</div>
-                        <div class="col-md-6 col-6"><span style=color:'${(i%3==1)?"red":(i%3==2)?"green":"white"}'> ${amazonAds[i].info}</span><br/></div>
+                        <div class="col-md-6 col-6"><span style=${(i%3==1)?"color:red":(i%3==2)?"color:green":"color:white"}> ${amazonAds[i].info}</span><br/></div>
                     </div>
                  </div>
         `;
@@ -211,7 +211,7 @@ function CueLinksAds() {
         html += `
         <div class="row">
             <div class="col-md-6 col-6">
-                <a onclick="RedirectTo('${prop.url}')"><img src="image/${prop.image}"/></a>
+                <a onclick="RedirectTo('${prop.url}')"><img src="${baseUrl}/image/${prop.image}"/></a>
             </div>
             <div class="col-md-6 col-6">
                 <span style="color:${isApplycolour?"white":"black"}">${prop.text}</span>
@@ -229,5 +229,5 @@ $(document).ready(function() {
     $("#adsSection #amazonCarousel .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
     $("#adsSection #amazonCarousel .carousel-inner").html(AmazonAds());
     $("#cueLinksAds").html(CueLinksAds());
-    
+    document.getElementById("adsSection").style.display = 'block';
 });

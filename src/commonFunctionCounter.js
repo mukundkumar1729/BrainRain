@@ -1,3 +1,4 @@
+let baseUrl = "https://brainrain.netlify.app/";
 let _timerCounter = sessionStorage.getItem('_timerCounter');
 if(isNaN(_timerCounter)){
     _timerCounter = 0;
@@ -6,7 +7,7 @@ let _functionCounter = 0;
 
 const RedirectTo = (url) => {
     if(url.includes('undefined')){
-      window.location.href = "https://brainrain-news.netlify.app/";
+      window.location.href = baseUrl;
     }else{
       window.location.href = url;
     }
@@ -14,33 +15,35 @@ const RedirectTo = (url) => {
 
 (function SetAdsContactsHTML(){
     if(document.getElementById("contactUsSection")){
+        document.getElementById("contactUsSection").style.display ='none';
         document.getElementById("contactUsSection").innerHTML = `<hr class="rounded"/>
                   <div class="col-md-6 col-6 qrCode">
-                     <h3>Get App</h3>
+                     <h5>Get App</h5>
                   </div>
                   <div class="col-md-6 col-6 contactUs">
-                     <h3>Contact Us:</h3>
+                     <h5>Contact Us:</h5>
                   </div>`;
     }
 
     if(document.getElementById("adsSection")){
-        document.getElementById("adsSection").innerHTML = `<div id="cueLinksCarousel" class ="carousel slide" data-ride="carousel">
-        <div  class="carousel-inner">
-        </div>
-        <a class="carousel-control-prev" href="#cueLinksCarousel" data-slide="prev">
-           <span class="carousel-control-prev-icon"></span>
-         </a>
-         <a class="carousel-control-next" href="#cueLinksCarousel" data-slide="next">
-           <span class="carousel-control-next-icon"></span>
-         </a>
-        </div>
-        <div id="amazonCarousel" class ="carousel slide" data-ride="carousel">
+      document.getElementById("adsSection").style.display = 'none';
+        document.getElementById("adsSection").innerHTML = `<div id="amazonCarousel" class ="carousel slide" data-ride="carousel">
         <div  class="carousel-inner">
         </div>
         <a class="carousel-control-prev" href="#amazonCarousel" data-slide="prev">
            <span class="carousel-control-prev-icon"></span>
          </a>
          <a class="carousel-control-next" href="#amazonCarousel" data-slide="next">
+           <span class="carousel-control-next-icon"></span>
+         </a>
+        </div>
+        <div id="cueLinksCarousel" class ="carousel slide" data-ride="carousel">
+        <div  class="carousel-inner">
+        </div>
+        <a class="carousel-control-prev" href="#cueLinksCarousel" data-slide="prev">
+           <span class="carousel-control-prev-icon"></span>
+         </a>
+         <a class="carousel-control-next" href="#cueLinksCarousel" data-slide="next">
            <span class="carousel-control-next-icon"></span>
          </a>
         </div>
@@ -59,13 +62,13 @@ setInterval(function(){
 
 switch(_functionCounter){
     case 5 :
-        $.getScript("https://brainrain.netlify.app/src/contactUs.js");
+        $.getScript(`${baseUrl}src/contactUs.js`);
         break;
     case 7 :
-        $.getScript("https://brainrain.netlify.app/src/adsJSCode.js");
+        $.getScript(`${baseUrl}src/adsJSCode.js`);
         break;
     case 30 :
-        $.getScript("https://brainrain.netlify.app/src/alertModal.js");
+        $.getScript(`${baseUrl}src/alertModal.js`);
         break;
     default :
         break;
