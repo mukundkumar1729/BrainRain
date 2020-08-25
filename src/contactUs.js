@@ -36,5 +36,9 @@ function ContactUsSocialMediaLinks(){
 }
 
 function RedirectToCurrentApp(){
-    window.location.href = appUrl;
+    if(!appUrl || appUrl.trim() == ""){
+        window.location.href= baseUrl;
+    }else{
+        window.location.href=appUrl;
+    }
 }

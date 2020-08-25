@@ -64,7 +64,7 @@ setInterval(function(){
 
 switch(_functionCounter){
     case 5 :
-        $.getScript(`${baseUrl}src/contactUs.js`);
+        $.getScript(`src/contactUs.js`);
         break;
     case 7 :
         $.getScript(`${baseUrl}src/adsJSCode.js`);
