@@ -1,4 +1,5 @@
 let baseUrl = "https://brainrain.netlify.app/";
+let appUrl = "";
 let _timerCounter = sessionStorage.getItem('_timerCounter');
 if(isNaN(_timerCounter)){
     _timerCounter = 0;
@@ -65,7 +66,7 @@ switch(_functionCounter){
         $.getScript(`${baseUrl}src/contactUs.js`);
         break;
     case 7 :
-        $.getScript(`src/adsJSCode.js`);
+        $.getScript(`${baseUrl}src/adsJSCode.js`);
         break;
     case 30 :
         $.getScript(`${baseUrl}src/alertModal.js`);
@@ -81,11 +82,9 @@ sessionStorage.setItem('_timerCounter', _timerCounter);
 function SetStyleSheet(){
   $("#adsSection").css({"margin-top": "60px", "position": "relative"});
   $("#adsSection img").css({"height":"75px","width":"125px"});
+  $("#staticAds .row").css({"margin-top": "10px","margin-bottom": "10px"});
   $(".amazonSearch iframe").css({"width": "100% !important"});
   $("iframe").css({"border": "none"});
-
-  $(".contactUs img").css({"height": "40px", "width": "50px", "border-radius": "50%"});
-  $("#staticAds .row").css({"margin-top": "10px","margin-bottom": "10px"});
-$("#staticAds .row:nth-child(odd) div span:nth-child(odd)").css({"color":"white"});
+  $("#staticAds .row:nth-child(odd) div span:nth-child(odd)").css({"color":"white"});
 
   }

@@ -230,4 +230,5 @@ $(document).ready(function() {
     $("#adsSection #amazonCarousel .carousel-inner").html(AmazonAds());
     $("#cueLinksAds").html(CueLinksAds());
     document.getElementById("adsSection").style.display = 'block';
+    $("adsSection img").css({"height":"75px","width":"15px"});
 });

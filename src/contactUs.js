@@ -1,11 +1,13 @@
 $(document).ready(function(){
     AppsLink();
     ContactUsSocialMediaLinks();
+    $(".contactUs img").css({"height": "40px", "width": "50px", "border-radius": "50%"})
+    $(".space").css({"width":"60px"});
 });
 
 function AppsLink(){
 const appsLink = `
-<a onclick="ShowAppDownloadModal();" class="btn btn-info" style="border-radius:25px;">Downloads Apps</a><br/>
+<a onclick="RedirectToCurrentApp();"><img src="${baseUrl}image/googlePlayBadge.jpg" alt="Google Play"/></a><br/>
 `; 
 
 let qrCodeEl = $('.contacts .qrCode');
@@ -33,7 +35,6 @@ function ContactUsSocialMediaLinks(){
     document.getElementById("contactUsSection").style.display ='block';
 }
 
-function ShowAppDownloadModal(){
-    $("#appAlertModal").modal("show");
-    $(".space").css({"width":"60px"});
+function RedirectToCurrentApp(){
+    window.location.href = appUrl;
 }

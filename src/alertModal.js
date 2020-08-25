@@ -43,6 +43,8 @@ const AlertModal = (() => {
   </div>
 </div>
               `;
+
+              appUrl = data.urls[constant.page + '_Aapp'];
           document.getElementById("alertModal").innerHTML = html;
           $("#appAlertModal").modal("show");
       })
