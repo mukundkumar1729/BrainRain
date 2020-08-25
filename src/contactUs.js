@@ -10,7 +10,7 @@ const appsLink = `
 <a onclick="RedirectToCurrentApp();"><img src="${baseUrl}image/googlePlayBadge.jpg" alt="Google Play"/></a><br/>
 `; 
 
-let qrCodeEl = $('.contacts .qrCode');
+let qrCodeEl = $('#contactUsSection .qrCode');
 $(qrCodeEl).append(appsLink);
 }
 
@@ -30,7 +30,7 @@ function ContactUsSocialMediaLinks(){
     <br/><br/>
     `;
     
-    let linksEL = $('.contacts .contactUs');
+    let linksEL = $('#contactUsSection .contactUs');
     $(linksEL).append(links);
     $("contactUsSection").show();
 }
