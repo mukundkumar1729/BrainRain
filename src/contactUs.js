@@ -2,14 +2,14 @@ $(document).ready(function(){
     debugger;
     AppsLink();
     ContactUsSocialMediaLinks();
-    $("#contactUsSection img").css({"height": "40px", "width": "50px", "border-radius": "50%"})
+    $("#contactUsSection img:not(.noImageStyle)").css({"height": "40px", "width": "50px", "border-radius": "50%"})
     $(".space").css({"width":"60px"});
     $("#contactUsSection").show();
 });
 
 function AppsLink(){
 const appsLink = `
-<a onclick="RedirectToCurrentApp();"><img src="${baseUrl}image/googlePlayBadge.jpg" alt="Google Play"/></a><br/>
+<a onclick="RedirectToCurrentApp();"><img src="${baseUrl}image/googlePlayBadge.jpg" class="noImageStyle" alt="Google Play"/></a><br/>
 `; 
 
 $('#contactUsSection').append(appsLink);
