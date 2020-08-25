@@ -16,12 +16,9 @@ const RedirectTo = (url) => {
 
 (function SetAdsContactsHTML(){
     if(document.getElementById("contactUsSection")){
-        $("contactUsSection").hide();
+        $("#contactUsSection").hide();
         document.getElementById("contactUsSection").innerHTML = `<hr class="rounded"/>
-                  <div class="col-md-6 col-6 qrCode">
-                     <h5>Get App</h5>
-                  </div>
-                  <div class="col-md-6 col-6 contactUs">
+                  <div class="col-md-12 col-12 contactUs">
                      <h5>Contact Us:</h5>
                   </div>`;
     }

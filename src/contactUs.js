@@ -10,12 +10,11 @@ const appsLink = `
 <a onclick="RedirectToCurrentApp();"><img src="${baseUrl}image/googlePlayBadge.jpg" alt="Google Play"/></a><br/>
 `; 
 
-let qrCodeEl = $('#contactUsSection .qrCode');
-$(qrCodeEl).append(appsLink);
+$('#contactUsSection').append(appsLink);
 }
 
 function ContactUsSocialMediaLinks(){
-    const links = `
+    const socialMediaLinks = `
     <a onclick="RedirectTo('https://play.google.com/store/apps/developer?id=Mukund+Kumar/')" title="Visit Google Play"><img src="${baseUrl}image/googlePlay.jpg" alt="Google Play"/></a><span class="space"></span>
     <a onclick="RedirectTo('https://kmukund439@gmail.com/')" title="kmukund439@gmail.com"><img src="${baseUrl}image/gmail.png" alt="gmail"/></a><span class="space"></span>
     <a onclick="RedirectTo('https://www.linkedin.com/in/mukundkumar1729/?originalSubdomain=in')"><img src="${baseUrl}image/LinkedIn.png" alt="linkedIn"/></a><span class="space"></span>
@@ -30,8 +29,7 @@ function ContactUsSocialMediaLinks(){
     <br/><br/>
     `;
     
-    let linksEL = $('#contactUsSection .contactUs');
-    $(linksEL).append(links);
+    $('#contactUsSection').append(socialMediaLinks);
     $("contactUsSection").show();
 }
 
