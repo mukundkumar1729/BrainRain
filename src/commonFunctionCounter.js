@@ -16,7 +16,7 @@ const RedirectTo = (url) => {
 
 (function SetAdsContactsHTML(){
     if(document.getElementById("contactUsSection")){
-        document.getElementById("contactUsSection").style.display ='none';
+        $("contactUsSection").hide();
         document.getElementById("contactUsSection").innerHTML = `<hr class="rounded"/>
                   <div class="col-md-6 col-6 qrCode">
                      <h5>Get App</h5>
@@ -27,7 +27,7 @@ const RedirectTo = (url) => {
     }
 
     if(document.getElementById("adsSection")){
-      document.getElementById("adsSection").style.display = 'none';
+      $("adsSection").hide();
         document.getElementById("adsSection").innerHTML = `<div id="amazonCarousel" class ="carousel slide" data-ride="carousel">
         <div  class="carousel-inner">
         </div>
@@ -54,7 +54,8 @@ const RedirectTo = (url) => {
 })();
 
 setInterval(function(){
-    let _d = (new Date()).toLocaleTimeString();
+    let _date = new Date();
+    let _d = (_date.toString().split('GMT')[0].trim());
     const _timerID = document.getElementById("timer");
 
     if(_timerID != null){

@@ -211,7 +211,7 @@ function CueLinksAds() {
         html += `
         <div class="row">
             <div class="col-md-6 col-6">
-                <a onclick="RedirectTo('${prop.url}')"><img src="${baseUrl}/image/${prop.image}"/></a>
+                <a onclick="RedirectTo('${prop.url}')"><img src="${baseUrl}/image/${prop.image}" style="height:75px;width:125px"/></a>
             </div>
             <div class="col-md-6 col-6">
                 <span style="color:${isApplycolour?"white":"black"}">${prop.text}</span>
@@ -229,6 +229,5 @@ $(document).ready(function() {
     $("#adsSection #amazonCarousel .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
     $("#adsSection #amazonCarousel .carousel-inner").html(AmazonAds());
     $("#cueLinksAds").html(CueLinksAds());
-    document.getElementById("adsSection").style.display = 'block';
-    $("adsSection img").css({"height":"75px","width":"15px"});
+    $("adsSection").show();
 });

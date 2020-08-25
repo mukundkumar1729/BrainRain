@@ -32,7 +32,7 @@ function ContactUsSocialMediaLinks(){
     
     let linksEL = $('.contacts .contactUs');
     $(linksEL).append(links);
-    document.getElementById("contactUsSection").style.display ='block';
+    $("contactUsSection").show();
 }
 
 function RedirectToCurrentApp(){
