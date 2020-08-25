@@ -4,6 +4,7 @@ $(document).ready(function(){
     ContactUsSocialMediaLinks();
     $("#contactUsSection img").css({"height": "40px", "width": "50px", "border-radius": "50%"})
     $(".space").css({"width":"60px"});
+    $("#contactUsSection").show();
 });
 
 function AppsLink(){
@@ -31,7 +32,6 @@ function ContactUsSocialMediaLinks(){
     `;
     
     $('#contactUsSection').append(socialMediaLinks);
-    $("#contactUsSection").show();
 }
 
 function RedirectToCurrentApp(){
