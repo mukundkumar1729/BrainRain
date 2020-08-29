@@ -36,7 +36,7 @@ function ContactUsSocialMediaLinks(){
 
 function RedirectToCurrentApp(){
     if(!appUrl || appUrl.trim() == ""){
-        window.location.href= baseUrl;
+        window.location.href= 'https://play.google.com/store/apps/developer?id=Mukund+Kumar/';
     }else{
         window.location.href=appUrl;
     }
