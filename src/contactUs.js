@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    debugger;
     AppsLink();
     ContactUsSocialMediaLinks();
     $("#contactUsSection img:not(.noImageStyle)").css({"height": "40px", "width": "50px", "border-radius": "50%"})

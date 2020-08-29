@@ -179,7 +179,6 @@ function CueLinksWidgets() {
 }
 
 function AmazonAds() {
-    debugger;
     let html = "";
     for(let i in amazonAds){
         if(amazonAds[i].url != ''){

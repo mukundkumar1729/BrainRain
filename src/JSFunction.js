@@ -606,7 +606,6 @@ function BindGoToPageDdl(){
 }
 
 function Redirect(url){
-    debugger;
     url = Function(`return(variables.urls.${url})`)(); 
     window.location.href = url;
 
