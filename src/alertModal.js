@@ -18,7 +18,7 @@ const AlertModal = (() => {
               if (key.includes("_Aapp")) {
                   appLinkHtml += `<div class="row"><div class="col-12">
                               <button type="button" onclick="RedirectToApp('${data.urls[key]}')" class="form-control btn btn-info">
-                              ${key.replace('_Aapp','').replace("_","")}</button>
+                              ${key.replace('_Aapp','')}</button>
                           </div></div>`;
               }
           });

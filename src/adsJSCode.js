@@ -41,6 +41,26 @@ const amazonAds= [
         info:``
     },
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01GPMV4RO&asins=B01GPMV4RO&linkId=99780f514aeac012013af84b2a6cca5d&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Dr. Ortho Oil Subscribe and Save : 5% | 10%`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B00F38B3NW&asins=B00F38B3NW&linkId=b7461a2a3e3caa5146f2f37f7f9723e8&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Omron HEM 7120 Fully Automatic Digital Blood Pressure Monitor With Intellisense Technology For Most Accurate Measurement`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07QFX7PWS&asins=B07QFX7PWS&linkId=778059fc15f0f2299ce9ec85c9b604b9&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Philips T Bulb Curve, 12 Watt, Base B22, Cool Daylight`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B089GRBSDJ&asins=B089GRBSDJ&linkId=8cc9ebdaf007fc6fa136df4f30b1fad9&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:``,
+        info:`4 GB RAM | 64 GB ROM | Expandable Upto 256 GB, 16.51 cm (6.5 inch) HD+ Display, 16MP + 2MP + 2MP | 8MP Front Camera, 5000 mAh Lithium-ion Battery`
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B075NKHHBV&asins=B075NKHHBV&linkId=e6ab4e7d80ba588204f3dd567884b69f&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Micromax Canvas Infinity 18:9`,
         info:`5.7-inch Screen, 13MP | 16MP Camera, 3GB | 32GB, 1.4GHz Quad-Core Processor, 2900 mAh Battery`
@@ -56,6 +76,11 @@ const amazonAds= [
         info:`3 GB | 32GB , 2.0 GHz Octa Core Processor, 4000mAh Battery`
     },
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07GRXX9F1&asins=B07GRXX9F1&linkId=b610455f2f7b3786d6ab80bfea539081&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Microtek UPS EB 700 VA UPS Inverter`,
+        info:``
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B00X1KGBJU&asins=B00X1KGBJU&linkId=51d247438a696384e2e04e8c5e0228cf&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Micromax Canvas Nitro 2 E311 (Grey-Silver)`,
         info:`5-inch Screen, 5MP Camera, 1GB | 8GB, 1.4 Ghz Octa Core Processor, 2400mAh  Battery`
@@ -69,6 +94,11 @@ const amazonAds= [
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B075V7T4F4&asins=B075V7T4F4&linkId=40564c02227faef708f24ea72514bee9&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Waist Bag`,
         info:`2 zippered compartments with 1 interior and 1 mesh pockets and  1 outer pocket for cell phones, 1 Pen/Tactical Torch Latch, `
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01C8QIBJ0&asins=B01C8QIBJ0&linkId=34ed9ef51160f7f5f6bfe29474975e08&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Patanjali Honey, 1kg, Subscribe & Save: 5% / 10%`,
+        info:``
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B073JWDLXZ&asins=B073JWDLXZ&linkId=939631059610ef30044868914b652752&show_border=true&link_opens_in_new_window=true"></iframe>`,
