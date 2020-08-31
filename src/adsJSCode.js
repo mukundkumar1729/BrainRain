@@ -211,11 +211,10 @@ function CueLinksWidgets() {
 function AmazonAds() {
     let html = "";
     for(let i in amazonAds){
-        debugger;
         if(amazonAds[i].url != ''){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
-                    <span style=${(i%3==1)?"color:red":(i%3==2)?"color:green":"color:white"}> ${amazonAds[i].text}</span><br/>
+                    <span style='${(i%3==1)?"color:red":(i%3==2)?"color:green":"color:white"}'> ${amazonAds[i].text}</span><br/>
                     <div class="row">
                         <div class="col-md-6 col-6">${amazonAds[i].url}</div>
                         <div class="col-md-6 col-6"><span style=${(i%3==1)?"color:red":(i%3==2)?"color:green":"color:white"}> ${amazonAds[i].info}</span><br/></div>
