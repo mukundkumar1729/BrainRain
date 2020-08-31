@@ -211,6 +211,7 @@ function CueLinksWidgets() {
 function AmazonAds() {
     let html = "";
     for(let i in amazonAds){
+        debugger;
         if(amazonAds[i].url != ''){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>

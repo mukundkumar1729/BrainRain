@@ -16,10 +16,10 @@ $('#contactUsSection').append(appsLink);
 
 function ContactUsSocialMediaLinks(){
     const socialMediaLinks = `
-    <a onclick="RedirectTo('https://play.google.com/store/apps/developer?id=Mukund+Kumar/')" title="Visit Google Play"><img src="${baseUrl}image/googlePlay.jpg" alt="Google Play"/></a><span class="space"></span>
-    <a onclick="RedirectTo('https://kmukund439@gmail.com/')" title="kmukund439@gmail.com"><img src="${baseUrl}image/gmail.png" alt="gmail"/></a><span class="space"></span>
-    <a onclick="RedirectTo('https://www.linkedin.com/in/mukundkumar1729/?originalSubdomain=in')"><img src="${baseUrl}image/LinkedIn.png" alt="linkedIn"/></a><span class="space"></span>
-    <a onclick="RedirectTo('https://twitter.com/mukundkumar1729')"><img src="${baseUrl}image/twitter.png" alt="twitter"/> </a><span class="space"></span>
+    <a onclick="RedirectTo('https://play.google.com/store/apps/developer?id=Mukund+Kumar/')" title="Visit Google Play"><img src="${baseUrl}image/googlePlay.jpg" alt="Google Play"/></a>
+    <a onclick="RedirectTo('https://kmukund439@gmail.com/')" title="kmukund439@gmail.com"><img src="${baseUrl}image/gmail.png" alt="gmail"/></a>
+    <a onclick="RedirectTo('https://www.linkedin.com/in/mukundkumar1729/?originalSubdomain=in')"><img src="${baseUrl}image/LinkedIn.png" alt="linkedIn"/></a>
+    <a onclick="RedirectTo('https://twitter.com/mukundkumar1729')"><img src="${baseUrl}image/twitter.png" alt="twitter"/> </a>
     <a onclick="RedirectTo('https://www.facebook.com/mukundkumar1729')"><img src="${baseUrl}image/fb-art.png" alt="facebook"/></a>
     <span class="line-break"><br/><br/></span>
     <a onclick="RedirectTo('https://www.hackerearth.com/@kmukund439')"><img src="${baseUrl}image/hackerEarth.png" alt="HackerEarth"/></a>
