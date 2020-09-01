@@ -16,12 +16,8 @@ const constant = {
     lastChild:"nth-last-child(1)",
     secondLastChild:"nth-last-child(2)",
     nextQuestion:"Next Question",
-    newsArticles:"newsArticles",
-    pNewsArticles:"pNewsArticles",
-    newsAPI:"https://gnews.io/api/v3/search?q=software&token=a200bb11d1b6155caffd725d56755f7a",
     listing:"listing",
     programmingSection:"programmingSection",
-    newsSection:"newsSection",
     PrePageLoad:"PrePageLoad",
     loader:"loader",
     contactUsSection:"contactUsSection",
@@ -47,13 +43,6 @@ const control = {
     dvAddQnsAnsByUploadLoader:"#dvAddQnsAnsByUploadLoader",
     addMoreButton:"#addMoreButtonTemplate",
     removeLastButton:"#removeLastButtonTemplate",
-    brainRainNews:".brainRainNews",
-    marqueeContent:".brainRainNews marquee span",
-    newsSection:"#newsSection",
-    newsTitle:"#newsSection #newsTitle",
-    newsDescription:"#newsSection #newsDescription",
-    newsImage:"#newsSection #newsImage",
-    newsSectionHL:"#newsSection #newsSectionHL",
     gotoDdl:"select.page",
     CSharpProgramming:"#programmingSection #CSharpProgramming",
     summaryEl:"details summary",
@@ -87,8 +76,6 @@ $(document).ready(function() {
     document.getElementById(constant.PrePageLoad).classList.add(constant.loader);
     $(control.PrePageLoadText).fadeOut();
     SetUserEmail();
-    loadNewsSectionScript();
-    BindGoToPageDdl();
     const resp = checkNetConnection();
     if(resp){
         GetDataOnPageLoad_FirebaseDB();
@@ -115,7 +102,9 @@ $(document).ready(function() {
         error: function(xhr, status, error){
             console.log(error);
         },
-        complete: function(xhr, status){}
+        complete: function(xhr, status){
+            BindGoToPageDdl();
+        }
     });
 });
 
@@ -284,7 +273,7 @@ function PreCreateQuesAns() {
     $(el).text(constant.add);
     $(`${control.updateBrainRain} .domain`)[0].disabled = false;
     $(control.question).val('');
-    $(control.answer).text('');
+    $(control.answer).val('');
 }
 
 
@@ -349,7 +338,7 @@ function PreUpdateQuesAns(id) {
     $(el).attr('itemID', id);
     $(`${control.updateBrainRain} .domain`)[0].disabled = true;
     $(control.question).val(quesAnsData[id - 1].ques);
-    $(control.answer).text(quesAnsData[id - 1].ans);
+    $(control.answer).val(quesAnsData[id - 1].ans);
 }
 
 function UpdateQuesAns(el) {
@@ -568,28 +557,24 @@ function checkNetConnection(){
     var lastNextQuestionTitle = $(`b:contains(${constant.nextQuestion})`)
     $(lastNextQuestionTitle).last().remove();
 }
-// News Section Starts Here
-function loadNewsSectionScript(){
-    $.getScript("src/newsSFunctions.js");
-}
-// News Section Ends Here
 
 function ShowSinglePage(sender){
-    if(sender.value == constant.contactUsSection){
-        document.getElementById(constant.contactUsSection).scrollIntoView(true)
-    }else{
-    let div = '#' + sender.value;
-    ShowSingleDiv(div);
-    switch(sender.value) {
-        case constant.newsSection:
-            SetAllNewsDetails();
-            $(control.gotoDdl).val(constant.newsSection);
-          break;
+    debugger;
+    switch(sender.value){
+        case constant.listing:
+            ShowSingleDiv('#' + sender.value);
+        break;
+        case constant.contactUsSection:
+            document.getElementById(constant.contactUsSection).scrollIntoView(true);
+        break;
         case constant.programmingSection:
-           $.getScript("src/programmingSFunctions.js");
+            ShowSingleDiv('#' + sender.value);
+            $.getScript("src/programmingSFunctions.js");
+        break;
         default:
-          // code block
-      }   
+            debugger;
+            window.location.href = sender.value;
+            break;
     }
 }
 
@@ -598,9 +583,16 @@ function BindGoToPageDdl(){
     ddl.options.length = 0;
     let options = [{value: constant.listing, text: "Interview Questions"},
                    {value: constant.programmingSection, text: "Programming Section"},
-                   {value: constant.newsSection, text: "News Section"},
                    {value: constant.contactUsSection, text:"Contact Us"}];
-    for (option of options) {
+    let urlsKeys = Object.keys(variables.urls);
+    $.each(urlsKeys, function(index, value){
+        if(!value.includes('_Aapp')){
+            let optionObj = {value: variables.urls[value], text:value};
+            options.push(optionObj);
+        }
+    });
+
+    for (let option of options) {
         ddl.options[ddl.options.length] = new Option(option.text, option.value);
     }
 }
