@@ -51,6 +51,11 @@ const amazonAds1= [
         info:`4.7-inch Screen, 2MP | 8MP Camera, 1GB | 8GB, 1.3 Ghz Quad Core Processor, 2000mAh  Battery`
     },
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07HGH88GL&asins=B07HGH88GL&linkId=216cbc1007aaf412f24eb06f306052df&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Samsung Galaxy M21 (Midnight Blue, 6GB RAM, 128GB Storage)`,
+        info:`Triple Camera Setup - 48MP (F2.0) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera and 20MP (F2.2) front facing Punch Hole Camera | 6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support | 6000 mAh Battery | Android 10.0 operating system with Exynos 9611,2.3GHz,1.7GHz Octa-Core processor, 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM`
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07N1FR7N9&asins=B07N1FR7N9&linkId=f71aee671bc54bc9f4e25638ebf6dabc&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Micromax Infinity N12 (Viola, 3GB, 32GB Storage) (Viola)`,
         info:`3 GB | 32GB , 2.0 GHz Octa Core Processor, 4000mAh Battery`
@@ -61,6 +66,16 @@ const amazonAds1= [
         info:``
     },
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01DDP85BY&asins=B01DDP85BY&linkId=bc9fd3768c1a7a777e62c5b44eb889da&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Moto G Plus, 4th Gen (White, 32 GB)`,
+        info:`16 MP primary camera | 5 MP wide angle front camera  | 5.5-inch full HD display | Android v6.0.1 Marshmallow OS | 1.5 GHz MSM8952 Qualcomm SnapdragonTM 617 octa-core processor with 550 MHz Adreno 405 GPU, 3GB RAM, 32GB internal memory expandable up to 128GB and dual micro-SIM dual-standby (4G+3G) | 3000 mAh`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07PZZLR4D&asins=B07PZZLR4D&linkId=868a950bea5939fe80d89afc87974acf&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Motorola Moto G7 (Black, 4GB RAM, 64GB Storage)`,
+        info:`4 GB RAM | 64 GB ROM | Expandable Upto 512 GB | 15.75 cm (6.2 inch) Full HD+ Display | 12MP + 5MP | 8MP Front Camera | 3000 mAh Battery | Qualcomm Snapdragon 632 Processor`
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B00X1KGBJU&asins=B00X1KGBJU&linkId=51d247438a696384e2e04e8c5e0228cf&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Micromax Canvas Nitro 2 E311 (Grey-Silver)`,
         info:`5-inch Screen, 5MP Camera, 1GB | 8GB, 1.4 Ghz Octa Core Processor, 2400mAh  Battery`
@@ -69,6 +84,11 @@ const amazonAds1= [
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07CJFKN5X&asins=B07CJFKN5X&linkId=da7828dafaff8ec556896f18277284f9&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Micromax Canvas IN8INITY Life(Black)`,
         info:`5.45 inch HD+ Display, 2 GB RAM | 16 GB ROM | Expandable Upto 128 G, 13MP Rear Camera | 8MP Front Camera, MediaTek MT6737 Cortex-A53 64-bit Processor`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B00BX5FOCK&asins=B00BX5FOCK&linkId=5f249a918611b419c98db0b871369be2&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`SanDisk Cruzer Blade 64GB USB 2.0 Flash Drive`,
+        info:``
     }
 ];
 
