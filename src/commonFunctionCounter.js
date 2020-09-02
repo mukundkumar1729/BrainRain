@@ -25,13 +25,23 @@ const RedirectTo = (url) => {
 
     if(document.getElementById("adsSection")){
       $("adsSection").hide();
-        document.getElementById("adsSection").innerHTML = `<div id="amazonCarousel" class ="carousel slide" data-ride="carousel">
+        document.getElementById("adsSection").innerHTML = `<div id="amazonCarousel1" class ="carousel slide" data-ride="carousel">
         <div  class="carousel-inner">
         </div>
-        <a class="carousel-control-prev" href="#amazonCarousel" data-slide="prev">
+        <a class="carousel-control-prev" href="#amazonCarousel1" data-slide="prev">
            <span class="carousel-control-prev-icon"></span>
          </a>
-         <a class="carousel-control-next" href="#amazonCarousel" data-slide="next">
+         <a class="carousel-control-next" href="#amazonCarousel1" data-slide="next">
+           <span class="carousel-control-next-icon"></span>
+         </a>
+        </div>
+        <div id="amazonCarousel2" class ="carousel slide" data-ride="carousel">
+        <div  class="carousel-inner">
+        </div>
+        <a class="carousel-control-prev" href="#amazonCarousel2" data-slide="prev">
+           <span class="carousel-control-prev-icon"></span>
+         </a>
+         <a class="carousel-control-next" href="#amazonCarousel2" data-slide="next">
            <span class="carousel-control-next-icon"></span>
          </a>
         </div>

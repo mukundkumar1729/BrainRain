@@ -16,7 +16,7 @@ const AlertModal = (() => {
           let keys = Object.keys(data.urls);
           keys.forEach(key => {
               if (key.includes("_Aapp")) {
-                  appLinkHtml += `<div class="row"><div class="col-12">
+                  appLinkHtml += `<div class="row" style="margin-top:10px"><div class="col-12">
                               <button type="button" onclick="RedirectTo('${data.urls[key]}')" class="form-control btn btn-info">
                               ${key.replace('_Aapp','')}</button>
                           </div></div>`;

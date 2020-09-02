@@ -34,27 +34,7 @@ const widgets = [
 ];
 
 
-const amazonAds= [
-    {
-        url:`<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="mukundkumar17-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category =""; amzn_assoc_default_search_key ="micromax";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; <\/script>\n<script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"><\/script>`,
-        text:``,
-        info:``
-    },
-    {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01GPMV4RO&asins=B01GPMV4RO&linkId=99780f514aeac012013af84b2a6cca5d&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Dr. Ortho Oil Subscribe and Save : 5% | 10%`,
-        info:``
-    },
-    {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B00F38B3NW&asins=B00F38B3NW&linkId=b7461a2a3e3caa5146f2f37f7f9723e8&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Omron HEM 7120 Fully Automatic Digital Blood Pressure Monitor With Intellisense Technology For Most Accurate Measurement`,
-        info:``
-    },
-    {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07QFX7PWS&asins=B07QFX7PWS&linkId=778059fc15f0f2299ce9ec85c9b604b9&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Philips T Bulb Curve, 12 Watt, Base B22, Cool Daylight`,
-        info:``
-    },
+const amazonAds1= [
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B089GRBSDJ&asins=B089GRBSDJ&linkId=8cc9ebdaf007fc6fa136df4f30b1fad9&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:``,
@@ -89,6 +69,24 @@ const amazonAds= [
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07CJFKN5X&asins=B07CJFKN5X&linkId=da7828dafaff8ec556896f18277284f9&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Micromax Canvas IN8INITY Life(Black)`,
         info:`5.45 inch HD+ Display, 2 GB RAM | 16 GB ROM | Expandable Upto 128 G, 13MP Rear Camera | 8MP Front Camera, MediaTek MT6737 Cortex-A53 64-bit Processor`
+    }
+];
+
+const amazonAds2 =[
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01GPMV4RO&asins=B01GPMV4RO&linkId=99780f514aeac012013af84b2a6cca5d&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Dr. Ortho Oil Subscribe and Save : 5% | 10%`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B00F38B3NW&asins=B00F38B3NW&linkId=b7461a2a3e3caa5146f2f37f7f9723e8&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Omron HEM 7120 Fully Automatic Digital Blood Pressure Monitor With Intellisense Technology For Most Accurate Measurement`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07QFX7PWS&asins=B07QFX7PWS&linkId=778059fc15f0f2299ce9ec85c9b604b9&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Philips T Bulb Curve, 12 Watt, Base B22, Cool Daylight`,
+        info:``
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B075V7T4F4&asins=B075V7T4F4&linkId=40564c02227faef708f24ea72514bee9&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -208,21 +206,23 @@ function CueLinksWidgets() {
     return html;
 }
 
-function AmazonAds() {
+function AmazonAds(amazonAds,counter=0) {
+    debugger;
     let html = "";
     for(let i in amazonAds){
         if(amazonAds[i].url != ''){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
-                    <span style='${(i%3==1)?"color:red":(i%3==2)?"color:green":"color:white"}'> ${amazonAds[i].text}</span><br/>
+                    <span style='${((i+counter)%3==1)?"color:red":((i+counter)%3==2)?"color:green":"color:white"}'> ${amazonAds[i].text}</span><br/>
                     <div class="row">
                         <div class="col-md-6 col-6">${amazonAds[i].url}</div>
-                        <div class="col-md-6 col-6"><span style=${(i%3==1)?"color:red":(i%3==2)?"color:green":"color:white"}> ${amazonAds[i].info}</span><br/></div>
+                        <div class="col-md-6 col-6"><span style=${((i+counter)%3==1)?"color:red":((i+counter)%3==2)?"color:green":"color:white"}> ${amazonAds[i].info}</span><br/></div>
                     </div>
                  </div>
         `;
     }
 }
+debugger;
     return html;
 }
 
@@ -253,10 +253,16 @@ function CueLinksAds() {
 }
 
 $(document).ready(function() {
-    CueLinksAdsScript
+    debugger;
+    $("#adsSection #amazonCarousel1 .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
+    $("#adsSection #amazonCarousel1 .carousel-inner").html(AmazonAds(amazonAds1,0));
+    $("#adsSection #amazonCarousel2 .carousel-inner").html(AmazonAds(amazonAds2,1));
+
+    CueLinksAdsScript();
     $("#adsSection #cueLinksCarousel .carousel-inner").html(CueLinksWidgets());
-    $("#adsSection #amazonCarousel .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
-    $("#adsSection #amazonCarousel .carousel-inner").html(AmazonAds());
     $("#cueLinksAds").html(CueLinksAds());
     $("adsSection").show();
+
 });
+
+{/* <script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="mukundkumar17-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category =""; amzn_assoc_default_search_key ="micromax";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; <\/script>\n<script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"><\/script></script> */}
