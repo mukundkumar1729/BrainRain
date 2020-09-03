@@ -26,6 +26,7 @@ function ContactUsSocialMediaLinks(){
     <a onclick="RedirectTo('https://in.pinterest.com/kmukund439/boards/')"><img src="${baseUrl}image/pinterestLogo.jpg" alt="pinterest"/></a></a><span style="margin-right:5px;"></span>
     <a onclick="RedirectTo('https://rapidapi.com/user/mukundKumar')"><img src="${baseUrl}image/rapidApi.jpg" alt="Rapid API"/></a></a><span style="margin-right:5px;"></span>
     <a onclick="RedirectTo('https://github.com/mukundkumar1729')"><img src="${baseUrl}image/github.png" alt="github"/></a></a><span style="margin-right:5px;"></span>
+    <a onclick="RedirectTo('https://www.quora.com/profile/Mukund-Kumar-107')"><img src="${baseUrl}image/quora.jpg" alt="quora"/></a></a><span style="margin-right:5px;"></span>
 
     <br/><br/>
     `;
