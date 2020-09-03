@@ -21,11 +21,11 @@ function ContactUsSocialMediaLinks(){
     <a onclick="RedirectTo('https://www.linkedin.com/in/mukundkumar1729/?originalSubdomain=in')"><img src="${baseUrl}image/LinkedIn.png" alt="linkedIn"/></a></a><span style="margin-right:5px;"></span>
     <a onclick="RedirectTo('https://twitter.com/mukundkumar1729')"><img src="${baseUrl}image/twitter.png" alt="twitter"/> </a></a><span style="margin-right:5px;"></span>
     <a onclick="RedirectTo('https://www.facebook.com/mukundkumar1729')"><img src="${baseUrl}image/fb-art.png" alt="facebook"/></a></a><span style="margin-right:5px;"></span>
-    <br/><br/>
     <a onclick="RedirectTo('https://www.hackerearth.com/@kmukund439')"><img src="${baseUrl}image/hackerEarth.png" alt="HackerEarth"/></a></a><span style="margin-right:5px;"></span>
     <a onclick="RedirectTo('https://www.instagram.com/_mukundkumar1729/')"><img src="${baseUrl}image/instagram.jpg" alt="Instagram"/></a></a><span style="margin-right:5px;"></span>
     <a onclick="RedirectTo('https://in.pinterest.com/kmukund439/boards/')"><img src="${baseUrl}image/pinterestLogo.jpg" alt="pinterest"/></a></a><span style="margin-right:5px;"></span>
     <a onclick="RedirectTo('https://rapidapi.com/user/mukundKumar')"><img src="${baseUrl}image/rapidApi.jpg" alt="Rapid API"/></a></a><span style="margin-right:5px;"></span>
+    <a onclick="RedirectTo('https://github.com/mukundkumar1729')"><img src="${baseUrl}image/github.png" alt="github"/></a></a><span style="margin-right:5px;"></span>
 
     <br/><br/>
     `;
