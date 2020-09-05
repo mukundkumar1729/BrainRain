@@ -559,7 +559,6 @@ function checkNetConnection(){
 }
 
 function ShowSinglePage(sender){
-    debugger;
     switch(sender.value){
         case constant.listing:
             ShowSingleDiv('#' + sender.value);
@@ -572,7 +571,6 @@ function ShowSinglePage(sender){
             $.getScript("src/programmingSFunctions.js");
         break;
         default:
-            debugger;
             window.location.href = sender.value;
             break;
     }

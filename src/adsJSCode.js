@@ -227,7 +227,6 @@ function CueLinksWidgets() {
 }
 
 function AmazonAds(amazonAds,counter=0) {
-    debugger;
     let html = "";
     for(let i in amazonAds){
         if(amazonAds[i].url != ''){
@@ -242,7 +241,6 @@ function AmazonAds(amazonAds,counter=0) {
         `;
     }
 }
-debugger;
     return html;
 }
 
@@ -273,7 +271,6 @@ function CueLinksAds() {
 }
 
 $(document).ready(function() {
-    debugger;
     $("#adsSection #amazonCarousel1 .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
     $("#adsSection #amazonCarousel1 .carousel-inner").html(AmazonAds(amazonAds1,0));
     $("#adsSection #amazonCarousel2 .carousel-inner").html(AmazonAds(amazonAds2,1));
