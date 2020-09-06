@@ -38,7 +38,7 @@ const amazonAds1= [
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B089GRBSDJ&asins=B089GRBSDJ&linkId=8cc9ebdaf007fc6fa136df4f30b1fad9&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:``,
-        info:`4 GB RAM | 64 GB ROM | Expandable Upto 256 GB, 16.51 cm (6.5 inch) HD+ Display, 16MP + 2MP + 2MP | 8MP Front Camera, 5000 mAh Lithium-ion Battery`
+        info:`4 GB RAM | 64 GB ROM | Expandable Upto 256 GB, 6.5 inch HD+ Display, 16MP + 2MP + 2MP | 8MP Front Camera, 5000 mAh Lithium-ion Battery`
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B075NKHHBV&asins=B075NKHHBV&linkId=e6ab4e7d80ba588204f3dd567884b69f&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -53,7 +53,7 @@ const amazonAds1= [
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07HGH88GL&asins=B07HGH88GL&linkId=216cbc1007aaf412f24eb06f306052df&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Samsung Galaxy M21 (Midnight Blue, 6GB RAM, 128GB Storage)`,
-        info:`Triple Camera Setup - 48MP (F2.0) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera and 20MP (F2.2) front facing Punch Hole Camera | 6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support | 6000 mAh Battery | Android 10.0 operating system with Exynos 9611,2.3GHz,1.7GHz Octa-Core processor, 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM`
+        info:`48MP + 8MP + 5MP Main Camera and 20MP front Camera | 6.4-inch Display, FHD+ Resolution (2340 x 1080) | 6000 mAh Battery | Android 10.0 OS with Exynos 9611,2.3GHz,1.7GHz Octa-Core processor, 6GB RAM, 128GB internal memory expandable up to 512GB`
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07N1FR7N9&asins=B07N1FR7N9&linkId=f71aee671bc54bc9f4e25638ebf6dabc&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -68,7 +68,7 @@ const amazonAds1= [
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01DDP85BY&asins=B01DDP85BY&linkId=bc9fd3768c1a7a777e62c5b44eb889da&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Moto G Plus, 4th Gen (White, 32 GB)`,
-        info:`16 MP primary camera | 5 MP wide angle front camera  | 5.5-inch full HD display | Android v6.0.1 Marshmallow OS | 1.5 GHz MSM8952 Qualcomm SnapdragonTM 617 octa-core processor with 550 MHz Adreno 405 GPU, 3GB RAM, 32GB internal memory expandable up to 128GB and dual micro-SIM dual-standby (4G+3G) | 3000 mAh`
+        info:`16 MP | 5 MP camera  | 5.5-inh display | Android v6.0.1 Marshmallow OS | 1.5 GHz Qualcomm SnapdragonTM 617 octa-core processor, 3GB RAM, 32GB internal memory expandable up to 128GB | 3000 mAh`
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07PZZLR4D&asins=B07PZZLR4D&linkId=868a950bea5939fe80d89afc87974acf&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -111,7 +111,7 @@ const amazonAds2 =[
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B081MTF2SK&asins=B081MTF2SK&linkId=6e385a0e0b32c8467a16df22fd675941&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Fedus Multipurpose Heating Pad For Pain Relief of Back, Shoulder, Knee, Elbow Heating Pad (Size-8x12)`,
-        info:`【ULTRA HEAT TECHNOLOGY】 Ultraheat Technology achieves highest temperature & maintains consistent heat for maximum relief. Ideal for Hot Therapy in order to relieve pain, stress, and discomfort in the lumbar/lower back area and abdominal/stomach area, muscle stiffness, joint pain and body cramps arthritis, cold womb, and cold weather.`
+        info:`Ultraheat Technology achieves highest temperature & maintains consistent heat for maximum relief. Ideal for Hot Therapy in order to relieve pain, stress, and discomfort in the lumbar/lower back area and abdominal/stomach area, muscle stiffness, joint pain and body cramps arthritis, cold womb, and cold weather.`
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B0857DZ41C&asins=B0857DZ41C&linkId=205c5e512e765aefd2d4e6fad7a65f1d&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -164,12 +164,12 @@ const cueLinksAds = [
     {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.nextbillion.groww",
         image:"groww.png",
-        text:"Investing in mutual funds is now simple and free. No paperwork, no hassles. Invest in the best mutual funds using Groww. All mutual funds are available in one investment app. And the best part - invest in direct mutual funds with zero commission for free. Switch your regular investments to direct." 
+        text:"invest in direct mutual funds with zero commission for free. Switch your regular investments to direct." 
      },
     {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dio.chingari.app",
         image:"chingari.png",
-        text:"The Chingari App started in January 2018 that allows users to record and share short videos with incredible filters and games. It provides users with a chance to browse through several short videos, download them, like them, share them and more. Apart from this, it also provides users with a platform to connect with people through the Direct Message feature." 
+        text:"The Chingari App allows users to record and share short videos with incredible filters and games.It also provides users with a platform to connect with people through the Direct Message feature." 
      },
     {
         url:"",
