@@ -94,6 +94,31 @@ const amazonAds1= [
 
 const amazonAds2 =[
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07M6Z816B&asins=B07M6Z816B&linkId=08a61731a8f6059abb1a82b79da20ef6&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Dettol Skincare Germ Protection Handwash Liquid Soap Refill, 1500ml`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B015PL0HG0&asins=B015PL0HG0&linkId=c635d698d8094d5d596a901e83d4ac94&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Savlon Antiseptic Disinfectant Liquid - 1000ml`,
+        info:``
+   },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B06Y5M3D4P&asins=B06Y5M3D4P&linkId=c6a00914613d728899ae9b29d9de1289&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`AmazonBasics Internal Frame (Hardback) Hiking Backpack with Raincover`,
+        info:`Internal-frame backpack with 55 L capacity (50 L + 5 L extension collar), Open-cell foam lumbar pad and molded channels for lower-back support and airflow, Waterproof cover included for heavier rain`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B081MTF2SK&asins=B081MTF2SK&linkId=6e385a0e0b32c8467a16df22fd675941&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Fedus Multipurpose Heating Pad For Pain Relief of Back, Shoulder, Knee, Elbow Heating Pad (Size-8x12)`,
+        info:`【ULTRA HEAT TECHNOLOGY】 Ultraheat Technology achieves highest temperature & maintains consistent heat for maximum relief. Ideal for Hot Therapy in order to relieve pain, stress, and discomfort in the lumbar/lower back area and abdominal/stomach area, muscle stiffness, joint pain and body cramps arthritis, cold womb, and cold weather.`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B0857DZ41C&asins=B0857DZ41C&linkId=205c5e512e765aefd2d4e6fad7a65f1d&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Praxon Adjustable 6 Vibration Modes 10 Frequency Feet Muscle Massage Machine`,
+        info:`Praxon Adjustable 6 Vibration Modes 10 Frequency Feet Muscle Massage Machine for Promoting Blood Circulation Relaxing Pressure Muscle Pain Relief || Wireless Low Frequency Feet Simulator Massage Mat`
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01GPMV4RO&asins=B01GPMV4RO&linkId=99780f514aeac012013af84b2a6cca5d&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Dr. Ortho Oil Subscribe and Save : 5% | 10%`,
         info:``
@@ -122,24 +147,29 @@ const amazonAds2 =[
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B073JWDLXZ&asins=B073JWDLXZ&linkId=939631059610ef30044868914b652752&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Skybags Rubik Polyester 68 Cms Blue Softsided Check-in Luggage (STRUW68EBLU)`,
         info:`Capacity: 66 liters; Weight: 4500 grams; Dimensions: 46.5 cms x 31.5 cms x 68.5 cms (LxWxH), Number Lock, Number of Wheels: 4`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B086T4WGRY&asins=B086T4WGRY&linkId=c473c2c768ca22f1705209fbdee045f2&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Dettol Original Germ Protection Bathing Soap bar, 125gm (Pack of 5)`,
+        info:``
     }
 ];
 
 const cueLinksAds = [
     {
-       url:"",
-       image:"jiva-ayurveda-logo.jpg",
-       text:"" 
+       url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rufilo.user",
+       image:"rufilo.png",
+       text:"Rufilo - India’s first SMaRT credit card discovery and instant credit line based personal loan platform." 
     },
     {
-        url:"",
-        image:"MedicalDeparture.png",
-        text:"Find a Medical Doctor" 
+        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.nextbillion.groww",
+        image:"groww.png",
+        text:"Investing in mutual funds is now simple and free. No paperwork, no hassles. Invest in the best mutual funds using Groww. All mutual funds are available in one investment app. And the best part - invest in direct mutual funds with zero commission for free. Switch your regular investments to direct." 
      },
     {
-        url:"",
-        image:"Lenskart.jpg",
-        text:"Lenskart is India’s online shopping portal for eyewear" 
+        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dio.chingari.app",
+        image:"chingari.png",
+        text:"The Chingari App started in January 2018 that allows users to record and share short videos with incredible filters and games. It provides users with a chance to browse through several short videos, download them, like them, share them and more. Apart from this, it also provides users with a platform to connect with people through the Direct Message feature." 
      },
     {
         url:"",
@@ -215,6 +245,7 @@ const cueLinksAds = [
 
 function CueLinksWidgets() {
     let html = "";
+    let cueLinksWidgets
     for(let i in widgets){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
