@@ -17,7 +17,9 @@
     "mobileStore":"https://brainrain-mobilestore.netlify.app/",
     "mobileStore_Aapp":"https://play.google.com/store/apps/details?id=com.wElectronicsStore_11905302",
     "news1729":"https://brainrain-news.netlify.app/",
-    "news1729_Aapp":"https://play.google.com/store/apps/details?id=com.wBrainRainNews_11941331"
+    "news1729_Aapp":"https://play.google.com/store/apps/details?id=com.wBrainRainNews_11941331",
+    "trivia":"https://brainrain-trivia.netlify.app/",
+    "trivia_Aapp":""
 },
 "title":{
     "all":"Get all apps fom the same developer",
@@ -29,6 +31,7 @@
     "WordsGame":"Words Game  is an interactive application to get the details - definition, meanings, sunonyms , antonyms, homonyms, anagrams, parts of speech,  related to a word. It provides autocomplete feature for searching words in the search box. It enables to search in multiple language.It is  desingned to learn the words effectively. It also sources to different standard english dictionary.",
     "PeriodicTable":"App gives detailed information related to element of periodic table.",
     "mobileStore":"This app lets mobile store users to keep the inventory details.",
-    "news1729":"This app aggregates and provides lates information and news on different topics, about and from a country, weather news."
+    "news1729":"This app aggregates and provides lates information and news on different topics, about and from a country, weather news.",
+    "trivia":"trivia application"
 }
 }
