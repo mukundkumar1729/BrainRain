@@ -167,6 +167,16 @@ const amazonAds2 =[
 
 const cueLinksAds = [
     {
+        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.next.innovation.takatak",
+        image:"mxtakatak.png",
+        text:"MX TakaTak is a short video community. It provides rich video content and encourage creation full of imagination." 
+     },
+    {
+        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.sonyliv",
+        image:"SonyLiv.png",
+        text:"SonyLiv - we live to entertain." 
+     },
+    {
        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rufilo.user",
        image:"rufilo.png",
        text:"Rufilo - India’s first SMaRT credit card discovery and instant credit line based personal loan platform." 
@@ -180,11 +190,6 @@ const cueLinksAds = [
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dio.chingari.app",
         image:"chingari.png",
         text:"The Chingari App allows users to record and share short videos with incredible filters and games.It also provides users with a platform to connect with people through the Direct Message feature." 
-     },
-    {
-        url:"",
-        image:"paytmmall.png",
-        text:"" 
      },
     {
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fthemomsco.com%2F",
