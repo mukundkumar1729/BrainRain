@@ -74,7 +74,7 @@ switch(_functionCounter){
         $.getScript(`${baseUrl}src/contactUs.js`);
         break;
     case 7 :
-        $.getScript(`${baseUrl}src/adsJSCode.js`);
+        $.getScript(`src/adsJSCode.js`);
         break;
     case 30 :
         $.getScript(`${baseUrl}src/alertModal.js`);
