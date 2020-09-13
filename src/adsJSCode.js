@@ -167,14 +167,14 @@ const amazonAds2 =[
 
 const cueLinksAds = [
     {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.next.innovation.takatak",
-        image:"mxtakatak.png",
-        text:"MX TakaTak is a short video community. It provides rich video content and encourage creation full of imagination." 
+        url:"",
+        image:"",
+        text:"" 
      },
     {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.sonyliv",
-        image:"SonyLiv.png",
-        text:"SonyLiv - we live to entertain." 
+        url:"",
+        image:"",
+        text:"" 
      },
     {
        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rufilo.user",
@@ -320,7 +320,6 @@ $(document).ready(function() {
     $("#adsSection #amazonCarousel1 .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
     $("#adsSection #amazonCarousel1 .carousel-inner").html(AmazonAds(amazonAds1,0));
     $("#adsSection #amazonCarousel2 .carousel-inner").html(AmazonAds(amazonAds2,1));
-debugger;
     const url = window.location.href.toLowerCase();
     if(url.includes("https://brainrain.netlify.app")){
         CueLinksAdsScript();
