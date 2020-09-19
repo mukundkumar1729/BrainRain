@@ -89,6 +89,12 @@ const amazonAds1= [
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B00BX5FOCK&asins=B00BX5FOCK&linkId=5f249a918611b419c98db0b871369be2&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`SanDisk Cruzer Blade 64GB USB 2.0 Flash Drive`,
         info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B00BX5FOCK&asins=B00BX5FOCK&linkId=5f249a918611b419c98db0b871369be2&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Micromax Dual 5 E4820 (Champagne, 128GB)`,
+        info:`13MP + 13MP camera, 5.5-inch touchscreen with 1080 x 1920 pixels resolution, Android 6.0 OS with 1.8GHz octa core processor, 4GB RAM, 128GB (4G+4G)
+        3200mAH lithium-ion battery`
     }
 ];
 
@@ -162,7 +168,32 @@ const amazonAds2 =[
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08HLS63WG&asins=B08HLS63WG&linkId=ded2c17e943bdebb2b110ae82c31cc3a&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Ergonomic High-Back Office Revolving Chair with Nylon Base,Adjustable Arms`,
         info:``
-    }
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08FMPDPZ3&asins=B08FMPDPZ3&linkId=f25f38317e67e8e699bc4457c8bbc985&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Fiber with Cotton Cloth 24x24 Inch Cushion Filler,1 pc,Vacuum Packing,Breathable Washable Quality`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07PF71VG7&asins=B07PF71VG7&linkId=011c42d67340edf706ae113df0756c4d&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`CITRA Led Bulb B22 base, 45 Watt 6000 K,Cool White LED Light`,
+        info:`B22 Socket, 30,000 HOUR LIFETIME or 16 years with 5 hrs/day of use. High Power Factor For Lower Electricity Consumption, Cool white 6000K Light TURNS ON INSTANTLY, Minimum of 100lm/watt.`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07KXW1GXT&asins=B07KXW1GXT&linkId=885b9b4b1da40dd1833470710c2f5de6&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`PHILIPS 30-Watts B22 LED White;Cool Day Light T-Bulb, Pack of 3`,
+        info:`B22 Socket, 30,000 HOUR LIFETIME or 16 years with 5 hrs/day of use. High Power Factor For Lower Electricity Consumption, Cool white 6000K Light TURNS ON INSTANTLY, Minimum of 100lm/watt.`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B016J3NR4C&asins=B016J3NR4C&linkId=02aefffa9ba04ad11c813fc5766a7b14&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`A2Z A To Z Traders Electric Lotus Diya/Deepak Light Lamp, Golden with 1 Hand Shape LED Light Keychain`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B016J3NYD6&asins=B016J3NYD6&linkId=20e7753305385b4b4d18d71f7764e655&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`A2Z Electric Multicolour OM LED Light Lamp for Pooja/Puja/Mandir/Home Decoration and 1 Hand LED Shape Light Key Chain`,
+        info:``
+    } 
 ];
 
 const cueLinksAds = [
