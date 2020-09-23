@@ -36,6 +36,16 @@ const widgets = [
 
 const amazonAds1= [
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08D6RCSGN&asins=B08D6RCSGN&linkId=fd8dede36a3d1d0fb1d45af09d04bc0c&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`IKALL N4 Calling Tablet with Keyboard (7 Inch, 8GB, 4G Volte)`,
+        info:`7 Inch Display ||b4G VolTe || 5MP rear and 2MP front camera || 3000 mAh battery || 1GB Ram and 8GB Internal Storage`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08HLR9JG8&asins=B08HLR9JG8&linkId=678b6943add8b3821258a6767af8a387&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`I KALL K800 (2GB, 16GB) (Blue)`,
+        info:`5.5 Inch IPS Display || 2500 mAh Battery || 2GB RAM and 16GB Internal Memory || 5MP Rear and 2MP Front Camera`
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B089GRBSDJ&asins=B089GRBSDJ&linkId=8cc9ebdaf007fc6fa136df4f30b1fad9&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:``,
         info:`4 GB RAM | 64 GB ROM | 6.5 inch HD+ Display, 16MP + 2MP + 2MP | 8MP Front Camera, 5000 mAh Battery`
