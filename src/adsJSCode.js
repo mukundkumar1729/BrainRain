@@ -36,9 +36,14 @@ const widgets = [
 
 const amazonAds1= [
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08D6RCSGN&asins=B08D6RCSGN&linkId=fd8dede36a3d1d0fb1d45af09d04bc0c&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`IKALL N4 Calling Tablet with Keyboard (7 Inch, 8GB, 4G Volte)`,
-        info:`7 Inch Display ||b4G VolTe || 5MP rear and 2MP front camera || 3000 mAh battery || 1GB Ram and 8GB Internal Storage`
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08GM8L1HV&asins=B08GM8L1HV&linkId=5430e30376e3b37f1d115253c66d4ecc&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`IKALL WiFi Tablet - N7 (2GB Ram + 16GB Storage)`,
+        info:`7 Inch Display ||it support only wifi to run internet || 2MP rear and 0.3MP front camera || 3000 mAh battery || 2GB Ram and 16GB Internal Storage`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B082HL9MJS&asins=B082HL9MJS&linkId=d034a20631f455e70a8da54421527952&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`IKall N5 4G Calling Tablet with 7 Inch Display Dual Sim 2GB Ram and 16GB Internal Memory (White)`,
+        info:`7 Inch Display ||b4G VolTe || 5MP rear and 2MP front camera || 3000 mAh battery || 2GB Ram and 16GB Internal Storage`
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08HLR9JG8&asins=B08HLR9JG8&linkId=678b6943add8b3821258a6767af8a387&show_border=true&link_opens_in_new_window=true"></iframe>`,
