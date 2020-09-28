@@ -120,7 +120,8 @@ const amazonAds2 =[
         info:``
     },
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B015PL0HG0&asins=B015PL0HG0&linkId=c635d698d8094d5d596a901e83d4ac94&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B015PL0HG0&asins=B015PL0HG0&linkId=c635d698d8094d5d596a901e83d4ac94&show_border=true&link_opens_in_new_window=true"></iframe>
+        <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B071LTXT7H&asins=B071LTXT7H&linkId=31b70996a17573a6bd24e92a5d046469&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Savlon Antiseptic Disinfectant Liquid - 1000ml`,
         info:``
    },
@@ -207,6 +208,51 @@ const amazonAds2 =[
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B016J3NYD6&asins=B016J3NYD6&linkId=20e7753305385b4b4d18d71f7764e655&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`A2Z Electric Multicolour OM LED Light Lamp for Pooja/Puja/Mandir/Home Decoration and 1 Hand LED Shape Light Key Chain`,
+        info:``
+    } ,
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B071LTXT7H&asins=B071LTXT7H&linkId=d2d791c4de11c1db2a7b07ff7a3182b7&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`A2Z Electric Multicolour OM LED Light Lamp for Pooja/Puja/Mandir/Home Decoration and 1 Hand LED Shape Light Key Chain`,
+        info:`Savlon Moisture Shield Handwash - 750 ml`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B079QC2712&asins=B079QC2712&linkId=85da4374fe2c3fc5a5923dc3d6dd9bb0&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Fortune Kachi Ghani Pure Mustard Oil Jar, 5L`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B086XQSMJM&asins=B086XQSMJM&linkId=7d7cc577550fc620b22dca61bcc93fd5&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Savlon Surface Disinfectant Spray Sanitizer, Germ Protection on Hard & Soft Surfaces, 170g (230ml)`,
+        info:``
+    } ,
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B071NZD6G9&asins=B071NZD6G9&linkId=7bfdfa96302192a1b884b15d1ff4fb1a&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Trust Classic Sulphur Less Sugar, 5kg`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B0831X68DT&asins=B0831X68DT&linkId=44f19e60b85a301f34778960b898ee93&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:``,
+        info:``
+    }, 
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B0831X68DT&asins=B0831X68DT&linkId=44f19e60b85a301f34778960b898ee93&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Colgate Swarna Vedshakti Ayurvedic Toothpaste with anti-germ properties for whole mouth protection - 400gm (Saver Pack)`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01H4UJLDU&asins=B01H4UJLDU&linkId=bbb41853878cd1436416025b180518ff&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Surf Excel Easy Wash Detergent Powder, 4 kg`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B006QQRLAY&asins=B006QQRLAY&linkId=b6c3b5ca029be0291bfef29448457db9&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Horlicks Health and Nutrition drink - 1 kg Refill pack (Classic Malt)`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07FS7C7B8&asins=B07FS7C7B8&linkId=dbb97a72e523a9414cc2afb28e6dc396&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Bournvita Health Drink, 2 kg`,
         info:``
     } 
 ];
