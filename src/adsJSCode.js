@@ -38,7 +38,7 @@ const amazonAds1= [
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08GM8L1HV&asins=B08GM8L1HV&linkId=5430e30376e3b37f1d115253c66d4ecc&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`IKALL WiFi Tablet - N7 (2GB Ram + 16GB Storage)`,
-        info:`7 Inch Display ||it support only wifi to run internet || 2MP rear and 0.3MP front camera || 3000 mAh battery || 2GB Ram and 16GB Internal Storage`
+        info:`7 Inch Display ||Supports only wifi || 2MP rear and 0.3MP front camera || 3000 mAh battery || 2GB Ram and 16GB Internal Storage`
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B082HL9MJS&asins=B082HL9MJS&linkId=d034a20631f455e70a8da54421527952&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -83,7 +83,7 @@ const amazonAds1= [
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01DDP85BY&asins=B01DDP85BY&linkId=bc9fd3768c1a7a777e62c5b44eb889da&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Moto G Plus, 4th Gen (White, 32 GB)`,
-        info:`16 MP | 5 MP camera  | 5.5-inh display | Android v6.0.1 Marshmallow OS | 1.5 GHz Qualcomm SnapdragonTM 617 octa-core processor, 3GB | 32GB | 3000 mAh`
+        info:`16 MP | 5 MP camera  | 5.5-inh display | Marshmallow OS | 1.5 GHz octa-core processor, 3GB | 32GB | 3000 mAh`
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07PZZLR4D&asins=B07PZZLR4D&linkId=868a950bea5939fe80d89afc87974acf&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -108,8 +108,7 @@ const amazonAds1= [
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B00BX5FOCK&asins=B00BX5FOCK&linkId=5f249a918611b419c98db0b871369be2&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Micromax Dual 5 E4820 (Champagne, 128GB)`,
-        info:`13MP + 13MP camera, 5.5-inch touchscreen with 1080 x 1920 pixels resolution, Android 6.0 OS with 1.8GHz octa core processor, 4GB RAM, 128GB (4G+4G)
-        3200mAH lithium-ion battery`
+        info:`13MP + 13MP camera, 5.5-inch touchscreen | 1080 x 1920 pixels resolution, 1.8GHz octa core processor, 4GB RAM, 128GB (4G+4G) 3200mAH lithium-ion battery`
     }
 ];
 
@@ -126,24 +125,9 @@ const amazonAds2 =[
         info:``
    },
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B06Y5M3D4P&asins=B06Y5M3D4P&linkId=c6a00914613d728899ae9b29d9de1289&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`AmazonBasics Internal Frame (Hardback) Hiking Backpack with Raincover`,
-        info:`Internal-frame backpack with 55 L capacity (50 L + 5 L extension collar), Open-cell foam lumbar pad and molded channels for lower-back support and airflow, Waterproof cover included for heavier rain`
-    },
-    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B081MTF2SK&asins=B081MTF2SK&linkId=6e385a0e0b32c8467a16df22fd675941&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Fedus Multipurpose Heating Pad For Pain Relief of Back, Shoulder, Knee, Elbow Heating Pad (Size-8x12)`,
         info:`Ultraheat Technology achieves highest temperature & maintains consistent heat for maximum relief. Ideal for Hot Therapy in order to relieve pain, stress, and discomfort in the lumbar/lower back area and abdominal/stomach area, muscle stiffness, joint pain and body cramps arthritis, cold womb, and cold weather.`
-    },
-    {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B0857DZ41C&asins=B0857DZ41C&linkId=205c5e512e765aefd2d4e6fad7a65f1d&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Praxon Adjustable 6 Vibration Modes 10 Frequency Feet Muscle Massage Machine`,
-        info:`Praxon Adjustable 6 Vibration Modes 10 Frequency Feet Muscle Massage Machine for Promoting Blood Circulation Relaxing Pressure Muscle Pain Relief || Wireless Low Frequency Feet Simulator Massage Mat`
-    },
-    {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01GPMV4RO&asins=B01GPMV4RO&linkId=99780f514aeac012013af84b2a6cca5d&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Dr. Ortho Oil Subscribe and Save : 5% | 10%`,
-        info:``
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B00F38B3NW&asins=B00F38B3NW&linkId=b7461a2a3e3caa5146f2f37f7f9723e8&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -151,9 +135,14 @@ const amazonAds2 =[
         info:``
     },
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07QFX7PWS&asins=B07QFX7PWS&linkId=778059fc15f0f2299ce9ec85c9b604b9&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Philips T Bulb Curve, 12 Watt, Base B22, Cool Daylight`,
-        info:``
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B06Y5M3D4P&asins=B06Y5M3D4P&linkId=c6a00914613d728899ae9b29d9de1289&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`AmazonBasics Internal Frame (Hardback) Hiking Backpack with Raincover`,
+        info:`Internal-frame backpack with 55 L capacity (50 L + 5 L extension collar), Open-cell foam lumbar pad and molded channels for lower-back support and airflow, Waterproof cover included for heavier rain`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B0857DZ41C&asins=B0857DZ41C&linkId=205c5e512e765aefd2d4e6fad7a65f1d&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Praxon Adjustable 6 Vibration Modes 10 Frequency Feet Muscle Massage Machine`,
+        info:`Praxon Adjustable 6 Vibration Modes 10 Frequency Feet Muscle Massage Machine for Promoting Blood Circulation Relaxing Pressure Muscle Pain Relief || Wireless Low Frequency Feet Simulator Massage Mat`
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B075V7T4F4&asins=B075V7T4F4&linkId=40564c02227faef708f24ea72514bee9&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -161,14 +150,19 @@ const amazonAds2 =[
         info:`2 zippered compartments with 1 interior and 1 mesh pockets and  1 outer pocket for cell phones, 1 Pen/Tactical Torch Latch, `
     },
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01C8QIBJ0&asins=B01C8QIBJ0&linkId=34ed9ef51160f7f5f6bfe29474975e08&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Patanjali Honey, 1kg, Subscribe & Save: 5% / 10%`,
-        info:``
-    },
-    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B073JWDLXZ&asins=B073JWDLXZ&linkId=939631059610ef30044868914b652752&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Skybags Rubik Polyester 68 Cms Blue Softsided Check-in Luggage (STRUW68EBLU)`,
         info:`Capacity: 66 liters; Weight: 4500 grams; Dimensions: 46.5 cms x 31.5 cms x 68.5 cms (LxWxH), Number Lock, Number of Wheels: 4`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01GPMV4RO&asins=B01GPMV4RO&linkId=99780f514aeac012013af84b2a6cca5d&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Dr. Ortho Oil Subscribe and Save : 5% | 10%`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01C8QIBJ0&asins=B01C8QIBJ0&linkId=34ed9ef51160f7f5f6bfe29474975e08&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Patanjali Honey, 1kg, Subscribe & Save: 5% / 10%`,
+        info:``
     },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B086T4WGRY&asins=B086T4WGRY&linkId=c473c2c768ca22f1705209fbdee045f2&show_border=true&link_opens_in_new_window=true"></iframe>`,
@@ -188,6 +182,11 @@ const amazonAds2 =[
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08FMPDPZ3&asins=B08FMPDPZ3&linkId=f25f38317e67e8e699bc4457c8bbc985&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Fiber with Cotton Cloth 24x24 Inch Cushion Filler,1 pc,Vacuum Packing,Breathable Washable Quality`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07QFX7PWS&asins=B07QFX7PWS&linkId=778059fc15f0f2299ce9ec85c9b604b9&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Philips T Bulb Curve, 12 Watt, Base B22, Cool Daylight`,
         info:``
     },
     {
@@ -228,11 +227,6 @@ const amazonAds2 =[
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B071NZD6G9&asins=B071NZD6G9&linkId=7bfdfa96302192a1b884b15d1ff4fb1a&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Trust Classic Sulphur Less Sugar, 5kg`,
-        info:``
-    },
-    {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B0831X68DT&asins=B0831X68DT&linkId=44f19e60b85a301f34778960b898ee93&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:``,
         info:``
     }, 
     {
