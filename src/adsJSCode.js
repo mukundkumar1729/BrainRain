@@ -364,16 +364,37 @@ function CueLinksWidgets() {
     return html;
 }
 
-function AmazonAds(amazonAds,counter=0) {
+function AmazonAds1(amazonAds) {
     let html = "";
+    let amazonAds = amazonAds1;
     for(let i in amazonAds){
         if(amazonAds[i].url != ''){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
-                    <span style='${((i+counter)%3==1)?"color:red":((i+counter)%3==2)?"color:green":"color:white"}'> ${amazonAds[i].text}</span><br/>
+                    <span style='${((i)%3==1)?"color:red":((i)%3==2)?"color:green":"color:white"}'> ${amazonAds[i].text}</span><br/>
                     <div class="row">
                         <div class="col-md-6 col-6">${amazonAds[i].url}</div>
-                        <div class="col-md-6 col-6"><span style=${((i+counter)%3==1)?"color:red":((i+counter)%3==2)?"color:green":"color:white"}> ${amazonAds[i].info}</span><br/></div>
+                        <div class="col-md-6 col-6">
+                            <span style=${((i)%3==1)?"color:red":((i)%3==2)?"color:green":"color:white"}> ${amazonAds[i].info}</span><br/>
+                        </div>
+                    </div>
+                 </div>
+        `;
+    }
+}
+    return html;
+}
+
+function AmazonAds2(amazonAds) {
+    let html = "";
+    let amazonAds = amazonAds2;
+    for(let i in amazonAds){
+        if(amazonAds[i].url != '' & i%2 == 0){
+        html += `
+                 <div class='carousel-item ${html==""?"active":""}'>
+                    <div class="row">
+                        <div class="col-md-6 col-6">${amazonAds[i].url}</div>
+                        <div class="col-md-6 col-6">${amazonAds[i+1].url}</div>
                     </div>
                  </div>
         `;
@@ -410,8 +431,8 @@ function CueLinksAds() {
 
 $(document).ready(function() {
     $("#adsSection #amazonCarousel1 .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
-    $("#adsSection #amazonCarousel1 .carousel-inner").html(AmazonAds(amazonAds1,0));
-    $("#adsSection #amazonCarousel2 .carousel-inner").html(AmazonAds(amazonAds2,1));
+    $("#adsSection #amazonCarousel1 .carousel-inner").html(AmazonAds1());
+    $("#adsSection #amazonCarousel2 .carousel-inner").html(AmazonAds2());
     const url = window.location.href.toLowerCase();
     if(url.includes("https://brainrain.netlify.app")){
         CueLinksAdsScript();
