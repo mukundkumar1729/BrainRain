@@ -366,7 +366,7 @@ function CueLinksWidgets() {
 
 function AmazonAds1(amazonAds) {
     let html = "";
-    let amazonAds = amazonAds1;
+    amazonAds = amazonAds??amazonAds1;
     for(let i in amazonAds){
         if(amazonAds[i].url != ''){
         html += `
@@ -387,7 +387,7 @@ function AmazonAds1(amazonAds) {
 
 function AmazonAds2(amazonAds) {
     let html = "";
-    let amazonAds = amazonAds2;
+    amazonAds = amazonAds??amazonAds2;
     for(let i in amazonAds){
         if(amazonAds[i].url != '' & i%2 == 0){
         html += `
