@@ -388,13 +388,14 @@ function AmazonAds1(amazonAds) {
 function AmazonAds2(amazonAds) {
     let html = "";
     amazonAds = amazonAds??amazonAds2;
+    let adsCount = Object.keys(amazonAds).length
     for(let i in amazonAds){
         if(amazonAds[i].url != '' & i%2 == 0){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
                     <div class="row">
                         <div class="col-md-6 col-6">${amazonAds[i].url}</div>
-                        <div class="col-md-6 col-6">${amazonAds[i+1].url}</div>
+                        <div class="col-md-6 col-6">${i+1 < adsCount ? amazonAds[i+1].url : ""}</div>
                     </div>
                  </div>
         `;
