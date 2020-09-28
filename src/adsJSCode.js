@@ -347,6 +347,11 @@ const cueLinksAds = [
         url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.vidyakul.com%2F",
         image:`DataCamp.png`,
         text:"DataCamp lets us to understand the language of data" 
+     },
+     {
+        url:"",
+        image:``,
+        text:"" 
      }
 ];
 
@@ -390,12 +395,12 @@ function AmazonAds2(amazonAds) {
     amazonAds = amazonAds??amazonAds2;
     let adsCount = Object.keys(amazonAds).length
     for(let i in amazonAds){
-        if(amazonAds[i].url != '' & i%2 == 0){
+        if(amazonAds[i].url != '' & i%2 == 1){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
                     <div class="row">
+                        <div class="col-md-6 col-6">${amazonAds[i-1].url}</div>
                         <div class="col-md-6 col-6">${amazonAds[i].url}</div>
-                        <div class="col-md-6 col-6">${i+1 < adsCount ? amazonAds[i+1].url : ""}</div>
                     </div>
                  </div>
         `;
