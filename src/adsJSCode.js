@@ -114,17 +114,6 @@ const amazonAds1= [
 
 const amazonAds2 =[
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07M6Z816B&asins=B07M6Z816B&linkId=08a61731a8f6059abb1a82b79da20ef6&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Dettol Skincare Germ Protection Handwash Liquid Soap Refill, 1500ml`,
-        info:``
-    },
-    {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B015PL0HG0&asins=B015PL0HG0&linkId=c635d698d8094d5d596a901e83d4ac94&show_border=true&link_opens_in_new_window=true"></iframe>
-        <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B071LTXT7H&asins=B071LTXT7H&linkId=31b70996a17573a6bd24e92a5d046469&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Savlon Antiseptic Disinfectant Liquid - 1000ml`,
-        info:``
-   },
-    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B081MTF2SK&asins=B081MTF2SK&linkId=6e385a0e0b32c8467a16df22fd675941&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Fedus Multipurpose Heating Pad For Pain Relief of Back, Shoulder, Knee, Elbow Heating Pad (Size-8x12)`,
         info:`Ultraheat Technology achieves highest temperature & maintains consistent heat for maximum relief. Ideal for Hot Therapy in order to relieve pain, stress, and discomfort in the lumbar/lower back area and abdominal/stomach area, muscle stiffness, joint pain and body cramps arthritis, cold womb, and cold weather.`
@@ -160,8 +149,8 @@ const amazonAds2 =[
         info:``
     },
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01C8QIBJ0&asins=B01C8QIBJ0&linkId=34ed9ef51160f7f5f6bfe29474975e08&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Patanjali Honey, 1kg, Subscribe & Save: 5% / 10%`,
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07STKJ6Q6&asins=B07STKJ6Q6&linkId=3899b720f7d92313c8d7c55e0f8393d2&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Dabur Almond Shampoo - With Almond-Vita Complex & Milk Extracts - 650 ml`,
         info:``
     },
     {
@@ -169,6 +158,26 @@ const amazonAds2 =[
         text:`Dettol Original Germ Protection Bathing Soap bar, 125gm (Pack of 5)`,
         info:``
     },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B08JWDG8VR&asins=B08JWDG8VR&linkId=fa93feb2093ece7c62a1e713435e8c66&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Savlon Glycerine Soap, 125g (Buy 3 Get 1 Free) And Savlon Hexa Advanced Soap, 125 g [Pack of 5]`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07M6Z816B&asins=B07M6Z816B&linkId=08a61731a8f6059abb1a82b79da20ef6&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Dettol Skincare Germ Protection Handwash Liquid Soap Refill, 1500ml`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B015PL0HG0&asins=B015PL0HG0&linkId=c635d698d8094d5d596a901e83d4ac94&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Savlon Antiseptic Disinfectant Liquid - 1000ml`,
+        info:``
+   },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B086XP3LPM&asins=B086XP3LPM&linkId=40290303d42aed70739208e0e35c1eeb&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Savlon Moisture Shield Germ Protection Liquid Handwash Refill Pouch, 1500ml`,
+        info:``
+   },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B00LVKUNJG&asins=B00LVKUNJG&linkId=4f05666ab80737798ce6cc1aa541a247&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Orthopaedic Back Rest`,
@@ -245,8 +254,33 @@ const amazonAds2 =[
         info:``
     },
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01DLPQJDM&asins=B01DLPQJDM&linkId=9072c3a3d2dbf646a133c2a7d077ecaf&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Horlicks Health and Nutrition drink - 750 g Refill Pack (Chocolate flavor)`,
+        info:``
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07FS7C7B8&asins=B07FS7C7B8&linkId=dbb97a72e523a9414cc2afb28e6dc396&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Bournvita Health Drink, 2 kg`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B077SZHY5G&asins=B077SZHY5G&linkId=2f0da0f6849f232e5f9ffb71c5c31def&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Aashirvaad Shudh Chakki Atta, 10kg`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01C8QIBJ0&asins=B01C8QIBJ0&linkId=34ed9ef51160f7f5f6bfe29474975e08&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Patanjali Honey, 1kg`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01CJUSP1Y&asins=B01CJUSP1Y&linkId=5d7e37565522035f075165a1bf2af9bb&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Glucon D Instant Energy Health Drink Regular - 450gm Refill (Extra 50gm Free)`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01CHUVAFO&asins=B01CHUVAFO&linkId=52b12c90c32e6c3209ce7deae1d1edb0&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Quaker Oats, 1.5 kg Pack`,
         info:``
     } 
 ];
