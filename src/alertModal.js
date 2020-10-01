@@ -4,14 +4,14 @@ const AlertModal = (() => {
   alertDiv.id = "alertModal";
   document.body.appendChild(alertDiv);
   debugger;
-  // fetch("https://commonurls.p.rapidapi.com/", {
-  //         "method": "GET",
-  //         "headers": {
-  //             "x-rapidapi-host": "commonurls.p.rapidapi.com",
-  //             "x-rapidapi-key": "uidfLUjLRFmshP9SqtRp4Dantn62p1IGMXsjsnj5i41NHnvqKG"
-  //         }
-  //     })
-      fetch("https://brainrain.in/data/commonurls.json")
+  // fetch("https://brainrain.in/data/commonurls.json")
+  fetch("https://commonurls.p.rapidapi.com/", {
+          "method": "GET",
+          "headers": {
+              "x-rapidapi-host": "commonurls.p.rapidapi.com",
+              "x-rapidapi-key": "uidfLUjLRFmshP9SqtRp4Dantn62p1IGMXsjsnj5i41NHnvqKG"
+          }
+      })
       .then(response => response.json())
       .then(data => {
         debugger;

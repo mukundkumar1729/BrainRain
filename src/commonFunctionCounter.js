@@ -1,4 +1,4 @@
-let baseUrl = "https://brainrain.netlify.app/";
+let baseUrl = "https://brainrain.in/";
 let appUrl = "";
 let _timerCounter = sessionStorage.getItem('_timerCounter');
 if(isNaN(_timerCounter)){
