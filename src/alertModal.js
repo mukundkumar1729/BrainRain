@@ -3,6 +3,7 @@ const AlertModal = (() => {
   let alertDiv = document.createElement("div");
   alertDiv.id = "alertModal";
   document.body.appendChild(alertDiv);
+  debugger;
   fetch("https://commonurls.p.rapidapi.com/", {
           "method": "GET",
           "headers": {
@@ -12,6 +13,7 @@ const AlertModal = (() => {
       })
       .then(response => response.json())
       .then(data => {
+        debugger;
           let appLinkHtml = "";
           let keys = Object.keys(data.urls);
           keys.forEach(key => {
@@ -48,7 +50,10 @@ const AlertModal = (() => {
           document.getElementById("alertModal").innerHTML = html;
           $("#appAlertModal").modal("show");
       })
-      .catch(error => console.log(error));
+      .catch((error, err1, err2) =>{
+        debugger;
+        console.log(error)
+      });
 });
 
 (function(){

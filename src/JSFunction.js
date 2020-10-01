@@ -584,7 +584,7 @@ function BindGoToPageDdl(){
                    {value: constant.contactUsSection, text:"Contact Us"}];
     let urlsKeys = Object.keys(variables.urls);
     $.each(urlsKeys, function(index, value){
-        if(!value.includes('_Aapp')){
+        if(!value.includes('_')){
             let optionObj = {value: variables.urls[value], text:value};
             options.push(optionObj);
         }

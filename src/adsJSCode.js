@@ -423,7 +423,6 @@ function AmazonAds2(amazonAds) {
     amazonAds = amazonAds??amazonAds2;
     let adsCount = Object.keys(amazonAds).length
     for(let i in amazonAds){
-        debugger;
         if(amazonAds[i].url != '' && i%2 == 1){
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
