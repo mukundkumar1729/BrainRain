@@ -99,11 +99,10 @@ sessionStorage.setItem('_timerCounter', _timerCounter);
 }, 1000);
 
 function SetStyleSheet(){
-  $("#adsSection").css({"margin-top": "60px", "position": "relative"});
+  $("#adsSection").css({"margin-top": "60px", "position": "relative","display":"none"});
   $("#adsSection img").css({"height":"75px","width":"125px"});
   $("#staticAds .row").css({"margin-top": "10px","margin-bottom": "10px"});
   $(".amazonSearch iframe").css({"width": "100% !important"});
   $("iframe").css({"border": "none"});
   $("#staticAds .row:nth-child(odd) div span:nth-child(odd)").css({"color":"white"});
-
   }
