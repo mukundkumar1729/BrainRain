@@ -33,7 +33,7 @@ const widgets = [
     }
 ];
 
-const creditCards=[
+const creditCardsAds=[
     {
         url:``,
         text:``,
