@@ -25,7 +25,18 @@ const RedirectTo = (url) => {
 
     if(document.getElementById("adsSection")){
       $("adsSection").hide();
-        document.getElementById("adsSection").innerHTML = `<div id="amazonCarousel1" class ="carousel slide" data-ride="carousel">
+        document.getElementById("adsSection").innerHTML = `
+        <div id="creditCardsCarousel" class ="carousel slide" data-ride="carousel">
+        <div  class="carousel-inner">
+        </div>
+        <a class="carousel-control-prev" href="#creditCardsCarousel" data-slide="prev">
+           <span class="carousel-control-prev-icon"></span>
+         </a>
+         <a class="carousel-control-next" href="#creditCardsCarousel" data-slide="next">
+           <span class="carousel-control-next-icon"></span>
+         </a>
+        </div>
+        <div id="amazonCarousel1" class ="carousel slide" data-ride="carousel">
         <div  class="carousel-inner">
         </div>
         <a class="carousel-control-prev" href="#amazonCarousel1" data-slide="prev">

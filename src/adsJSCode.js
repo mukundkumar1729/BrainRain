@@ -33,6 +33,23 @@ const widgets = [
     }
 ];
 
+const creditCards=[
+    {
+        url:``,
+        text:``,
+        info:``
+    },
+    {
+        url:``,
+        text:``,
+        info:``
+    },
+    {
+        url:``,
+        text:``,
+        info:``
+    }
+]
 
 const amazonAds1= [
     {
@@ -397,6 +414,11 @@ function CueLinksWidgets() {
     return html;
 }
 
+function CreditCardsAds(){
+    let html = AmazonAds1(creditCardsAds);
+    return html; 
+}
+
 function AmazonAds1(amazonAds) {
     let html = "";
     amazonAds = amazonAds??amazonAds1;
@@ -464,6 +486,7 @@ function CueLinksAds() {
 }
 
 $(document).ready(function() {
+    $("#adsSection #creditCardsCarousel .carousel-inner").html(CreditCardsAds());
     $("#adsSection #amazonCarousel1 .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
     $("#adsSection #amazonCarousel1 .carousel-inner").html(AmazonAds1());
     $("#adsSection #amazonCarousel2 .carousel-inner").html(AmazonAds2());
