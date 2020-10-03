@@ -33,21 +33,71 @@ const widgets = [
     }
 ];
 
-const creditCardsAds=[
+const medAds = [
     {
-        url:``,
-        text:``,
-        info:``
+        url:`<a href="http://medlifeinternational.go2cloud.org/aff_c?offer_id=303&aff_id=14561&file_id=5921" target="_blank"><img src="https://media.go2speed.org/brand/files/medlifeinternational/303/20200326103239-300X250.gif" width="300" height="250" border="0" /></a><img src="http://medlifeinternational.go2cloud.org/aff_i?offer_id=303&file_id=5921&aff_id=14561" width="0" height="0" style="position:absolute;visibility:hidden;" border="0" />`,
+        image:``,
+        isUrl:false
     },
     {
-        url:``,
-        text:``,
-        info:``
+        url:`<a href="http://medlifeinternational.go2cloud.org/aff_c?offer_id=223&aff_id=14561&file_id=2489" target="_blank"><img src="https://media.go2speed.org/brand/files/medlifeinternational/223/300x250-Shilajeet.jpg" width="300" height="250" border="0" /></a><img src="http://medlifeinternational.go2cloud.org/aff_i?offer_id=223&file_id=2489&aff_id=14561" width="0" height="0" style="position:absolute;visibility:hidden;" border="0" />`,
+        image:``,
+        isUrl:false
     },
     {
-        url:``,
-        text:``,
-        info:``
+        url:`<a href="http://medlifeinternational.go2cloud.org/aff_c?offer_id=104&aff_id=14561&file_id=1655" target="_blank"><img src="https://media.go2speed.org/brand/files/medlifeinternational/104/Medlife-orange-logo.jpg" width="300" height="250" border="0" /></a><img src="http://medlifeinternational.go2cloud.org/aff_i?offer_id=104&file_id=1655&aff_id=14561" width="0" height="0" style="position:absolute;visibility:hidden;" border="0" />`,
+        image:``,
+        isUrl:false
+    },
+    {
+        url:`<a href="http://medlifeinternational.go2cloud.org/aff_c?offer_id=169&aff_id=14561&file_id=1945" target="_blank"><img src="https://media.go2speed.org/brand/files/medlifeinternational/169/20180305104723-300-x-250_HH.jpg" width="300" height="250" border="0" /></a><img src="http://medlifeinternational.go2cloud.org/aff_i?offer_id=169&file_id=1945&aff_id=14561" width="0" height="0" style="position:absolute;visibility:hidden;" border="0" />`,
+        image:``,
+        isUrl:false
+    },
+    {
+        url:`<a href="http://medlifeinternational.go2cloud.org/aff_c?offer_id=167&aff_id=14561&file_id=2165" target="_blank"><img src="https://media.go2speed.org/brand/files/medlifeinternational/167/300x250--Medlife-Supplements.jpg" width="300" height="250" border="0" /></a><img src="http://medlifeinternational.go2cloud.org/aff_i?offer_id=167&file_id=2165&aff_id=14561" width="0" height="0" style="position:absolute;visibility:hidden;" border="0" />`,
+        image:``,
+        isUrl:false
+    },
+    {
+        url:`https://inr.deals/mq1cW`,
+        image:`1mgLabs.png`,
+        isUrl:true
+    },
+    {
+        url:`https://inr.deals/gGsu9`,
+        image:`GoDaddy.png`,
+        isUrl:true
+    },
+    {
+        url:`https://inr.deals/Z3Ocl`,
+        image:`kotak811.png`,
+        isUrl:true
+    },
+    {
+        url:`https://inr.deals/6Lcz1`,
+        image:`adda247.jpg`,
+        isUrl:true
+    },
+    {
+        url:`https://inr.deals/im1qY`,
+        image:`dominos.png`,
+        isUrl:true
+    },
+    {
+        url:`https://inr.deals/AzXjN`,
+        image:`healthkart.png`,
+        isUrl:true
+    },
+    {
+        url:`https://inr.deals/mPxek`,
+        image:`swiggy.jpg`,
+        isUrl:true
+    },
+    {
+        url:`https://inr.deals/vrlTd`,
+        image:`flipkart.png`,
+        isUrl:true
     }
 ]
 
@@ -309,16 +359,6 @@ const amazonAds2 =[
 
 const cueLinksAds = [
     {
-        url:"",
-        image:"",
-        text:"" 
-     },
-    {
-        url:"",
-        image:"",
-        text:"" 
-     },
-    {
        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rufilo.user",
        image:"rufilo.png",
        text:"Rufilo - India’s first SMaRT credit card discovery and instant credit line based personal loan platform." 
@@ -419,9 +459,16 @@ function CueLinksWidgets() {
     return html;
 }
 
-function CreditCardsAds(){
-    let html = AmazonAds1(creditCardsAds);
-    return html; 
+function MedAds(){
+ let html = "";
+ let ads = medAds;
+ for(let i in ads){
+     debugger;
+     html += `<div class='carousel-item ${html==""?"active":""}'>`;
+     html += ads[i].isUrl ? `<div  style="height:122px"><a href="${ads[i].url}"><image src="/image/${ads[i].image}"/></a></div>` : ads[i].url;
+     html += `</div>`;
+ }
+ return html;
 }
 
 function AmazonAds1(amazonAds) {
@@ -491,7 +538,7 @@ function CueLinksAds() {
 }
 
 $(document).ready(function() {
-    $("#adsSection #creditCardsCarousel .carousel-inner").html(CreditCardsAds());
+    $("#adsSection #medCarousel .carousel-inner").html(MedAds());
     $("#adsSection #amazonCarousel1 .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
     $("#adsSection #amazonCarousel1 .carousel-inner").html(AmazonAds1());
     $("#adsSection #amazonCarousel2 .carousel-inner").html(AmazonAds2());

@@ -26,13 +26,13 @@ const RedirectTo = (url) => {
     if(document.getElementById("adsSection")){
       $("adsSection").hide();
         document.getElementById("adsSection").innerHTML = `
-        <div id="creditCardsCarousel" class ="carousel slide" data-ride="carousel">
+        <div id="medCarousel" class ="carousel slide" data-ride="carousel">
         <div  class="carousel-inner">
         </div>
-        <a class="carousel-control-prev" href="#creditCardsCarousel" data-slide="prev">
+        <a class="carousel-control-prev" href="#medCarousel" data-slide="prev">
            <span class="carousel-control-prev-icon"></span>
          </a>
-         <a class="carousel-control-next" href="#creditCardsCarousel" data-slide="next">
+         <a class="carousel-control-next" href="#medCarousel" data-slide="next">
            <span class="carousel-control-next-icon"></span>
          </a>
         </div>
@@ -85,7 +85,7 @@ switch(_functionCounter){
         $.getScript(`${baseUrl}src/contactUs.js`);
         break;
     case 7 :
-        $.getScript(`${baseUrl}src/adsJSCode.js`);
+        $.getScript(`src/adsJSCode.js`);
         break;
     case 30 :
         $.getScript(`${baseUrl}src/alertModal.js`);
