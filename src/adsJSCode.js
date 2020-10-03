@@ -465,7 +465,7 @@ function MedAds(){
  for(let i in ads){
      debugger;
      html += `<div class='carousel-item ${html==""?"active":""}'>`;
-     html += ads[i].isUrl ? `<div  style="height:122px"><a href="${ads[i].url}"><image src="/image/${ads[i].image}"/></a></div>` : ads[i].url;
+     html += ads[i].isUrl ? `<div style="height:122px"><a href="${ads[i].url}"><image src="/image/${ads[i].image}"/></a></div>` : ads[i].url;
      html += `</div>`;
  }
  return html;
