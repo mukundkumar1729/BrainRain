@@ -299,7 +299,12 @@ const amazonAds2 =[
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01CHUVAFO&asins=B01CHUVAFO&linkId=52b12c90c32e6c3209ce7deae1d1edb0&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Quaker Oats, 1.5 kg Pack`,
         info:``
-    } 
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08DTZFGL3&asins=B08DTZFGL3&linkId=bee8bbccfb42560fdda99cc1bf505432&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Cotton Casual fit 3 Quarter Pants for Men Shorts for Boys Half Pants [Free Size 28-32]`,
+        info:``
+    }
 ];
 
 const cueLinksAds = [
