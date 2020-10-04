@@ -65,6 +65,11 @@ const medAds = [
         isUrl:true
     },
     {
+        url:`https://inr.deals/5J8C1`,
+        image:`jivaAyurved.png`,
+        isUrl:true
+    },
+    {
         url:`https://inr.deals/gGsu9`,
         image:`GoDaddy.png`,
         isUrl:true
@@ -77,6 +82,11 @@ const medAds = [
     {
         url:`https://inr.deals/6Lcz1`,
         image:`adda247.jpg`,
+        isUrl:true
+    },
+    {
+        url:`https://inr.deals/NcEeY`,
+        image:`pizzahut.jpg`,
         isUrl:true
     },
     {
@@ -96,6 +106,11 @@ const medAds = [
     },
     {
         url:`https://inr.deals/vrlTd`,
+        image:`flipkart.png`,
+        isUrl:true
+    },
+    {
+        url:`https://inr.deals/VXt4G`,
         image:`flipkart.png`,
         isUrl:true
     }
@@ -239,12 +254,22 @@ const amazonAds2 =[
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B015PL0HG0&asins=B015PL0HG0&linkId=c635d698d8094d5d596a901e83d4ac94&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Savlon Antiseptic Disinfectant Liquid - 1000ml`,
         info:``
-   },
+    },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B086XP3LPM&asins=B086XP3LPM&linkId=40290303d42aed70739208e0e35c1eeb&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Savlon Moisture Shield Germ Protection Liquid Handwash Refill Pouch, 1500ml`,
         info:``
-   },
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B071LTXT7H&asins=B071LTXT7H&linkId=d2d791c4de11c1db2a7b07ff7a3182b7&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`A2Z Electric Multicolour OM LED Light Lamp for Pooja/Puja/Mandir/Home Decoration and 1 Hand LED Shape Light Key Chain`,
+        info:`Savlon Moisture Shield Handwash - 750 ml`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B086XQSMJM&asins=B086XQSMJM&linkId=7d7cc577550fc620b22dca61bcc93fd5&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Savlon Surface Disinfectant Spray Sanitizer, Germ Protection on Hard & Soft Surfaces, 170g (230ml)`,
+        info:``
+    },
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B00LVKUNJG&asins=B00LVKUNJG&linkId=4f05666ab80737798ce6cc1aa541a247&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Orthopaedic Back Rest`,
@@ -286,20 +311,10 @@ const amazonAds2 =[
         info:``
     } ,
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B071LTXT7H&asins=B071LTXT7H&linkId=d2d791c4de11c1db2a7b07ff7a3182b7&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`A2Z Electric Multicolour OM LED Light Lamp for Pooja/Puja/Mandir/Home Decoration and 1 Hand LED Shape Light Key Chain`,
-        info:`Savlon Moisture Shield Handwash - 750 ml`
-    },
-    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B079QC2712&asins=B079QC2712&linkId=85da4374fe2c3fc5a5923dc3d6dd9bb0&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Fortune Kachi Ghani Pure Mustard Oil Jar, 5L`,
         info:``
     },
-    {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B086XQSMJM&asins=B086XQSMJM&linkId=7d7cc577550fc620b22dca61bcc93fd5&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Savlon Surface Disinfectant Spray Sanitizer, Germ Protection on Hard & Soft Surfaces, 170g (230ml)`,
-        info:``
-    } ,
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B071NZD6G9&asins=B071NZD6G9&linkId=7bfdfa96302192a1b884b15d1ff4fb1a&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Trust Classic Sulphur Less Sugar, 5kg`,
@@ -353,6 +368,26 @@ const amazonAds2 =[
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08DTZFGL3&asins=B08DTZFGL3&linkId=bee8bbccfb42560fdda99cc1bf505432&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Cotton Casual fit 3 Quarter Pants for Men Shorts for Boys Half Pants [Free Size 28-32]`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08B3QTZKJ&asins=B08B3QTZKJ&linkId=45b55a9fd57194b2c554f045eae03cb7&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`haldiram mixture`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B077K4V1SL&asins=B077K4V1SL&linkId=e95ae3e5b527021451a1608b79bbbb65&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Taste Good Karela Biscuits High Fiber, Tasty and Healthy Sugar-Free Snacks, 1600 g - Pack of 16`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07VX8MD76&asins=B07VX8MD76&linkId=04f25bab4f5accfa569c536ad7379846&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`WALKERS Highland Oat & Butter Digestive Biscuits (Combo of 2)`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07D1VB7QY&asins=B07D1VB7QY&linkId=f36386142751d990b541b2374ed0cd99&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Pampers New Diaper Pants, XL, 56 Count`,
         info:``
     }
 ];
