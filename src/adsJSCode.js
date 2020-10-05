@@ -61,12 +61,12 @@ const medAds = [
     },
     {
         url:`https://inr.deals/mq1cW`,
-        image:`1mgLabs.png`,
+        image:`1mg.png`,
         isUrl:true
     },
     {
         url:`https://inr.deals/5J8C1`,
-        image:`jivaAyurved.png`,
+        image:`jivaAyurveda.jpg`,
         isUrl:true
     },
     {
@@ -81,7 +81,7 @@ const medAds = [
     },
     {
         url:`https://inr.deals/6Lcz1`,
-        image:`adda247.jpg`,
+        image:`adda247.png`,
         isUrl:true
     },
     {
@@ -111,7 +111,7 @@ const medAds = [
     },
     {
         url:`https://inr.deals/VXt4G`,
-        image:`flipkart.png`,
+        image:`sharekhan.png`,
         isUrl:true
     }
 ]
