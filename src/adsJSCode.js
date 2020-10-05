@@ -61,7 +61,7 @@ const medAds = [
     },
     {
         url:`https://inr.deals/mq1cW`,
-        image:`1mg.png`,
+        image:`1mgLabs.png`,
         isUrl:true
     },
     {
@@ -86,7 +86,7 @@ const medAds = [
     },
     {
         url:`https://inr.deals/NcEeY`,
-        image:`pizzahut.jpg`,
+        image:`pizzahut.png`,
         isUrl:true
     },
     {
