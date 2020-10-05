@@ -67,9 +67,7 @@ let quesAnsData = [];
 let quesAnsUploadedData = [];
 
 let variables = {
-    userEmailID:"kmukund439@gmail.com",
-    urls:{},
-    titles:{}
+    userEmailID:"kmukund439@gmail.com"
 }
 
 $(document).ready(function() {
@@ -86,25 +84,6 @@ $(document).ready(function() {
     }
     $(window).resize(function() {
         AlignElsOnSmallDevice();
-    });
-    $.ajax({
-        url:"../data/commonUrls.json",
-        type:"GET",
-        dataType:"json",
-        async:true,
-        processData:true,
-        ifModified:false,
-        beforeSend: function(xhr){},
-        success: function(data, status, xhr){
-            variables.urls = data.urls;
-            variables.title = data.title;
-        },
-        error: function(xhr, status, error){
-            console.log(error);
-        },
-        complete: function(xhr, status){
-            BindGoToPageDdl();
-        }
     });
 });
 
@@ -574,31 +553,6 @@ function ShowSinglePage(sender){
             window.location.href = sender.value;
             break;
     }
-}
-
-function BindGoToPageDdl(){
-    let ddl = $(control.gotoDdl)[0];
-    ddl.options.length = 0;
-    let options = [{value: constant.listing, text: "Interview Questions"},
-                   {value: constant.programmingSection, text: "Programming Section"},
-                   {value: constant.contactUsSection, text:"Contact Us"}];
-    let urlsKeys = Object.keys(variables.urls);
-    $.each(urlsKeys, function(index, value){
-        if(!value.includes('_')){
-            let optionObj = {value: variables.urls[value], text:value};
-            options.push(optionObj);
-        }
-    });
-
-    for (let option of options) {
-        ddl.options[ddl.options.length] = new Option(option.text, option.value);
-    }
-}
-
-function Redirect(url){
-    url = Function(`return(variables.urls.${url})`)(); 
-    window.location.href = url;
-
 }
 function Transfer(url){
     window.location.href = url;

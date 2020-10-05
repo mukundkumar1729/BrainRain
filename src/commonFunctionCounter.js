@@ -6,6 +6,40 @@ if(isNaN(_timerCounter)){
 }
 let _functionCounter = 0;
 
+(function BindGoToPageDdl(urls){
+  let ddl = $('#goToDdl')[0];
+  ddl.options.length = 0;
+  let options = {};
+  $.ajax({
+    url:"../data/commonUrls.json",
+    type:"GET",
+    dataType:"json",
+    async:true,
+    processData:true,
+    ifModified:false,
+    beforeSend: function(xhr){},
+    success: function(data, status, xhr){
+      let pageUrl = window.location.href;
+      if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app")){
+        options = [{value: constant.listing, text: "Interview Questions"},
+                   {value: constant.programmingSection, text: "Programming Section"},
+                   {value: constant.contactUsSection, text:"Contact Us"}];
+        }
+        let urlsKeys = Object.keys(data.urls);
+        $.each(urlsKeys, function(index, value){
+            if(!value.includes('_')){
+                ddl.options[ddl.options.length] = new Option(value, data.urls[value]);
+            }
+        });
+    },
+    error: function(xhr, status, error){
+        console.log(error);
+    },
+    complete: function(xhr, status){
+    }
+  });
+})();
+
 const RedirectTo = (url) => {
     if(url.includes('undefined')){
       window.location.href = baseUrl;

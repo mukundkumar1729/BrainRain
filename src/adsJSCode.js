@@ -498,9 +498,8 @@ function MedAds(){
  let html = "";
  let ads = medAds;
  for(let i in ads){
-     debugger;
      html += `<div class='carousel-item ${html==""?"active":""}'>`;
-     html += ads[i].isUrl ? `<div style="height:122px"><a href="${ads[i].url}"><image src="https://brainrain.in/image/${ads[i].image}"/></a></div>` : ads[i].url;
+     html += ads[i].isUrl ? `<div style="width:350px;height:122px"><a href="${ads[i].url}"><image src="https://brainrain.in/image/${ads[i].image}"/></a></div>` : ads[i].url;
      html += `</div>`;
  }
  return html;
