@@ -113,6 +113,11 @@ const medAds = [
         url:`https://inr.deals/VXt4G`,
         image:`sharekhan.png`,
         isUrl:true
+    },
+    {
+        url:`https://amzn.urlvia.com/SHArz`,
+        image:`amazon.png`,
+        isUrl:true
     }
 ]
 
