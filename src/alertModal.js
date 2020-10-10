@@ -3,7 +3,6 @@ const AlertModal = (() => {
     let alertDiv = document.createElement("div");
     alertDiv.id = "alertModal";
     document.body.appendChild(alertDiv);
-    debugger;
     let appLinkHtml = "";
             let keys = Object.keys(commonUrlData.urls);
             keys.forEach(key => {
@@ -35,7 +34,6 @@ const AlertModal = (() => {
     </div>
   </div>
                 `;
-  debugger;
                 appUrl = commonUrlData.urls[constant.page + '_Aapp'];
             document.getElementById("alertModal").innerHTML = html;
             $("#appAlertModal").modal("show");

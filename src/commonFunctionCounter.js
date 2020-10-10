@@ -4,7 +4,6 @@ let _timerCounter = sessionStorage.getItem('_timerCounter');
 if(isNaN(_timerCounter)){
     _timerCounter = 0;
 }
-debugger;
 let _functionCounter = 0;
 let commonUrlData = {
   urls:{
