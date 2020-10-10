@@ -577,6 +577,7 @@ function CueLinksAds() {
 }
 
 $(document).ready(function() {
+    debugger;
     $("#adsSection #medCarousel .carousel-inner").html(MedAds());
     $("#adsSection #amazonCarousel1 .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
     $("#adsSection #amazonCarousel1 .carousel-inner").html(AmazonAds1());
