@@ -1,5 +1,6 @@
 let baseUrl = "https://brainrain.in/";
 let appUrl = "";
+let commonUrlData = "";
 let _timerCounter = sessionStorage.getItem('_timerCounter');
 if(isNaN(_timerCounter)){
     _timerCounter = 0;
@@ -19,8 +20,9 @@ let _functionCounter = 0;
     ifModified:false,
     beforeSend: function(xhr){},
     success: function(data, status, xhr){
+      commonUrlData = data;
       let pageUrl = window.location.href;
-      if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app")){
+      if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app") || pageUrl.includes("127.0.0.1:5501/")){
         options = [{value: constant.listing, text: "Interview Questions"},
                    {value: constant.programmingSection, text: "Programming Section"},
                    {value: constant.contactUsSection, text:"Contact Us"}];
@@ -51,7 +53,7 @@ const RedirectTo = (url) => {
 (function SetAdsContactsHTML(){
     if(document.getElementById("contactUsSection")){
         $("#contactUsSection").hide();
-        document.getElementById("contactUsSection").innerHTML = `<hr class="rounded"/>
+        document.getElementById("contactUsSection").innerHTML = `
                   <div class="col-md-12 col-12 contactUs">
                      <h5>Contact Us:</h5>
                   </div>`;
@@ -121,8 +123,8 @@ switch(_functionCounter){
     case 7 :
         $.getScript(`${baseUrl}src/adsJSCode.js`);
         break;
-    case 30 :
-        $.getScript(`${baseUrl}src/alertModal.js`);
+    case 10 :
+        $.getScript(`src/alertModal.js`);
         break;
     default :
         break;
