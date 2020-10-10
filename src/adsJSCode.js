@@ -116,7 +116,12 @@ const medAds = [
     },
     {
         url:`https://amzn.urlvia.com/SHArz`,
-        image:`amazon.png`,
+        image:`amazon.jpg`,
+        isUrl:true
+    },
+    {
+        url:`https://inr.deals/2SyTt`,
+        image:`mamaEarth.jpg`,
         isUrl:true
     }
 ]
