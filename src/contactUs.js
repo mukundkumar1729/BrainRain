@@ -1,7 +1,7 @@
 function AppsLink() {
     const appsLink = `<a onclick="RedirectToCurrentApp();">
     <img src="${baseUrl}image/googlePlayBadge.jpg" class="noImageStyle" alt="Google Play"/></a><span style="margin-right:5px;"></span>`;
-    $("#contactUsSection").append(a)
+    $("#contactUsSection").append(appsLink)
 }
 
 function ContactUsSocialMediaLinks() {
