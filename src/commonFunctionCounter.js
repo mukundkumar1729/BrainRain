@@ -4,6 +4,7 @@ let _timerCounter = sessionStorage.getItem('_timerCounter');
 if(isNaN(_timerCounter)){
     _timerCounter = 0;
 }
+debugger;
 let _functionCounter = 0;
 let commonUrlData = {
   urls:{
@@ -45,6 +46,7 @@ let commonUrlData = {
 };
 
 (function BindGoToPageDdl(urls){
+  debugger;
   let ddl = $('#goToDdl')[0];
   ddl.options.length = 0;
   let options = {};
@@ -139,13 +141,13 @@ setInterval(function(){
 
 switch(_functionCounter){
     case 5 :
-        $.getScript(`src/contactUs.js`);
+        $.getScript(`${baseUrl}src/contactUs.js`);
         break;
     case 7 :
-        $.getScript(`src/adsJSCode.js`);
+        $.getScript(`${baseUrl}src/adsJSCode.js`);
         break;
     case 10 :
-        $.getScript(`src/alertModal.js`);
+        $.getScript(`${baseUrl}src/alertModal.js`);
         break;
     default :
         break;
