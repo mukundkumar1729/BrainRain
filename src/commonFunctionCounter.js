@@ -48,9 +48,9 @@ let commonUrlData = {
   let ddl = $('#goToDdl')[0];
   ddl.options.length = 0;
   let options = {};
-  
+  debugger;
   let pageUrl = window.location.href;
-  if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app") || pageUrl.includes("127.0.0.1:5501/")){
+  if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app") || pageUrl.includes("127.0.0.1:550/")){
     options = [{value: constant.listing, text: "Interview Questions"},
                {value: constant.programmingSection, text: "Programming Section"},
                {value: constant.contactUsSection, text:"Contact Us"}];
@@ -145,7 +145,7 @@ switch(_functionCounter){
         $.getScript(`${baseUrl}src/adsJSCode.js`);
         break;
     case 10 :
-        $.getScript(`src/alertModal.js`);
+        $.getScript(`${baseUrl}src/alertModal.js`);
         break;
     default :
         break;
