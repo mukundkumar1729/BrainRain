@@ -38,9 +38,9 @@ let commonUrlData = {
 "trivia":"https://trivia.brainrain.in/",
 "trivia_netlify":"https://brainrain-trivia.netlify.app/",
 "trivia_Aapp":"https://play.google.com/store/apps/details?id=com.wtrivia_12102649",
-"factsfinder":"https://factsfinder.brainrain.in/",
-"factsfinder_netlify":"https://brainrain-factsfinder.netlify.app/",
-"factsfinder_Aapp":"https://play.google.com/store/apps/details?id=com.wFactsFinder_12183319"
+"factsFinder":"https://factsfinder.brainrain.in/",
+"factsFinder_netlify":"https://brainrain-factsfinder.netlify.app/",
+"factsFinder_Aapp":"https://play.google.com/store/apps/details?id=com.wFactsFinder_12183319"
   }
 };
 
@@ -139,13 +139,13 @@ setInterval(function(){
 
 switch(_functionCounter){
     case 5 :
-        $.getScript(`${baseUrl}src/contactUs.js`);
+        $.getScript(`src/contactUs.js`);
         break;
     case 7 :
-        $.getScript(`${baseUrl}src/adsJSCode.js`);
+        $.getScript(`src/adsJSCode.js`);
         break;
     case 10 :
-        $.getScript(`${baseUrl}src/alertModal.js`);
+        $.getScript(`src/alertModal.js`);
         break;
     default :
         break;

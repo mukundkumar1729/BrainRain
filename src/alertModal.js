@@ -1,5 +1,5 @@
 const AlertModal = (() => {
-    let aAppUrl = "";
+    let appUrl = "";
     let alertDiv = document.createElement("div");
     alertDiv.id = "alertModal";
     document.body.appendChild(alertDiv);
