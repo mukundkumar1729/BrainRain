@@ -45,16 +45,14 @@ let commonUrlData = {
 };
 
 (function BindGoToPageDdl(urls){
-  debugger;
   let ddl = $('#goToDdl')[0];
   ddl.options.length = 0;
   let options = {};
-  debugger;
   let pageUrl = window.location.href;
-  if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app") || pageUrl.includes("127.0.0.1:550/")){
-    options = [{value: constant.listing, text: "Interview Questions"},
-               {value: constant.programmingSection, text: "Programming Section"},
-               {value: constant.contactUsSection, text:"Contact Us"}];
+  if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app") || pageUrl.includes("127.0.0.1:550")){
+               commonUrlData.urls["Interview Questions"] = constant.listing;
+               commonUrlData.urls["Programming Section"] = constant.programmingSection;
+               commonUrlData.urls["Contact Us"] = constant.contactUsSection;
     }
     let urlsKeys = Object.keys(commonUrlData.urls);
     $.each(urlsKeys, function(index, value){
@@ -62,7 +60,7 @@ let commonUrlData = {
             ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
         }
     });
-  });
+  })();
 
 const RedirectTo = (url) => {
     if(url.includes('undefined')){
