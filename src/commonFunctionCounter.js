@@ -1,46 +1,67 @@
 let baseUrl = "https://brainrain.in/";
 let appUrl = "";
-let commonUrlData = "";
 let _timerCounter = sessionStorage.getItem('_timerCounter');
 if(isNaN(_timerCounter)){
     _timerCounter = 0;
 }
 let _functionCounter = 0;
+let commonUrlData = {
+  urls:{
+  "all_Aapp":"https://play.google.com/store/apps/developer?id=Mukund+Kumar",
+"brainrain":"http://brainrain.in/",
+"brainrain_netlify":"https://brainrain.netlify.app/",
+"brainrain_Aapp":"https://play.google.com/store/apps/details?id=com.wBrainRain_11045965",
+"tictactoe":"https://tictactoe.brainrain.in/",
+"tictactoe_netlify":"https://brainrain-tictactoe.netlify.app/",
+"tictactoe_Aapp":"https://play.google.com/store/apps/details?id=com.wTicTacToe_11438924",
+"_2048":"https://2048.brainrain.in/",
+"_2048_netlify":"https://brainrain-2048.netlify.app/",
+"_2048_Aapp":"https://play.google.com/store/apps/details?id=com.ww2048BrainRainGame_11611166",
+"pairup":"https://pairup.brainrain.in/",
+"pairup_netlify":"https://brainrain-pairup.netlify.app/",
+"pairup_Aapp":"https://play.google.com/store/apps/details?id=com.wPairUpBrainRainGame_11608416",
+"numberSignificance":"https://brainrain-numberssignificance.netlify.app/",
+"numberSignificance_netlify":"https://brainrain-numberssignificance.netlify.app/",
+"numberSignificance_Aapp":"https://play.google.com/store/apps/details?id=com.wNumbersSignificance_11716054",
+"wordsGame":"https://wordsgame.brainrain.in/",
+"wordsGame_netlify":"https://brainrain-wordsgame.netlify.app/",
+"wordsGame_Aapp":"https://play.google.com/store/apps/details?id=com.wWordsSearch_11772740",
+"periodicTable":"https://periodictable.brainrain.in/",
+"periodicTable_netlify":"https://brainrain-periodictable.netlify.app/",
+"periodicTable_Aapp":"https://play.google.com/store/apps/details?id=com.wperiodictable_11819465",
+"mobileStore":"https://mobilestore.brainrain.in/",
+"mobileStore_netlify":"https://brainrain-mobilestore.netlify.app/",
+"mobileStore_Aapp":"https://play.google.com/store/apps/details?id=com.wElectronicsStore_11905302",
+"news1729":"https://brainrain-news.netlify.app/",
+"news1729_netlify":"https://brainrain-news.netlify.app/",
+"news1729_Aapp":"https://play.google.com/store/apps/details?id=com.wBrainRainNews_11941331",
+"trivia":"https://trivia.brainrain.in/",
+"trivia_netlify":"https://brainrain-trivia.netlify.app/",
+"trivia_Aapp":"https://play.google.com/store/apps/details?id=com.wtrivia_12102649",
+"factsfinder":"https://factsfinder.brainrain.in/",
+"factsfinder_netlify":"https://brainrain-factsfinder.netlify.app/",
+"factsfinder_Aapp":"https://play.google.com/store/apps/details?id=com.wFactsFinder_12183319"
+  }
+};
 
 (function BindGoToPageDdl(urls){
   let ddl = $('#goToDdl')[0];
   ddl.options.length = 0;
   let options = {};
-  $.ajax({
-    url:"../data/commonUrls.json",
-    type:"GET",
-    dataType:"json",
-    async:true,
-    processData:true,
-    ifModified:false,
-    beforeSend: function(xhr){},
-    success: function(data, status, xhr){
-      commonUrlData = data;
-      let pageUrl = window.location.href;
-      if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app") || pageUrl.includes("127.0.0.1:5501/")){
-        options = [{value: constant.listing, text: "Interview Questions"},
-                   {value: constant.programmingSection, text: "Programming Section"},
-                   {value: constant.contactUsSection, text:"Contact Us"}];
-        }
-        let urlsKeys = Object.keys(data.urls);
-        $.each(urlsKeys, function(index, value){
-            if(!value.includes('_')){
-                ddl.options[ddl.options.length] = new Option(value, data.urls[value]);
-            }
-        });
-    },
-    error: function(xhr, status, error){
-        console.log(error);
-    },
-    complete: function(xhr, status){
+  
+  let pageUrl = window.location.href;
+  if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app") || pageUrl.includes("127.0.0.1:5501/")){
+    options = [{value: constant.listing, text: "Interview Questions"},
+               {value: constant.programmingSection, text: "Programming Section"},
+               {value: constant.contactUsSection, text:"Contact Us"}];
     }
+    let urlsKeys = Object.keys(commonUrlData.urls);
+    $.each(urlsKeys, function(index, value){
+        if(!value.includes('_')){
+            ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
+        }
+    });
   });
-})();
 
 const RedirectTo = (url) => {
     if(url.includes('undefined')){
