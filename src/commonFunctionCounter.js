@@ -60,12 +60,18 @@ let commonUrlData = {
             ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
         }
     });
+debugger;
+   let currentPage = constant.Page??"brainrain";
+   let currentPageOption = $(ddl + "option [value*=" + currentPage +"]");
+   $(currentPageOption).attr("selected","selected");
   })();
 
 const RedirectTo = (url) => {
     if(url.includes('undefined')){
+      sessionStorage.BrainRainPage = "brainrain";
       window.location.href = baseUrl;
     }else{
+      sessionStorage.BrainRainPage = constant.page;
       window.location.href = url;
     }
   }
