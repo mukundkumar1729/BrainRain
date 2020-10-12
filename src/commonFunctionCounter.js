@@ -61,7 +61,7 @@ let commonUrlData = {
         }
     });
 debugger;
-   let currentPage = constant.page??"brainrain";
+   let currentPage = constant.page.toLowerCase()??"brainrain.in";
    let currentPageOption = $("option[value*=" + currentPage + "]");
    $(currentPageOption).attr("selected","selected");
   })();
