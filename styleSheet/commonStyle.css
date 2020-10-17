@@ -1,0 +1,5 @@
+.cs-lockElement{
+    position:sticky; 
+    top:10px;
+    z-index:9999 !important;
+}
