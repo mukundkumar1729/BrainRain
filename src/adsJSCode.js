@@ -128,6 +128,11 @@ const medAds = [
 
 const amazonAds1= [
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B08DN4WLTB&asins=B08DN4WLTB&linkId=7f86ebf1d3fbd5437a0f5e6a9f2306e0&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`IKALL WiFi Tablet with Keyboard`,
+        info:`7 Inch Display ||Supports only wifi || 2MP rear and 0.3MP front camera || 3000 mAh battery || 2GB Ram and 16GB Internal Storage`
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B08GM8L1HV&asins=B08GM8L1HV&linkId=5430e30376e3b37f1d115253c66d4ecc&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`IKALL WiFi Tablet - N7 (2GB Ram + 16GB Storage)`,
         info:`7 Inch Display ||Supports only wifi || 2MP rear and 0.3MP front camera || 3000 mAh battery || 2GB Ram and 16GB Internal Storage`

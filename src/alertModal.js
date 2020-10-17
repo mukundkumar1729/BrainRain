@@ -40,5 +40,5 @@ const AlertModal = (() => {
   });
   
   (function(){
-    setTimeout(AlertModal(), 25000);
+    setTimeout(AlertModal(), 60000);
   })();

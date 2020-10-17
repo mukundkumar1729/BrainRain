@@ -52,16 +52,15 @@ let commonUrlData = {
   if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app") || pageUrl.includes("127.0.0.1:550")){
                commonUrlData.urls["Interview Questions"] = constant.listing;
                commonUrlData.urls["Programming Section"] = constant.programmingSection;
-               commonUrlData.urls["Contact Us"] = constant.contactUsSection;
     }
+    commonUrlData.urls["Contact Us"] = constant.contactUsSection??"contactUsSection";
     let urlsKeys = Object.keys(commonUrlData.urls);
     $.each(urlsKeys, function(index, value){
         if(!value.includes('_')){
             ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
         }
     });
-debugger;
-   let currentPage = constant.page.toLowerCase()??"brainrain.in";
+   let currentPage = constant.page.toLowerCase()??"http://brainrain.in";
    let currentPageOption = $("option[value*=" + currentPage + "]");
    $(currentPageOption).attr("selected","selected");
   })();
