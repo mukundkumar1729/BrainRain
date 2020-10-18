@@ -65,9 +65,13 @@ let commonUrlData = {
    $(currentPageOption).attr("selected","selected");
   })();
 
-const RedirectTo = (url) => {
+const RedirectTo = (sender) => {
   debugger;
-    if(url.includes('undefined')){
+  if(typeof(sender) == "string"){
+    window.location.href = sender;
+  }
+  let url = sender.value;
+    if(! sender.value){
       sessionStorage.BrainRainPage = "brainrain";
       window.location.href = baseUrl;
     }else{
