@@ -75,6 +75,8 @@ const RedirectTo = (url) => {
     }
   }
 
+  const Transfer = (url) => RedirectTo(url);
+
 (function SetAdsContactsHTML(){
     if(document.getElementById("contactUsSection")){
         $("#contactUsSection").hide();
