@@ -60,12 +60,13 @@ let commonUrlData = {
             ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
         }
     });
-   let currentPage = constant.page.toLowerCase()??"http://brainrain.in";
+   let currentPage = constant.page.toLowerCase()??":https//brainrain.in";
    let currentPageOption = $("option[value*=" + currentPage + "]");
    $(currentPageOption).attr("selected","selected");
   })();
 
 const RedirectTo = (url) => {
+  debugger;
     if(url.includes('undefined')){
       sessionStorage.BrainRainPage = "brainrain";
       window.location.href = baseUrl;
@@ -74,8 +75,6 @@ const RedirectTo = (url) => {
       window.location.href = url;
     }
   }
-
-  const Transfer = (url) => RedirectTo(url);
 
 (function SetAdsContactsHTML(){
     if(document.getElementById("contactUsSection")){
@@ -150,7 +149,7 @@ switch(_functionCounter){
     case 7 :
         $.getScript(`${baseUrl}src/adsJSCode.js`);
         break;
-    case 10 :
+    case 30 :
         $.getScript(`${baseUrl}src/alertModal.js`);
         break;
     default :
