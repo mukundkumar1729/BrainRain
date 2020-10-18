@@ -15,7 +15,7 @@ const AlertModal = (() => {
             });
   
             const html = `
-    <div id="appAlertModal" class="modal fade" role="dialog" tabindex="-1">
+    <div id="appAlertModal" class="modal fade" role="dialog" tabindex="-1" style="z-index:19999 !important;">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content">
         <div class="modal-header">
