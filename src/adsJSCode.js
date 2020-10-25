@@ -251,6 +251,11 @@ const amazonAds2 =[
         info:``
     },
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07QF8FLYN&asins=B07QF8FLYN&linkId=e9eb9c8ba9d1afa90f0897a002ae70f9&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Dabur Vatika Health Shampoo - Power of 7 Natural Ingredients - 640 ml`,
+        info:``
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B086T4WGRY&asins=B086T4WGRY&linkId=c473c2c768ca22f1705209fbdee045f2&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Dettol Original Germ Protection Bathing Soap bar, 125gm (Pack of 5)`,
         info:``
@@ -331,8 +336,18 @@ const amazonAds2 =[
         info:``
     },
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07PYX3G94&asins=B07PYX3G94&linkId=be65792625c370fc10593ee16e43a4b0&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Dhara Kachhi Ghani Mustard Oil Jar, 5L`,
+        info:``
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B071NZD6G9&asins=B071NZD6G9&linkId=7bfdfa96302192a1b884b15d1ff4fb1a&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Trust Classic Sulphur Less Sugar, 5kg`,
+        info:``
+    }, 
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07TXFVC2K&asins=B07TXFVC2K&linkId=b6a5c4f310a3cec04d7a164673614b3f&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Dhampure White Crystal Sugar, 5kg`,
         info:``
     }, 
     {
@@ -363,6 +378,11 @@ const amazonAds2 =[
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B077SZHY5G&asins=B077SZHY5G&linkId=2f0da0f6849f232e5f9ffb71c5c31def&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`Aashirvaad Shudh Chakki Atta, 10kg`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07HTD259P&asins=B07HTD259P&linkId=ab213bf22a24c06e9df1719f5070c5ee&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Amazon Brand - Vedaka Medium Poha, 500g`,
         info:``
     },
     {
