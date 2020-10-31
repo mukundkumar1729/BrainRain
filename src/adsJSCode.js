@@ -128,6 +128,16 @@ const medAds = [
 
 const amazonAds1= [
     {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B081MTF2SK&asins=B081MTF2SK&linkId=6e385a0e0b32c8467a16df22fd675941&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Fedus Multipurpose Heating Pad For Pain Relief of Back, Shoulder, Knee, Elbow Heating Pad (Size-8x12)`,
+        info:`Ultraheat Technology achieves highest temperature & maintains consistent heat for maximum relief. Ideal for Hot Therapy in order to relieve pain, stress, and discomfort in the lumbar/lower back area and abdominal/stomach area, muscle stiffness, joint pain and body cramps arthritis, cold womb, and cold weather.`
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B00F38B3NW&asins=B00F38B3NW&linkId=b7461a2a3e3caa5146f2f37f7f9723e8&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Omron HEM 7120 Fully Automatic Digital Blood Pressure Monitor With Intellisense Technology For Most Accurate Measurement`,
+        info:``
+    },
+    {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B08DN4WLTB&asins=B08DN4WLTB&linkId=7f86ebf1d3fbd5437a0f5e6a9f2306e0&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`IKALL WiFi Tablet with Keyboard`,
         info:`7 Inch Display ||Supports only wifi || 2MP rear and 0.3MP front camera || 3000 mAh battery || 2GB Ram and 16GB Internal Storage`
@@ -211,13 +221,38 @@ const amazonAds1= [
 
 const amazonAds2 =[
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B081MTF2SK&asins=B081MTF2SK&linkId=6e385a0e0b32c8467a16df22fd675941&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Fedus Multipurpose Heating Pad For Pain Relief of Back, Shoulder, Knee, Elbow Heating Pad (Size-8x12)`,
-        info:`Ultraheat Technology achieves highest temperature & maintains consistent heat for maximum relief. Ideal for Hot Therapy in order to relieve pain, stress, and discomfort in the lumbar/lower back area and abdominal/stomach area, muscle stiffness, joint pain and body cramps arthritis, cold womb, and cold weather.`
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07D1VB7QY&asins=B07D1VB7QY&linkId=f36386142751d990b541b2374ed0cd99&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Pampers New Diaper Pants, XL, 56 Count`,
+        info:``
     },
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B00F38B3NW&asins=B00F38B3NW&linkId=b7461a2a3e3caa5146f2f37f7f9723e8&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Omron HEM 7120 Fully Automatic Digital Blood Pressure Monitor With Intellisense Technology For Most Accurate Measurement`,
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B08L9HC54K&asins=B08L9HC54K&linkId=2777a2192a647aa9b447d42fe9489762&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Leotude Regular Fit Cotton Sweatshirt for Women`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07YF14TY4&asins=B07YF14TY4&linkId=40bf7e6adda47cdcd159d6090cad9a08&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Urbano Fashion Men's Color-Block Cotton Hooded Sweatshirt`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07SH1F744&asins=B07SH1F744&linkId=aa9a995167c2cd45be38030cd817a6e9&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Qube By Fort Collins Men's Jacket`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B08M688MC7&asins=B08M688MC7&linkId=85f0e559073dcf858824725479dbc54c&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Women Winter Thick Jacket Hoodie Collar Collar Zipper Pocket Warm Solid Color Outwear`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B076Y8V6TS&asins=B076Y8V6TS&linkId=176cca08bbe74c1189f1aee215affcf6&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`HIVER Men's Nylon Jacket 100% Water Proof Full-Sleeved Winter Jacket with Hood for Minus Degree`,
+        info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B08M65YWJH&asins=B08M65YWJH&linkId=06783a26fa2557167dcb97d1968efd03&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Women Girls Winter Coat Glossy Long Over-The-Knee Hooded Thick Padded Cardigan Jacket`,
         info:``
     },
     {
@@ -418,11 +453,6 @@ const amazonAds2 =[
     {
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07VX8MD76&asins=B07VX8MD76&linkId=04f25bab4f5accfa569c536ad7379846&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`WALKERS Highland Oat & Butter Digestive Biscuits (Combo of 2)`,
-        info:``
-    },
-    {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07D1VB7QY&asins=B07D1VB7QY&linkId=f36386142751d990b541b2374ed0cd99&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Pampers New Diaper Pants, XL, 56 Count`,
         info:``
     }
 ];
