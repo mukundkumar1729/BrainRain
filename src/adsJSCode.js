@@ -455,6 +455,11 @@ const amazonAds2 =[
         url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07VX8MD76&asins=B07VX8MD76&linkId=04f25bab4f5accfa569c536ad7379846&show_border=true&link_opens_in_new_window=true"></iframe>`,
         text:`WALKERS Highland Oat & Butter Digestive Biscuits (Combo of 2)`,
         info:``
+    },
+    {
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B01LP0UKJE&asins=B01LP0UKJE&linkId=d349edbe9d43df8b9be511aa8d47dc47&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`AmazonBasics 13mm Extra Thick Yoga and Exercise Mat with Carrying Strap`,
+        info:``
     }
 ];
 
