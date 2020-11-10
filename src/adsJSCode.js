@@ -232,8 +232,8 @@ const amazonAds2 =[
         info:``
     },
     {
-        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&language=en_IN&marketplace=amazon&region=IN&placement=B07YF14TY4&asins=B07YF14TY4&linkId=40bf7e6adda47cdcd159d6090cad9a08&show_border=true&link_opens_in_new_window=true"></iframe>`,
-        text:`Urbano Fashion Men's Color-Block Cotton Hooded Sweatshirt`,
+        url:`<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mukundkumar17-21&marketplace=amazon&region=IN&placement=B07Z6GQ511&asins=B07Z6GQ511&linkId=c3d92e66dab86c91d3dc947aa814a119&show_border=true&link_opens_in_new_window=true"></iframe>`,
+        text:`Alan Jones Clothing Men's Cotton Sweatshirt Hoodies`,
         info:``
     },
     {
