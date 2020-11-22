@@ -53,13 +53,15 @@ let commonUrlData = {
                commonUrlData.urls["Interview Questions"] = constant.listing;
                commonUrlData.urls["Programming Section"] = constant.programmingSection;
     }
+    debugger;
     commonUrlData.urls["Contact Us"] = constant.contactUsSection??"contactUsSection";
     let urlsKeys = Object.keys(commonUrlData.urls);
     $.each(urlsKeys, function(index, value){
-        if(!value.includes('_')){
+        if(value.includes('_2048') || !value.includes('_') ){
             ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
         }
     });
+    debugger;
    let currentPage = constant.page.toLowerCase()??":https//brainrain.in";
    let currentPageOption = $("option[value*=" + currentPage + "]");
    $(currentPageOption).attr("selected","selected");
