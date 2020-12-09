@@ -644,14 +644,14 @@ function CueLinksAds() {
 
 $(document).ready(function() {
     $("#adsSection #medCarousel .carousel-inner").html(MedAds());
-    // $("#adsSection #amazonCarousel1 .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
-    // $("#adsSection #amazonCarousel1 .carousel-inner").html(AmazonAds1());
-    // $("#adsSection #amazonCarousel2 .carousel-inner").html(AmazonAds2());
     const url = window.location.href.toLowerCase();
     if(url.includes("https://brainrain.netlify.app")){
         CueLinksAdsScript();
         $("#adsSection #cueLinksCarousel .carousel-inner").html(CueLinksWidgets());
         $("#cueLinksAds").html(CueLinksAds());
+        $("#adsSection #amazonCarousel1 .carousel-inner").before(`<h3 style="margin-top:25px;">Get Best Shopping Deals at amazon</h3>`);
+        $("#adsSection #amazonCarousel1 .carousel-inner").html(AmazonAds1());
+        $("#adsSection #amazonCarousel2 .carousel-inner").html(AmazonAds2());
     }
     $("adsSection").show();
 
