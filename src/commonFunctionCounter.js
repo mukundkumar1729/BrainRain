@@ -144,7 +144,8 @@ setInterval(function(){
     const _timerID = document.getElementById("timer");
 
     if(_timerID != null){
-        _timerID.innerHTML = `${_d} (${_timerCounter}s)`;
+        _timerID.innerHTML = `${_d}`;
+        _timer[0].setAttribute("title", _timerCounter + 's');
 }
 
 switch(_functionCounter){
