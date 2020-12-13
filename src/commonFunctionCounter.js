@@ -69,6 +69,7 @@ const RedirectTo = (sender) => {
   debugger;
   if(typeof(sender) == "string"){
     window.location.href = sender;
+    return;
   }
   let url = sender.value;
     if(! sender.value){
