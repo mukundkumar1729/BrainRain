@@ -26,7 +26,9 @@ function RedirectToCurrentApp() {
     appUrl && "" != appUrl.trim() ? window.location.href = appUrl : window.location.href = "https://play.google.com/store/apps/developer?id=Mukund+Kumar"
 }
 $(document).ready(function() {
-    AppsLink(); ContactUsSocialMediaLinks();
+    debugger;
+     AppsLink();
+     ContactUsSocialMediaLinks();
      $("#contactUsSection img:not(.noImageStyle)").css({
         height: "40px",
         width: "50px",
