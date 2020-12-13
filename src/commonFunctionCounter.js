@@ -66,6 +66,7 @@ let commonUrlData = {
   })();
 
 const RedirectTo = (sender) => {
+  debugger;
   if(typeof(sender) == "string"){
     window.location.href = sender;
   }
