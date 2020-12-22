@@ -139,6 +139,7 @@ const RedirectTo = (sender) => {
 })();
 
 setInterval(function(){
+  debugger;
     let _date = new Date();
     let _d = (_date.toString().split('GMT')[0].trim());
     const _timerID = document.getElementById("timer");
