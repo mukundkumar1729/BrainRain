@@ -146,7 +146,7 @@ setInterval(function(){
 
     if(_timerID != null){
         _timerID.innerHTML = `${_d}`;
-        _timerID[0].setAttribute("title", _timerCounter + 's');
+        _timerID.setAttribute("title", _timerCounter + 's');
 }
 
 switch(_functionCounter){
