@@ -160,7 +160,8 @@ const DetailedTimerModal = () => {
       <div class="modal-content">
         <div class="modal-header">
             <div class="row">
-                <div class="col-12 bg-secondary text-center"><h5 id="timerModal">Today</h5></div>
+                <div class="col-2 col-md-4"><h5 id="timerModal">Today</h5></div>
+                <div class="col-10 col-md-8 bg-secondary text-center"><h5 id="timerModal">Today</h5></div>
             </div>
             <button type="button" class="close btn btn-danger" data-dismiss="modal">&times;</button>
         </div>
