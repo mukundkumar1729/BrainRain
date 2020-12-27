@@ -139,34 +139,39 @@ const RedirectTo = (sender) => {
 })();
 
 const StartModalLocalCounter = (sender) => {
-
   if(sender.innerText == "Start"){
     sender.innerText = "Stop";
   }else{
     sender.innerText = "Start";
-    document.getElementById("modalLocalCounter").innerText = "0";
+    let modalLocalCounter = document.getElementById("modalLocalCounter");
+    document.getElementById("lastModalLocalCounter").innerText = modalLocalCounter.innerText;
+    modalLocalCounter.innerText = "0";
+    modalLocalCounter.setAttribute("timeElapsed", 0);
   }
 }
 
 const DetailedTimerModal = () => {
-  const _timer = document.getElementById("timer");
+  let timerModalDiv = document.createElement("div");
+  timerModalDiv.id = "timerModalDiv";
+  document.body.appendChild(timerModalDiv);
   const html = `
-    <div id="detailedTimerModal" class="modal fade" role="dialog" tabindex="-1" style="z-index:19999 !important;">
+    <div id="detailedTimerModal" class="modal" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close btn btn-danger" data-dismiss="modal">&times;</button>
+            <div class="row">
+                <div class="col-12 bg-secondary text-center"><h5 id="timerModal">Today</h5></div>
+            </div>
+            <button type="button" class="close btn btn-danger" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
             <div class="row">
-                <div class="col-12"><h5 id="timerModal" class="text-info">${_timer.text()}</h5></div>
-            </div>
-            <div class="row">
-                <div class="col-12">Using for <span id="timerCounterModal" class="text-info"></span>ms</div>
+                <div class="col-12 bg-light text-center">Using for <span id="timerCounterModal" class="text-info"></span>s</div>
             </div>
         </div>
         <div class="row">
-                <div class="col-8"><h5 id="modalLocalCounter" class="text-info"></h5></div>
+                <div class="col-2"><span id="lastModalLocalCounter"></span></div>
+                <div class="col-4 text-right"><h5 id="modalLocalCounter" class="text-info" timeElapsed="0">0</h5></div>
                 <div class="col-4"><label id="modalLocalCounterText" class="text-primary" onclick="StartModalLocalCounter(this);">Start</label></div>
             </div>
         <div class="modal-footer">
@@ -176,28 +181,46 @@ const DetailedTimerModal = () => {
     </div>
   </div>
                 `;
-
- $("#detailedTimerModal").modal("show"); 
+  timerModalDiv.innerHTML = html;
+  $("#detailedTimerModal").modal("show"); 
 }
 
 setInterval(function(){
     let _date = new Date();
     _date = (_date.toString().split('GMT')[0].trim());
-    _date = _date.replace(/202/,"");
+    _date = _date.replace(/2020|2021|2022|2023|2024|2025/,"");
     const _timerID = document.getElementById("timer");
 
     if(_timerID != null){
-        _timerID.innerHTML = `${_d}`;
+        _timerID.innerHTML = `${_date}`;
         _timerID.setAttribute("title", _timerCounter + 's');
-        document.getElementById("timerCounterModal").innerText = _functionCounter;
-}
 
-if(document.getElementById("modalLocalCounterText").innerText == "Stop"){
-  let timeElapsed = document.getElementById("modalLocalCounter").innerText;
-  timeElapsed++;
-  document.getElementById("modalLocalCounter").innerText = timeElapsed;
+        let timerCounterModal = document.getElementById("timerCounterModal");
+        let modalLocalCounter = document.getElementById("modalLocalCounter")
+        if(timerCounterModal){
+          timerCounterModal.innerText = _functionCounter;
+          document.getElementById("timerModal").innerText = _date;
+          if(document.getElementById("modalLocalCounterText").innerText == "Stop"){
+            let timeElapsed = modalLocalCounter.getAttribute("timeElapsed");
+            let fTimeElapsed = "";
+            timeElapsed++;
+            if(timeElapsed >= 60){
+                let minutes = parseInt(timeElapsed / 60);
+                 if(minutes >= 60){
+                    let hour = parseInt(minutes / 60);
+                    let hourMinutes = minutes % 60;
+                    fTimeElapsed += `${hour} : ${hourMinutes} : `;
+                 }else{
+                  fTimeElapsed += `${minutes} : `;
+                }
+            }
+            let seconds = timeElapsed % 60;
+            fTimeElapsed += `${seconds}`;
+            modalLocalCounter.innerText = fTimeElapsed;
+            modalLocalCounter.setAttribute("timeElapsed", timeElapsed);
+          }
+        }
 }
-
 
 switch(_functionCounter){
     case 5 :
