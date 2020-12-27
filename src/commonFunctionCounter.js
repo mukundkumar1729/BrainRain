@@ -138,15 +138,66 @@ const RedirectTo = (sender) => {
     }
 })();
 
+const StartModalLocalCounter = (sender) => {
+
+  if(sender.innerText == "Start"){
+    sender.innerText = "Stop";
+  }else{
+    sender.innerText = "Start";
+    document.getElementById("modalLocalCounter").innerText = "0";
+  }
+}
+
+const DetailedTimerModal = () => {
+  const _timer = document.getElementById("timer");
+  const html = `
+    <div id="detailedTimerModal" class="modal fade" role="dialog" tabindex="-1" style="z-index:19999 !important;">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close btn btn-danger" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12"><h5 id="timerModal" class="text-info">${_timer.text()}</h5></div>
+            </div>
+            <div class="row">
+                <div class="col-12">Using for <span id="timerCounterModal" class="text-info"></span>ms</div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-8"><h5 id="modalLocalCounter" class="text-info"></h5></div>
+                <div class="col-4"><label id="modalLocalCounterText" class="text-primary" onclick="StartModalLocalCounter(this);">Start</label></div>
+            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+                `;
+
+ $("#detailedTimerModal").modal("show"); 
+}
+
 setInterval(function(){
     let _date = new Date();
-    let _d = (_date.toString().split('GMT')[0].trim());
+    _date = (_date.toString().split('GMT')[0].trim());
+    _date = _date.replace(/202/,"");
     const _timerID = document.getElementById("timer");
 
     if(_timerID != null){
         _timerID.innerHTML = `${_d}`;
         _timerID.setAttribute("title", _timerCounter + 's');
+        document.getElementById("timerCounterModal").innerText = _functionCounter;
 }
+
+if(document.getElementById("modalLocalCounterText").innerText == "Stop"){
+  let timeElapsed = document.getElementById("modalLocalCounter").innerText;
+  timeElapsed++;
+  document.getElementById("modalLocalCounter").innerText = timeElapsed;
+}
+
 
 switch(_functionCounter){
     case 5 :
