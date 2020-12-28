@@ -160,8 +160,8 @@ const DetailedTimerModal = () => {
       <div class="modal-content">
         <div class="modal-header">
             <div class="row">
-                <div class="col-10 bg-secondary text-center"><h5 id="timerModal">Today</h5></div>
-                <div class="col-2"><button type="button" class="close btn btn-danger" data-dismiss="modal">&times;</button></div>
+                <div class="col-11 bg-secondary text-center"><h5 id="timerModal">Today</h5></div>
+                <div class="col-1"><button type="button" class="close btn btn-danger" data-dismiss="modal">&times;</button></div>
             </div>
         </div>
         <div class="modal-body">
@@ -187,20 +187,17 @@ const DetailedTimerModal = () => {
 
 setInterval(function(){
     let _date = new Date();
-    let _longDate = _date;
-    _date = (_date.toString().split('GMT')[0].trim());
-    _date = _date.replace(/2020|2021|2022|2023|2024|2025/,"");
     const _timerID = document.getElementById("timer");
 
     if(_timerID != null){
-        _timerID.innerHTML = `${_date}`;
+        _timerID.innerHTML = `${_date.toTimeString().split("GMT")[0]}`;
         _timerID.setAttribute("title", _timerCounter + 's');
 
         let timerCounterModal = document.getElementById("timerCounterModal");
         let modalLocalCounter = document.getElementById("modalLocalCounter")
         if(timerCounterModal){
           timerCounterModal.innerText = _functionCounter;
-          document.getElementById("timerModal").innerText = _longDate;
+          document.getElementById("timerModal").innerText = _date;
           if(document.getElementById("modalLocalCounterText").innerText == "Stop"){
             let timeElapsed = modalLocalCounter.getAttribute("timeElapsed");
             let fTimeElapsed = "";
