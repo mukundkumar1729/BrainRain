@@ -50,8 +50,10 @@ let commonUrlData = {
   let options = {};
   let pageUrl = window.location.href;
   if(pageUrl.includes("https://brainrain.in") || pageUrl.includes("https://brainrain.netlify.app") || pageUrl.includes("127.0.0.1:550")){
-               commonUrlData.urls["Interview Questions"] = constant.listing;
-               commonUrlData.urls["Programming Section"] = constant.programmingSection;
+      if(constant)  {
+              commonUrlData.urls["Interview Questions"] = constant["listing"];
+              commonUrlData.urls["Programming Section"] = constant["programmingSection"];
+      }
     }
     commonUrlData.urls["Contact Us"] = constant.contactUsSection??"contactUsSection";
     let urlsKeys = Object.keys(commonUrlData.urls);
