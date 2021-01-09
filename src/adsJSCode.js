@@ -41,66 +41,19 @@ const affiliateAds1= [
     }
 ];
 
-const affiliateAds2 =[];
-
 const cueLinksAds = [
-    {
-       url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.rufilo.user",
-       image:"rufilo.png",
-       text:"Rufilo - India’s first SMaRT credit card discovery and instant credit line based personal loan platform." 
-    },
-    {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.nextbillion.groww",
-        image:"groww.png",
-        text:"invest in direct mutual funds with zero commission for free. Switch your regular investments to direct." 
-     },
-    {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dio.chingari.app",
-        image:"chingari.png",
-        text:"The Chingari App allows users to record and share short videos with incredible filters and games.It also provides users with a platform to connect with people through the Direct Message feature." 
-     },
-    {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fthemomsco.com%2F",
-        image:`theMomsCo.png`,
-        text:"Buy natural products Online" 
+     {
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fmamaearth.in%2F",
+        image:`mammaEarth.png`,
+        text:"Mama Earth honest, natural and Toxin-free safe products, for a little bit of heaven, sent down to earth" 
      },
      {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.shopclues.com%2F",
-        image:`shopclues.png`,
-        text:"" 
-     },
-     {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.voot.com%2F",
-        image:`vootKids.png`,
-        text:"vootkids provides entertaining & learning experience for the kids" 
-     },
-     {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.unacademyapp",
-        image:`unacademy.png`,
-        text:"Unacademy is a learning platform" 
-     },
-     {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fstore.adda247.com%2Fhome",
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fstore.adda247.com%2Fhome",
         image:`adda247.jpg`,
         text:"Adda247 is examination specific" 
      },
      {
-        url:"",
-        image:`edureka.png`,
-        text:"edureka!" 
-     },
-     {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.testbook.tbapp",
-        image:`testbook.png`,
-        text:"Testbook is for Online Exam Preparation, provides Free Mock Tests" 
-     },
-     {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fgoprep.co%2F",
-        image:`goprep.png`,
-        text:"Goprep is e-learning platform for Classes 8th to 12th" 
-     },
-     {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dco.gradeup.k12",
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dco.gradeup.k12",
         image:`goprep.png`,
         text:"Install Goprep App" 
      },
@@ -110,24 +63,34 @@ const cueLinksAds = [
         text:"Skillzcafe is an online learning market place" 
      },
      {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Ftestseries.edugorilla.com%2F",
-        image:`eduGorilla.png`,
-        text:"EduGorilla is an educational community, encapsulates every exam held in the country" 
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.dreamplug.androidapp",
+        image:`cred.png`,
+        text:"CRED's credit card spend tracking and management features provide simple, yet powerful tools for its members to manage their credit card more efficiently" 
      },
      {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.vidyakul.com%2F",
-        image:`vidyakul.png`,
-        text:"Vidyakul is an interactive e-learning platform" 
-     },
-     {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.vidyakul.com%2F",
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.datacamp.com%2F",
         image:`DataCamp.png`,
         text:"DataCamp lets us to understand the language of data" 
      },
      {
-        url:"",
-        image:``,
-        text:"" 
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.amazon.in%2F",
+        image:`amazon.png`,
+        text:"amazon" 
+     },
+     {
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fpizzaonline.dominos.co.in%2F",
+        image:`dominos.png`,
+        text:"Dominos - One of India’s best pizza restaurants" 
+     },
+     {
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.flipkart.com%2F",
+        image:`flipkart.png`,
+        text:"flipkart" 
+     },
+     {
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fstore.jiva.com%2F",
+        image:`jivaAyurved.png`,
+        text:"jiva ayurved" 
      }
 ];
 
@@ -197,6 +160,7 @@ function CueLinksAds() {
         isApplycolour = !isApplycolour;
         if(prop.url !=""){
         html += `
+        <div class='carousel-item ${html==""?"active":""}'>
         <div class="row">
             <div class="col-md-6 col-6">
                 <a onclick="RedirectTo('${prop.url}')"><img src="${baseUrl}/image/${prop.image}" style="height:75px;width:125px"/></a>
@@ -204,6 +168,7 @@ function CueLinksAds() {
             <div class="col-md-6 col-6">
                 <span style="color:${isApplycolour?"white":"black"}">${prop.text}</span>
             </div>
+        </div>
         </div>
         `;
         }
@@ -213,13 +178,9 @@ function CueLinksAds() {
 
 $(document).ready(function() {
     const url = window.location.href.toLowerCase();
+    if(url.includes("https://brainrain.netlify.app")){}
     CueLinksAdsScript();
     $("#adsSection #cueLinksCarousel .carousel-inner").html(CueLinksWidgets());
-    $("#cueLinksAds").html(CueLinksAds());
-    if(url.includes("https://brainrain.netlify.app")){
-        $("#adsSection #affiliateCarousel1 .carousel-inner").html(AffiliateAds1());
-        $("#adsSection #affiliateCarousel2 .carousel-inner").html(AffiliateAds2());
-    }
+    $("#adsSection #affiliateCarousel1 .carousel-inner").html(CueLinksAds());
     $("adsSection").show();
-
 });

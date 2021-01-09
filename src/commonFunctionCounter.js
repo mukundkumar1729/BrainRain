@@ -117,19 +117,7 @@ const RedirectTo = (sender) => {
            <span class="carousel-control-next-icon"></span>
          </a>
         </div>
-
-        <div id="affiliateCarousel2" class ="carousel slide" data-ride="carousel">
-        <div  class="carousel-inner" style="margin-left:30px;">
-        </div>
-        <a class="carousel-control-prev" href="#affiliateCarousel2" data-slide="prev">
-           <span class="carousel-control-prev-icon"></span>
-         </a>
-         <a class="carousel-control-next" href="#affiliateCarousel2" data-slide="next">
-           <span class="carousel-control-next-icon"></span>
-         </a>
-        </div>
-        <div id="cueLinksAds">
-        </div>`;
+        `;
     }
 })();
 
@@ -220,7 +208,7 @@ switch(_functionCounter){
         $.getScript(`${baseUrl}src/contactUs.js`);
         break;
     case 7 :
-        $.getScript(`src/adsJSCode.js`);
+        $.getScript(`${baseUrl}src/adsJSCode.js`);
         break;
     case 30 :
         $.getScript(`${baseUrl}src/alertModal.js`);
