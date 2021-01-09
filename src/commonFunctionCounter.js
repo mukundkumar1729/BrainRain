@@ -95,43 +95,36 @@ const RedirectTo = (sender) => {
     if(document.getElementById("adsSection")){
       $("adsSection").hide();
         document.getElementById("adsSection").innerHTML = `
-        <div id="medCarousel" class ="carousel slide" data-ride="carousel">
-        <div  class="carousel-inner">
-        </div>
-        <a class="carousel-control-prev" href="#medCarousel" data-slide="prev">
-           <span class="carousel-control-prev-icon"></span>
-         </a>
-         <a class="carousel-control-next" href="#medCarousel" data-slide="next">
-           <span class="carousel-control-next-icon"></span>
-         </a>
-        </div>
-        <div id="amazonCarousel1" class ="carousel slide" data-ride="carousel">
-        <div  class="carousel-inner">
-        </div>
-        <a class="carousel-control-prev" href="#amazonCarousel1" data-slide="prev">
-           <span class="carousel-control-prev-icon"></span>
-         </a>
-         <a class="carousel-control-next" href="#amazonCarousel1" data-slide="next">
-           <span class="carousel-control-next-icon"></span>
-         </a>
-        </div>
-        <div id="amazonCarousel2" class ="carousel slide" data-ride="carousel">
-        <div  class="carousel-inner">
-        </div>
-        <a class="carousel-control-prev" href="#amazonCarousel2" data-slide="prev">
-           <span class="carousel-control-prev-icon"></span>
-         </a>
-         <a class="carousel-control-next" href="#amazonCarousel2" data-slide="next">
-           <span class="carousel-control-next-icon"></span>
-         </a>
-        </div>
+
         <div id="cueLinksCarousel" class ="carousel slide" data-ride="carousel">
-        <div  class="carousel-inner">
+        <div  class="carousel-inner" style="margin-left:30px;">
         </div>
         <a class="carousel-control-prev" href="#cueLinksCarousel" data-slide="prev">
            <span class="carousel-control-prev-icon"></span>
          </a>
-         <a class="carousel-control-next" href="#cueLinksCarousel" data-slide="next">
+         <a class="carousel-control-next" style="margin-right:5px" href="#cueLinksCarousel" data-slide="next">
+           <span class="carousel-control-next-icon"></span>
+         </a>
+        </div>
+
+        <div id="affiliateCarousel1" class ="carousel slide" data-ride="carousel">
+        <div  class="carousel-inner" style="margin-left:30px;">
+        </div>
+        <a class="carousel-control-prev" href="#affiliateCarousel1" data-slide="prev">
+           <span class="carousel-control-prev-icon"></span>
+         </a>
+         <a class="carousel-control-next" href="#affiliateCarousel1" data-slide="next">
+           <span class="carousel-control-next-icon"></span>
+         </a>
+        </div>
+
+        <div id="affiliateCarousel2" class ="carousel slide" data-ride="carousel">
+        <div  class="carousel-inner" style="margin-left:30px;">
+        </div>
+        <a class="carousel-control-prev" href="#affiliateCarousel2" data-slide="prev">
+           <span class="carousel-control-prev-icon"></span>
+         </a>
+         <a class="carousel-control-next" href="#affiliateCarousel2" data-slide="next">
            <span class="carousel-control-next-icon"></span>
          </a>
         </div>
@@ -227,7 +220,7 @@ switch(_functionCounter){
         $.getScript(`${baseUrl}src/contactUs.js`);
         break;
     case 7 :
-        $.getScript(`${baseUrl}src/adsJSCode.js`);
+        $.getScript(`src/adsJSCode.js`);
         break;
     case 30 :
         $.getScript(`${baseUrl}src/alertModal.js`);
@@ -244,7 +237,5 @@ function SetStyleSheet(){
   $("#adsSection").css({"margin-top": "60px", "position": "relative","display":"none"});
   $("#adsSection img").css({"height":"75px","width":"125px"});
   $("#staticAds .row").css({"margin-top": "10px","margin-bottom": "10px"});
-  $(".amazonSearch iframe").css({"width": "100% !important"});
-  $("iframe").css({"border": "none"});
   $("#staticAds .row:nth-child(odd) div span:nth-child(odd)").css({"color":"white"});
   }
