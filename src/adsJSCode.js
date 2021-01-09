@@ -44,8 +44,13 @@ const affiliateAds1= [
 const cueLinksAds = [
      {
         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fmamaearth.in%2F",
-        image:`mammaEarth.png`,
+        image:`mamaEarth.jpg`,
         text:"Mama Earth honest, natural and Toxin-free safe products, for a little bit of heaven, sent down to earth" 
+     },
+     {
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fstore.jiva.com%2F",
+        image:`jivaAyurveda.jpg`,
+        text:"jiva ayurved" 
      },
      {
         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fstore.adda247.com%2Fhome",
@@ -53,18 +58,23 @@ const cueLinksAds = [
         text:"Adda247 is examination specific" 
      },
      {
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fpizzaonline.dominos.co.in%2F",
+        image:`dominos.png`,
+        text:"Dominos - One of India’s best pizza restaurants" 
+     },
+     {
         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dco.gradeup.k12",
         image:`goprep.png`,
         text:"Install Goprep App" 
      },
      {
-        url:"https://linksredirect.com/?cid=97511&source=linkkit&url=https%3A%2F%2Fwww.skillzcafe.com%2F",
+        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.skillzcafe.com%2F",
         image:`skillzCafe.png`,
         text:"Skillzcafe is an online learning market place" 
      },
      {
         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.dreamplug.androidapp",
-        image:`cred.png`,
+        image:`cred.jpg`,
         text:"CRED's credit card spend tracking and management features provide simple, yet powerful tools for its members to manage their credit card more efficiently" 
      },
      {
@@ -74,23 +84,13 @@ const cueLinksAds = [
      },
      {
         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.amazon.in%2F",
-        image:`amazon.png`,
+        image:`amazonProducts.jpg`,
         text:"amazon" 
-     },
-     {
-        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fpizzaonline.dominos.co.in%2F",
-        image:`dominos.png`,
-        text:"Dominos - One of India’s best pizza restaurants" 
      },
      {
         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.flipkart.com%2F",
         image:`flipkart.png`,
         text:"flipkart" 
-     },
-     {
-        url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fstore.jiva.com%2F",
-        image:`jivaAyurved.png`,
-        text:"jiva ayurved" 
      }
 ];
 
