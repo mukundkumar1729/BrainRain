@@ -183,4 +183,5 @@ $(document).ready(function() {
     $("#adsSection #cueLinksCarousel .carousel-inner").html(CueLinksWidgets());
     $("#adsSection #affiliateCarousel1 .carousel-inner").html(CueLinksAds());
     $("adsSection").show();
+    $("#adsSection").css({"margin-bottom":"60px"});
 });

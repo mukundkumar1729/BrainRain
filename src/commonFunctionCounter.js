@@ -226,5 +226,4 @@ function SetStyleSheet(){
   $("#adsSection img").css({"height":"75px","width":"125px"});
   $("#staticAds .row").css({"margin-top": "10px","margin-bottom": "10px"});
   $("#staticAds .row:nth-child(odd) div span:nth-child(odd)").css({"color":"white"});
-  $("#adsSection").css({"margin-bottom":"60px"});
   }
