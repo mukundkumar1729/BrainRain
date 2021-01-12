@@ -97,7 +97,7 @@ const RedirectTo = (sender) => {
         document.getElementById("adsSection").innerHTML = `
 
         <div id="cueLinksCarousel" class ="carousel slide" data-ride="carousel">
-        <div  class="carousel-inner" style="margin-left:30px;">
+        <div  class="carousel-inner" style="margin-left:32px;">
         </div>
         <a class="carousel-control-prev" href="#cueLinksCarousel" data-slide="prev">
            <span class="carousel-control-prev-icon"></span>
