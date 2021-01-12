@@ -179,7 +179,7 @@ setInterval(function(){
     const _timerID = document.getElementById("timer");
 
     if(_timerID != null){
-        _timerID.innerHTML = `${_date.toTimeString().split("GMT")[0]}`;
+        _timerID.innerHTML = _date.toString().split(' ')[0] +' ' + _date.toTimeString().split("GMT")[0];
         _timerID.setAttribute("title", _timerCounter + 's');
 
         let timerCounterModal = document.getElementById("timerCounterModal");
