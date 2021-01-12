@@ -163,7 +163,7 @@ function CueLinksAds() {
         <div class='carousel-item ${html==""?"active":""}'>
         <div class="row">
             <div class="col-md-12 col-12">
-                <a onclick="RedirectTo('${prop.url}')"><img src="${baseUrl}/image/${prop.image}" style="height:75px;width:375px"/></a>
+                <a onclick="RedirectTo('${prop.url}')"><img src="${baseUrl}/image/${prop.image}" style="height:75px;width:198px"/></a>
             </div>
             <div class="col-md-12 col-12">
                 <span style="color:${isApplycolour?"white":"black"}">${prop.text}</span>

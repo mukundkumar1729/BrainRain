@@ -32,7 +32,7 @@ let commonUrlData = {
 "mobileStore":"https://mobilestore.brainrain.in/",
 "mobileStore_netlify":"https://brainrain-mobilestore.netlify.app/",
 "mobileStore_Aapp":"https://play.google.com/store/apps/details?id=com.wElectronicsStore_11905302",
-"news1729":"https://brainrain-news.netlify.app/",
+"news1729":"https://news.brainrain.in/",
 "news1729_netlify":"https://brainrain-news.netlify.app/",
 "news1729_Aapp":"https://play.google.com/store/apps/details?id=com.wBrainRainNews_11941331",
 "trivia":"https://trivia.brainrain.in/",
@@ -40,7 +40,13 @@ let commonUrlData = {
 "trivia_Aapp":"https://play.google.com/store/apps/details?id=com.wtrivia_12102649",
 "factsFinder":"https://factsfinder.brainrain.in/",
 "factsFinder_netlify":"https://brainrain-factsfinder.netlify.app/",
-"factsFinder_Aapp":"https://play.google.com/store/apps/details?id=com.wFactsFinder_12183319"
+"factsFinder_Aapp":"https://play.google.com/store/apps/details?id=com.wFactsFinder_12183319",
+"WebEditor":"https://webeditor.brainrain.in/",
+"WebEditor_netlify":"https://webeditor.brainrain.in/",
+"WebEditor_Aapp":"https://play.google.com/store/apps/details?id=com.wwebeditor_12857094",
+"GodianMessenger":"https://play.google.com/store/apps/details?id=com.wGordianMessenger_12990967",
+"GodianMessenger_netlify":"https://play.google.com/store/apps/details?id=com.wGordianMessenger_12990967",
+"GodianMessenger_Aapp":"https://play.google.com/store/apps/details?id=com.wGordianMessenger_12990967",
   }
 };
 
