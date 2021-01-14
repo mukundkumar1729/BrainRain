@@ -91,6 +91,16 @@ const cueLinksAds = [
         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.flipkart.com%2F",
         image:`flipkart.png`,
         text:"flipkart" 
+     },
+     {
+         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.starstell.com%2F",
+         image:"starstell.jpg",
+         text:"StarsTell.com is a premium e-commerce portal for online Astrology consultation and remedial products, Online Pooja services and Astro services"
+     },
+     {
+         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.globalshiksha.com%2F",
+         image:"globalshiksha.jpg",
+         text:"Global Shiksha is an immersive learning experience that provides comperhensive, curriculum-aligned Maths, English, and EVS content for LKG to Class 6."
      }
 ];
 
