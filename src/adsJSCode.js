@@ -59,7 +59,7 @@ const cueLinksAds = [
      },
      {
         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fpizzaonline.dominos.co.in%2F",
-        image:`dominos.png`,
+        image:`dominos.jpg`,
         text:"Dominos - One of India’s best pizza restaurants" 
      },
      {
@@ -89,7 +89,7 @@ const cueLinksAds = [
      },
      {
         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.flipkart.com%2F",
-        image:`flipkart.png`,
+        image:`flipkart.jpg`,
         text:"flipkart" 
      },
      {
@@ -99,7 +99,7 @@ const cueLinksAds = [
      },
      {
          url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.globalshiksha.com%2F",
-         image:"globalshiksha.jpg",
+         image:"globalShiksha.jpg",
          text:"Global Shiksha is an immersive learning experience that provides comperhensive, curriculum-aligned Maths, English, and EVS content for LKG to Class 6."
      }
 ];
@@ -107,7 +107,6 @@ const cueLinksAds = [
 function CueLinksWidgets() {
     let html = "";
     for(let i in cuewidgets){
-        debugger;
         html += `
                  <div class='carousel-item ${html==""?"active":""}'>
                     <span style='color:${(i%3==1)?"red":(i%3==2)?"green":"white"}'> ${cuewidgets[i].text}</span><br/>
