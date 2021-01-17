@@ -66,12 +66,17 @@ let commonUrlData = {
     $.each(urlsKeys, function(index, value){
         if(!value.substring(1).includes('_') ){
             ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
-            debugger;
             if(constant.page.toLowerCase() == value.toLowerCase()){
               $(ddl.options[ddl.options.length]).attr('selected','selected')
             }
         }
     });
+    debugger;
+    if(constant.page=='brainrain'){
+      $(select).val(`https://brainrain.in/`);
+    }else{
+      $(select).val(`https://${constant.page}.brainrain.in/`);
+    }
   })();
 
 const RedirectTo = (sender) => {
