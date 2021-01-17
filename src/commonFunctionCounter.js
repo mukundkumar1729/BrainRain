@@ -66,7 +66,8 @@ let commonUrlData = {
     $.each(urlsKeys, function(index, value){
         if(!value.substring(1).includes('_') ){
             ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
-            if(constant.page == value){
+            debugger;
+            if(constant.page.toLowerCase() == value.toLowerCase()){
               $(ddl.options[ddl.options.length]).attr('selected','selected')
             }
         }
