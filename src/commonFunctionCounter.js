@@ -75,7 +75,7 @@ let commonUrlData = {
    }else{
      currentPage = `https://${constant.page}.brainrain.in`;
    }
-   let currentPageOption = $(`option[value='${currentPage}']`);
+   let currentPageOption = $(`option[value='${currentPage}/']`);
    $(currentPageOption).attr("selected","selected");
   })();
 
