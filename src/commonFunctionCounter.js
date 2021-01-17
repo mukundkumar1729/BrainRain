@@ -66,11 +66,11 @@ let commonUrlData = {
     $.each(urlsKeys, function(index, value){
         if(!value.substring(1).includes('_') ){
             ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
+            if(constant.page == value){
+              $(ddl.options[ddl.options.length]).attr('selected','selected')
+            }
         }
     });
-    debugger;
-   let currentPageOption = $(`option[value*='${constant.page}']`);
-   $(currentPageOption).attr("selected","selected");
   })();
 
 const RedirectTo = (sender) => {
