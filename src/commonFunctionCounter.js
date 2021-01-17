@@ -65,17 +65,14 @@ let commonUrlData = {
     let urlsKeys = Object.keys(commonUrlData.urls);
     $.each(urlsKeys, function(index, value){
         if(!value.substring(1).includes('_') ){
-            ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
-            if(constant.page.toLowerCase() == value.toLowerCase()){
-              $(ddl.options[ddl.options.length]).attr('selected','selected')
-            }
+          ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
         }
     });
     debugger;
     if(constant.page=='brainrain'){
-      $('select').val(`https://brainrain.in/`);
+      $('select').find(`option[value="https://brainrain.in/"]`).attr('selected','selected');
     }else{
-      $('select').val(`https://${constant.page}.brainrain.in/`);
+      $('select').find(`option[value*="${constant.page.toLowerCase()}"]`).attr('selected','selected');
     }
   })();
 
