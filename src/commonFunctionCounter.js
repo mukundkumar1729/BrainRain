@@ -69,13 +69,11 @@ let commonUrlData = {
         }
     });
     debugger;
-   let currentPage = '//'+constant.page;
-   let currentPageOption = $(`option[value*='${currentPage}']`);
+   let currentPageOption = $(`option[value*='${constant.page}']`);
    $(currentPageOption).attr("selected","selected");
   })();
 
 const RedirectTo = (sender) => {
-  debugger;
   if(typeof(sender) == "string"){
     window.location.href = sender;
     return;
