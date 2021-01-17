@@ -73,9 +73,9 @@ let commonUrlData = {
     });
     debugger;
     if(constant.page=='brainrain'){
-      $(select).val(`https://brainrain.in/`);
+      $('select').val(`https://brainrain.in/`);
     }else{
-      $(select).val(`https://${constant.page}.brainrain.in/`);
+      $('select').val(`https://${constant.page}.brainrain.in/`);
     }
   })();
 
