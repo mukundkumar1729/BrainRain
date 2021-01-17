@@ -68,6 +68,7 @@ let commonUrlData = {
             ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
         }
     });
+    debugger;
    let currentPage = constant.page.toLowerCase()??":https//brainrain.in";
    let currentPageOption = $("option[value*=" + currentPage + "]");
    $(currentPageOption).attr("selected","selected");
