@@ -69,8 +69,13 @@ let commonUrlData = {
         }
     });
     debugger;
-   let currentPage = constant.page.toLowerCase()??":https//brainrain.in";
-   let currentPageOption = $("option[value*=" + currentPage + "]");
+   let currentPage = "https://brainrain.in";
+   if(constant.page.toLowerCase()=="brainrain"){
+     currentPage = "https://brainrain.in";
+   }else{
+     currentPage = `https://${constant.page}.brainrain.in`;
+   }
+   let currentPageOption = $("option[value=" + currentPage + "]");
    $(currentPageOption).attr("selected","selected");
   })();
 
