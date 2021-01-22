@@ -101,6 +101,11 @@ const cueLinksAds = [
          url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fwww.globalshiksha.com%2F",
          image:"globalShiksha.jpg",
          text:"Global Shiksha is an immersive learning experience that provides comperhensive, curriculum-aligned Maths, English, and EVS content for LKG to Class 6."
+     },
+     {
+         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fpaytmmall.com",
+         image:"paytmmall.png",
+         text:"Paytmmall"
      }
 ];
 
