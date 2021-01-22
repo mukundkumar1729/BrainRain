@@ -103,7 +103,7 @@ const RedirectTo = (sender) => {
     if(document.getElementById("adsSection")){
       $("adsSection").hide();
         document.getElementById("adsSection").innerHTML = `
-        <div id="fixedAffiliateLink">
+        <div id="fixedAffiliateLink" style="margin-left:32px;">
           <a href="https://www.task321.com/register?invite_code=YN05VH">
               <img src='${baseUrl}/image/taskVIPHall.jpg' style="height:250px;width:298px"/>
               <p>Earning some extra money by doing simple tasks e,g, liking facebook posts.Install app from above link</p>
