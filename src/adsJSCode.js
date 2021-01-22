@@ -35,18 +35,13 @@ const cuewidgets = [
 
 const affiliateAds1= [
     {
-        url:``,
-        text:``,
-        info:``
-    }
-];
-
-const cueLinksAds = [
-    {
         url:"https://www.task321.com/register?invite_code=YN05VH",
         image:`taskVIPHall.jpg`,
         text:"Earning some extra money by doing simple tasks e,g, liking facebook posts.Install app from above link" 
      }, 
+];
+
+const cueLinksAds = [
     {
         url:"https://linksredirect.com/?cid=117192&source=linkkit&url=https%3A%2F%2Fmamaearth.in%2F",
         image:`mamaEarth.jpg`,
@@ -177,7 +172,7 @@ function CueLinksAds() {
         <div class='carousel-item ${html==""?"active":""}'>
         <div class="row">
             <div class="col-md-12 col-12">
-                <a onclick="RedirectTo('${prop.url}')"><img src="${baseUrl}/image/${prop.image}" style="height:150px;width:298px"/></a>
+                <a onclick="RedirectTo('${prop.url}')"><img src="${baseUrl}/image/${prop.image}" style="height:250px;width:298px"/></a>
             </div>
             <div class="col-md-12 col-12">
                 <span style="color:${isApplycolour?"white":"black"}">${prop.text}</span>
@@ -194,8 +189,7 @@ $(document).ready(function() {
     const url = window.location.href.toLowerCase();
     if(url.includes("https://brainrain.netlify.app")){}
     CueLinksAdsScript();
-    $("#adsSection #cueLinksCarousel .carousel-inner").html(CueLinksWidgets());
-    $("#adsSection #affiliateCarousel1 .carousel-inner").html(CueLinksAds());
+    $("#adsSection #cueLinksCarousel .carousel-inner").html(CueLinksAds());
     $("adsSection").show();
     $("#adsSection").css({"margin-bottom":"60px"});
 });

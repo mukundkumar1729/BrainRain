@@ -103,6 +103,12 @@ const RedirectTo = (sender) => {
     if(document.getElementById("adsSection")){
       $("adsSection").hide();
         document.getElementById("adsSection").innerHTML = `
+        <div id="fixedAffiliateLink">
+          <a href="https://www.task321.com/register?invite_code=YN05VH">
+              <img src='taskVIPHall.jpg' style="height:250px;width:298px"/>
+              <p>Earning some extra money by doing simple tasks e,g, liking facebook posts.Install app from above link</p>
+          </a>
+        </div>
 
         <div id="cueLinksCarousel" class ="carousel slide" data-ride="carousel">
         <div  class="carousel-inner" style="margin-left:32px;">
@@ -111,17 +117,6 @@ const RedirectTo = (sender) => {
            <span class="carousel-control-prev-icon"></span>
          </a>
          <a class="carousel-control-next" style="margin-right:5px" href="#cueLinksCarousel" data-slide="next">
-           <span class="carousel-control-next-icon"></span>
-         </a>
-        </div>
-
-        <div id="affiliateCarousel1" class ="carousel slide" data-ride="carousel">
-        <div  class="carousel-inner" style="margin-left:30px;">
-        </div>
-        <a class="carousel-control-prev" href="#affiliateCarousel1" data-slide="prev">
-           <span class="carousel-control-prev-icon"></span>
-         </a>
-         <a class="carousel-control-next" href="#affiliateCarousel1" data-slide="next">
            <span class="carousel-control-next-icon"></span>
          </a>
         </div>
