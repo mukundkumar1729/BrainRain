@@ -72,7 +72,7 @@ let commonUrlData = {
     if(constant.page=='brainrain'){
       $('select').find(`option[value="https://brainrain.in/"]`).attr('selected','selected');
     }else{
-      $('select').find(`option[value*="${constant.page.toLowerCase()}"]`).attr('selected','selected');
+      $('select').find(`option[value*="${constant.page.replace("_","").toLowerCase()}"]`).attr('selected','selected');
     }
   })();
 
