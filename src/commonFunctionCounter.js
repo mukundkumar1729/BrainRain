@@ -68,7 +68,6 @@ let commonUrlData = {
           ddl.options[ddl.options.length] = new Option(value, commonUrlData.urls[value]);
         }
     });
-    debugger;
     if(constant.page=='brainrain'){
       $('select').find(`option[value="https://brainrain.in/"]`).attr('selected','selected');
     }else{
@@ -77,6 +76,7 @@ let commonUrlData = {
   })();
 
 const RedirectTo = (sender) => {
+  debugger;
   if(typeof(sender) == "string"){
     window.location.href = sender;
     return;
