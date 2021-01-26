@@ -43,10 +43,7 @@ let commonUrlData = {
 "factsFinder_Aapp":"https://play.google.com/store/apps/details?id=com.wFactsFinder_12183319",
 "WebEditor":"https://webeditor.brainrain.in/",
 "WebEditor_netlify":"https://webeditor.brainrain.in/",
-"WebEditor_Aapp":"https://play.google.com/store/apps/details?id=com.wwebeditor_12857094",
-"GodianMessenger":"https://play.google.com/store/apps/details?id=com.wGordianMessenger_12990967",
-"GodianMessenger_netlify":"https://play.google.com/store/apps/details?id=com.wGordianMessenger_12990967",
-"GodianMessenger_Aapp":"https://play.google.com/store/apps/details?id=com.wGordianMessenger_12990967",
+"WebEditor_Aapp":"https://play.google.com/store/apps/details?id=com.wwebeditor_12857094"
   }
 };
 
@@ -76,7 +73,6 @@ let commonUrlData = {
   })();
 
 const RedirectTo = (sender) => {
-  debugger;
   if(typeof(sender) == "string"){
     window.location.href = sender;
     return;
