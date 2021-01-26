@@ -85,6 +85,8 @@ const RedirectTo = (sender) => {
     if(! sender.value){
       sessionStorage.BrainRainPage = "brainrain";
       window.location.href = baseUrl;
+    }else if(url.toLowerCase() == "contactussection"){
+      document.getElementById("contactUsSection").scrollIntoView(true);
     }else{
       sessionStorage.BrainRainPage = constant.page;
       window.location.href = url;
