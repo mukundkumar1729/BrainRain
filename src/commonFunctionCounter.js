@@ -194,7 +194,7 @@ setInterval(function(){
 }
 
 switch(_functionCounter){
-    case 5 :
+    case 2:
         $.getScript(`${baseUrl}src/contactUs.js`);
         break;
     case 7 :
