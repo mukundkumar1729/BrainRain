@@ -18,6 +18,7 @@ function ContactUsSocialMediaLinks() {
       <a onclick="RedirectTo('https://github.com/mukundkumar1729')"><img src="${baseUrl}image/github.png" alt="github"/></a></a><span style="margin-right:5px;"></span>
       <a onclick="RedirectTo('https://www.quora.com/profile/Mukund-Kumar-107')"><img src="${baseUrl}image/quora.jpg" alt="quora"/></a></a><span style="margin-right:5px;"></span>
       <a onclick="RedirectTo('skype:kmukund439?chat')"><img src="${baseUrl}image/skype.png" alt="skype"/></a></a><span style="margin-right:5px;"></span>
+      <a onclick="RedirectTo('https://t.me/mukundkumar1729')"><img src="${baseUrl}image/telegram.jpg" alt="skype"/></a></a><span style="margin-right:5px;"></span>
 <br/><br/>`;
     $("#contactUsSection").append(appsLink)
 }

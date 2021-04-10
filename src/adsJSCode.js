@@ -35,9 +35,9 @@ const cuewidgets = [
 
 const affiliateAds1= [
     {
-        url:"https://www.task321.com/register?invite_code=YN05VH",
-        image:`taskVIPHall.jpg`,
-        text:"Earning some extra money by doing simple tasks e,g, liking facebook posts.Install app from above link" 
+        url:"",
+        image:"",
+        text:"" 
      }, 
 ];
 
