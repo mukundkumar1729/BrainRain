@@ -97,18 +97,6 @@ const RedirectTo = (sender) => {
                      <h5>Contact Us:</h5>
                   </div>`;
     }
-
-    if(document.getElementById("adsSection")){
-      $("adsSection").hide();
-        document.getElementById("adsSection").innerHTML = `
-        <div id="fixedAffiliateLink" style="margin-left:32px;">
-          <a href="https://www.task321.com/register?invite_code=YN05VH">
-              <img src='${baseUrl}/image/taskVIPHall.jpg' style="height:250px;width:298px"/>
-          </a>
-          <p>Earning some extra money by doing simple tasks e,g, liking facebook posts.For more details click here...</p>
-        </div>
-        `;
-    }
 })();
 
 const StartModalLocalCounter = (sender) => {
@@ -217,14 +205,3 @@ function SetStyleSheet(){
   $("#staticAds .row").css({"margin-top": "10px","margin-bottom": "10px"});
   $("#staticAds .row:nth-child(odd) div span:nth-child(odd)").css({"color":"white"});
   }
-
-  // <div id="cueLinksCarousel" class ="carousel slide" data-ride="carousel">
-  // <div  class="carousel-inner" style="margin-left:32px;">
-  // </div>
-  // <a class="carousel-control-prev" href="#cueLinksCarousel" data-slide="prev">
-  //    <span class="carousel-control-prev-icon"></span>
-  //  </a>
-  //  <a class="carousel-control-next" style="margin-right:5px" href="#cueLinksCarousel" data-slide="next">
-  //    <span class="carousel-control-next-icon"></span>
-  //  </a>
-  // </div>
