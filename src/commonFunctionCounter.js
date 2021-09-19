@@ -50,7 +50,10 @@ let commonUrlData = {
 const HideGoToDropdownInApp = () => {
   const appParamValue = GetQueryStringParamValue('app');
   if(appParamValue && appParamValue == 1){
-     document.getElementById("goToDdl").style.display = "none";
+
+    const goToDdl = document.getElementById("goToDdl");
+    goToDdl.style.display = "none";
+    goToDdl.parentNode.previousElementSibling.firstChild.style.display = "none";
   }
 }
 
