@@ -70,7 +70,20 @@ let commonUrlData = {
     }else{
       $('select').find(`option[value*="${constant.page.replace("_","").toLowerCase()}"]`).attr('selected','selected');
     }
+
+    HideGoToDropdownInApp();
   })();
+
+  
+(function SetAdsContactsHTML(){
+  if(document.getElementById("contactUsSection")){
+      $("#contactUsSection").hide();
+      document.getElementById("contactUsSection").innerHTML = `
+                <div class="col-md-12 col-12 contactUs">
+                   <h5>Contact Us:</h5>
+                </div>`;
+  }
+})();
 
 const RedirectTo = (sender) => {
   if(typeof(sender) == "string"){
@@ -88,16 +101,6 @@ const RedirectTo = (sender) => {
       window.location.href = url;
     }
   }
-
-(function SetAdsContactsHTML(){
-    if(document.getElementById("contactUsSection")){
-        $("#contactUsSection").hide();
-        document.getElementById("contactUsSection").innerHTML = `
-                  <div class="col-md-12 col-12 contactUs">
-                     <h5>Contact Us:</h5>
-                  </div>`;
-    }
-})();
 
 const StartModalLocalCounter = (sender) => {
   if(sender.innerText == "Start"){
@@ -189,7 +192,7 @@ switch(_functionCounter){
        // $.getScript(`${baseUrl}src/adsJSCode.js`);
         break;
     case 30 :
-        $.getScript(`${baseUrl}src/alertModal.js`);
+       // $.getScript(`${baseUrl}src/alertModal.js`);
         break;
     default :
         break;
@@ -199,9 +202,25 @@ _functionCounter++;
 sessionStorage.setItem('_timerCounter', _timerCounter);
 }, 1000);
 
-function SetStyleSheet(){
+const  SetStyleSheet = () =>{
   $("#adsSection").css({"margin-top": "60px", "position": "relative","display":"none"});
   $("#adsSection img").css({"height":"75px","width":"125px"});
   $("#staticAds .row").css({"margin-top": "10px","margin-bottom": "10px"});
   $("#staticAds .row:nth-child(odd) div span:nth-child(odd)").css({"color":"white"});
   }
+
+  
+ const HideGoToDropdownInApp =(app) => {
+  const appParamValue = GetQueryStringParamValue('app');
+  if(app == 1){
+     document.getElementById("goToDdl").style.display = "none";
+  }
+}
+
+const GetQueryStringParamValue = (paramName) => {
+ let params = window.location.href.split('?');
+ if(params.length > 1){
+    const paramValue = params[1].split('&').find(x => x.split('=').toLowerCase() == paramName.toLowerCase());
+    return paramValue;
+ }
+}
