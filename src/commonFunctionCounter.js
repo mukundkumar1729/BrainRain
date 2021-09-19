@@ -210,9 +210,9 @@ const  SetStyleSheet = () =>{
   }
 
   
- const HideGoToDropdownInApp =(app) => {
+ const HideGoToDropdownInApp = () => {
   const appParamValue = GetQueryStringParamValue('app');
-  if(app == 1){
+  if(appParamValue && appParamValue == 1){
      document.getElementById("goToDdl").style.display = "none";
   }
 }
@@ -220,7 +220,9 @@ const  SetStyleSheet = () =>{
 const GetQueryStringParamValue = (paramName) => {
  let params = window.location.href.split('?');
  if(params.length > 1){
-    const paramValue = params[1].split('&').find(x => x.split('=').toLowerCase() == paramName.toLowerCase());
-    return paramValue;
+    const param = params[1].split('&').find(x => x.split('=')[0].toLowerCase() == paramName.toLowerCase())?.split('=');
+    if(param.length > 1){
+      return param[1];
+    }
  }
 }
