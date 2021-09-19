@@ -47,6 +47,24 @@ let commonUrlData = {
   }
 };
 
+const HideGoToDropdownInApp = () => {
+  const appParamValue = GetQueryStringParamValue('app');
+  if(appParamValue && appParamValue == 1){
+     document.getElementById("goToDdl").style.display = "none";
+  }
+}
+
+const GetQueryStringParamValue = (paramName) => {
+  debugger;
+ let params = window.location.href.split('?');
+ if(params.length > 1){
+    const param = params[1].split('&').find(x => x.split('=')[0].toLowerCase() == paramName.toLowerCase())?.split('=');
+    if(param.length > 1){
+      return param[1];
+    }
+ }
+}
+
 (function BindGoToPageDdl(urls){
   let ddl = $('#goToDdl')[0];
   ddl.options.length = 0;
@@ -74,7 +92,6 @@ let commonUrlData = {
     HideGoToDropdownInApp();
   })();
 
-  
 (function SetAdsContactsHTML(){
   if(document.getElementById("contactUsSection")){
       $("#contactUsSection").hide();
@@ -208,22 +225,3 @@ const  SetStyleSheet = () =>{
   $("#staticAds .row").css({"margin-top": "10px","margin-bottom": "10px"});
   $("#staticAds .row:nth-child(odd) div span:nth-child(odd)").css({"color":"white"});
   }
-
-  
- const HideGoToDropdownInApp = () => {
-  const appParamValue = GetQueryStringParamValue('app');
-  if(appParamValue && appParamValue == 1){
-     document.getElementById("goToDdl").style.display = "none";
-  }
-}
-
-const GetQueryStringParamValue = (paramName) => {
-  debugger;
- let params = window.location.href.split('?');
- if(params.length > 1){
-    const param = params[1].split('&').find(x => x.split('=')[0].toLowerCase() == paramName.toLowerCase())?.split('=');
-    if(param.length > 1){
-      return param[1];
-    }
- }
-}
