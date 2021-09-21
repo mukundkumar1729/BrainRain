@@ -53,7 +53,7 @@ const HideGoToDropdownInApp = () => {
 
     const goToDdl = document.getElementById("goToDdl");
     goToDdl.style.display = "none";
-    goToDdl.parentNode.previousElementSibling.firstElementChild.style.display = 'none'
+    goToDdl.parentNode.previousElementSibling.firstChild.style.display = "none";
   }
 }
 
