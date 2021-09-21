@@ -115,13 +115,10 @@ function GetDataOnPageLoad_JSONFile() {
     if (quesAnsData.length == 0) {
         quesAnsRef.on("child_added", data => {
             quesAnsData = data.val(); 
-            ActionOnPageLoad(quesAnsData);
-            document.getElementById(constant.PrePageLoad).classList.remove(constant.loader);
         });
-    }else{
-        ActionOnPageLoad(quesAnsData);
-        document.getElementById(constant.PrePageLoad).classList.remove(constant.loader);
-}
+    }
+    ActionOnPageLoad(quesAnsData);
+    document.getElementById(constant.PrePageLoad).classList.remove(constant.loader);
 }
 
 function ActionOnPageLoad(data) {
