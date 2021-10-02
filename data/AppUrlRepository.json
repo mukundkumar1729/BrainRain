@@ -1,0 +1,174 @@
+   [ 
+       {
+        "name":"heading",
+        "displayName":"Brainrain Universe",
+        "displayMessage":"",
+        "url":"gordian1729.in",
+        "confirmMsg":"",
+        "order":1,
+        "isVisible":false
+       },
+      
+       {
+        "name":"brainrain",
+        "displayName":"Brainrain",
+        "displayMessage":"",
+        "url":"https://brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":2,
+        "isVisible":true
+       },
+       {
+        "name":"2048",
+        "displayName":"2048 - mind game",
+        "displayMessage":"",
+        "url":"https://2048.brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":3,
+        "isVisible":true
+       },
+       {
+        "name":"wordsgame",
+        "displayName":"Play With Words",
+        "displayMessage":"",
+        "url":"https://wordsgame.brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":4,
+        "isVisible":true
+       },
+       {
+        "name":"periodictable",
+        "displayName":"Periodic Table",
+        "displayMessage":"",
+        "url":"https://periodictable.brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":5,
+        "isVisible":true
+       },
+       {
+        "name":"factsfinder",
+        "displayName":"Facts Finder",
+        "displayMessage":"",
+        "url":"https://factsfinder.brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":6,
+        "isVisible":true
+       },
+       {
+        "name":"trivia ",
+        "displayName":"Trivia",
+        "displayMessage":"",
+        "url":"https://trivia.brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":7,
+        "isVisible":true
+       },
+       {
+        "name":"webeditor",
+        "displayName":"web editor",
+        "displayMessage":"",
+        "url":"https://webeditor.brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":8,
+        "isVisible":true
+       },
+       {
+        "name":"news",
+        "displayName":"news",
+        "displayMessage":"",
+        "url":"https://news.brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":9,
+        "isVisible":true
+       },
+       {
+        "name":"pairup",
+        "displayName":"pairup",
+        "displayMessage":"",
+        "url":"https://pairup.brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":10,
+        "isVisible":true
+       },
+       {
+        "name":"numberssignificance",
+        "displayName":"numbers significance",
+        "displayMessage":"",
+        "url":"https://brainrain-numberssignificance.netlify.app/?app=1",
+        "confirmMsg":"",
+        "order":11,
+        "isVisible":true
+       },
+       {
+        "name":"tictactoe",
+        "displayName":"Tic Tac Toe",
+        "displayMessage":"",
+        "url":"https://tictactoe.brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":12,
+        "isVisible":true
+       },
+       {
+        "name":"mobilestore",
+        "displayName":"mobile store",
+        "displayMessage":"",
+        "url":"https://mobilestore.brainrain.in/?app=1",
+        "confirmMsg":"",
+        "order":13,
+        "isVisible":true
+       },
+       {
+        "name":"cashkaro",
+        "displayName":"Cash Karo",
+        "displayMessage":"Earn cashback everytime you shop online",
+        "url":"https://cashkaro.com/?r=8503745&fname=Mukund+Kumar",
+        "confirmMsg":"",
+        "order":45,
+        "isVisible":true
+       },
+       {
+        "name":"cred",
+        "displayName":"CRED - Pay credit card bills",
+        "displayMessage":"Pay credit card bills, get rewarded and improved credit score",
+        "url":"https://app.cred.club/spQx/4fd1b872",
+        "confirmMsg":"",
+        "order":46,
+        "isVisible":true
+       },
+       {
+        "name":"facebook",
+        "displayName":"facebook",
+        "displayMessage":"",
+        "url":"https://www.facebook.com/",
+        "confirmMsg":"",
+        "order":47,
+        "isVisible":false
+       },
+       {
+        "name":"contactus",
+        "displayName":"Contact Us",
+        "displayMessage":"",
+        "url":"https://gordian1729.in/",
+        "confirmMsg":"",
+        "order":48,
+        "isVisible":false
+       },
+       {
+        "name":"shareApp",
+        "displayName":"Share App",
+        "displayMessage":"Learn & Play with Brainrain",
+        "url":"https://gordian1729.in?name=shareapp",
+        "confirmMsg":"Share app and let your friends learn and play brain rain games",
+        "order":49,
+        "isVisible":true
+       },
+       {
+        "name":"update",
+        "displayName":"Update App",
+        "displayMessage":"",
+        "url":"https://play.google.com/store/apps/details?id=com.wTask_13113576&name=update",
+        "confirmMsg":"",
+        "order":50,
+        "isVisible":true
+       }
+   ]
