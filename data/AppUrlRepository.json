@@ -65,7 +65,7 @@
        },
        {
         "name":"webeditor",
-        "displayName":"web editor",
+        "displayName":"wWb editor",
         "displayMessage":"",
         "url":"https://webeditor.brainrain.in/?app=1",
         "confirmMsg":"",
@@ -74,7 +74,7 @@
        },
        {
         "name":"news",
-        "displayName":"news",
+        "displayName":"News",
         "displayMessage":"",
         "url":"https://news.brainrain.in/?app=1",
         "confirmMsg":"",
@@ -83,7 +83,7 @@
        },
        {
         "name":"pairup",
-        "displayName":"pairup",
+        "displayName":"Pairup",
         "displayMessage":"",
         "url":"https://pairup.brainrain.in/?app=1",
         "confirmMsg":"",
@@ -92,7 +92,7 @@
        },
        {
         "name":"numberssignificance",
-        "displayName":"numbers significance",
+        "displayName":"Number significance",
         "displayMessage":"",
         "url":"https://brainrain-numberssignificance.netlify.app/?app=1",
         "confirmMsg":"",
@@ -106,16 +106,16 @@
         "url":"https://tictactoe.brainrain.in/?app=1",
         "confirmMsg":"",
         "order":12,
-        "isVisible":true
+        "isVisible":false
        },
        {
         "name":"mobilestore",
-        "displayName":"mobile store",
+        "displayName":"Mobile store",
         "displayMessage":"",
         "url":"https://mobilestore.brainrain.in/?app=1",
         "confirmMsg":"",
         "order":13,
-        "isVisible":true
+        "isVisible":false
        },
        {
         "name":"cashkaro",
@@ -133,11 +133,11 @@
         "url":"https://app.cred.club/spQx/4fd1b872",
         "confirmMsg":"",
         "order":46,
-        "isVisible":true
+        "isVisible":false
        },
        {
         "name":"facebook",
-        "displayName":"facebook",
+        "displayName":"Facebook",
         "displayMessage":"",
         "url":"https://www.facebook.com/",
         "confirmMsg":"",
