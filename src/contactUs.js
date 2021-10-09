@@ -24,7 +24,6 @@ function ContactUsSocialMediaLinks() {
 }
 
 function RedirectToCurrentApp() {
-    debugger;
     appName = constant.page+ "_Aapp";
     appUrl = commonUrlData.urls[appName];
     appUrl && "" != appUrl.trim() ? window.location.href = appUrl : window.location.href = "https://play.google.com/store/apps/developer?id=Mukund+Kumar"
