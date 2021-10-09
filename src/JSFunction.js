@@ -117,6 +117,7 @@ function GetDataOnPageLoad_JSONFile() {
     if (quesAnsData.length == 0) {
         quesAnsRef.on("child_added", data => {
             quesAnsData = data.val(); 
+            console.log(quesAnsData);
             ActionOnPageLoad(quesAnsData);
             document.getElementById(constant.PrePageLoad).classList.remove(constant.loader);
         });
@@ -194,8 +195,10 @@ function ProcessQuesAns(data) {
 
 function GetQuesAnsTBodyHTML(data){
     let html = '';
+    debugger;
     let options = [];
     for (var item of data) {
+        if(item){
         let isOptionIncluded = false;
         for(var opt of options){
             isOptionIncluded = opt.toLowerCase() == item.domain.toLowerCase() ? true : false;
@@ -211,6 +214,7 @@ function GetQuesAnsTBodyHTML(data){
             html += '</td></tr>';
         }
     }
+    }
     const quesAnsTbodyData = {html: html, options: options};
     return quesAnsTbodyData;
 }
@@ -220,7 +224,7 @@ function CreateElementForQuesAns(item, qnsType) {
     const editButton = `<button type='button' class='btn btn-primary editButton' onclick='PreUpdateQuesAns("${item.ID}")' style='float:right;'>Edit</button>`;
     let deleteButton = "";
     if(variables.isDeleteButtonToBeVisible){
-    deleteButton = `<button type='button' class='btn btn-danger' onclick='DeleteQuesAns("${item.ID}")' style='float:right;'><span class="fa fa-trash"></span></button>`;
+    deleteButton = `<button type='button' class='btn btn-danger' onclick='DeleteQuesAns(this, "${item.ID}")' style='float:right;'><span class="fa fa-trash"></span></button>`;
     }
     let row = `<div class='row'>
                         <div class='col-md-12 col-12' style='${style}'>
@@ -356,9 +360,13 @@ function UpdateQuesAns(el) {
     }
     
 
-function DeleteQuesAns(id) {
+function DeleteQuesAns(sender, id) {
+    debugger;
     if (confirm(constant.confirmDelete)) {
         quesAnsData[id - 1].isActive = 0;
+        $(sender).closest('tr').hide();
+        const quesAnsChildRef = quesAnsRef.child('quesAnsDoc/' + (id-1));
+        quesAnsChildRef.remove();
     } else {
         return false;
     }

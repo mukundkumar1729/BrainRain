@@ -58,7 +58,6 @@ const HideGoToDropdownInApp = () => {
 }
 
 const GetQueryStringParamValue = (paramName) => {
-  debugger;
  let params = window.location.href.split('?');
  if(params.length > 1){
     const param = params[1].split('&').find(x => x.split('=')[0].toLowerCase() == paramName.toLowerCase())?.split('=');
