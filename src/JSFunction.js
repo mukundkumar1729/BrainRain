@@ -116,8 +116,7 @@ function GetDataOnPageLoad_JSONFile() {
  function GetDataOnPageLoad_FirebaseDB() {
     if (quesAnsData.length == 0) {
         quesAnsRef.on("child_added", data => {
-            quesAnsData = data.val(); 
-            console.log(quesAnsData);
+            quesAnsData = data.val();
             ActionOnPageLoad(quesAnsData);
             document.getElementById(constant.PrePageLoad).classList.remove(constant.loader);
         });
@@ -131,7 +130,6 @@ function ActionOnPageLoad(data) {
     ShowSingleDiv();
     ProcessQuesAns(data);
     AlignElsOnSmallDevice();
-    console.log(window.location.href);
 }
 
 function HideShow(e) {
