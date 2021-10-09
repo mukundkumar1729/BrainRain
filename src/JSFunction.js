@@ -67,7 +67,8 @@ let quesAnsData = [];
 let quesAnsUploadedData = [];
 
 let variables = {
-    userEmailID:"kmukund439@gmail.com"
+    userEmailID:"kmukund439@gmail.com",
+    isDeleteButtonToBeVisible:false
 }
 
 $(document).ready(function() {
@@ -75,6 +76,7 @@ $(document).ready(function() {
     $(control.PrePageLoadText).fadeOut();
     SetUserEmail();
     const resp = checkNetConnection();
+    DeleteButtonVisibility();
     if(resp){
         GetDataOnPageLoad_FirebaseDB();
     }
@@ -128,6 +130,7 @@ function ActionOnPageLoad(data) {
     ShowSingleDiv();
     ProcessQuesAns(data);
     AlignElsOnSmallDevice();
+    console.log(window.location.href);
 }
 
 function HideShow(e) {
@@ -215,10 +218,14 @@ function GetQuesAnsTBodyHTML(data){
 function CreateElementForQuesAns(item, qnsType) {
     style = qnsType == constant.ques ? "background-color:white;margin-top:10px" : "background-color:green";
     const editButton = `<button type='button' class='btn btn-primary editButton' onclick='PreUpdateQuesAns("${item.ID}")' style='float:right;'>Edit</button>`;
+    let deleteButton = "";
+    if(variables.isDeleteButtonToBeVisible){
+    deleteButton = `<button type='button' class='btn btn-danger' onclick='DeleteQuesAns("${item.ID}")' style='float:right;'><span class="fa fa-trash"></span></button>`;
+    }
     let row = `<div class='row'>
                         <div class='col-md-12 col-12' style='${style}'>
                         ${qnsType == constant.ques ? item.ques : item.ans}
-                        ${qnsType == constant.ques ? editButton : ''}
+                        ${qnsType == constant.ques ? editButton+deleteButton : ''}
                         </div></div>`;
     return row;
 }
@@ -556,4 +563,17 @@ function ShowSinglePage(sender){
 }
 function Transfer(url){
     window.location.href = url;
+}
+
+function DeleteButtonVisibility(){
+    variables.isDeleteButtonToBeVisible = false;
+    const url = window.location.href;
+    if(url.includes('127.0.0.1:5501/')){
+        variables.isDeleteButtonToBeVisible = true;
+    }else{
+        const idbtbvValue = sessionStorage.getItem("brainrain_idbtbv");
+        if(idbtbvValue){
+            variables.isDeleteButtonToBeVisible = true;   
+        }
+    }
 }
