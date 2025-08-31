@@ -508,7 +508,7 @@ function checkNetConnection(){
      if (xhr.status >= 200 && xhr.status < 304) {
       return true;
      } else {
-      return false;
+      return true;
      }
     } catch (e) {
      return false;
