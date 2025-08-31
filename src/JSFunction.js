@@ -500,19 +500,20 @@ function SampleFileDownload(){
 }
 
 function checkNetConnection(){
+    return true;
     var xhr = new XMLHttpRequest();
     var url = "https://jsonip.com?callback=?";
     xhr.open('HEAD', url, false);
-    try {
-     xhr.send();
-     if (xhr.status >= 200 && xhr.status < 304) {
-      return true;
-     } else {
-      return true;
-     }
-    } catch (e) {
-     return false;
-    }
+    // try {
+    //  xhr.send();
+    //  if (xhr.status >= 200 && xhr.status < 304) {
+    //   return true;
+    //  } else {
+    //   return false;
+    //  }
+    // } catch (e) {
+    //  return false;
+    // }
    }
 
    function AddMoreQuesAnsTemplate(){
