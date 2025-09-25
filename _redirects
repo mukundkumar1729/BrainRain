@@ -1,0 +1,5 @@
+
+# All requests from the https://brainrain.netlify.app/ will be permanently redirected
+# to the https://brainrain.gordian1729.in, preserving the path.
+
+https://brainrain.netlify.app/* https://brainrain.gordian1729.in/:splat 301!
